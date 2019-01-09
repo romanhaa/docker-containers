@@ -70,4 +70,6 @@ packages_to_install <- c(
   "xml2"
 )
 
+install.packages("BiocManager", repos="http://cran.us.r-project.org")
+
 BiocManager::install(packages_to_install)
