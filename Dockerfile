@@ -18,3 +18,4 @@ RUN Rscript -e 'BiocManager::install(c("Seurat", "tidyverse", "reshape2", "scale
 # test
 # RUN Rscript -e 'Seurat::RunUMAP()'
 
+CMD R
