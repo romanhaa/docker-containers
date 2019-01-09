@@ -10,8 +10,11 @@ RUN apt install -y libhdf5-dev
 RUN pip install umap-learn
 RUN pip3 install umap-learn
 
+RUN ls /
+
 # use script here as soon as repo is public
 ADD https://github.com/romanhaa/docker_r/archive/master.tar.gz /docker/
+RUN ls /docker
 CMD Rscript /docker/install_packages.R
 # RUN Rscript -e 'install.packages("BiocManager", repos="http://cran.us.r-project.org")'
 # RUN Rscript -e 'BiocManager::install(c("Seurat", "tidyverse", "reshape2", "scales", "gridExtra", "enrichR", "scran", "biomaRt", "Rmagic"))'
