@@ -7,26 +7,13 @@ RUN apt install -y \
   python3-dev \
   python3-pip
 
-# for curl and RCurl (R package)
 RUN apt install -y \
-  libcurl4-openssl-dev
-
-# for openssl (R package)
-RUN apt install -y libssl-dev
-
-# for Cairo (R package)
-RUN apt install -y \
-  libcairo2-dev
-  # libxt-dev
-
-# for XML and xml2 (R package)
-RUN apt install -y libxml2-dev
-
-# for units (R package)
-RUN apt install -y libudunits2-dev
-
-# for hdf5r (R package)
-RUN apt install -y libhdf5-dev
+  libcurl4-openssl-dev \ # curl and RCurl (R package)
+  libssl-dev \ # openssl (R package)
+  libcairo2-dev libxt-dev \ # Cairo (R package)
+  libxml2-dev \ # XML and xml2 (R package)
+  libudunits2-dev \ # units (R package)
+  libhdf5-dev # hdf5r (R package)
 
 # for UMAP in Seurat (R package)
 RUN pip install umap-learn
