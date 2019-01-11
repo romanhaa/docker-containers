@@ -27,7 +27,6 @@ packages_to_install <- c(
   "ggsignif",
   "h2o",
   "magrittr",
-#  "metacell",
   "MetaNeighbor",
   "monocle",
   "org.Hs.eg.db",
@@ -68,3 +67,11 @@ packages_to_install <- c(
 install.packages("BiocManager", repos="http://cran.us.r-project.org")
 
 BiocManager::install(packages_to_install)
+
+BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
+
+
+
+
+
+
