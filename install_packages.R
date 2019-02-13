@@ -14,6 +14,7 @@ packages_to_install <- c(
   "diffusionMap",
   "DT",
   "enrichR",
+  "future.apply",
   "GenomicFeatures",
   "GenomicRanges",
   "ggalluvial",
