@@ -46,6 +46,7 @@ packages_to_install <- c(
   "scales",
   "scater",
   "scde",
+  "sessioninfo",
   "Seurat",
   "shiny",
   "shinydashboard",
