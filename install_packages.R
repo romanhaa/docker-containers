@@ -72,6 +72,8 @@ BiocManager::install(packages_to_install)
 
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
+devtools::install_github("jalvesaq/colorout")
+
 
 
 
