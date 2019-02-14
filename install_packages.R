@@ -40,6 +40,7 @@ packages_to_install <- c(
   "reshape2",
   "reticulate",
   "Rmagic",
+  "roxygen2",
   "Rsamtools",
   "Rtsne",
   "SC3",
