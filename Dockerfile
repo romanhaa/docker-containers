@@ -29,6 +29,10 @@ RUN apt install -y libhdf5-dev
 RUN pip install umap-learn
 RUN pip3 install umap-learn
 
+# for phate in Seurat (R package)
+RUN pip install phate
+RUN pip3 install phate
+
 # get resources from repo
 ADD https://github.com/romanhaa/docker_r/archive/master.tar.gz /docker/
 RUN tar -xvzf /docker/master.tar.gz -C /docker
