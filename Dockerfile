@@ -30,7 +30,7 @@ RUN pip install umap-learn
 RUN pip3 install umap-learn
 
 # for phate in Seurat (R package)
-RUN pip install phate
+# not available for python2
 RUN pip3 install phate
 
 # get resources from repo
