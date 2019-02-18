@@ -41,7 +41,4 @@ RUN tar -xvzf /docker/master.tar.gz -C /docker
 # install R packages
 RUN Rscript /docker/docker_r-master/install_packages.R
 
-# Seurat installation
-# RUN Rscript -e 'Seurat::RunUMAP()'
-
 CMD R
