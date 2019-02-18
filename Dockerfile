@@ -1,11 +1,12 @@
-FROM r-base:3.5.1
+FROM r-base:3.5.2
 
 RUN apt update -y && apt upgrade -y
 RUN apt install -y \
   python-dev \
   python-pip \
   python3-dev \
-  python3-pip
+  python3-pip \
+  python3-tk
 
 # curl and RCurl (R package)
 RUN apt install -y libcurl4-openssl-dev
