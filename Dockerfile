@@ -34,6 +34,9 @@ RUN pip3 install umap-learn
 # not available for python2
 RUN pip3 install phate
 
+# for dca (deep count autoencoder)
+RUN pip3 install tensorflow dca
+
 # get resources from repo
 ADD https://github.com/romanhaa/docker_r/archive/master.tar.gz /docker/
 RUN tar -xvzf /docker/master.tar.gz -C /docker
