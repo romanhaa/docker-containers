@@ -76,6 +76,7 @@ BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo"
 
 devtools::install_github("jalvesaq/colorout")
 
+devtools::install_github("romanhaa/cerebroPrepare")
 
 
 
