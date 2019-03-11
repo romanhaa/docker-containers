@@ -7,6 +7,7 @@ packages_to_install <- c(
   "circlize",
   "clusterProfiler",
   "ComplexHeatmap",
+  "concaveman",
   "dendextend",
   "destiny",
   "devtools",
