@@ -23,6 +23,7 @@ packages_to_install <- c(
   "ggbio",
   "ggdendro",
   "ggExtra",
+  "ggforce",
   "ggrepel",
   "ggridges",
   "ggsignif",
