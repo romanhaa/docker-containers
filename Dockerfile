@@ -26,6 +26,12 @@ RUN apt install -y libudunits2-dev
 # hdf5r (R package)
 RUN apt install -y libhdf5-dev
 
+# V8 (R package)
+RUN apt install -y libv8-dev
+
+# rgdal (R package)
+RUN apt install -y libgdal-dev
+
 # for UMAP in Seurat (R package)
 # RUN pip install umap-learn
 RUN pip3 install umap-learn
