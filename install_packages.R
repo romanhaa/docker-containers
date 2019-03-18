@@ -32,6 +32,7 @@ packages_to_install <- c(
   "magrittr",
   "MetaNeighbor",
   "monocle",
+  "msigdbr",
   "org.Hs.eg.db",
   "org.Mm.eg.db",
   "phateR",
