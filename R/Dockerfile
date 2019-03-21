@@ -44,7 +44,7 @@ RUN pip3 install phate
 RUN pip3 install tensorflow dca
 
 # get resources from repo
-ADD https://github.com/romanhaa/docker_r/archive/master.tar.gz /docker/
+ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 RUN tar -xvzf /docker/master.tar.gz -C /docker
 
 # install R packages
