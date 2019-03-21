@@ -48,6 +48,6 @@ ADD https://github.com/romanhaa/docker_r/archive/master.tar.gz /docker/
 RUN tar -xvzf /docker/master.tar.gz -C /docker
 
 # install R packages
-RUN Rscript /docker/docker_r-master/install_packages.R
+RUN Rscript /docker/docker_containers/R/install_packages.R
 
 CMD R
