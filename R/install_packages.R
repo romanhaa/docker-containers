@@ -71,16 +71,28 @@ packages_to_install <- c(
   "xml2"
 )
 
+# install BiocManager
 install.packages("BiocManager", repos="http://cran.us.r-project.org")
 
+# install list of packages
 BiocManager::install(packages_to_install)
 
+# metacell
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
+# colorout
 devtools::install_github("jalvesaq/colorout")
 
+# install cerebroPrepare
 devtools::install_github("romanhaa/cerebroPrepare")
 
+# install Garnett + dependencies
+BiocManager::install(c(
+    "DelayedArray",
+    "DelayedMatrixStats",
+    "org.Hs.eg.db","org.Mm.eg.db"
+))
+devtools::install_github("cole-trapnell-lab/garnett")
 
 
 
