@@ -33,11 +33,12 @@ RUN apt install -y libv8-dev
 RUN apt install -y libgdal-dev
 
 # for UMAP in Seurat (R package)
-# RUN pip install umap-learn
 RUN pip3 install umap-learn
 
+# for Monocle 3
+RUN pip3 install louvain
+
 # for phate in Seurat (R package)
-# not available for python2
 RUN pip3 install phate
 
 # for dca (deep count autoencoder)
