@@ -88,12 +88,40 @@ devtools::install_github("romanhaa/cerebroPrepare")
 
 # install Garnett + dependencies
 BiocManager::install(c(
-    "DelayedArray",
-    "DelayedMatrixStats",
-    "org.Hs.eg.db","org.Mm.eg.db"
+  "DelayedArray",
+  "DelayedMatrixStats",
+  "org.Hs.eg.db",
+  "org.Mm.eg.db"
 ))
 devtools::install_github("cole-trapnell-lab/garnett")
 
+place_for_other_libraries <- "/other_R_libraries"
 
+dir.create(
+  place_for_other_libraries,
+  recursive = TRUE
+)
 
+# Seurat 3
+devtools::install_github(
+  repo = "satijalab/seurat",
+  ref = "release/3.0",
+  lib = place_for_other_libraries
+)
+
+# Monocle 3
+devtools::install_github(
+  "cole-trapnell-lab/DDRTree",
+  ref = "simple-ppt-like",
+  lib = place_for_other_libraries
+)
+devtools::install_github(
+  "cole-trapnell-lab/L1-graph",
+  lib = place_for_other_libraries
+)
+devtools::install_github(
+  "cole-trapnell-lab/monocle-release",
+  ref = "monocle3_alpha",
+  lib = place_for_other_libraries
+)
 
