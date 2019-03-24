@@ -1,7 +1,7 @@
 FROM r-base:3.5.2
 
-RUN apt update -y && apt upgrade -y
-RUN apt install -y \
+RUN apt update --yes && apt upgrade --yes
+RUN apt install --yes \
   python-dev \
   python-pip \
   python3-dev \
@@ -9,28 +9,34 @@ RUN apt install -y \
   python3-tk
 
 # curl and RCurl (R package)
-RUN apt install -y libcurl4-openssl-dev
+RUN apt install --yes libcurl4-openssl-dev
 
 # openssl (R package)
-RUN apt install -y libssl-dev
+RUN apt install --yes libssl-dev
 
 # Cairo (R package)
-RUN apt install -y libcairo2-dev libxt-dev
+RUN apt install --yes libcairo2-dev libxt-dev
 
 # XML and xml2 (R package)
-RUN apt install -y libxml2-dev
+RUN apt install --yes libxml2-dev
 
 # units (R package)
-RUN apt install -y libudunits2-dev
+RUN apt install --yes libudunits2-dev
 
 # hdf5r (R package)
-RUN apt install -y libhdf5-dev
+RUN apt install --yes libhdf5-dev
 
 # V8 (R package)
-RUN apt install -y libv8-dev
+RUN apt install --yes libv8-dev
 
 # rgdal (R package)
-RUN apt install -y libgdal-dev
+RUN apt install --yes libgdal-dev
+
+# for Monocle 3
+RUN apt install --yes \
+  xorg \
+  libx11-dev \
+  libglu1-mesa-dev 
 
 # for UMAP in Seurat (R package)
 RUN pip3 install umap-learn
