@@ -114,15 +114,18 @@ devtools::install_github(
 devtools::install_github(
   "cole-trapnell-lab/DDRTree",
   ref = "simple-ppt-like",
-  lib = place_for_other_libraries
+  lib = place_for_other_libraries,
+  upgrade = FALSE
 )
 devtools::install_github(
   "cole-trapnell-lab/L1-graph",
-  lib = place_for_other_libraries
+  lib = place_for_other_libraries,
+  upgrade = FALSE
 )
 devtools::install_github(
   "cole-trapnell-lab/monocle-release",
   ref = "monocle3_alpha",
-  lib = place_for_other_libraries
+  lib = place_for_other_libraries,
+  upgrade = FALSE
 )
 
