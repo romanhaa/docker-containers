@@ -106,7 +106,8 @@ dir.create(
 devtools::install_github(
   repo = "satijalab/seurat",
   ref = "release/3.0",
-  lib = place_for_other_libraries
+  lib = place_for_other_libraries,
+  upgrade = FALSE
 )
 
 # Monocle 3
