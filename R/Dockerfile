@@ -1,6 +1,9 @@
 FROM r-base:3.5.2
 
-ARG DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8  
 
 RUN apt update --yes && apt upgrade --yes
 RUN apt install --yes \
