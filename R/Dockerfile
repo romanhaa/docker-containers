@@ -1,5 +1,7 @@
 FROM r-base:3.5.2
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt update --yes && apt upgrade --yes
 RUN apt install --yes \
   python-dev \
