@@ -35,14 +35,17 @@ RUN apt install -y libgdal-dev
 # for UMAP in Seurat (R package)
 RUN pip3 install umap-learn
 
-# for Monocle 3
+# for Monocle 3 and scanpy
 RUN pip3 install louvain
 
 # for phate in Seurat (R package)
 RUN pip3 install phate
 
-# for dca (deep count autoencoder)
+# dca (deep count autoencoder)
 RUN pip3 install tensorflow dca
+
+# scanpy
+RUN pip3 install scanpy python-igraph
 
 # get resources from repo
 ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
