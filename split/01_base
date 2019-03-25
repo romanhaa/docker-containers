@@ -8,13 +8,6 @@ ENV LC_ALL en_US.UTF-8
 CMD R
 
 ##----------------------------------------------------------------------------##
-## DOWNLOAD GITHUB REPO
-##----------------------------------------------------------------------------##
-
-ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
-RUN tar -xvzf /docker/master.tar.gz -C /docker
-
-##----------------------------------------------------------------------------##
 ## SYSTEM PACKAGES
 ##----------------------------------------------------------------------------##
 
@@ -48,29 +41,3 @@ RUN apt-get install --yes \
   libv8-dev \
   libgdal-dev \
   xorg libx11-dev libglu1-mesa-dev
-
-##----------------------------------------------------------------------------##
-## PYTHON PACKAGES
-##----------------------------------------------------------------------------##
-
-# umap-learn                  UMAP
-# louvain                     Monocle 3 and scanpy
-# phate                       Seurat
-# tensorflow, dca             DCA
-# python-igraph, scanpy       scanpy
-
-RUN pip3 install \
-  umap-learn \
-  louvain \
-  phate \
-  tensorflow \
-  dca \
-  scanpy \
-  python-igraph
-
-##----------------------------------------------------------------------------##
-## R PACKAGES
-##----------------------------------------------------------------------------##
-
-RUN Rscript /docker/docker_containers-master/R/install_packages.R
-
