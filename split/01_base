@@ -41,3 +41,24 @@ RUN apt-get install --yes \
   libv8-dev \
   libgdal-dev \
   xorg libx11-dev libglu1-mesa-dev
+
+##----------------------------------------------------------------------------##
+## PYTHON PACKAGES
+##----------------------------------------------------------------------------##
+
+# umap-learn                  UMAP
+# louvain                     Monocle 3 and scanpy
+# phate                       Seurat
+# tensorflow, dca             DCA
+# python-igraph, scanpy       scanpy
+
+RUN pip3 install \
+  umap-learn \
+  louvain \
+  phate \
+  tensorflow \
+  dca \
+  scanpy \
+  python-igraph
+
+
