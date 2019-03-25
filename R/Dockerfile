@@ -39,7 +39,7 @@ RUN apt-get install --yes \
 # xorg, libx11-dev, libglu1-mesa-dev     Monocle 3 (R package)
 
 RUN apt-get install --yes \
-  libcurl4-openssl-dev
+  libcurl4-openssl-dev \
   libssl-dev \
   libcairo2-dev libxt-dev \
   libxml2-dev \
