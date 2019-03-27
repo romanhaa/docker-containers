@@ -74,8 +74,12 @@ packages_to_install <- c(
 # install BiocManager
 install.packages("BiocManager", repos="http://cran.us.r-project.org")
 
+# install BiocManager
+install.packages("pak", repos="http://cran.us.r-project.org")
+
 # install list of packages
-BiocManager::install(packages_to_install)
+# BiocManager::install(packages_to_install)
+pak::pkg_install(packages_to_install, ask = FALSE)
 
 # metacell
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
