@@ -57,7 +57,7 @@ RUN apt-get install --yes \
 # louvain                     Monocle 3 and scanpy
 # phate                       Seurat
 # tensorflow, dca             DCA
-# python-igraph, scanpy       scanpy
+# python-igraph, fa2, scanpy  scanpy
 
 RUN pip3 install \
   umap-learn \
@@ -65,8 +65,9 @@ RUN pip3 install \
   phate \
   tensorflow \
   dca \
-  scanpy \
-  python-igraph
+  python-igraph \
+  fa2 \
+  scanpy
 
 ##----------------------------------------------------------------------------##
 ## R PACKAGES
