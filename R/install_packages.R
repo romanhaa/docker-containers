@@ -88,7 +88,7 @@ BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo"
 devtools::install_github("jalvesaq/colorout")
 
 # install cerebroPrepare
-devtools::install_github("romanhaa/cerebroPrepare")
+devtools::install_github("romanhaa/cerebroPrepare", ref = "0.9.0")
 
 # install Garnett + dependencies
 BiocManager::install(c(
