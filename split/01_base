@@ -64,4 +64,14 @@ RUN pip3 install \
   scanpy \
   leidenalg
 
+##----------------------------------------------------------------------------##
+## (SOME) R PACKAGES
+##----------------------------------------------------------------------------##
+
+RUN Rscript -e 'install.packages("pak", repos="http://cran.us.r-project.org")'
+RUN Rscript -e 'pak::pkg_install("tidyverse", ask = FALSE)'
+
+
+
+
 
