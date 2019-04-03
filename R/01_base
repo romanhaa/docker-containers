@@ -65,11 +65,36 @@ RUN pip3 install \
   leidenalg
 
 ##----------------------------------------------------------------------------##
+## DOWNLOAD GITHUB REPO
+##----------------------------------------------------------------------------##
+
+ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
+RUN tar -xvzf /docker/master.tar.gz -C /docker
+
+##----------------------------------------------------------------------------##
 ## (SOME) R PACKAGES
 ##----------------------------------------------------------------------------##
 
-RUN Rscript -e 'install.packages("pak", repos="http://cran.us.r-project.org")'
-RUN Rscript -e 'pak::pkg_install("tidyverse", ask = FALSE)'
+RUN Rscript -e 'install.packages("pak", repos = "http://cran.us.r-project.org")'
+RUN Rscript -e 'pak::pkg_install(c("tidyverse","Seurat"), ask = FALSE)'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

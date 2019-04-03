@@ -64,7 +64,6 @@ packages_to_install <- c(
   "TxDb.Hsapiens.UCSC.hg19.knownGene",
   "tximport",
   "umap",
-#  "URD",
   "VennDiagram",
   "viridis",
   "XML",
@@ -72,10 +71,7 @@ packages_to_install <- c(
 )
 
 # install BiocManager
-install.packages("BiocManager", repos="http://cran.us.r-project.org")
-
-# install BiocManager
-install.packages("pak", repos="http://cran.us.r-project.org")
+install.packages("BiocManager", repos = "http://cran.us.r-project.org")
 
 # install list of packages
 BiocManager::install(packages_to_install)
@@ -84,19 +80,24 @@ BiocManager::install(packages_to_install)
 # metacell
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
+# patchwork (ggplot extension)
+devtools::install_github("thomasp85/patchwork")
+
 # colorout
 devtools::install_github("jalvesaq/colorout")
 
 # install cerebroPrepare
-devtools::install_github("romanhaa/cerebroPrepare", ref = "0.9.0")
+devtools::install_github("romanhaa/cerebroPrepare")
 
 # install Garnett + dependencies
-BiocManager::install(c(
-  "DelayedArray",
-  "DelayedMatrixStats",
-  "org.Hs.eg.db",
-  "org.Mm.eg.db"
-))
+BiocManager::install(
+  c(
+    "DelayedArray",
+    "DelayedMatrixStats",
+    "org.Hs.eg.db",
+    "org.Mm.eg.db"
+  )
+)
 devtools::install_github("cole-trapnell-lab/garnett")
 
 place_for_other_libraries <- "/other_R_libraries"
