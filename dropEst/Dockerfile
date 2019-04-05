@@ -18,11 +18,12 @@ RUN apt-get install --yes \
   git
 
 # download dropEst repo
-git clone https://github.com/hms-dbmi/dropEst.git
+RUN git clone https://github.com/hms-dbmi/dropEst.git
 
 # build dropEst from source
-mkdir dropEst/build
-cd dropEst/build
-cmake .. && make
-make install
+RUN mkdir dropEst/build && \
+  cd dropEst/build && \
+  cmake .. && \
+  make && \
+  make install
 
