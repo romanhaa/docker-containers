@@ -7,7 +7,10 @@ packages_to_install <- c(
   "circlize",
   "clusterProfiler",
   "ComplexHeatmap",
+  "cole-trapnell-lab/garnett",
   "concaveman",
+  "DelayedArray",
+  "DelayedMatrixStats",
   "dendextend",
   "destiny",
   "devtools",
@@ -16,6 +19,8 @@ packages_to_install <- c(
   "DT",
   "enrichR",
   "FlowSOM",
+  "exaexa/EmbedSOM",
+  "exaexa/DiffSOM",
   "future.apply",
   "GenomicFeatures",
   "GenomicRanges",
@@ -30,6 +35,7 @@ packages_to_install <- c(
   "ggridges",
   "ggsignif",
   "h2o",
+  "jalvesaq/colorout",
   "magrittr",
   "MetaNeighbor",
   "monocle",
@@ -44,6 +50,7 @@ packages_to_install <- c(
   "reshape2",
   "reticulate",
   "Rmagic",
+  "romanhaa/cerebroPrepare",
   "roxygen2",
   "Rsamtools",
   "Rtsne",
@@ -59,6 +66,7 @@ packages_to_install <- c(
   "shinyjs",
   "shinythemes",
   "tidyverse",
+  "thomasp85/patchwork",
   "topGO",
   "TSCAN",
   "tsne",
@@ -81,30 +89,10 @@ BiocManager::install(packages_to_install)
 # metacell
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
-# patchwork (ggplot extension)
-# devtools::install_github("thomasp85/patchwork")
+# velocyto
+devtools::install_github("velocyto-team/velocyto.R")
 
-# EmbedSOM and DiffSOM
-devtools::install_github('exaexa/EmbedSOM')
-devtools::install_github('exaexa/DiffSOM')
-
-# colorout
-devtools::install_github("jalvesaq/colorout")
-
-# install cerebroPrepare
-devtools::install_github("romanhaa/cerebroPrepare")
-
-# install Garnett + dependencies
-BiocManager::install(
-  c(
-    "DelayedArray",
-    "DelayedMatrixStats",
-    "org.Hs.eg.db",
-    "org.Mm.eg.db"
-  )
-)
-devtools::install_github("cole-trapnell-lab/garnett")
-
+# alternative location for R packages
 place_for_other_libraries <- "/other_R_libraries"
 
 dir.create(
@@ -119,9 +107,6 @@ devtools::install_github(
   lib = place_for_other_libraries,
   upgrade = FALSE
 )
-
-# velocyto
-devtools::install_github("velocyto-team/velocyto.R")
 
 # Monocle 3
 devtools::install_github(
