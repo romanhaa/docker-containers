@@ -15,6 +15,7 @@ packages_to_install <- c(
   "diffusionMap",
   "DT",
   "enrichR",
+  "FlowSOM",
   "future.apply",
   "GenomicFeatures",
   "GenomicRanges",
@@ -82,6 +83,10 @@ BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo"
 
 # patchwork (ggplot extension)
 devtools::install_github("thomasp85/patchwork")
+
+# EmbedSOM and DiffSOM
+devtools::install_github('exaexa/EmbedSOM')
+devtools::install_github('exaexa/DiffSOM')
 
 # colorout
 devtools::install_github("jalvesaq/colorout")
