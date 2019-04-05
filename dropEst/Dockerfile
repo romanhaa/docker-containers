@@ -4,7 +4,7 @@ FROM r-base:3.5.2
 RUN apt-get update --yes && apt-get upgrade --yes
 
 # update R packages and install required R packages
-RUN Rscript -e 'install.packages()'
+RUN Rscript -e 'update.packages(repos = "http://cran.us.r-project.org", ask = FALSE)'
 RUN Rscript -e 'install.packages(c("Rcpp","RcppEigen", "RInside", "Matrix"))'
 
 # install dependencies
