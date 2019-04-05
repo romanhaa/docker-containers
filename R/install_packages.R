@@ -82,7 +82,7 @@ BiocManager::install(packages_to_install)
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
 # patchwork (ggplot extension)
-devtools::install_github("thomasp85/patchwork")
+# devtools::install_github("thomasp85/patchwork")
 
 # EmbedSOM and DiffSOM
 devtools::install_github('exaexa/EmbedSOM')
