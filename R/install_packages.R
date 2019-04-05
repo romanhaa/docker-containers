@@ -120,6 +120,9 @@ devtools::install_github(
   upgrade = FALSE
 )
 
+# velocyto
+devtools::install_github("velocyto-team/velocyto.R")
+
 # Monocle 3
 devtools::install_github(
   "cole-trapnell-lab/DDRTree",
