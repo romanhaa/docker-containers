@@ -75,6 +75,8 @@ RUN pip3 install \
   h5py \
   click \
   pysam \
+
+RUN pip3 install \
   velocyto
 
 ##----------------------------------------------------------------------------##
