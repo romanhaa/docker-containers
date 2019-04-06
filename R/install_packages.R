@@ -66,7 +66,7 @@ packages_to_install <- c(
   "shinyjs",
   "shinythemes",
   "tidyverse",
-  "thomasp85/patchwork",
+#  "thomasp85/patchwork",
   "topGO",
   "TSCAN",
   "tsne",
