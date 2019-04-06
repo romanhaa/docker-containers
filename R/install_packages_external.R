@@ -1,6 +1,6 @@
 
 # metacell
-BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
+BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
 BiocManager::install("exaexa/EmbedSOM")
 
