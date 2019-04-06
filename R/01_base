@@ -65,7 +65,9 @@ RUN pip3 install \
   fa2 \
   python-igraph \
   scanpy \
-  leidenalg \
+  leidenalg
+
+RUN pip3 install \
   numpy \
   scipy \
   cython \
@@ -73,8 +75,10 @@ RUN pip3 install \
   matplotlib \
   scikit-learn \
   h5py \
-  click \
-  pysam \
+  click
+
+RUN pip3 install \
+  pysam
 
 RUN pip3 install \
   velocyto
