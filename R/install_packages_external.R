@@ -2,18 +2,17 @@
 # metacell
 BiocManager::install("metacell",  site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
-# Garnett
 BiocManager::install("exaexa/EmbedSOM")
 
-BiocManager::install("exaexa/DiffSOM")
+BiocManager::install("exaexa/DiffSOM", dependencies = FALSE)
 
 BiocManager::install("jalvesaq/colorout")
 
-BiocManager::install("romanhaa/cerebroPrepare")
+BiocManager::install("romanhaa/cerebroPrepare", dependencies = FALSE)
 
 BiocManager::install("thomasp85/patchwork")
 
-devtools::install_github("velocyto-team/velocyto.R")
+BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
 # alternative location for R packages
 place_for_other_libraries <- "/other_R_libraries"
