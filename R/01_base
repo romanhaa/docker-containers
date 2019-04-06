@@ -52,6 +52,9 @@ RUN apt-get install --yes \
 # tensorflow, dca             DCA
 # python-igraph, fa2, scanpy  scanpy
 # leidenalg                   Leiden algorithm for clustering in Seurat v3
+# numpy scipy cython numba
+# matplotlib scikit-learn
+# h5py click pysam velocyto   velocyto
 
 RUN pip3 install \
   umap-learn \
@@ -62,7 +65,17 @@ RUN pip3 install \
   fa2 \
   python-igraph \
   scanpy \
-  leidenalg
+  leidenalg \
+  numpy \
+  scipy \
+  cython \
+  numba \
+  matplotlib \
+  scikit-learn \
+  h5py \
+  click \
+  pysam \
+  velocyto
 
 ##----------------------------------------------------------------------------##
 ## (SOME) R PACKAGES
