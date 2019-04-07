@@ -30,7 +30,7 @@ RUN apt-get install --yes \
 # libv8-dev                              V8 (R package)
 # libgdal-dev                            rgdal (R package)
 # xorg, libx11-dev, libglu1-mesa-dev     Monocle 3 (R package)
-# libboost-all-dev                       velocyto (R package)
+# samtools libboost-all-dev              velocyto (R package)
 
 RUN apt-get install --yes \
   libcurl4-openssl-dev \
@@ -42,7 +42,7 @@ RUN apt-get install --yes \
   libv8-dev \
   libgdal-dev \
   xorg libx11-dev libglu1-mesa-dev \
-  libboost-all-dev
+  samtools libboost-all-dev
 
 ##----------------------------------------------------------------------------##
 ## PYTHON PACKAGES
