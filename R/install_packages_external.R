@@ -16,11 +16,7 @@ BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
 # alternative location for R packages
 place_for_other_libraries <- "/other_R_libraries"
-
-dir.create(
-  place_for_other_libraries,
-  recursive = TRUE
-)
+dir.create(place_for_other_libraries, recursive = TRUE)
 
 # Seurat 3
 devtools::install_github(
