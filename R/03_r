@@ -7,6 +7,15 @@ ENV LC_ALL en_US.UTF-8
 
 CMD R
 
+RUN rm -rf /docker/docker_containers-master
+
+##----------------------------------------------------------------------------##
+## DOWNLOAD GITHUB REPO
+##----------------------------------------------------------------------------##
+
+ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
+RUN tar -xvzf /docker/master.tar.gz -C /docker
+
 ##----------------------------------------------------------------------------##
 ## R PACKAGES
 ##----------------------------------------------------------------------------##
