@@ -10,7 +10,7 @@ BiocManager::install("jalvesaq/colorout")
 
 BiocManager::install("romanhaa/cerebroPrepare", dependencies = FALSE)
 
-BiocManager::install("thomasp85/patchwork")
+BiocManager::install("thomasp85/patchwork", dependencies = FALSE)
 
 BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
