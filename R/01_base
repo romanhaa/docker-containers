@@ -57,6 +57,7 @@ RUN apt-get install --yes \
 # numpy scipy cython numba
 # matplotlib scikit-learn
 # h5py click pysam velocyto   velocyto
+# scvelo                      scVelo
 
 RUN pip3 install \
   umap-learn \
@@ -67,9 +68,7 @@ RUN pip3 install \
   fa2 \
   python-igraph \
   scanpy \
-  leidenalg
-
-RUN pip3 install \
+  leidenalg \
   numpy \
   scipy \
   cython \
@@ -77,13 +76,14 @@ RUN pip3 install \
   matplotlib \
   scikit-learn \
   h5py \
-  click
-
-RUN pip3 install \
+  click \
   pysam
 
 RUN pip3 install \
   velocyto
+
+RUN pip3 install \
+  scvelo
 
 ##----------------------------------------------------------------------------##
 ## (SOME) R PACKAGES
