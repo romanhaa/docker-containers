@@ -2,6 +2,8 @@
 # metacell
 BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
 
+BiocManager::install("ggjlab/scMCA")
+
 BiocManager::install("exaexa/EmbedSOM")
 
 BiocManager::install("exaexa/DiffSOM", dependencies = FALSE)
