@@ -16,7 +16,11 @@ BiocManager::install("thomasp85/patchwork", dependencies = FALSE)
 
 BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
-# alternative location for R packages
+# itertools is a dependency of loomR
+BiocManager::install("itertools")
+BiocManager::install("mojaveazure/loomR", dependencies = FALSE)
+
+# alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
 dir.create(place_for_other_libraries, recursive = TRUE)
 
