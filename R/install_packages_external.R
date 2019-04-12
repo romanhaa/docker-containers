@@ -18,7 +18,7 @@ BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
 # itertools is a dependency of loomR
 BiocManager::install("itertools")
-BiocManager::install("mojaveazure/loomR", dependencies = FALSE)
+BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)
 
 BiocManager::install("ChristophH/sctransform", ref = "develop", dependencies = FALSE)
 
