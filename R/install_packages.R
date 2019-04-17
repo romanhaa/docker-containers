@@ -31,6 +31,7 @@ packages_to_install <- c(
   "ggridges",
   "ggsignif",
   "h2o",
+  "hdf5r",
   "magrittr",
   "MetaNeighbor",
   "monocle",
