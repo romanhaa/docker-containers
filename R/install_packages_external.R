@@ -23,7 +23,7 @@ BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 BiocManager::install("itertools")
 BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)
 
-BiocManager::install("ChristophH/sctransform", ref = "develop", dependencies = FALSE)
+# BiocManager::install("ChristophH/sctransform", ref = "develop", dependencies = FALSE)
 
 # alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
