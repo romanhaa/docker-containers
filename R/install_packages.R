@@ -54,6 +54,7 @@ packages_to_install <- c(
   "scater",
   "scde",
   "scran",
+  "sctransform",
   "sessioninfo",
   "Seurat",
   "shiny",
