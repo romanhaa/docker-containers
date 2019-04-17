@@ -59,6 +59,7 @@ packages_to_install <- c(
   "shinydashboard",
   "shinyjs",
   "shinythemes",
+  "slingshot",
   "tidyverse",
   "topGO",
   "TSCAN",
