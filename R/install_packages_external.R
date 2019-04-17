@@ -14,6 +14,9 @@ BiocManager::install("romanhaa/cerebroPrepare", dependencies = FALSE)
 
 BiocManager::install("thomasp85/patchwork", dependencies = FALSE)
 
+# because version on CRAN has problems
+BiocManager::install("thomasp85/ggforce", dependencies = FALSE)
+
 BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 
 # itertools is a dependency of loomR
@@ -26,12 +29,12 @@ BiocManager::install("ChristophH/sctransform", ref = "develop", dependencies = F
 place_for_other_libraries <- "/other_R_libraries"
 dir.create(place_for_other_libraries, recursive = TRUE)
 
-# Seurat 3
-devtools::install_github(
-  repo = "satijalab/seurat",
-  ref = "release/3.0",
-  lib = place_for_other_libraries,
-  upgrade = FALSE
+# Seurat 2.3.4
+install.packages(
+  "Seurat",
+  repo = c("satijalab.org/ran/", getOption("repos")),
+  type = "binary",
+  lib = place_for_other_libraries
 )
 
 # Monocle 3
