@@ -30,12 +30,18 @@ place_for_other_libraries <- "/other_R_libraries"
 dir.create(place_for_other_libraries, recursive = TRUE)
 
 # Seurat 2.3.4
-install.packages(
+devtools::install_version(
   "Seurat",
-  repo = c("satijalab.org/ran/", getOption("repos")),
-  type = "binary",
+  version = "2.3.4",
+  repos = "http://cran.us.r-project.org"
   lib = place_for_other_libraries
 )
+# install.packages(
+#   "Seurat",
+#   repo = c("satijalab.org/ran/", getOption("repos")),
+#   type = "binary",
+#   lib = place_for_other_libraries
+# )
 
 # Monocle 3
 devtools::install_github(
