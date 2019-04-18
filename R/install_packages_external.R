@@ -33,7 +33,7 @@ dir.create(place_for_other_libraries, recursive = TRUE)
 devtools::install_version(
   "Seurat",
   version = "2.3.4",
-  repos = "http://cran.us.r-project.org"
+  repos = "http://cran.us.r-project.org",
   lib = place_for_other_libraries
 )
 # install.packages(
