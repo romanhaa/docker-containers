@@ -21,6 +21,7 @@ packages_to_install <- c(
   "future.apply",
   "GenomicFeatures",
   "GenomicRanges",
+  "gam",
   "ggalluvial",
   "gganimate",
   "ggbeeswarm",
