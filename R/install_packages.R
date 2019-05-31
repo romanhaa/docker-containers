@@ -54,6 +54,7 @@ packages_to_install <- c(
   "scales",
   "scater",
   "scde",
+  "scMerge",
   "scran",
   "sctransform",
   "sessioninfo",

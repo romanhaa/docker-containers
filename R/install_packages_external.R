@@ -36,12 +36,6 @@ devtools::install_version(
   repos = "http://cran.us.r-project.org",
   lib = place_for_other_libraries
 )
-# install.packages(
-#   "Seurat",
-#   repo = c("satijalab.org/ran/", getOption("repos")),
-#   type = "binary",
-#   lib = place_for_other_libraries
-# )
 
 # Monocle 3
 devtools::install_github(

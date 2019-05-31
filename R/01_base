@@ -1,4 +1,4 @@
-FROM r-base:3.5.2
+FROM r-base:3.6.0
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
