@@ -1,6 +1,6 @@
 
 # metacell
-BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = FALSE, update = TRUE)
+BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = TRUE)
 
 BiocManager::install("ggjlab/scMCA", dependencies = FALSE, update = TRUE)
 
