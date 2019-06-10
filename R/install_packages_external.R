@@ -1,29 +1,30 @@
 
 # metacell
-BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = FALSE)
+BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", update = FALSE, update = TRUE)
 
-BiocManager::install("ggjlab/scMCA", dependencies = FALSE)
+BiocManager::install("ggjlab/scMCA", dependencies = FALSE, update = TRUE)
 
 BiocManager::install("exaexa/EmbedSOM")
 
-BiocManager::install("exaexa/DiffSOM", dependencies = FALSE)
+BiocManager::install("exaexa/DiffSOM", dependencies = FALSE, update = TRUE)
 
 BiocManager::install("jalvesaq/colorout")
 
-BiocManager::install("romanhaa/cerebroPrepare", dependencies = FALSE)
+BiocManager::install("romanhaa/cerebroPrepare", dependencies = FALSE, update = TRUE)
 
-BiocManager::install("thomasp85/patchwork", dependencies = FALSE)
+BiocManager::install("thomasp85/patchwork", dependencies = FALSE, update = TRUE)
 
 # because version on CRAN has problems
-BiocManager::install("thomasp85/ggforce", dependencies = FALSE)
+BiocManager::install("thomasp85/ggforce", dependencies = FALSE, update = TRUE)
 
-BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
+BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE, update = TRUE)
 
 # itertools is a dependency of loomR
-BiocManager::install("itertools")
-BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)
+BiocManager::install("itertools", update = TRUE)
+BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE, update = TRUE)
 
-# BiocManager::install("ChristophH/sctransform", ref = "develop", dependencies = FALSE)
+# cowplot 1.0
+BiocManager::install("wilkelab/cowplot", update = TRUE)
 
 # alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
