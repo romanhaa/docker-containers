@@ -28,6 +28,7 @@ packages_to_install <- c(
   "ggbio",
   "ggdendro",
   "ggExtra",
+  "ggforce",
   "ggrepel",
   "ggridges",
   "ggsignif",
@@ -81,5 +82,5 @@ packages_to_install <- c(
 install.packages("BiocManager", repos = "http://cran.us.r-project.org")
 
 # install list of packages
-BiocManager::install(packages_to_install)
+BiocManager::install(packages_to_install, update = TRUE, ask = FALSE)
 # pak::pkg_install(packages_to_install, ask = FALSE)
