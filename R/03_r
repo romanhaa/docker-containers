@@ -1,4 +1,4 @@
-FROM romanhaa/r_github:2019-05-31_r_step_one
+FROM romanhaa/r_github:2019-06-11_r_step_one
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
