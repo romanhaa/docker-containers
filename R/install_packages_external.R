@@ -14,8 +14,9 @@ BiocManager::install("velocyto-team/velocyto.R", dependencies = FALSE)
 # itertools is a dependency of loomR
 BiocManager::install("itertools", update = TRUE)
 BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)
-# cowplot 1.0
+# cowplot 1.0 (not on CRAN yet)
 BiocManager::install("wilkelab/cowplot")
+BiocManager::install("cole-trapnell-lab/monocle3")
 
 # alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
@@ -28,23 +29,3 @@ devtools::install_version(
   repos = "http://cran.us.r-project.org",
   lib = place_for_other_libraries
 )
-
-# Monocle 3
-devtools::install_github(
-  "cole-trapnell-lab/DDRTree",
-  ref = "simple-ppt-like",
-  lib = place_for_other_libraries,
-  upgrade = FALSE
-)
-devtools::install_github(
-  "cole-trapnell-lab/L1-graph",
-  lib = place_for_other_libraries,
-  upgrade = FALSE
-)
-devtools::install_github(
-  "cole-trapnell-lab/monocle-release",
-  ref = "monocle3_alpha",
-  lib = place_for_other_libraries,
-  upgrade = FALSE
-)
-
