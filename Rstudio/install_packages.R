@@ -8,10 +8,10 @@ install_packages <- function(packages) {
     } else {
       name <- i
     }
-    if ( suppressWarnings(require(name, character.only = TRUE, quietly = TRUE)) == FALSE ) {
+    if ( (name %in% library()$results[,1] ) == FALSE ) {
       message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' will be installed."))
       BiocManager::install(i, update = TRUE, ask = FALSE, quiet = TRUE)
-      if ( require(name, character.only = TRUE, quietly = TRUE) == FALSE ) {
+      if ( (name %in% library()$results[,1] ) == FALSE ) {
         message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' installation failed."))
         stop()
       } else {
