@@ -1,6 +1,29 @@
 # install BiocManager
 install.packages("BiocManager", repos = "http://cran.us.r-project.org")
 
+install_packages <- function(packages) {
+  for ( i in packages ) {
+    if ( grepl(i, pattern = "/") ) {
+      name <- strsplit(i, split = "/")[[1]][2]
+    } else {
+      name <- i
+    }
+    if ( suppressWarnings(require(name, character.only = TRUE, quietly = TRUE)) == FALSE ) {
+      message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' will be installed."))
+      BiocManager::install(i, update = TRUE, ask = FALSE, quiet = TRUE)
+      if ( require(name, character.only = TRUE, quietly = TRUE) == FALSE ) {
+        message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' installation failed."))
+        stop()
+      } else {
+        message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' successfully installed."))
+      }
+    } else {
+      message(paste0("[", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "] '", i, "' already installed."))
+    }
+  }
+}
+
+# packages for first round of installation
 packages_to_install <- c(
   "alluvial",
   "beeswarm",
@@ -44,7 +67,6 @@ packages_to_install <- c(
   "msigdbr",
   "org.Hs.eg.db",
   "org.Mm.eg.db",
-  "pandoc",
   "phateR",
   "pheatmap",
   "phylogram",
@@ -80,33 +102,32 @@ packages_to_install <- c(
   "VennDiagram",
   "viridis",
   "XML",
-  "xml2"
-)
-
-# install list of packages
-BiocManager::install(packages_to_install, update = TRUE, ask = FALSE)
-# pak::pkg_install(packages_to_install, ask = FALSE)
-
-# metacell
-BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo")
-
-external_packages_to_install <- c(
+  "xml2",
   "cole-trapnell-lab/garnett",
   "cole-trapnell-lab/monocle3",
   "dviraran/SingleR",
-  "exaexa/DiffSOM",
   "exaexa/EmbedSOM",
   "ggjlab/scMCA",
   "jalvesaq/colorout",
   "romanhaa/cerebroApp",
   "romanhaa/cerebroPrepare",
-  "thomasp85/patchwork",
   "velocyto-team/velocyto.R",
-  "itertools",
-  "wilkelab/cowplot"
+  "itertools"
 )
 
-BiocManager::install(external_packages_to_install, update = TRUE, ask = FALSE)
+install_packages(packages_to_install)
+
+# update not on CRAN yet
+BiocManager::install("thomasp85/patchwork", update = TRUE, ask = FALSE, force = TRUE)
+
+# official update not on CRAN yet
+BiocManager::install("wilkelab/cowplot", update = TRUE, ask = FALSE, force = TRUE)
+
+# needs EmbedSOM installed before
+BiocManager::install("exaexa/DiffSOM", update = TRUE, ask = FALSE)
+
+# metacell
+BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo")
 
 # itertools is a dependency of loomR
 BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)

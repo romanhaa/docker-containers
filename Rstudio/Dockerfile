@@ -6,7 +6,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 ##----------------------------------------------------------------------------##
-## SYSTEM PACKAGES
+## update and install system packages
 ##----------------------------------------------------------------------------##
 
 RUN apt-get update --yes && \
@@ -18,6 +18,7 @@ RUN apt-get install --yes \
   python3-dev \
   python3-pip \
   python3-tk \
+  pandoc \
   libcurl4-openssl-dev \
   libssl-dev \
   libcairo2-dev libxt-dev \
@@ -28,7 +29,8 @@ RUN apt-get install --yes \
   libgdal-dev \
   xorg libx11-dev libglu1-mesa-dev \
   samtools libboost-all-dev \
-  libgsl-dev
+  libgsl-dev \
+  libbz2-dev
 
 # libcurl4-openssl-dev                   curl and RCurl (R package)
 # libssl-dev                             openssl (R package)
@@ -41,9 +43,34 @@ RUN apt-get install --yes \
 # xorg, libx11-dev, libglu1-mesa-dev     Monocle 3 (R package)
 # samtools libboost-all-dev              velocyto (R package)
 # libgsl-dev                             gsl -> slingshot (R package)
+# libbz2-dev                             Rsamtools (R package)
 
 ##----------------------------------------------------------------------------##
-## PYTHON PACKAGES
+## install conda to install Python 3.7 afterwards
+##----------------------------------------------------------------------------##
+
+RUN cd / && \
+  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+  bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
+
+##----------------------------------------------------------------------------##
+## make Python 3.7 default because velocyto requires at least Python 3.6
+## - set 'python' command to call Python 2.7
+## - set 'python3' command to call Python 3.7
+## - rm lsb_release because it prevents pip3 from working properly
+##----------------------------------------------------------------------------##
+
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
+  update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2 && \
+  python --version && \
+  python3 --version && \
+  rm /usr/bin/lsb_release
+
+##----------------------------------------------------------------------------##
+## install Python packages
+## - velocyto is installed in a second run because it doesn't automatically
+##   install its dependencies before
+## - similarly, scvelo requires velocyto
 ##----------------------------------------------------------------------------##
 
 # umap-learn                  UMAP
@@ -58,7 +85,7 @@ RUN apt-get install --yes \
 # scvelo                      scVelo
 # jupyter                     jupyter
 
-RUN pip3 install \
+RUN python3 -m pip install \
   umap-learn \
   louvain \
   phate \
@@ -70,33 +97,30 @@ RUN pip3 install \
   leidenalg \
   numpy \
   scipy \
-  cython \
+  Cython \
   numba \
   matplotlib \
   scikit-learn \
   h5py \
   click \
   pysam \
-  jupyter \
+  jupyter
+
+RUN python3 -m pip install \
+  "scipy!=1.3.0,>=1.0" \
+  "pandas<0.24,>=0.19.0" \
   velocyto \
   scvelo
 
 ##----------------------------------------------------------------------------##
-## (SOME) R PACKAGES
-##----------------------------------------------------------------------------##
-
-RUN Rscript -e 'install.packages("pak", repos = "http://cran.us.r-project.org")'
-RUN Rscript -e 'pak::pkg_install(c("tidyverse","Seurat"), ask = FALSE)'
-
-##----------------------------------------------------------------------------##
-## DOWNLOAD GITHUB REPO
+## download GitHub repo
 ##----------------------------------------------------------------------------##
 
 ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 RUN tar -xvzf /docker/master.tar.gz -C /docker
 
 ##----------------------------------------------------------------------------##
-## R PACKAGES
+## install R packages
 ##----------------------------------------------------------------------------##
 
-RUN Rscript /docker/docker_containers-master/R/install_packages.R
+RUN Rscript /docker/docker_containers-master/Rstudio/install_packages.R
