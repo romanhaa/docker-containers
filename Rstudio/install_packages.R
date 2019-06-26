@@ -118,19 +118,19 @@ packages_to_install <- c(
 install_packages(packages_to_install)
 
 # update not on CRAN yet
-BiocManager::install("thomasp85/patchwork", update = TRUE, ask = FALSE, force = TRUE)
+BiocManager::install("thomasp85/patchwork", update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # official update not on CRAN yet
-BiocManager::install("wilkelab/cowplot", update = TRUE, ask = FALSE, force = TRUE)
+BiocManager::install("wilkelab/cowplot", update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # needs EmbedSOM installed before
-BiocManager::install("exaexa/DiffSOM", update = TRUE, ask = FALSE)
+BiocManager::install("exaexa/DiffSOM", update = TRUE, ask = FALSE, quiet = TRUE)
 
 # metacell
-BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo")
+BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo", quiet = TRUE)
 
 # itertools is a dependency of loomR
-BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE)
+BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE, quiet = TRUE)
 
 # alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
@@ -141,5 +141,6 @@ devtools::install_version(
   "Seurat",
   version = "2.3.4",
   repos = "http://cran.us.r-project.org",
-  lib = place_for_other_libraries
+  lib = place_for_other_libraries,
+  quiet = TRUE
 )
