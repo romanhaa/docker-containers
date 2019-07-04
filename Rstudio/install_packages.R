@@ -26,6 +26,7 @@ install_packages <- function(packages) {
 # packages for first round of installation
 packages_to_install <- c(
   "alluvial",
+  "batchelor",
   "beeswarm",
   "biomaRt",
   "cellranger",
