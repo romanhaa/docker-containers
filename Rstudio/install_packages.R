@@ -60,6 +60,7 @@ packages_to_install <- c(
   "ggrepel",
   "ggridges",
   "ggsignif",
+  "gProfileR",
   "h2o",
   "hdf5r",
   "magrittr",

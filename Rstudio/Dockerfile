@@ -9,28 +9,28 @@ ENV LC_ALL en_US.UTF-8
 ## update and install system packages
 ##----------------------------------------------------------------------------##
 
-RUN apt-get update --yes && \
-  apt-get upgrade --yes
-
-RUN apt-get install --yes \
-  python-dev \
-  python-pip \
-  python3-dev \
-  python3-pip \
-  python3-tk \
-  pandoc \
-  libcurl4-openssl-dev \
-  libssl-dev \
-  libcairo2-dev libxt-dev \
-  libxml2-dev \
-  libudunits2-dev \
-  libhdf5-dev \
-  libv8-dev \
-  libgdal-dev \
-  xorg libx11-dev libglu1-mesa-dev \
-  samtools libboost-all-dev \
-  libgsl-dev \
-  libbz2-dev
+RUN apt-get update --yes \
+ && apt-get upgrade --yes \
+ && apt-get install --yes \
+    python-dev \
+    python-pip \
+    python3-dev \
+    python3-pip \
+    python3-tk \
+    pandoc \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libcairo2-dev libxt-dev \
+    libxml2-dev \
+    libudunits2-dev \
+    libhdf5-dev \
+    libv8-dev \
+    libgdal-dev \
+    xorg libx11-dev libglu1-mesa-dev \
+    samtools libboost-all-dev \
+    libgsl-dev \
+    libbz2-dev \
+ && rm -rf /var/lib/apt/lists/*
 
 # libcurl4-openssl-dev                   curl and RCurl (R package)
 # libssl-dev                             openssl (R package)
@@ -60,11 +60,11 @@ RUN cd / && \
 ## - rm lsb_release because it prevents pip3 from working properly
 ##----------------------------------------------------------------------------##
 
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 && \
-  update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2 && \
-  python --version && \
-  python3 --version && \
-  rm /usr/bin/lsb_release
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 \
+ && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2 \
+ && python --version \
+ && python3 --version \
+ && rm /usr/bin/lsb_release
 
 ##----------------------------------------------------------------------------##
 ## install Python packages
@@ -86,31 +86,31 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 &&
 # jupyter                     jupyter
 
 RUN python3 -m pip install \
-  umap-learn \
-  louvain \
-  phate \
-  tensorflow \
-  dca \
-  fa2 \
-  python-igraph \
-  scanpy \
-  leidenalg \
-  numpy \
-  scipy \
-  Cython \
-  numba \
-  matplotlib \
-  scikit-learn \
-  h5py \
-  click \
-  pysam \
-  jupyter
+    umap-learn \
+    louvain \
+    phate \
+    tensorflow \
+    dca \
+    fa2 \
+    python-igraph \
+    scanpy \
+    leidenalg \
+    numpy \
+    scipy \
+    Cython \
+    numba \
+    matplotlib \
+    scikit-learn \
+    h5py \
+    click \
+    pysam \
+    jupyter
 
 RUN python3 -m pip install \
-  "scipy!=1.3.0,>=1.0" \
-  "pandas<0.24,>=0.19.0" \
-  velocyto \
-  scvelo
+    "scipy!=1.3.0,>=1.0" \
+    "pandas<0.24,>=0.19.0" \
+    velocyto \
+    scvelo
 
 ##----------------------------------------------------------------------------##
 ## download GitHub repo
