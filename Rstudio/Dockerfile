@@ -49,9 +49,9 @@ RUN apt-get update --yes \
 ## install conda to install Python 3.7 afterwards
 ##----------------------------------------------------------------------------##
 
-RUN cd / && \
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-  bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
+RUN cd / \
+ && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+ && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
 
 ##----------------------------------------------------------------------------##
 ## make Python 3.7 default because velocyto requires at least Python 3.6
