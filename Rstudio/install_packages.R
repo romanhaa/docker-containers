@@ -96,6 +96,7 @@ packages_to_install <- c(
   "shinyjs",
   "shinythemes",
   "slingshot",
+  "tensorflow",
   "tidyverse",
   "topGO",
   "TSCAN",
@@ -135,6 +136,10 @@ BiocManager::install("metacell", site_repository = "tanaylab.bitbucket.io/repo",
 
 # itertools is a dependency of loomR
 BiocManager::install("mojaveazure/loomR", ref = "develop", dependencies = FALSE, quiet = TRUE)
+
+# install tensorflow
+tensorflow::install_tensorflow()
+BiocManager::install("Irrationone/cellassign", update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # alternative location for R packagesq
 place_for_other_libraries <- "/other_R_libraries"
