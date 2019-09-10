@@ -96,7 +96,6 @@ packages_to_install <- c(
   "shinydashboard",
   "shinyjs",
   "shinythemes",
-  "SingleR",
   "slingshot",
   "tensorflow",
   "tidyverse",
@@ -154,3 +153,7 @@ devtools::install_version(
   lib = place_for_other_libraries,
   quiet = TRUE
 )
+
+# SingleR
+BiocManager::install(version = 'devel')
+BiocManager::install("SingleR")
