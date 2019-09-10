@@ -57,6 +57,7 @@ packages_to_install <- c(
   "ggExtra",
   "ggforce",
   "ggpubr",
+  "ggraph",
   "ggrepel",
   "ggridges",
   "ggsignif",
