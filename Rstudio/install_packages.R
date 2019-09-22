@@ -23,6 +23,7 @@ install_packages <- function(packages) {
   }
 }
 
+install_packages(c('devtools'))
 install_packages(c('satijalab/seurat-wrappers'))
 
 # packages for first round of installation
