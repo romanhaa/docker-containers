@@ -24,7 +24,7 @@ install_packages <- function(packages) {
 }
 
 BiocManager::install('devtools')
-install_packages(c('satijalab/seurat-wrappers'))
+BiocManager::install('satijalab/seurat-wrappers')
 
 # packages for first round of installation
 packages_to_install <- c(
