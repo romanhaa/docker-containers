@@ -23,6 +23,8 @@ install_packages <- function(packages) {
   }
 }
 
+install_packages(c('satijalab/seurat-wrappers'))
+
 # packages for first round of installation
 packages_to_install <- c(
   'alluvial',
