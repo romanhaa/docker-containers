@@ -51,7 +51,8 @@ RUN apt-get update --yes \
 
 RUN cd / \
  && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
- && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
+ && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3 \
+ && export PATH=$PATH:/miniconda3/bin
 
 ##----------------------------------------------------------------------------##
 ## make Python 3.7 default because velocyto requires at least Python 3.6
@@ -107,8 +108,9 @@ RUN python3 -m pip install \
     jupyter
 
 RUN python3 -m pip install \
-    "scipy!=1.3.0,>=1.0" \
+    "matplotlib>=3.0,<3.1" \
     "pandas<0.24,>=0.19.0" \
+    "scipy!=1.3.0,>=1.0" \
     velocyto \
     scvelo
 
