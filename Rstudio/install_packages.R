@@ -116,6 +116,7 @@ packages_to_install <- c(
   'jalvesaq/colorout',
   'romanhaa/cerebroApp',
   'romanhaa/cerebroPrepare',
+  'satijalab/seurat-wrappers',
   'velocyto-team/velocyto.R',
   'itertools'
 )
