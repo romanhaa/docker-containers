@@ -23,9 +23,6 @@ install_packages <- function(packages) {
   }
 }
 
-BiocManager::install('devtools')
-BiocManager::install('satijalab/seurat-wrappers')
-
 # packages for first round of installation
 packages_to_install <- c(
   'alluvial',
@@ -37,6 +34,7 @@ packages_to_install <- c(
   'circlize',
   'clusterProfiler',
   'ComplexHeatmap',
+  'cowplot',
   'concaveman',
   'DelayedArray',
   'DelayedMatrixStats',
@@ -48,6 +46,7 @@ packages_to_install <- c(
   'DT',
   'enrichR',
   'FlowSOM',
+  'foreign',
   'future.apply',
   'GenomicFeatures',
   'GenomicRanges',
@@ -69,6 +68,7 @@ packages_to_install <- c(
   'gprofiler2',
   'h2o',
   'hdf5r',
+  'lwgeom',
   'magrittr',
   'MetaNeighbor',
   'monocle',
@@ -82,6 +82,7 @@ packages_to_install <- c(
   'RColorBrewer',
   'reshape2',
   'reticulate',
+  'rgdal',
   'Rmagic',
   'roxygen2',
   'Rsamtools',
@@ -99,7 +100,9 @@ packages_to_install <- c(
   'shinydashboard',
   'shinyjs',
   'shinythemes',
+  'sf',
   'slingshot',
+  'stringi',
   'tensorflow',
   'tidyverse',
   'topGO',
@@ -117,8 +120,7 @@ packages_to_install <- c(
   'exaexa/EmbedSOM',
   'ggjlab/scMCA',
   'jalvesaq/colorout',
-  'romanhaa/cerebroApp',
-  'romanhaa/cerebroPrepare',
+  'romanhaa/cerebroApp@merge_packages',
   'satijalab/seurat-wrappers',
   'velocyto-team/velocyto.R',
   'itertools'
@@ -126,11 +128,10 @@ packages_to_install <- c(
 
 install_packages(packages_to_install)
 
+devtools::install_github('satijalab/seurat-wrappers')
+
 # update not on CRAN yet
 BiocManager::install('thomasp85/patchwork', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
-
-# official update not on CRAN yet
-BiocManager::install('wilkelab/cowplot', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # needs EmbedSOM installed before
 BiocManager::install('exaexa/DiffSOM', update = TRUE, ask = FALSE, quiet = TRUE)
