@@ -120,6 +120,7 @@ packages_to_install <- c(
   'exaexa/EmbedSOM',
   'ggjlab/scMCA',
   'jalvesaq/colorout',
+  'krlmlr/ulimit',
   'romanhaa/cerebroApp@merge_packages',
   'satijalab/seurat-wrappers',
   'velocyto-team/velocyto.R',
