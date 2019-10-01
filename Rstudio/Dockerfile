@@ -129,5 +129,5 @@ RUN tar -xvzf /docker/master.tar.gz -C /docker
 # install BiocManager first, then some other (big) packages
 # this helps when a new package is added to the list of packages to install so one doesn't have to start from scratch
 RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
-RUN Rscript -e 'BiocManager::install(c("remotes","devtools","DiffBind","monocle","Seurat","tidyverse"), update = TRUE, ask = FALSE)'
+RUN Rscript -e 'BiocManager::install(c("remotes","devtools","ChIPseeker","destiny","DiffBind","monocle","Seurat","tidyverse"), update = TRUE, ask = FALSE, quiet = TRUE)'
 RUN Rscript /docker/docker_containers-master/Rstudio/install_packages.R
