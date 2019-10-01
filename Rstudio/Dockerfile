@@ -105,7 +105,8 @@ RUN python3 -m pip install \
     h5py \
     click \
     pysam \
-    jupyter
+    jupyter \
+    deeptools
 
 RUN python3 -m pip install \
     "matplotlib>=3.0,<3.1" \
