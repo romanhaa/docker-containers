@@ -135,9 +135,6 @@ BiocManager::install('romanhaa/cerebroApp@develop', update = TRUE, ask = FALSE, 
 # update not on CRAN yet
 BiocManager::install('thomasp85/patchwork', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
-# needs EmbedSOM installed before
-BiocManager::install('exaexa/DiffSOM', update = TRUE, ask = FALSE, quiet = TRUE)
-
 # metacell
 BiocManager::install('metacell', site_repository = 'tanaylab.bitbucket.io/repo', quiet = TRUE)
 
