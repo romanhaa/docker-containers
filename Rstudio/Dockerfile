@@ -21,9 +21,9 @@ ENV LC_ALL en_US.UTF-8
 ## libgsl-dev                             gsl -> slingshot (R package)
 ## libbz2-dev                             Rsamtools (R package)
 ##----------------------------------------------------------------------------##
-RUN apt-get update --yes \
- && apt-get upgrade --yes \
- && apt-get install --yes \
+RUN apt-get --quiet update --yes \
+ && apt-get --quiet upgrade --yes \
+ && apt-get --quiet install --yes \
     python-dev \
     python-pip \
     python3-dev \
@@ -48,7 +48,7 @@ RUN apt-get update --yes \
 ## install conda to install Python 3.7 afterwards
 ##----------------------------------------------------------------------------##
 RUN cd / \
- && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+ && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
 ENV PATH "$PATH:/miniconda3/bin"
 
