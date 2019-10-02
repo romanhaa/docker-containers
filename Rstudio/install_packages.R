@@ -120,13 +120,13 @@ packages_to_install <- c(
   'ggjlab/scMCA',
   'jalvesaq/colorout',
   'krlmlr/ulimit',
-  'satijalab/seurat-wrappers',
   'velocyto-team/velocyto.R',
   'itertools'
 )
 
 install_packages(packages_to_install)
 
+BiocManager::install('satijalab/seurat-wrappers', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 BiocManager::install('romanhaa/cerebroApp@develop', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # update not on CRAN yet
