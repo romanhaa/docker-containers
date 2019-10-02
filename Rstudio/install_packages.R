@@ -126,6 +126,9 @@ packages_to_install <- c(
 
 install_packages(packages_to_install)
 
+# both of these packages have problems with the install_packages() function
+# because after (successful) installation, the package is not found due to the
+# different names of the packages
 BiocManager::install('satijalab/seurat-wrappers', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 BiocManager::install('romanhaa/cerebroApp@develop', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
