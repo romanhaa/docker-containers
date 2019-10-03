@@ -4,7 +4,12 @@ install.packages('BiocManager', repos = 'http://cran.us.r-project.org')
 install_packages <- function(packages) {
   for ( i in packages ) {
     if ( grepl(i, pattern = '/') ) {
-      name <- strsplit(i, split = '/')[[1]][2]
+      if ( grepl(i, pattern = '@') ) {
+        name <- strsplit(i, split = '/')[[1]][2]
+        name <- strsplit(name, split = '@')[[1]][1]
+      } else {
+        name <- strsplit(i, split = '/')[[1]][2]
+      }
     } else {
       name <- i
     }
