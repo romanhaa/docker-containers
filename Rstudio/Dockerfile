@@ -42,6 +42,7 @@ RUN apt-get --quiet update --yes \
     samtools libboost-all-dev \
     libgsl-dev \
     libbz2-dev \
+    less \
  && rm -rf /var/lib/apt/lists/*
 
 ##----------------------------------------------------------------------------##
@@ -88,30 +89,30 @@ RUN conda install --quiet --yes -c bioconda deeptools
 ## jupyter                     jupyter
 ##----------------------------------------------------------------------------##
 RUN python3 -m pip install \
-    umap-learn \
-    louvain \
-    phate \
-    tensorflow \
+    click \
+    Cython \
     dca \
     fa2 \
+    "gast<0.3,>=0.2" \
+    h5py \
+    leidenalg \
+    louvain \
+    numba \
+    numpy \
+    "numpydoc>=0.5" \
+    "matplotlib>=3.0,<3.1" \
+    "pandas<0.24,>=0.19.0" \
+    phate \
+    pysam \
     python-igraph \
     scanpy \
-    leidenalg \
-    numpy \
-    scipy \
-    Cython \
-    numba \
-    matplotlib \
     scikit-learn \
-    h5py \
-    click \
-    pysam \
+    "scipy!=1.3.0,>=1.0" \
+    tensorflow \
+    umap-learn \
     jupyter
 
 RUN python3 -m pip install \
-    "matplotlib>=3.0,<3.1" \
-    "pandas<0.24,>=0.19.0" \
-    "scipy!=1.3.0,>=1.0" \
     velocyto \
     scvelo
 
