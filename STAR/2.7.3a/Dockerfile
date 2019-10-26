@@ -1,8 +1,8 @@
 FROM ubuntu:19.04
 
-RUN apt update --yes && \
-  apt upgrade --yes && \
-  apt install --yes \
+RUN apt-get update --yes && \
+  apt-get upgrade --yes && \
+  apt-get install --yes \
   build-essential \
   libz-dev \
   wget
