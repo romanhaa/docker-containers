@@ -48,6 +48,7 @@ packages_to_install <- c(
   'devtools',
   'DiffBind',
   'diffusionMap',
+  'DropletUtils',
   'DT',
   'enrichR',
   'FlowSOM',
@@ -128,7 +129,8 @@ packages_to_install <- c(
   'jalvesaq/colorout',
   'krlmlr/ulimit',
   'velocyto-team/velocyto.R',
-  'itertools'
+  'itertools',
+  'BUStools/BUSpaRse'
 )
 
 install_packages(packages_to_install)
@@ -137,7 +139,7 @@ install_packages(packages_to_install)
 # because after (successful) installation, the package is not found due to the
 # different names of the packages
 BiocManager::install('satijalab/seurat-wrappers', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
-BiocManager::install('romanhaa/cerebroApp@develop', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
+BiocManager::install('romanhaa/cerebroApp', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # update not on CRAN yet
 BiocManager::install('thomasp85/patchwork', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
