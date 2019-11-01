@@ -106,6 +106,7 @@ packages_to_install <- c(
   'shinydashboard',
   'shinyjs',
   'shinythemes',
+  'SingleR',
   'sf',
   'slingshot',
   'stringi',
@@ -151,7 +152,7 @@ BiocManager::install('metacell', site_repository = 'tanaylab.bitbucket.io/repo',
 BiocManager::install('mojaveazure/loomR', ref = 'develop', dependencies = FALSE, quiet = TRUE)
 
 # install tensorflow
-tensorflow::install_tensorflow()
+tensorflow::install_tensorflow(extra_packages = 'tensorflow-probability')
 BiocManager::install('Irrationone/cellassign', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # alternative location for R packagesq
@@ -166,7 +167,3 @@ devtools::install_version(
   lib = place_for_other_libraries,
   quiet = TRUE
 )
-
-# SingleR
-BiocManager::install(version = 'devel', ask = FALSE, update = FALSE)
-BiocManager::install('SingleR')

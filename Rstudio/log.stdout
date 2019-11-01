@@ -2,32 +2,32 @@ Sending build context to Docker daemon   12.8kB
 Step 1/17 : FROM rocker/rstudio:3.6.1
  ---> 88cd344dad13
 Step 2/17 : ENV DEBIAN_FRONTEND noninteractive
- ---> Running in 09b5bd54efa9
-Removing intermediate container 09b5bd54efa9
- ---> cc23d99edeb1
+ ---> Running in a3b960ea8db8
+Removing intermediate container a3b960ea8db8
+ ---> 18cd5c39354c
 Step 3/17 : ENV LANG en_US.UTF-8
- ---> Running in 2fed0c95bc30
-Removing intermediate container 2fed0c95bc30
- ---> c7f56d868fcc
+ ---> Running in 730c1899fc57
+Removing intermediate container 730c1899fc57
+ ---> 54c27149d2ea
 Step 4/17 : ENV LANGUAGE en_US:en
- ---> Running in 8412aa82d089
-Removing intermediate container 8412aa82d089
- ---> d341275a0d39
+ ---> Running in aaee33fa7c2a
+Removing intermediate container aaee33fa7c2a
+ ---> 202a2d5d1d40
 Step 5/17 : ENV LC_ALL en_US.UTF-8
- ---> Running in f7d469e6770d
-Removing intermediate container f7d469e6770d
- ---> 01698d91599e
+ ---> Running in 8291559c7270
+Removing intermediate container 8291559c7270
+ ---> 3ec097fafc71
 Step 6/17 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg libx11-dev libglu1-mesa-dev     samtools libboost-all-dev     libgsl-dev     libbz2-dev     less  && rm -rf /var/lib/apt/lists/*
- ---> Running in 52aba32b42c0
-Ign:1 http://cdn-fastly.deb.debian.org/debian stretch InRelease
-Get:2 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:3 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2,365 B]
-Get:4 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+ ---> Running in 88e3474d7746
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Ign:2 http://cdn-fastly.deb.debian.org/debian stretch InRelease
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:4 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [501 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
 Get:6 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [27.4 kB]
-Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7,086 kB]
-Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [501 kB]
-Fetched 7,920 kB in 8s (963 kB/s)
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2,365 B]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7,086 kB]
+Fetched 7,920 kB in 25s (314 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -40,26 +40,26 @@ The following packages will be upgraded:
 18 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 Need to get 10.0 MB of archives.
 After this operation, 24.6 kB of additional disk space will be used.
-Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 base-files amd64 9.9+deb9u11 [67.5 kB]
-Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsystemd0 amd64 232-25+deb9u12 [282 kB]
-Get:5 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fslibs amd64 1.43.4-2+deb9u1 [208 kB]
-Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libudev1 amd64 232-25+deb9u12 [126 kB]
-Get:6 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fsprogs amd64 1.43.4-2+deb9u1 [947 kB]
-Get:4 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 tzdata all 2019c-0+deb9u1 [276 kB]
-Get:7 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libcomerr2 amd64 1.43.4-2+deb9u1 [63.5 kB]
-Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libss2 amd64 1.43.4-2+deb9u1 [67.8 kB]
-Get:9 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.0.2 amd64 1.0.2t-1~deb9u1 [1,304 kB]
-Get:10 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl-dev amd64 1.1.0l-1~deb9u1 [1,594 kB]
-Get:11 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.1 amd64 1.1.0l-1~deb9u1 [1,358 kB]
-Get:12 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 file amd64 1:5.30-1+deb9u3 [64.2 kB]
-Get:13 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic1 amd64 1:5.30-1+deb9u3 [111 kB]
-Get:14 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic-mgc amd64 1:5.30-1+deb9u3 [222 kB]
-Get:15 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1 amd64 2.2.0-2+deb9u3 [83.7 kB]
-Get:16 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u1 [1,446 kB]
-Get:17 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 openssl amd64 1.1.0l-1~deb9u1 [749 kB]
-Get:18 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 sudo amd64 1.8.19p1-2.1+deb9u1 [1,054 kB]
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fslibs amd64 1.43.4-2+deb9u1 [208 kB]
+Get:15 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 base-files amd64 9.9+deb9u11 [67.5 kB]
+Get:2 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fsprogs amd64 1.43.4-2+deb9u1 [947 kB]
+Get:16 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsystemd0 amd64 232-25+deb9u12 [282 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libudev1 amd64 232-25+deb9u12 [126 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 tzdata all 2019c-0+deb9u1 [276 kB]
+Get:3 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libcomerr2 amd64 1.43.4-2+deb9u1 [63.5 kB]
+Get:4 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libss2 amd64 1.43.4-2+deb9u1 [67.8 kB]
+Get:5 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.0.2 amd64 1.0.2t-1~deb9u1 [1,304 kB]
+Get:6 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl-dev amd64 1.1.0l-1~deb9u1 [1,594 kB]
+Get:7 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.1 amd64 1.1.0l-1~deb9u1 [1,358 kB]
+Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 file amd64 1:5.30-1+deb9u3 [64.2 kB]
+Get:9 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic1 amd64 1:5.30-1+deb9u3 [111 kB]
+Get:10 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic-mgc amd64 1:5.30-1+deb9u3 [222 kB]
+Get:11 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1 amd64 2.2.0-2+deb9u3 [83.7 kB]
+Get:12 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u1 [1,446 kB]
+Get:13 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 openssl amd64 1.1.0l-1~deb9u1 [749 kB]
+Get:14 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 sudo amd64 1.8.19p1-2.1+deb9u1 [1,054 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 10.0 MB in 14s (710 kB/s)
+[0mFetched 10.0 MB in 14s (702 kB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19951 files and directories currently installed.)
 Preparing to unpack .../base-files_9.9+deb9u11_amd64.deb ...
 Unpacking base-files (9.9+deb9u11) over (9.9+deb9u9) ...
@@ -117,8 +117,8 @@ Setting up sudo (1.8.19p1-2.1+deb9u1) ...
 Setting up tzdata (2019c-0+deb9u1) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Fri Nov  1 09:19:23 UTC 2019.
-Universal Time is now:  Fri Nov  1 09:19:23 UTC 2019.
+Local time is now:      Fri Nov  1 11:21:08 UTC 2019.
+Universal Time is now:  Fri Nov  1 11:21:08 UTC 2019.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 Setting up linux-libc-dev:amd64 (4.9.189-3+deb9u1) ...
@@ -382,28 +382,28 @@ The following NEW packages will be installed:
 0 upgraded, 481 newly installed, 0 to remove and 0 not upgraded.
 Need to get 265 MB of archives.
 After this operation, 1,079 MB of additional disk space will be used.
-Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 dmsetup amd64 2:1.02.137-2 [107 kB]
-Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libdevmapper1.02.1 amd64 2:1.02.137-2 [170 kB]
-Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcryptsetup4 amd64 2:1.7.3-4 [109 kB]
-Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libip4tc0 amd64 1.6.0+snapshot20161117-6 [67.8 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libkmod2 amd64 23-2 [48.1 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libseccomp2 amd64 2.3.1-2.1+deb9u1 [40.7 kB]
-Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 systemd amd64 232-25+deb9u12 [2,469 kB]
-Get:22 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1-dev amd64 2.2.0-2+deb9u3 [134 kB]
-Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 udev amd64 232-25+deb9u12 [1,113 kB]
-Get:9 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 groff-base amd64 1.22.3-9 [1,160 kB]
-Get:10 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 bsdmainutils amd64 9.0.12+nmu1 [186 kB]
-Get:11 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpipeline1 amd64 1.4.1-2 [27.6 kB]
-Get:12 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 man-db amd64 2.7.6.1-2 [1,044 kB]
-Get:13 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 liblocale-gettext-perl amd64 1.07-3+b1 [18.7 kB]
-Get:14 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 keyboard-configuration all 1.164 [644 kB]
-Get:15 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcrecpp0v5 amd64 2:8.39-3 [151 kB]
-Get:16 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 x11-common all 1:7.7+19 [251 kB]
-Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libxss1 amd64 1:1.2.2-1 [17.5 kB]
-Get:18 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 poppler-data all 0.4.7-8 [1,451 kB]
-Get:19 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libassuan0 amd64 2.4.3-2 [42.5 kB]
-Get:20 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 pinentry-curses amd64 1.0.0-2 [50.5 kB]
-Get:21 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libnpth0 amd64 1.3-1 [14.6 kB]
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1-dev amd64 2.2.0-2+deb9u3 [134 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 dmsetup amd64 2:1.02.137-2 [107 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libdevmapper1.02.1 amd64 2:1.02.137-2 [170 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcryptsetup4 amd64 2:1.7.3-4 [109 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libip4tc0 amd64 1.6.0+snapshot20161117-6 [67.8 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libkmod2 amd64 23-2 [48.1 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libseccomp2 amd64 2.3.1-2.1+deb9u1 [40.7 kB]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 systemd amd64 232-25+deb9u12 [2,469 kB]
+Get:9 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 udev amd64 232-25+deb9u12 [1,113 kB]
+Get:10 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 groff-base amd64 1.22.3-9 [1,160 kB]
+Get:11 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 bsdmainutils amd64 9.0.12+nmu1 [186 kB]
+Get:12 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpipeline1 amd64 1.4.1-2 [27.6 kB]
+Get:13 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 man-db amd64 2.7.6.1-2 [1,044 kB]
+Get:14 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 liblocale-gettext-perl amd64 1.07-3+b1 [18.7 kB]
+Get:15 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 keyboard-configuration all 1.164 [644 kB]
+Get:16 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcrecpp0v5 amd64 2:8.39-3 [151 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 x11-common all 1:7.7+19 [251 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libxss1 amd64 1:1.2.2-1 [17.5 kB]
+Get:19 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 poppler-data all 0.4.7-8 [1,451 kB]
+Get:20 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libassuan0 amd64 2.4.3-2 [42.5 kB]
+Get:21 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 pinentry-curses amd64 1.0.0-2 [50.5 kB]
+Get:22 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libnpth0 amd64 1.3-1 [14.6 kB]
 Get:23 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 gnupg-agent amd64 2.1.18-8~deb9u4 [554 kB]
 Get:24 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libksba8 amd64 1.3.5-2 [99.7 kB]
 Get:25 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 gnupg amd64 2.1.18-8~deb9u4 [1,128 kB]
@@ -864,7 +864,7 @@ Get:479 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libtxc-dxtn-s
 Get:480 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 proj-bin amd64 4.9.3-1 [59.6 kB]
 Get:481 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 xserver-xorg-legacy amd64 2:1.19.2-1+deb9u5 [2,068 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 265 MB in 7min 15s (609 kB/s)
+[0mFetched 265 MB in 5min 17s (835 kB/s)
 Selecting previously unselected package dmsetup.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19950 files and directories currently installed.)
 Preparing to unpack .../000-dmsetup_2%3a1.02.137-2_amd64.deb ...
@@ -2834,13 +2834,13 @@ Done.
 Setting up libpam-systemd:amd64 (232-25+deb9u12) ...
 Processing triggers for libc-bin (2.24-11+deb9u4) ...
 Processing triggers for dbus (1.10.28-0+deb9u1) ...
-Removing intermediate container 52aba32b42c0
- ---> 0c3235b45dd0
+Removing intermediate container 88e3474d7746
+ ---> b4999bbe6cad
 Step 7/17 : RUN cd /  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
- ---> Running in 0eff116a50b4
+ ---> Running in 9a72cd5f6014
 PREFIX=/miniconda3
 Unpacking payload ...
-[91m  0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : pyopenssl-19.0.0-py37_0.conda:   0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : zlib-1.2.11-h7b6447c_3.conda:   3%|▎         | 1/35 [00:00<00:00, 47.73it/s][0m[91mExtracting : six-1.12.0-py37_0.conda:   6%|▌         | 2/35 [00:00<00:00, 48.03it/s]     Extracting : conda-package-handling-1.6.0-py37h7b6447c_0.conda:   9%|▊         | 3/35 [00:00<00:00, 71.78it/s][0m[91mExtracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  11%|█▏        | 4/35 [00:00<00:00, 34.43it/s]              Extracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  14%|█▍        | 5/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : _libgcc_mutex-0.1-main.conda:  14%|█▍        | 5/35 [00:00<00:00, 42.99it/s]       [0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  17%|█▋        | 6/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : pycparser-2.19-py37_0.conda:  20%|██        | 7/35 [00:00<00:00, 42.99it/s]     [0m[91mExtracting : idna-2.8-py37_0.conda:  23%|██▎       | 8/35 [00:00<00:00, 42.99it/s]      [0m[91mExtracting : pycosat-0.6.3-py37h14c3975_0.conda:  26%|██▌       | 9/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  29%|██▊       | 10/35 [00:00<00:00, 42.99it/s]        [0m[91mExtracting : requests-2.22.0-py37_0.conda:  31%|███▏      | 11/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : readline-7.0-h7b6447c_5.conda:  34%|███▍      | 12/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : yaml-0.1.7-had09818_2.conda:  37%|███▋      | 13/35 [00:00<00:00, 42.99it/s]  [0m[91mExtracting : urllib3-1.24.2-py37_0.conda:  40%|████      | 14/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : tqdm-4.36.1-py_0.conda:  43%|████▎     | 15/35 [00:00<00:00, 42.99it/s]     [0m[91mExtracting : ruamel_yaml-0.15.46-py37h14c3975_0.conda:  46%|████▌     | 16/35 [00:00<00:00, 42.99it/s][0m[91mExtracting : xz-5.2.4-h14c3975_4.conda:  49%|████▊     | 17/35 [00:00<00:00, 42.99it/s]               [0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  51%|█████▏    | 18/35 [00:00<00:00, 42.99it/s]Extracting : ncurses-6.1-he6710b0_1.conda:  54%|█████▍    | 19/35 [00:00<00:00, 53.33it/s][0m[91mExtracting : libffi-3.2.1-hd88cf55_4.conda:  54%|█████▍    | 19/35 [00:00<00:00, 53.33it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  57%|█████▋    | 20/35 [00:00<00:00, 53.33it/s][0m[91mExtracting : chardet-3.0.4-py37_1003.conda:  60%|██████    | 21/35 [00:00<00:00, 53.33it/s][0m[91mExtracting : libedit-3.1.20181209-hc058e9b_0.conda:  63%|██████▎   | 22/35 [00:00<00:00, 53.33it/s][0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  66%|██████▌   | 23/35 [00:00<00:00, 53.33it/s]     [0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 35.07it/s][0m[91mExtracting : cffi-1.13.0-py37h2e261b9_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 35.07it/s][0m[91mExtracting : pip-19.3.1-py37_0.tar.bz2:  71%|███████▏  | 25/35 [00:00<00:00, 35.07it/s]         [0m[91mExtracting : openssl-1.1.1d-h7b6447c_3.tar.bz2:  74%|███████▍  | 26/35 [00:00<00:00, 35.07it/s]Extracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  77%|███████▋  | 27/35 [00:00<00:00, 35.07it/s] [0m[91mExtracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 36.18it/s][0m[91mExtracting : setuptools-41.4.0-py37_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 36.18it/s][0m[91mExtracting : wheel-0.33.6-py37_0.tar.bz2:  83%|████████▎ | 29/35 [00:00<00:00, 36.18it/s]     [0m[91mExtracting : cryptography-2.8-py37h1ba5d50_0.tar.bz2:  86%|████████▌ | 30/35 [00:00<00:00, 36.18it/s][0m[91mExtracting : ca-certificates-2019.10.16-0.tar.bz2:  89%|████████▊ | 31/35 [00:00<00:00, 36.18it/s]   [0m[91mExtracting : asn1crypto-1.2.0-py37_0.tar.bz2:  91%|█████████▏| 32/35 [00:00<00:00, 36.18it/s]     [0m[91mExtracting : pysocks-1.7.1-py37_0.tar.bz2:  94%|█████████▍| 33/35 [00:00<00:00, 36.18it/s]   [0m[91mExtracting : conda-4.7.12-py37_0.tar.bz2:  97%|█████████▋| 34/35 [00:00<00:00, 36.18it/s] Extracting : conda-4.7.12-py37_0.tar.bz2: 100%|██████████| 35/35 [00:00<00:00, 32.38it/s][0m[91m                                                                                         [0m[91m[0mCollecting package metadata (current_repodata.json): ...working... done
+[91m  0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : pyopenssl-19.0.0-py37_0.conda:   0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : zlib-1.2.11-h7b6447c_3.conda:   3%|▎         | 1/35 [00:00<00:01, 25.38it/s]Extracting : six-1.12.0-py37_0.conda:   6%|▌         | 2/35 [00:00<00:00, 50.38it/s]     Extracting : conda-package-handling-1.6.0-py37h7b6447c_0.conda:   9%|▊         | 3/35 [00:00<00:00, 70.15it/s][0m[91mExtracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  11%|█▏        | 4/35 [00:00<00:00, 50.74it/s]              [0m[91mExtracting : _libgcc_mutex-0.1-main.conda:  14%|█▍        | 5/35 [00:00<00:00, 63.31it/s]       [0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  17%|█▋        | 6/35 [00:00<00:00, 49.27it/s][0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  20%|██        | 7/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : pycparser-2.19-py37_0.conda:  20%|██        | 7/35 [00:00<00:00, 57.43it/s]     [0m[91mExtracting : idna-2.8-py37_0.conda:  23%|██▎       | 8/35 [00:00<00:00, 57.43it/s]      [0m[91mExtracting : pycosat-0.6.3-py37h14c3975_0.conda:  26%|██▌       | 9/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  29%|██▊       | 10/35 [00:00<00:00, 57.43it/s]        [0m[91mExtracting : requests-2.22.0-py37_0.conda:  31%|███▏      | 11/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : readline-7.0-h7b6447c_5.conda:  34%|███▍      | 12/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : yaml-0.1.7-had09818_2.conda:  37%|███▋      | 13/35 [00:00<00:00, 57.43it/s]  [0m[91mExtracting : urllib3-1.24.2-py37_0.conda:  40%|████      | 14/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : tqdm-4.36.1-py_0.conda:  43%|████▎     | 15/35 [00:00<00:00, 57.43it/s]     [0m[91mExtracting : ruamel_yaml-0.15.46-py37h14c3975_0.conda:  46%|████▌     | 16/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : xz-5.2.4-h14c3975_4.conda:  49%|████▊     | 17/35 [00:00<00:00, 57.43it/s]               [0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  51%|█████▏    | 18/35 [00:00<00:00, 57.43it/s][0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  54%|█████▍    | 19/35 [00:00<00:00, 68.06it/s][0m[91mExtracting : libffi-3.2.1-hd88cf55_4.conda:  54%|█████▍    | 19/35 [00:00<00:00, 68.06it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  57%|█████▋    | 20/35 [00:00<00:00, 68.06it/s][0m[91mExtracting : chardet-3.0.4-py37_1003.conda:  60%|██████    | 21/35 [00:00<00:00, 68.06it/s][0m[91mExtracting : libedit-3.1.20181209-hc058e9b_0.conda:  63%|██████▎   | 22/35 [00:00<00:00, 68.06it/s][0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  66%|██████▌   | 23/35 [00:00<00:00, 68.06it/s]     [0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 38.39it/s][0m[91mExtracting : cffi-1.13.0-py37h2e261b9_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 38.39it/s][0m[91mExtracting : pip-19.3.1-py37_0.tar.bz2:  71%|███████▏  | 25/35 [00:00<00:00, 38.39it/s]         [0m[91mExtracting : openssl-1.1.1d-h7b6447c_3.tar.bz2:  74%|███████▍  | 26/35 [00:00<00:00, 38.39it/s][0m[91mExtracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  77%|███████▋  | 27/35 [00:00<00:00, 38.39it/s] [0m[91mExtracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 37.99it/s][0m[91mExtracting : setuptools-41.4.0-py37_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 37.99it/s][0m[91mExtracting : wheel-0.33.6-py37_0.tar.bz2:  83%|████████▎ | 29/35 [00:00<00:00, 37.99it/s]     [0m[91mExtracting : cryptography-2.8-py37h1ba5d50_0.tar.bz2:  86%|████████▌ | 30/35 [00:00<00:00, 37.99it/s][0m[91mExtracting : ca-certificates-2019.10.16-0.tar.bz2:  89%|████████▊ | 31/35 [00:00<00:00, 37.99it/s]   [0m[91mExtracting : asn1crypto-1.2.0-py37_0.tar.bz2:  91%|█████████▏| 32/35 [00:00<00:00, 37.99it/s]     [0m[91mExtracting : pysocks-1.7.1-py37_0.tar.bz2:  94%|█████████▍| 33/35 [00:00<00:00, 37.99it/s]   [0m[91mExtracting : conda-4.7.12-py37_0.tar.bz2:  97%|█████████▋| 34/35 [00:00<00:00, 37.99it/s] Extracting : conda-4.7.12-py37_0.tar.bz2: 100%|██████████| 35/35 [00:00<00:00, 33.11it/s][0m[91m                                                                                         [0m[91m[0mCollecting package metadata (current_repodata.json): ...working... done
 Solving environment: ...working... done
 
 ## Package Plan ##
@@ -2927,22 +2927,22 @@ The following NEW packages will be INSTALLED:
 Preparing transaction: ...working... done
 Executing transaction: ...working... done
 installation finished.
-Removing intermediate container 0eff116a50b4
- ---> 0181992189cc
+Removing intermediate container 9a72cd5f6014
+ ---> 2c308732722d
 Step 8/17 : ENV PATH "$PATH:/miniconda3/bin"
- ---> Running in 19b5ec4dfe09
-Removing intermediate container 19b5ec4dfe09
- ---> 5218ea3c16f7
+ ---> Running in 214f76ec7b10
+Removing intermediate container 214f76ec7b10
+ ---> d289e82325a7
 Step 9/17 : RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1  && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2  && python --version  && python3 --version  && rm /usr/bin/lsb_release
- ---> Running in 2c8057c51295
+ ---> Running in 1865569032ff
 update-alternatives: using /usr/bin/python2.7 to provide /usr/bin/python (python) in auto mode
 update-alternatives: using /miniconda3/bin/python3.7 to provide /usr/bin/python3 (python3) in auto mode
 [91mPython 2.7.13
 [0mPython 3.7.4
-Removing intermediate container 2c8057c51295
- ---> c43de49b14b8
+Removing intermediate container 1865569032ff
+ ---> ded936fb3fcd
 Step 10/17 : RUN conda install --quiet --yes -c bioconda deeptools
- ---> Running in 8cbf7a7ff8e7
+ ---> Running in 91f20df17d43
 Collecting package metadata (current_repodata.json): ...working... done
 Solving environment: ...working... done
 
@@ -3062,10 +3062,10 @@ The following NEW packages will be INSTALLED:
 Preparing transaction: ...working... done
 Verifying transaction: ...working... done
 Executing transaction: ...working... done
-Removing intermediate container 8cbf7a7ff8e7
- ---> bc5ff2b9efa5
+Removing intermediate container 91f20df17d43
+ ---> e474edcc1834
 Step 11/17 : RUN python3 -m pip install     click     Cython     dca     fa2     "gast<0.3,>=0.2"     h5py     leidenalg     louvain     numba     numpy     "numpydoc>=0.5"     "matplotlib>=3.0,<3.1"     "pandas<0.24,>=0.19.0"     phate     pysam     python-igraph     scanpy     scikit-learn     "scipy!=1.3.0,>=1.0"     tensorflow     umap-learn     jupyter
- ---> Running in a8005f69b862
+ ---> Running in ff0ea3b840fd
 Collecting click
   Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
 Collecting Cython
@@ -3119,295 +3119,295 @@ Collecting sphinx>=1.6.5
   Downloading https://files.pythonhosted.org/packages/1d/58/a547b02946af1cf337c701cafcf3267065c1c83d6e701f540961f4907b5d/Sphinx-2.2.1-py3-none-any.whl (3.3MB)
 Collecting Jinja2>=2.3
   Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.4.2)
+Requirement already satisfied: kiwisolver>=1.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (1.1.0)
 Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.8.0)
 Requirement already satisfied: cycler>=0.10 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (0.10.0)
-Requirement already satisfied: kiwisolver>=1.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (1.1.0)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.4.2)
 Requirement already satisfied: pytz>=2011k in /miniconda3/lib/python3.7/site-packages (from pandas<0.24,>=0.19.0) (2019.3)
-Collecting graphtools>=1.3.1
-  Downloading https://files.pythonhosted.org/packages/28/d4/3e0f973b84b892bb39414a11818ed40cf460ee8e3e9b9d8dd28eda832022/graphtools-1.3.1-py3-none-any.whl
+Collecting future
+  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
 Collecting scprep>=0.11.1
   Downloading https://files.pythonhosted.org/packages/c6/b3/e039c5181e50aa0cc9057639f100ab50483f6dfb67b602bcffe1093c1ae4/scprep-1.0.3-py3-none-any.whl (95kB)
 Collecting tasklogger>=1.0
   Downloading https://files.pythonhosted.org/packages/5d/6b/cb2a724eff19829a0ada0217f403f54fca1e48c7de6fc3383e0a8b8fa121/tasklogger-1.0.0-py3-none-any.whl
-Collecting future
-  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
-Collecting joblib
-  Downloading https://files.pythonhosted.org/packages/8f/42/155696f85f344c066e17af287359c9786b436b1bf86029bb3411283274f3/joblib-0.14.0-py2.py3-none-any.whl (294kB)
-Collecting patsy
-  Downloading https://files.pythonhosted.org/packages/ea/0c/5f61f1a3d4385d6bf83b83ea495068857ff8dfb89e74824c6e9eb63286d8/patsy-0.5.1-py2.py3-none-any.whl (231kB)
-Collecting anndata>=0.6.22rc1
-  Downloading https://files.pythonhosted.org/packages/2b/72/87196c15f68d9865c31a43a10cf7c50bcbcedd5607d09f9aada0b3963103/anndata-0.6.22.post1-py3-none-any.whl (47kB)
+Collecting graphtools>=1.3.1
+  Downloading https://files.pythonhosted.org/packages/28/d4/3e0f973b84b892bb39414a11818ed40cf460ee8e3e9b9d8dd28eda832022/graphtools-1.3.1-py3-none-any.whl
 Collecting statsmodels>=0.10.0rc2
   Downloading https://files.pythonhosted.org/packages/01/cb/614f37ac4a9919eb0dbc0cd9eb939d1a33299f54f10e8a705dd9b08c2f3f/statsmodels-0.10.1-cp37-cp37m-manylinux1_x86_64.whl (8.1MB)
-Collecting natsort
-  Downloading https://files.pythonhosted.org/packages/e7/13/a66bfa0ebf00e17778ca0319d081be686a33384d1f612fc8e0fc542ac5d8/natsort-6.0.0-py2.py3-none-any.whl
-Collecting importlib-metadata>=0.7; python_version < "3.8"
-  Downloading https://files.pythonhosted.org/packages/f6/d2/40b3fa882147719744e6aa50ac39cf7a22a913cbcba86a0371176c425a3b/importlib_metadata-0.23-py2.py3-none-any.whl
-Collecting networkx
-  Downloading https://files.pythonhosted.org/packages/41/8f/dd6a8e85946def36e4f2c69c84219af0fa5e832b018c970e92f2ad337e45/networkx-2.4-py3-none-any.whl (1.6MB)
 Collecting seaborn
   Downloading https://files.pythonhosted.org/packages/a8/76/220ba4420459d9c4c9c9587c6ce607bf56c25b3d3d2de62056efe482dadc/seaborn-0.9.0-py3-none-any.whl (208kB)
+Collecting networkx
+  Downloading https://files.pythonhosted.org/packages/41/8f/dd6a8e85946def36e4f2c69c84219af0fa5e832b018c970e92f2ad337e45/networkx-2.4-py3-none-any.whl (1.6MB)
+Collecting importlib-metadata>=0.7; python_version < "3.8"
+  Downloading https://files.pythonhosted.org/packages/f6/d2/40b3fa882147719744e6aa50ac39cf7a22a913cbcba86a0371176c425a3b/importlib_metadata-0.23-py2.py3-none-any.whl
 Collecting tables
   Downloading https://files.pythonhosted.org/packages/0f/cb/4097be890a773af95343389faa8c283b0d9ff606f144227a548461dcbdd5/tables-3.6.1-cp37-cp37m-manylinux1_x86_64.whl (4.3MB)
-Collecting opt-einsum>=2.3.2
-  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
-Collecting tensorboard<2.1.0,>=2.0.0
-  Downloading https://files.pythonhosted.org/packages/d3/9e/a48cd34dd7b672ffc227b566f7d16d63c62c58b542d54efa45848c395dd4/tensorboard-2.0.1-py3-none-any.whl (3.8MB)
-Collecting wrapt>=1.11.1
-  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
-Collecting absl-py>=0.7.0
-  Downloading https://files.pythonhosted.org/packages/3b/72/e6e483e2db953c11efa44ee21c5fdb6505c4dffa447b4263ca8af6676b62/absl-py-0.8.1.tar.gz (103kB)
+Collecting natsort
+  Downloading https://files.pythonhosted.org/packages/e7/13/a66bfa0ebf00e17778ca0319d081be686a33384d1f612fc8e0fc542ac5d8/natsort-6.0.0-py2.py3-none-any.whl
+Collecting anndata>=0.6.22rc1
+  Downloading https://files.pythonhosted.org/packages/2b/72/87196c15f68d9865c31a43a10cf7c50bcbcedd5607d09f9aada0b3963103/anndata-0.6.22.post1-py3-none-any.whl (47kB)
+Collecting patsy
+  Downloading https://files.pythonhosted.org/packages/ea/0c/5f61f1a3d4385d6bf83b83ea495068857ff8dfb89e74824c6e9eb63286d8/patsy-0.5.1-py2.py3-none-any.whl (231kB)
+Collecting joblib
+  Downloading https://files.pythonhosted.org/packages/8f/42/155696f85f344c066e17af287359c9786b436b1bf86029bb3411283274f3/joblib-0.14.0-py2.py3-none-any.whl (294kB)
 Collecting keras-preprocessing>=1.0.5
   Downloading https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
-Collecting astor>=0.6.0
-  Downloading https://files.pythonhosted.org/packages/d1/4f/950dfae467b384fc96bc6469de25d832534f6b4441033c39f914efd13418/astor-0.8.0-py2.py3-none-any.whl
-Collecting keras-applications>=1.0.8
-  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+Collecting opt-einsum>=2.3.2
+  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
 Collecting tensorflow-estimator<2.1.0,>=2.0.0
   Downloading https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl (449kB)
-Requirement already satisfied: wheel>=0.26 in /miniconda3/lib/python3.7/site-packages (from tensorflow) (0.33.6)
-Collecting protobuf>=3.6.1
-  Downloading https://files.pythonhosted.org/packages/d7/34/02a2083afc14adff644a1e29783f276f12f1f914ca4cab157d73bb3d2fed/protobuf-3.10.0-cp37-cp37m-manylinux1_x86_64.whl (1.3MB)
-Collecting google-pasta>=0.1.6
-  Downloading https://files.pythonhosted.org/packages/d0/33/376510eb8d6246f3c30545f416b2263eee461e40940c2a4413c711bdf62d/google_pasta-0.1.7-py3-none-any.whl (52kB)
-Collecting termcolor>=1.1.0
-  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
 Collecting grpcio>=1.8.6
   Downloading https://files.pythonhosted.org/packages/b9/ba/254011b066e6675411ba913dafd6e40ce8d3235bebf64fb226a7305f29ac/grpcio-1.24.3-cp37-cp37m-manylinux2010_x86_64.whl (2.2MB)
-Collecting ipykernel
-  Downloading https://files.pythonhosted.org/packages/e1/92/8fec943b5b81078399f969f00557804d884c96fcd0bc296e81a2ed4fd270/ipykernel-5.1.3-py3-none-any.whl (116kB)
-Collecting qtconsole
-  Downloading https://files.pythonhosted.org/packages/d0/fc/4936c60be8d56acedfefcc13cf9f3d881e4036147d78e86160463c92d1b7/qtconsole-4.5.5-py2.py3-none-any.whl (121kB)
+Collecting wrapt>=1.11.1
+  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
+Collecting tensorboard<2.1.0,>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/d3/9e/a48cd34dd7b672ffc227b566f7d16d63c62c58b542d54efa45848c395dd4/tensorboard-2.0.1-py3-none-any.whl (3.8MB)
+Collecting absl-py>=0.7.0
+  Downloading https://files.pythonhosted.org/packages/3b/72/e6e483e2db953c11efa44ee21c5fdb6505c4dffa447b4263ca8af6676b62/absl-py-0.8.1.tar.gz (103kB)
+Requirement already satisfied: wheel>=0.26 in /miniconda3/lib/python3.7/site-packages (from tensorflow) (0.33.6)
+Collecting google-pasta>=0.1.6
+  Downloading https://files.pythonhosted.org/packages/d0/33/376510eb8d6246f3c30545f416b2263eee461e40940c2a4413c711bdf62d/google_pasta-0.1.7-py3-none-any.whl (52kB)
+Collecting astor>=0.6.0
+  Downloading https://files.pythonhosted.org/packages/d1/4f/950dfae467b384fc96bc6469de25d832534f6b4441033c39f914efd13418/astor-0.8.0-py2.py3-none-any.whl
+Collecting termcolor>=1.1.0
+  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
+Collecting keras-applications>=1.0.8
+  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+Collecting protobuf>=3.6.1
+  Downloading https://files.pythonhosted.org/packages/d7/34/02a2083afc14adff644a1e29783f276f12f1f914ca4cab157d73bb3d2fed/protobuf-3.10.0-cp37-cp37m-manylinux1_x86_64.whl (1.3MB)
 Collecting nbconvert
   Downloading https://files.pythonhosted.org/packages/79/6c/05a569e9f703d18aacb89b7ad6075b404e8a4afde2c26b73ca77bb644b14/nbconvert-5.6.1-py2.py3-none-any.whl (455kB)
+Collecting notebook
+  Downloading https://files.pythonhosted.org/packages/f3/a1/1e07cedcb554408fefe4a7d32b2a041c86517167aec6ca8251c808ef6c1e/notebook-6.0.1-py3-none-any.whl (9.0MB)
 Collecting ipywidgets
   Downloading https://files.pythonhosted.org/packages/56/a0/dbcf5881bb2f51e8db678211907f16ea0a182b232c591a6d6f276985ca95/ipywidgets-7.5.1-py2.py3-none-any.whl (121kB)
 Collecting jupyter-console
   Downloading https://files.pythonhosted.org/packages/cb/ee/6374ae8c21b7d0847f9c3722dcdfac986b8e54fa9ad9ea66e1eb6320d2b8/jupyter_console-6.0.0-py2.py3-none-any.whl
-Collecting notebook
-  Downloading https://files.pythonhosted.org/packages/f3/a1/1e07cedcb554408fefe4a7d32b2a041c86517167aec6ca8251c808ef6c1e/notebook-6.0.1-py3-none-any.whl (9.0MB)
+Collecting qtconsole
+  Downloading https://files.pythonhosted.org/packages/d0/fc/4936c60be8d56acedfefcc13cf9f3d881e4036147d78e86160463c92d1b7/qtconsole-4.5.5-py2.py3-none-any.whl (121kB)
+Collecting ipykernel
+  Downloading https://files.pythonhosted.org/packages/e1/92/8fec943b5b81078399f969f00557804d884c96fcd0bc296e81a2ed4fd270/ipykernel-5.1.3-py3-none-any.whl (116kB)
 Collecting pyyaml
   Downloading https://files.pythonhosted.org/packages/e3/e8/b3212641ee2718d556df0f23f78de8303f068fe29cdaa7a91018849582fe/PyYAML-5.1.2.tar.gz (265kB)
 Collecting hyperopt
   Downloading https://files.pythonhosted.org/packages/0b/4a/79541d4f61e7878f846f68ab31ed709bac6ee99345378c0e02658c3be0d4/hyperopt-0.2.2-py3-none-any.whl (1.9MB)
-Collecting sphinxcontrib-serializinghtml
-  Downloading https://files.pythonhosted.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl (89kB)
-Collecting babel!=2.0,>=1.3
-  Downloading https://files.pythonhosted.org/packages/2c/60/f2af68eb046c5de5b1fe6dd4743bf42c074f7141fe7b2737d3061533b093/Babel-2.7.0-py2.py3-none-any.whl (8.4MB)
-Collecting snowballstemmer>=1.1
-  Downloading https://files.pythonhosted.org/packages/7d/4b/cdf1113a0e88b641893b814e9c36f69a6fda28cd88b62c7f0d858cde3166/snowballstemmer-2.0.0-py2.py3-none-any.whl (97kB)
-Collecting sphinxcontrib-qthelp
-  Downloading https://files.pythonhosted.org/packages/ce/5b/4747c3ba98b3a3e21a66faa183d8f79b9ded70e74212a7988d236a6eb78a/sphinxcontrib_qthelp-1.0.2-py2.py3-none-any.whl (90kB)
-Collecting sphinxcontrib-applehelp
-  Downloading https://files.pythonhosted.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl (121kB)
-Collecting sphinxcontrib-devhelp
-  Downloading https://files.pythonhosted.org/packages/b0/a3/fea98741f0b2f2902fbf6c35c8e91b22cd0dd13387291e81d457f9a93066/sphinxcontrib_devhelp-1.0.1-py2.py3-none-any.whl (84kB)
-Collecting sphinxcontrib-jsmath
-  Downloading https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
-Collecting imagesize
-  Downloading https://files.pythonhosted.org/packages/fc/b6/aef66b4c52a6ad6ac18cf6ebc5731ed06d8c9ae4d3b2d9951f261150be67/imagesize-1.1.0-py2.py3-none-any.whl
-Requirement already satisfied: requests>=2.5.0 in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc>=0.5) (2.22.0)
-Requirement already satisfied: setuptools in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc>=0.5) (41.4.0)
-Collecting packaging
-  Downloading https://files.pythonhosted.org/packages/cf/94/9672c2d4b126e74c4496c6b3c58a8b51d6419267be9e70660ba23374c875/packaging-19.2-py2.py3-none-any.whl
-Collecting sphinxcontrib-htmlhelp
-  Downloading https://files.pythonhosted.org/packages/e4/35/80a67cc493f4a8a9634ab203a77aaa1b84d79ccb1c02eca72cb084d2c7f7/sphinxcontrib_htmlhelp-1.0.2-py2.py3-none-any.whl (96kB)
 Collecting docutils>=0.12
   Downloading https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl (547kB)
+Collecting sphinxcontrib-htmlhelp
+  Downloading https://files.pythonhosted.org/packages/e4/35/80a67cc493f4a8a9634ab203a77aaa1b84d79ccb1c02eca72cb084d2c7f7/sphinxcontrib_htmlhelp-1.0.2-py2.py3-none-any.whl (96kB)
+Requirement already satisfied: requests>=2.5.0 in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc>=0.5) (2.22.0)
+Collecting sphinxcontrib-jsmath
+  Downloading https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+Collecting sphinxcontrib-serializinghtml
+  Downloading https://files.pythonhosted.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl (89kB)
+Collecting snowballstemmer>=1.1
+  Downloading https://files.pythonhosted.org/packages/7d/4b/cdf1113a0e88b641893b814e9c36f69a6fda28cd88b62c7f0d858cde3166/snowballstemmer-2.0.0-py2.py3-none-any.whl (97kB)
+Requirement already satisfied: setuptools in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc>=0.5) (41.4.0)
+Collecting sphinxcontrib-applehelp
+  Downloading https://files.pythonhosted.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl (121kB)
+Collecting packaging
+  Downloading https://files.pythonhosted.org/packages/cf/94/9672c2d4b126e74c4496c6b3c58a8b51d6419267be9e70660ba23374c875/packaging-19.2-py2.py3-none-any.whl
 Collecting alabaster<0.8,>=0.7
   Downloading https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
+Collecting babel!=2.0,>=1.3
+  Downloading https://files.pythonhosted.org/packages/2c/60/f2af68eb046c5de5b1fe6dd4743bf42c074f7141fe7b2737d3061533b093/Babel-2.7.0-py2.py3-none-any.whl (8.4MB)
+Collecting sphinxcontrib-qthelp
+  Downloading https://files.pythonhosted.org/packages/ce/5b/4747c3ba98b3a3e21a66faa183d8f79b9ded70e74212a7988d236a6eb78a/sphinxcontrib_qthelp-1.0.2-py2.py3-none-any.whl (90kB)
 Collecting Pygments>=2.0
   Downloading https://files.pythonhosted.org/packages/5c/73/1dfa428150e3ccb0fa3e68db406e5be48698f2a979ccbcec795f28f44048/Pygments-2.4.2-py2.py3-none-any.whl (883kB)
+Collecting sphinxcontrib-devhelp
+  Downloading https://files.pythonhosted.org/packages/b0/a3/fea98741f0b2f2902fbf6c35c8e91b22cd0dd13387291e81d457f9a93066/sphinxcontrib_devhelp-1.0.1-py2.py3-none-any.whl (84kB)
+Collecting imagesize
+  Downloading https://files.pythonhosted.org/packages/fc/b6/aef66b4c52a6ad6ac18cf6ebc5731ed06d8c9ae4d3b2d9951f261150be67/imagesize-1.1.0-py2.py3-none-any.whl
 Collecting MarkupSafe>=0.23
   Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
-Collecting pygsp>=0.5.1
-  Downloading https://files.pythonhosted.org/packages/d4/89/2f4aa73cccf12bec5179ac5d52a68b508120c838b7e5d456f5ea0c8beade/PyGSP-0.5.1-py2.py3-none-any.whl (1.8MB)
 Collecting decorator>=4.3.0
   Downloading https://files.pythonhosted.org/packages/8f/b7/f329cfdc75f3d28d12c65980e4469e2fa373f1953f5df6e370e84ea2e875/decorator-4.4.1-py2.py3-none-any.whl
+Collecting pygsp>=0.5.1
+  Downloading https://files.pythonhosted.org/packages/d4/89/2f4aa73cccf12bec5179ac5d52a68b508120c838b7e5d456f5ea0c8beade/PyGSP-0.5.1-py2.py3-none-any.whl (1.8MB)
 Collecting zipp>=0.5
   Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
 Collecting numexpr>=2.6.2
   Downloading https://files.pythonhosted.org/packages/2c/69/274c2b81b9bdf7783150461c8982f23248dc917402ed4c6f8aa4b90bb98e/numexpr-2.7.0-cp37-cp37m-manylinux1_x86_64.whl (162kB)
-Collecting markdown>=2.6.8
-  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
-Collecting werkzeug>=0.11.15
-  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
 Collecting google-auth<2,>=1.6.3
   Downloading https://files.pythonhosted.org/packages/c5/9b/ed0516cc1f7609fb0217e3057ff4f0f9f3e3ce79a369c6af4a6c5ca25664/google_auth-1.6.3-py2.py3-none-any.whl (73kB)
+Collecting werkzeug>=0.11.15
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
 Collecting google-auth-oauthlib<0.5,>=0.4.1
   Downloading https://files.pythonhosted.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl
-Collecting jupyter-client
-  Downloading https://files.pythonhosted.org/packages/13/81/fe0eee1bcf949851a120254b1f530ae1e01bdde2d3ab9710c6ff81525061/jupyter_client-5.3.4-py2.py3-none-any.whl (92kB)
-Requirement already satisfied: tornado>=4.2 in /miniconda3/lib/python3.7/site-packages (from ipykernel->jupyter) (6.0.3)
-Collecting ipython>=5.0.0
-  Downloading https://files.pythonhosted.org/packages/81/2e/59cdacea6476a4c21b7c090a91250ffbcd085900f5eb9f4e4d68dd2ee4e3/ipython-7.9.0-py3-none-any.whl (775kB)
-Collecting traitlets>=4.1.0
-  Downloading https://files.pythonhosted.org/packages/ca/ab/872a23e29cec3cf2594af7e857f18b687ad21039c1f9b922fac5b9b142d5/traitlets-4.3.3-py2.py3-none-any.whl (75kB)
-Collecting jupyter-core
-  Downloading https://files.pythonhosted.org/packages/fb/82/86437f661875e30682e99d04c13ba6c216f86f5f6ca6ef212d3ee8b6ca11/jupyter_core-4.6.1-py2.py3-none-any.whl (82kB)
-Collecting ipython-genutils
-  Downloading https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
+Collecting markdown>=2.6.8
+  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
 Collecting mistune<2,>=0.8.1
   Downloading https://files.pythonhosted.org/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl
-Collecting pandocfilters>=1.4.1
-  Downloading https://files.pythonhosted.org/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz
-Collecting testpath
-  Downloading https://files.pythonhosted.org/packages/be/a4/162f9ebb6489421fe46dcca2ae420369edfee4b563c668d93cb4605d12ba/testpath-0.4.2-py2.py3-none-any.whl (163kB)
 Collecting entrypoints>=0.2.2
   Downloading https://files.pythonhosted.org/packages/ac/c6/44694103f8c221443ee6b0041f69e2740d89a25641e62fb4f2ee568f2f9c/entrypoints-0.3-py2.py3-none-any.whl
 Collecting nbformat>=4.4
   Downloading https://files.pythonhosted.org/packages/da/27/9a654d2b6cc1eaa517d1c5a4405166c7f6d72f04f6e7eea41855fe808a46/nbformat-4.4.0-py2.py3-none-any.whl (155kB)
 Collecting bleach
   Downloading https://files.pythonhosted.org/packages/ab/05/27e1466475e816d3001efb6e0a85a819be17411420494a1e602c36f8299d/bleach-3.1.0-py2.py3-none-any.whl (157kB)
+Collecting traitlets>=4.2
+  Downloading https://files.pythonhosted.org/packages/ca/ab/872a23e29cec3cf2594af7e857f18b687ad21039c1f9b922fac5b9b142d5/traitlets-4.3.3-py2.py3-none-any.whl (75kB)
+Collecting jupyter-core
+  Downloading https://files.pythonhosted.org/packages/fb/82/86437f661875e30682e99d04c13ba6c216f86f5f6ca6ef212d3ee8b6ca11/jupyter_core-4.6.1-py2.py3-none-any.whl (82kB)
+Collecting pandocfilters>=1.4.1
+  Downloading https://files.pythonhosted.org/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz
 Collecting defusedxml
   Downloading https://files.pythonhosted.org/packages/06/74/9b387472866358ebc08732de3da6dc48e44b0aacd2ddaa5cb85ab7e986a2/defusedxml-0.6.0-py2.py3-none-any.whl
+Collecting testpath
+  Downloading https://files.pythonhosted.org/packages/be/a4/162f9ebb6489421fe46dcca2ae420369edfee4b563c668d93cb4605d12ba/testpath-0.4.2-py2.py3-none-any.whl (163kB)
+Collecting ipython-genutils
+  Downloading https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
+Collecting terminado>=0.8.1
+  Downloading https://files.pythonhosted.org/packages/a7/56/80ea7fa66565fa75ae21ce0c16bc90067530e5d15e48854afcc86585a391/terminado-0.8.2-py2.py3-none-any.whl
+Collecting jupyter-client>=5.3.1
+  Downloading https://files.pythonhosted.org/packages/13/81/fe0eee1bcf949851a120254b1f530ae1e01bdde2d3ab9710c6ff81525061/jupyter_client-5.3.4-py2.py3-none-any.whl (92kB)
+Collecting prometheus-client
+  Downloading https://files.pythonhosted.org/packages/b3/23/41a5a24b502d35a4ad50a5bb7202a5e1d9a0364d0c12f56db3dbf7aca76d/prometheus_client-0.7.1.tar.gz
+Collecting Send2Trash
+  Downloading https://files.pythonhosted.org/packages/49/46/c3dc27481d1cc57b9385aff41c474ceb7714f7935b1247194adae45db714/Send2Trash-1.5.0-py3-none-any.whl
+Requirement already satisfied: tornado>=5.0 in /miniconda3/lib/python3.7/site-packages (from notebook->jupyter) (6.0.3)
+Collecting pyzmq>=17
+  Downloading https://files.pythonhosted.org/packages/c7/6a/307e4a576787c7df1df6ebf56754c3fc8defcafa1a09ee22e9b961a390be/pyzmq-18.1.0-cp37-cp37m-manylinux1_x86_64.whl (1.1MB)
+Collecting ipython>=4.0.0; python_version >= "3.3"
+  Downloading https://files.pythonhosted.org/packages/81/2e/59cdacea6476a4c21b7c090a91250ffbcd085900f5eb9f4e4d68dd2ee4e3/ipython-7.9.0-py3-none-any.whl (775kB)
 Collecting widgetsnbextension~=3.5.0
   Downloading https://files.pythonhosted.org/packages/6c/7b/7ac231c20d2d33c445eaacf8a433f4e22c60677eb9776c7c5262d7ddee2d/widgetsnbextension-3.5.1-py2.py3-none-any.whl (2.2MB)
 Collecting prompt-toolkit<2.1.0,>=2.0.0
   Downloading https://files.pythonhosted.org/packages/87/61/2dfea88583d5454e3a64f9308a686071d58d59a55db638268a6413e1eb6d/prompt_toolkit-2.0.10-py3-none-any.whl (340kB)
-Collecting terminado>=0.8.1
-  Downloading https://files.pythonhosted.org/packages/a7/56/80ea7fa66565fa75ae21ce0c16bc90067530e5d15e48854afcc86585a391/terminado-0.8.2-py2.py3-none-any.whl
-Collecting Send2Trash
-  Downloading https://files.pythonhosted.org/packages/49/46/c3dc27481d1cc57b9385aff41c474ceb7714f7935b1247194adae45db714/Send2Trash-1.5.0-py3-none-any.whl
-Collecting pyzmq>=17
-  Downloading https://files.pythonhosted.org/packages/c7/6a/307e4a576787c7df1df6ebf56754c3fc8defcafa1a09ee22e9b961a390be/pyzmq-18.1.0-cp37-cp37m-manylinux1_x86_64.whl (1.1MB)
-Collecting prometheus-client
-  Downloading https://files.pythonhosted.org/packages/b3/23/41a5a24b502d35a4ad50a5bb7202a5e1d9a0364d0c12f56db3dbf7aca76d/prometheus_client-0.7.1.tar.gz
 Collecting cloudpickle
   Downloading https://files.pythonhosted.org/packages/c1/49/334e279caa3231255725c8e860fa93e72083567625573421db8875846c14/cloudpickle-1.2.2-py2.py3-none-any.whl
-Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc>=0.5) (1.24.2)
 Requirement already satisfied: idna<2.9,>=2.5 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc>=0.5) (2.8)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc>=0.5) (1.24.2)
 Requirement already satisfied: certifi>=2017.4.17 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc>=0.5) (2019.9.11)
 Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc>=0.5) (3.0.4)
 Collecting more-itertools
   Downloading https://files.pythonhosted.org/packages/45/dc/3241eef99eb45f1def35cf93af35d1cf9ef4c0991792583b8f33ea41b092/more_itertools-7.2.0-py3-none-any.whl (57kB)
+Collecting cachetools>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl
 Collecting rsa>=3.1.4
   Downloading https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
 Collecting pyasn1-modules>=0.2.1
   Downloading https://files.pythonhosted.org/packages/52/50/bb4cefca37da63a0c52218ba2cb1b1c36110d84dcbae8aa48cd67c5e95c2/pyasn1_modules-0.2.7-py2.py3-none-any.whl (131kB)
-Collecting cachetools>=2.0.0
-  Downloading https://files.pythonhosted.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl
 Collecting requests-oauthlib>=0.7.0
   Downloading https://files.pythonhosted.org/packages/c2/e2/9fd03d55ffb70fe51f587f20bcf407a6927eb121de86928b34d162f0b1ac/requests_oauthlib-1.2.0-py2.py3-none-any.whl
-Collecting jedi>=0.10
-  Downloading https://files.pythonhosted.org/packages/55/54/da994f359e4e7da4776a200e76dbc85ba5fc319eefc22e33d55296d95a1d/jedi-0.15.1-py2.py3-none-any.whl (1.0MB)
-Collecting pexpect; sys_platform != "win32"
-  Downloading https://files.pythonhosted.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl (58kB)
-Collecting pickleshare
-  Downloading https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
-Collecting backcall
-  Downloading https://files.pythonhosted.org/packages/84/71/c8ca4f5bb1e08401b916c68003acf0a0655df935d74d93bf3f3364b310e0/backcall-0.1.0.tar.gz
 Collecting jsonschema!=2.5.0,>=2.4
   Downloading https://files.pythonhosted.org/packages/ce/6c/888d7c3c1fce3974c88a01a6bc553528c99d3586e098eee23e8383dd11c3/jsonschema-3.1.1-py2.py3-none-any.whl (56kB)
 Collecting webencodings
   Downloading https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
-Collecting wcwidth
-  Downloading https://files.pythonhosted.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl
 Collecting ptyprocess; os_name != "nt"
   Downloading https://files.pythonhosted.org/packages/d1/29/605c2cc68a9992d18dada28206eeada56ea4bd07a239669da41674648b6f/ptyprocess-0.6.0-py2.py3-none-any.whl
+Collecting jedi>=0.10
+  Downloading https://files.pythonhosted.org/packages/55/54/da994f359e4e7da4776a200e76dbc85ba5fc319eefc22e33d55296d95a1d/jedi-0.15.1-py2.py3-none-any.whl (1.0MB)
+Collecting backcall
+  Downloading https://files.pythonhosted.org/packages/84/71/c8ca4f5bb1e08401b916c68003acf0a0655df935d74d93bf3f3364b310e0/backcall-0.1.0.tar.gz
+Collecting pexpect; sys_platform != "win32"
+  Downloading https://files.pythonhosted.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl (58kB)
+Collecting pickleshare
+  Downloading https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
+Collecting wcwidth
+  Downloading https://files.pythonhosted.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl
 Collecting pyasn1>=0.1.3
   Downloading https://files.pythonhosted.org/packages/a1/71/8f0d444e3a74e5640a3d5d967c1c6b015da9c655f35b2d308a55d907a517/pyasn1-0.4.7-py2.py3-none-any.whl (76kB)
 Collecting oauthlib>=3.0.0
   Downloading https://files.pythonhosted.org/packages/05/57/ce2e7a8fa7c0afb54a0581b14a65b56e62b5759dbc98e80627142b8a3704/oauthlib-3.1.0-py2.py3-none-any.whl (147kB)
-Collecting parso>=0.5.0
-  Downloading https://files.pythonhosted.org/packages/a3/bd/bf4e5bd01d79906e5b945a7af033154da49fd2b0d5b5c705a21330323305/parso-0.5.1-py2.py3-none-any.whl (95kB)
 Collecting pyrsistent>=0.14.0
   Downloading https://files.pythonhosted.org/packages/30/86/53a88c0a57698fa228db29a4000c28f4124823010388cb7042fe6e2be8dd/pyrsistent-0.15.5.tar.gz (107kB)
 Collecting attrs>=17.4.0
   Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+Collecting parso>=0.5.0
+  Downloading https://files.pythonhosted.org/packages/a3/bd/bf4e5bd01d79906e5b945a7af033154da49fd2b0d5b5c705a21330323305/parso-0.5.1-py2.py3-none-any.whl (95kB)
 Building wheels for collected packages: dca, fa2, gast, leidenalg, louvain, numpydoc, python-igraph, umap-learn, kopt, future, opt-einsum, wrapt, absl-py, termcolor, pyyaml, pandocfilters, prometheus-client, backcall, pyrsistent
   Building wheel for dca (setup.py): started
   Building wheel for dca (setup.py): finished with status 'done'
-  Created wheel for dca: filename=DCA-0.2.3-cp37-none-any.whl size=22140 sha256=c29cc93a37d970c66e7d538ddb7146466f0053c7eb80f5790c4f7650b2758236
+  Created wheel for dca: filename=DCA-0.2.3-cp37-none-any.whl size=22140 sha256=0036bbee338b716e31ceb8906b09bf1402a43dee7d1bfd8b6c046b9be0a51c9b
   Stored in directory: /root/.cache/pip/wheels/58/56/85/d272d8b353965060912768a2f079842eebb0623bcfafb5048e
   Building wheel for fa2 (setup.py): started
   Building wheel for fa2 (setup.py): finished with status 'done'
-  Created wheel for fa2: filename=fa2-0.3.5-cp37-cp37m-linux_x86_64.whl size=301834 sha256=bb8d073b9e61cfca7429265ca4dbf9a7776001733451f569689a6f6c4fce4413
+  Created wheel for fa2: filename=fa2-0.3.5-cp37-cp37m-linux_x86_64.whl size=301844 sha256=4869d1b6260dbe6b1fedc4fea69eb8e68b1e678a19713ddf859259c361380ed5
   Stored in directory: /root/.cache/pip/wheels/4f/44/5b/d4fef7f6a310279e27dace5099b8f8104dcc3a9a046004524f
   Building wheel for gast (setup.py): started
   Building wheel for gast (setup.py): finished with status 'done'
-  Created wheel for gast: filename=gast-0.2.2-cp37-none-any.whl size=7540 sha256=db0fa4779d71e33b872639141f3eb240d679b5e4da314bc0ccca637e6a721098
+  Created wheel for gast: filename=gast-0.2.2-cp37-none-any.whl size=7540 sha256=04992749b377269860236961022e5cebd3c0d0feff655594a9e708f209332ac0
   Stored in directory: /root/.cache/pip/wheels/5c/2e/7e/a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd
   Building wheel for leidenalg (setup.py): started
   Building wheel for leidenalg (setup.py): still running...
   Building wheel for leidenalg (setup.py): finished with status 'done'
-  Created wheel for leidenalg: filename=leidenalg-0.7.0-cp37-cp37m-linux_x86_64.whl size=1122579 sha256=5c344f602bf26f09fe36975d104f2fa8412483a7372cec7df4c4b9094222e524
+  Created wheel for leidenalg: filename=leidenalg-0.7.0-cp37-cp37m-linux_x86_64.whl size=1122538 sha256=fd494dfd7699153d2ca9beb88bf622a1864683aaf1fa7dc2ab16dee79b682f7c
   Stored in directory: /root/.cache/pip/wheels/29/55/48/5a04693a10f50297bcda23819ca23ab3470a61dd911851c8bd
   Building wheel for louvain (setup.py): started
   Building wheel for louvain (setup.py): still running...
   Building wheel for louvain (setup.py): finished with status 'done'
-  Created wheel for louvain: filename=louvain-0.6.1-cp37-cp37m-linux_x86_64.whl size=1031311 sha256=9795461264b69f87bb1f5844734f3a5d1df874bfe98b31572354d2a2d3ce9204
+  Created wheel for louvain: filename=louvain-0.6.1-cp37-cp37m-linux_x86_64.whl size=1031340 sha256=327f30cd9e8bcfbc71157882bca4c011156c80274b19ec8760b7d49155c432a0
   Stored in directory: /root/.cache/pip/wheels/f2/c3/d4/f7abaf064186d6214ef952bbb72fd6c5136d4b17dbeaeff481
   Building wheel for numpydoc (setup.py): started
   Building wheel for numpydoc (setup.py): finished with status 'done'
-  Created wheel for numpydoc: filename=numpydoc-0.9.1-cp37-none-any.whl size=31872 sha256=f87f38f4d978133b5b310b66d84547e96096190cbb5737eb57abb2c2cff30476
+  Created wheel for numpydoc: filename=numpydoc-0.9.1-cp37-none-any.whl size=31872 sha256=8cc40a13e78d7bf3d6c96a999f20beeb58e37b3588f664fbfea23d04f2fc576d
   Stored in directory: /root/.cache/pip/wheels/51/30/d1/92a39ba40f21cb70e53f8af96eb98f002a781843c065406500
   Building wheel for python-igraph (setup.py): started
   Building wheel for python-igraph (setup.py): still running...
   Building wheel for python-igraph (setup.py): finished with status 'done'
-  Created wheel for python-igraph: filename=python_igraph-0.7.1.post6-cp37-cp37m-linux_x86_64.whl size=2239810 sha256=f99f0a947de9925410a1a1e3f58f8ba41576d1670f85a71fce2a7237e68261cf
+  Created wheel for python-igraph: filename=python_igraph-0.7.1.post6-cp37-cp37m-linux_x86_64.whl size=2239805 sha256=8c8064564b87a7862b90b7c3b74ae93717c8953fc8355d70a1409bddd2ae6dc0
   Stored in directory: /root/.cache/pip/wheels/41/d6/02/34eebae97e25f5b87d60f4c0687e00523e3f244fa41bc3f4a7
   Building wheel for umap-learn (setup.py): started
   Building wheel for umap-learn (setup.py): finished with status 'done'
-  Created wheel for umap-learn: filename=umap_learn-0.3.10-cp37-none-any.whl size=38881 sha256=0c2d829b92a07301d3e7a6414ed6c3ccb6f7612bce1dda09415be2023853328f
+  Created wheel for umap-learn: filename=umap_learn-0.3.10-cp37-none-any.whl size=38881 sha256=79d2d9aabc0ca31aa97f8c49e51da19d122fef6fd27b6563b78dcceeb5897860
   Stored in directory: /root/.cache/pip/wheels/d0/f8/d5/8e3af3ee957feb9b403a060ebe72f7561887fef9dea658326e
   Building wheel for kopt (setup.py): started
   Building wheel for kopt (setup.py): finished with status 'done'
-  Created wheel for kopt: filename=kopt-0.1.0-py2.py3-none-any.whl size=20597 sha256=90019bcc42948fe7fb42efbefa744cff7a03a77ee8fe976057709a5fb82e19d1
+  Created wheel for kopt: filename=kopt-0.1.0-py2.py3-none-any.whl size=20597 sha256=37d58f5d401c32e5e66d77ba9eb2489ee7a3276ccd58358edb8bb47b2d67ce33
   Stored in directory: /root/.cache/pip/wheels/21/07/fb/61d6d91da2defece9f6f91aa94f4370fc920324e28eb9010a9
   Building wheel for future (setup.py): started
   Building wheel for future (setup.py): finished with status 'done'
-  Created wheel for future: filename=future-0.18.2-cp37-none-any.whl size=491057 sha256=8e5ba7f83a747b199a76d4f842bbd65df6f5c2c1f9fa029370ac7bc2454438b1
+  Created wheel for future: filename=future-0.18.2-cp37-none-any.whl size=491057 sha256=f12672f84ae159d37751fd268fcce853525d2d67116f77d78b502988d1bd6b1a
   Stored in directory: /root/.cache/pip/wheels/8b/99/a0/81daf51dcd359a9377b110a8a886b3895921802d2fc1b2397e
   Building wheel for opt-einsum (setup.py): started
   Building wheel for opt-einsum (setup.py): finished with status 'done'
-  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp37-none-any.whl size=61682 sha256=c47eebe351d8ae4e2f81f570d7fc7470a7af0f8142adfc17ab0bb62032ddb477
+  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp37-none-any.whl size=61682 sha256=ad8b5b2365f3ccf84e6d3946db521fd738fe65156c8964304847b1279f326692
   Stored in directory: /root/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833
   Building wheel for wrapt (setup.py): started
   Building wheel for wrapt (setup.py): finished with status 'done'
-  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71272 sha256=75e7596103205811468e9b83e67b6cd39e07db9343438bd8c43bd15da08a23cc
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71270 sha256=61381166cca2a074a53d647eaab6037e2576842dc9da222887b6ed66451a274f
   Stored in directory: /root/.cache/pip/wheels/d7/de/2e/efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd
   Building wheel for absl-py (setup.py): started
   Building wheel for absl-py (setup.py): finished with status 'done'
-  Created wheel for absl-py: filename=absl_py-0.8.1-cp37-none-any.whl size=121167 sha256=c7a71ddd36d8b94dbbce66802a589e03257371290176edb0a137a67ca39f2bfb
+  Created wheel for absl-py: filename=absl_py-0.8.1-cp37-none-any.whl size=121167 sha256=0ca64663417d5164fac2a7540a5f6ea4480ad7fa506aaae7e5393ddb98e7c1f7
   Stored in directory: /root/.cache/pip/wheels/a7/15/a0/0a0561549ad11cdc1bc8fa1191a353efd30facf6bfb507aefc
   Building wheel for termcolor (setup.py): started
   Building wheel for termcolor (setup.py): finished with status 'done'
-  Created wheel for termcolor: filename=termcolor-1.1.0-cp37-none-any.whl size=4832 sha256=318425fa75c5cd4118d2e6af689b515d97b971b25b688197dde1120517d1c014
+  Created wheel for termcolor: filename=termcolor-1.1.0-cp37-none-any.whl size=4832 sha256=4d4998ac3188679e70fbd80e5934a3fab6ffa30c91c3f60f3f60e57b9b8c1956
   Stored in directory: /root/.cache/pip/wheels/7c/06/54/bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6
   Building wheel for pyyaml (setup.py): started
   Building wheel for pyyaml (setup.py): finished with status 'done'
-  Created wheel for pyyaml: filename=PyYAML-5.1.2-cp37-cp37m-linux_x86_64.whl size=44103 sha256=90cd6dadc4f22f9432503191af13e4967d79ec211f1394a38928dc8426bddbcf
+  Created wheel for pyyaml: filename=PyYAML-5.1.2-cp37-cp37m-linux_x86_64.whl size=44103 sha256=de87609c3f44c65682734697306bc5a1476d881c8be39cfa77edaf7b28681eb2
   Stored in directory: /root/.cache/pip/wheels/d9/45/dd/65f0b38450c47cf7e5312883deb97d065e030c5cca0a365030
   Building wheel for pandocfilters (setup.py): started
   Building wheel for pandocfilters (setup.py): finished with status 'done'
-  Created wheel for pandocfilters: filename=pandocfilters-1.4.2-cp37-none-any.whl size=7857 sha256=a70f7dc8563e001cd258dc5be9e5b66a8c387cc6109f52de053595359277ee65
+  Created wheel for pandocfilters: filename=pandocfilters-1.4.2-cp37-none-any.whl size=7857 sha256=093971f92cad496e43549c752d85afe266a9cb332168a6fb00e0d0bb298fd1f9
   Stored in directory: /root/.cache/pip/wheels/39/01/56/f1b08a6275acc59e846fa4c1e1b65dbc1919f20157d9e66c20
   Building wheel for prometheus-client (setup.py): started
   Building wheel for prometheus-client (setup.py): finished with status 'done'
-  Created wheel for prometheus-client: filename=prometheus_client-0.7.1-cp37-none-any.whl size=41402 sha256=79fc21e168cd4198580d8cb089a7fa7fc877183b93d31ef900c2c08679ff35aa
+  Created wheel for prometheus-client: filename=prometheus_client-0.7.1-cp37-none-any.whl size=41402 sha256=bbbb6e3ab585baffc9fd214b26ad81fbcdb29f12eee2204e270d990516a8ed44
   Stored in directory: /root/.cache/pip/wheels/1c/54/34/fd47cd9b308826cc4292b54449c1899a30251ef3b506bc91ea
   Building wheel for backcall (setup.py): started
   Building wheel for backcall (setup.py): finished with status 'done'
-  Created wheel for backcall: filename=backcall-0.1.0-cp37-none-any.whl size=10415 sha256=93d562a09bdeef241ff48bee5464ef9442753ad1ed3aae4eddd7d858235c8661
+  Created wheel for backcall: filename=backcall-0.1.0-cp37-none-any.whl size=10415 sha256=28b5bea5346cc5e1aeaa7924336fd37b9d4a3459fdb69273019e1a741c172c6e
   Stored in directory: /root/.cache/pip/wheels/98/b0/dd/29e28ff615af3dda4c67cab719dd51357597eabff926976b45
   Building wheel for pyrsistent (setup.py): started
   Building wheel for pyrsistent (setup.py): finished with status 'done'
-  Created wheel for pyrsistent: filename=pyrsistent-0.15.5-cp37-cp37m-linux_x86_64.whl size=114597 sha256=2844a9a77f401dd8579f2f2febb478a03c8353b44f512139a5aec56f3a7088a5
+  Created wheel for pyrsistent: filename=pyrsistent-0.15.5-cp37-cp37m-linux_x86_64.whl size=114599 sha256=f0f077238e8ca7310f67c954504a0241857aac7aec9511b710e1b3389579746f
   Stored in directory: /root/.cache/pip/wheels/c4/5a/b2/d22f93864c638398dad50541af906e9838bb22044d2cc3ad3a
 Successfully built dca fa2 gast leidenalg louvain numpydoc python-igraph umap-learn kopt future opt-einsum wrapt absl-py termcolor pyyaml pandocfilters prometheus-client backcall pyrsistent
 [91mERROR: hyperopt 0.2.2 has requirement networkx==2.2, but you'll have networkx 2.4 which is incompatible.
 ERROR: scprep 1.0.3 has requirement pandas>=0.25, but you'll have pandas 0.23.4 which is incompatible.
-[0mInstalling collected packages: click, Cython, h5py, keras-applications, keras-preprocessing, pyyaml, keras, joblib, scikit-learn, patsy, llvmlite, numba, natsort, pandas, anndata, statsmodels, more-itertools, zipp, importlib-metadata, decorator, networkx, matplotlib, seaborn, umap-learn, numexpr, tables, scanpy, future, cloudpickle, hyperopt, kopt, dca, fa2, gast, python-igraph, leidenalg, louvain, sphinxcontrib-serializinghtml, babel, snowballstemmer, sphinxcontrib-qthelp, sphinxcontrib-applehelp, sphinxcontrib-devhelp, sphinxcontrib-jsmath, imagesize, packaging, sphinxcontrib-htmlhelp, docutils, MarkupSafe, Jinja2, alabaster, Pygments, sphinx, numpydoc, tasklogger, pygsp, graphtools, scprep, phate, opt-einsum, markdown, protobuf, werkzeug, absl-py, pyasn1, rsa, pyasn1-modules, cachetools, google-auth, oauthlib, requests-oauthlib, google-auth-oauthlib, grpcio, tensorboard, wrapt, astor, tensorflow-estimator, google-pasta, termcolor, tensorflow, ipython-genutils, traitlets, jupyter-core, pyzmq, jupyter-client, parso, jedi, ptyprocess, pexpect, wcwidth, prompt-toolkit, pickleshare, backcall, ipython, ipykernel, qtconsole, mistune, pandocfilters, testpath, entrypoints, pyrsistent, attrs, jsonschema, nbformat, webencodings, bleach, defusedxml, nbconvert, terminado, Send2Trash, prometheus-client, notebook, widgetsnbextension, ipywidgets, jupyter-console, jupyter
+[0mInstalling collected packages: click, Cython, keras-preprocessing, h5py, keras-applications, pyyaml, keras, joblib, scikit-learn, pandas, patsy, statsmodels, matplotlib, seaborn, decorator, networkx, more-itertools, zipp, importlib-metadata, llvmlite, numba, umap-learn, numexpr, tables, natsort, anndata, scanpy, future, cloudpickle, hyperopt, kopt, dca, fa2, gast, python-igraph, leidenalg, louvain, docutils, sphinxcontrib-htmlhelp, sphinxcontrib-jsmath, sphinxcontrib-serializinghtml, snowballstemmer, sphinxcontrib-applehelp, packaging, alabaster, babel, sphinxcontrib-qthelp, MarkupSafe, Jinja2, Pygments, sphinxcontrib-devhelp, imagesize, sphinx, numpydoc, scprep, tasklogger, pygsp, graphtools, phate, opt-einsum, tensorflow-estimator, grpcio, wrapt, protobuf, cachetools, pyasn1, rsa, pyasn1-modules, google-auth, werkzeug, absl-py, oauthlib, requests-oauthlib, google-auth-oauthlib, markdown, tensorboard, google-pasta, astor, termcolor, tensorflow, mistune, entrypoints, ipython-genutils, traitlets, pyrsistent, attrs, jsonschema, jupyter-core, nbformat, webencodings, bleach, pandocfilters, defusedxml, testpath, nbconvert, ptyprocess, terminado, pyzmq, jupyter-client, prometheus-client, Send2Trash, parso, jedi, wcwidth, prompt-toolkit, backcall, pexpect, pickleshare, ipython, ipykernel, notebook, widgetsnbextension, ipywidgets, jupyter-console, qtconsole, jupyter
   Found existing installation: matplotlib 3.1.1
     Uninstalling matplotlib-3.1.1:
       Successfully uninstalled matplotlib-3.1.1
 Successfully installed Cython-0.29.13 Jinja2-2.10.3 MarkupSafe-1.1.1 Pygments-2.4.2 Send2Trash-1.5.0 absl-py-0.8.1 alabaster-0.7.12 anndata-0.6.22.post1 astor-0.8.0 attrs-19.3.0 babel-2.7.0 backcall-0.1.0 bleach-3.1.0 cachetools-3.1.1 click-7.0 cloudpickle-1.2.2 dca-0.2.3 decorator-4.4.1 defusedxml-0.6.0 docutils-0.15.2 entrypoints-0.3 fa2-0.3.5 future-0.18.2 gast-0.2.2 google-auth-1.6.3 google-auth-oauthlib-0.4.1 google-pasta-0.1.7 graphtools-1.3.1 grpcio-1.24.3 h5py-2.10.0 hyperopt-0.2.2 imagesize-1.1.0 importlib-metadata-0.23 ipykernel-5.1.3 ipython-7.9.0 ipython-genutils-0.2.0 ipywidgets-7.5.1 jedi-0.15.1 joblib-0.14.0 jsonschema-3.1.1 jupyter-1.0.0 jupyter-client-5.3.4 jupyter-console-6.0.0 jupyter-core-4.6.1 keras-2.3.1 keras-applications-1.0.8 keras-preprocessing-1.1.0 kopt-0.1.0 leidenalg-0.7.0 llvmlite-0.30.0 louvain-0.6.1 markdown-3.1.1 matplotlib-3.0.3 mistune-0.8.4 more-itertools-7.2.0 natsort-6.0.0 nbconvert-5.6.1 nbformat-4.4.0 networkx-2.4 notebook-6.0.1 numba-0.46.0 numexpr-2.7.0 numpydoc-0.9.1 oauthlib-3.1.0 opt-einsum-3.1.0 packaging-19.2 pandas-0.23.4 pandocfilters-1.4.2 parso-0.5.1 patsy-0.5.1 pexpect-4.7.0 phate-0.4.5 pickleshare-0.7.5 prometheus-client-0.7.1 prompt-toolkit-2.0.10 protobuf-3.10.0 ptyprocess-0.6.0 pyasn1-0.4.7 pyasn1-modules-0.2.7 pygsp-0.5.1 pyrsistent-0.15.5 python-igraph-0.7.1.post6 pyyaml-5.1.2 pyzmq-18.1.0 qtconsole-4.5.5 requests-oauthlib-1.2.0 rsa-4.0 scanpy-1.4.4.post1 scikit-learn-0.21.3 scprep-1.0.3 seaborn-0.9.0 snowballstemmer-2.0.0 sphinx-2.2.1 sphinxcontrib-applehelp-1.0.1 sphinxcontrib-devhelp-1.0.1 sphinxcontrib-htmlhelp-1.0.2 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.2 sphinxcontrib-serializinghtml-1.1.3 statsmodels-0.10.1 tables-3.6.1 tasklogger-1.0.0 tensorboard-2.0.1 tensorflow-2.0.0 tensorflow-estimator-2.0.1 termcolor-1.1.0 terminado-0.8.2 testpath-0.4.2 traitlets-4.3.3 umap-learn-0.3.10 wcwidth-0.1.7 webencodings-0.5.1 werkzeug-0.16.0 widgetsnbextension-3.5.1 wrapt-1.11.2 zipp-0.6.0
-Removing intermediate container a8005f69b862
- ---> 822f20e1e0bd
+Removing intermediate container ff0ea3b840fd
+ ---> 2c740ef464ca
 Step 12/17 : RUN python3 -m pip install     velocyto     scvelo
- ---> Running in a37f1828644c
+ ---> Running in a5eeafd0818f
 Collecting velocyto
   Downloading https://files.pythonhosted.org/packages/81/66/e8fff9d3b824fd99c0f678c47c740fec058ce2d9a0cfdf11b114ea8889f2/velocyto-0.17.17.tar.gz (198kB)
 Collecting scvelo
@@ -3424,14 +3424,14 @@ Collecting loompy
 Requirement already satisfied: pysam in /miniconda3/lib/python3.7/site-packages (from velocyto) (0.15.3)
 Requirement already satisfied: Click in /miniconda3/lib/python3.7/site-packages (from velocyto) (7.0)
 Requirement already satisfied: pandas in /miniconda3/lib/python3.7/site-packages (from velocyto) (0.23.4)
-Requirement already satisfied: anndata>=0.6.18 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.6.22.post1)
 Requirement already satisfied: umap-learn>=0.3 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.3.10)
+Requirement already satisfied: anndata>=0.6.18 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.6.22.post1)
 Requirement already satisfied: scanpy>=1.4 in /miniconda3/lib/python3.7/site-packages (from scvelo) (1.4.4.post1)
 Requirement already satisfied: llvmlite>=0.30.0dev0 in /miniconda3/lib/python3.7/site-packages (from numba->velocyto) (0.30.0)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (2.4.2)
+Requirement already satisfied: cycler>=0.10 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (0.10.0)
 Requirement already satisfied: kiwisolver>=1.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (1.1.0)
 Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (2.8.0)
-Requirement already satisfied: cycler>=0.10 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (0.10.0)
 Requirement already satisfied: joblib>=0.11 in /miniconda3/lib/python3.7/site-packages (from scikit-learn->velocyto) (0.14.0)
 Requirement already satisfied: six in /miniconda3/lib/python3.7/site-packages (from h5py->velocyto) (1.12.0)
 Requirement already satisfied: setuptools in /miniconda3/lib/python3.7/site-packages (from loompy->velocyto) (41.4.0)
@@ -3439,41 +3439,41 @@ Collecting numpy-groupies
   Downloading https://files.pythonhosted.org/packages/96/7a/2196465530e72084c6bb97cd49bf8ccdc83919cc94755727aa148effbc0f/numpy_groupies-0.9.9.tar.gz (43kB)
 Requirement already satisfied: pytz>=2011k in /miniconda3/lib/python3.7/site-packages (from pandas->velocyto) (2019.3)
 Requirement already satisfied: natsort in /miniconda3/lib/python3.7/site-packages (from anndata>=0.6.18->scvelo) (6.0.0)
+Requirement already satisfied: patsy in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.5.1)
+Requirement already satisfied: tqdm in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (4.36.1)
+Requirement already satisfied: statsmodels>=0.10.0rc2 in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.10.1)
+Requirement already satisfied: seaborn in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.9.0)
+Requirement already satisfied: tables in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (3.6.1)
 Requirement already satisfied: importlib-metadata>=0.7; python_version < "3.8" in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.23)
 Requirement already satisfied: networkx in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (2.4)
-Requirement already satisfied: tqdm in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (4.36.1)
-Requirement already satisfied: tables in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (3.6.1)
-Requirement already satisfied: seaborn in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.9.0)
-Requirement already satisfied: statsmodels>=0.10.0rc2 in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.10.1)
-Requirement already satisfied: patsy in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.5.1)
+Requirement already satisfied: numexpr>=2.6.2 in /miniconda3/lib/python3.7/site-packages (from tables->scanpy>=1.4->scvelo) (2.7.0)
 Requirement already satisfied: zipp>=0.5 in /miniconda3/lib/python3.7/site-packages (from importlib-metadata>=0.7; python_version < "3.8"->scanpy>=1.4->scvelo) (0.6.0)
 Requirement already satisfied: decorator>=4.3.0 in /miniconda3/lib/python3.7/site-packages (from networkx->scanpy>=1.4->scvelo) (4.4.1)
-Requirement already satisfied: numexpr>=2.6.2 in /miniconda3/lib/python3.7/site-packages (from tables->scanpy>=1.4->scvelo) (2.7.0)
 Requirement already satisfied: more-itertools in /miniconda3/lib/python3.7/site-packages (from zipp>=0.5->importlib-metadata>=0.7; python_version < "3.8"->scanpy>=1.4->scvelo) (7.2.0)
 Building wheels for collected packages: velocyto, loompy, numpy-groupies
   Building wheel for velocyto (setup.py): started
   Building wheel for velocyto (setup.py): finished with status 'done'
-  Created wheel for velocyto: filename=velocyto-0.17.17-cp37-cp37m-linux_x86_64.whl size=390602 sha256=dec157968284268324dbba946f68a79ffbcd20e6579b62396fd193c72d72092d
+  Created wheel for velocyto: filename=velocyto-0.17.17-cp37-cp37m-linux_x86_64.whl size=390597 sha256=979e2fd46017b716cc4f79601c62834119b486ea5e7f2b984b30dcf61bd11ad8
   Stored in directory: /root/.cache/pip/wheels/e0/10/47/5a2aa6a7179b17b50a19cdba1df71798ade77e7d9ce98c5300
   Building wheel for loompy (setup.py): started
   Building wheel for loompy (setup.py): finished with status 'done'
-  Created wheel for loompy: filename=loompy-3.0.6-cp37-none-any.whl size=47896 sha256=574a0a094b0179449b6a52625e25e72e78ce83a518122362d1beafca27c8e628
+  Created wheel for loompy: filename=loompy-3.0.6-cp37-none-any.whl size=47896 sha256=32aaad81fe4eb394489ea37e5433d7608df41371d95b3598fbc4102d9844fc63
   Stored in directory: /root/.cache/pip/wheels/f9/a4/90/5a98ad83419732b0fba533b81a2a52ba3dbe230a936ca4cdc9
   Building wheel for numpy-groupies (setup.py): started
   Building wheel for numpy-groupies (setup.py): finished with status 'done'
-  Created wheel for numpy-groupies: filename=numpy_groupies-0+unknown-cp37-none-any.whl size=27878 sha256=9b6030513cd25fa7a920a2fabfbb01f482491bc8fbc2ee9616e7d45c2f51a651
+  Created wheel for numpy-groupies: filename=numpy_groupies-0+unknown-cp37-none-any.whl size=27878 sha256=a789a4ded96c1628d3c63a39cc8fcfb43139c9ea1f7247f1002719f8234ebcf1
   Stored in directory: /root/.cache/pip/wheels/6c/fb/3d/5c43eb691bd92a3ddd0ebeb6e7e78ceaf3ae1cb8d54b89a7fb
 Successfully built velocyto loompy numpy-groupies
 Installing collected packages: numpy-groupies, loompy, velocyto, scvelo
 Successfully installed loompy-3.0.6 numpy-groupies-0+unknown scvelo-0.1.24 velocyto-0.17.17
-Removing intermediate container a37f1828644c
- ---> fed26940b069
+Removing intermediate container a5eeafd0818f
+ ---> f35bcc25c6f0
 Step 13/17 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 
 
- ---> 676d2655b3bb
+ ---> e4764a25157b
 Step 14/17 : RUN tar -xvzf /docker/master.tar.gz -C /docker
- ---> Running in 17b0d956524a
+ ---> Running in ed611ce3e878
 docker_containers-master/
 docker_containers-master/.gitignore
 docker_containers-master/R/
@@ -3507,16 +3507,16 @@ docker_containers-master/kallisto/0.46.0/Dockerfile
 docker_containers-master/kallisto/0.46.0/README.md
 docker_containers-master/scanpy/
 docker_containers-master/scanpy/Dockerfile
-Removing intermediate container 17b0d956524a
- ---> ed0b1ea83ae1
+Removing intermediate container ed611ce3e878
+ ---> d83cf7b2f788
 Step 15/17 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
- ---> Running in 90fcf7f51f27
+ ---> Running in 8b46b90f39c5
 [91mInstalling package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
 [0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.9.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 39983 bytes (39 KB)
-=====[0m[91m=[0m[91m==[0m[91m=[0m[91m===[0m[91m==[0m[91m==[0m[91m=[0m[91m=====[0m[91m=====[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m====[0m[91m==[0m[91m=[0m[91m=[0m[91m===
-[0m[91mdownloaded 39 KB
+=================[0m[91m=================================
+downloaded 39 KB
 
 [0m[91m* installing *source* package ‘BiocManager’ ...
 [0m[91m** package ‘BiocManager’ successfully unpacked and MD5 sums checked
@@ -3533,12 +3533,12 @@ Step 15/17 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cra
 [0m[91m** testing if installed package keeps a record of temporary installation path
 [0m[91m* DONE (BiocManager)
 [0m[91m
-[0m[91mThe downloaded source packages are in
-	‘/tmp/Rtmpmd6JtH/downloaded_packages’
-[0mRemoving intermediate container 90fcf7f51f27
- ---> ebc47f392aea
+The downloaded source packages are in
+	‘/tmp/RtmpToF8BN/downloaded_packages’
+[0mRemoving intermediate container 8b46b90f39c5
+ ---> a2c7c09d60b4
 Step 16/17 : RUN Rscript -e 'BiocManager::install(c("remotes","devtools","ChIPseeker","destiny","DiffBind","monocle","Seurat","tidyverse"), update = TRUE, ask = FALSE, quiet = TRUE)'
- ---> Running in 401122ea8af0
+ ---> Running in 4065dc96536f
 [91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'BiocVersion', 'remotes', 'devtools', 'ChIPseeker',
   'destiny', 'DiffBind', 'monocle', 'Seurat', 'tidyverse'
@@ -3547,7 +3547,7 @@ Step 16/17 : RUN Rscript -e 'BiocManager::install(c("remotes","devtools","ChIPse
 [0m[91mOld packages: 'littler', 'boot', 'foreign', 'KernSmooth', 'mgcv', 'nlme'
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/littler_0.3.9.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 652684 bytes (637 KB)
-[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m
+===[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m==[0m[91m==[0m[91m===[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==
 downloaded 637 KB
 
 [0m[91m* installing *source* package ‘littler’ ...
@@ -3609,30 +3609,30 @@ config.status: creating src/config.h
 [0m[91m* DONE (littler)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpqKriLu/downloaded_packages’
+	‘/tmp/RtmpSQzkw2/downloaded_packages’
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/boot_1.3-23.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 232655 bytes (227 KB)
-[0m[91m===[0m[91m====[0m[91m===[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m=
+[0m[91m===[0m[91m====[0m[91m===[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m====[0m[91m===[0m[91m===[0m[91m=[0m[91m===[0m[91m====[0m[91m=
 downloaded 227 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/foreign_0.8-72.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 346659 bytes (338 KB)
-[0m[91m=[0m[91m==[0m[91m===[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m==[0m[91m
+==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m====[0m[91m===[0m[91m==[0m[91m=====[0m[91m==[0m[91m===[0m[91m==[0m[91m=
 downloaded 338 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/KernSmooth_2.23-16.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 24632 bytes (24 KB)
-[0m[91m==================================[0m[91m==[0m[91m==============
+[0m[91m=================================[0m[91m===========[0m[91m======[0m[91m
 downloaded 24 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/mgcv_1.8-30.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 936510 bytes (914 KB)
-[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=
 downloaded 914 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/nlme_3.1-141.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 775617 bytes (757 KB)
-=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m
+[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
 downloaded 757 KB
 
 [0m[91m* installing *source* package ‘boot’ ...
@@ -3774,18 +3774,18 @@ gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o mgcv.so coxph.o discrete.
 [0m[91m* DONE (mgcv)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpqKriLu/downloaded_packages’
+	‘/tmp/RtmpSQzkw2/downloaded_packages’
 [0m[91mUpdating HTML index of packages in '.Library'
 [0m[91mMaking 'packages.html' ...[0m[91m done
-[0mRemoving intermediate container 401122ea8af0
- ---> 783bcf5ce33b
+[0mRemoving intermediate container 4065dc96536f
+ ---> 54fe21998a8b
 Step 17/17 : RUN Rscript /docker/docker_containers-master/Rstudio/install_packages.R
- ---> Running in 44b72cc21666
+ ---> Running in e49bfcce5a2c
 [91mInstalling package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
 [0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.9.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 39983 bytes (39 KB)
-=================[0m[91m=================================[0m[91m
+=================[0m[91m=================================
 downloaded 39 KB
 
 [0m[91m* installing *source* package ‘BiocManager’ ...
@@ -3804,286 +3804,433 @@ downloaded 39 KB
 [0m[91m* DONE (BiocManager)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpAyasyv/downloaded_packages’
-[0m[91m[2019-11-01 10:40:46] 'alluvial' will be installed.
+	‘/tmp/Rtmpm3LfHj/downloaded_packages’
+[0m[91m[2019-11-01 12:40:16] 'alluvial' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'alluvial'
-[0m[91m[2019-11-01 10:40:50] 'alluvial' successfully installed.
-[0m[91m[2019-11-01 10:40:50] 'batchelor' will be installed.
+[0m[91m[2019-11-01 12:40:20] 'alluvial' successfully installed.
+[0m[91m[2019-11-01 12:40:20] 'batchelor' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'batchelor'
 [0m[91malso installing the dependencies ‘rhdf5’, ‘Rhdf5lib’, ‘beeswarm’, ‘vipor’, ‘RcppHNSW’, ‘HDF5Array’, ‘ggbeeswarm’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocSingular’, ‘DelayedMatrixStats’, ‘scater’, ‘beachmat’
 
-[0m[91m[2019-11-01 10:47:25] 'batchelor' successfully installed.
-[0m[91m[2019-11-01 10:47:25] 'beeswarm' already installed.
-[0m[91m[2019-11-01 10:47:25] 'biomaRt' already installed.
-[0m[91m[2019-11-01 10:47:26] 'cellranger' already installed.
-[0m[91m[2019-11-01 10:47:26] 'ChIPseeker' already installed.
-[0m[91m[2019-11-01 10:47:26] 'circlize' will be installed.
+[0m[91m[2019-11-01 12:47:09] 'batchelor' successfully installed.
+[0m[91m[2019-11-01 12:47:09] 'beeswarm' already installed.
+[0m[91m[2019-11-01 12:47:09] 'biomaRt' already installed.
+[0m[91m[2019-11-01 12:47:09] 'cellranger' already installed.
+[0m[91m[2019-11-01 12:47:10] 'ChIPseeker' already installed.
+[0m[91m[2019-11-01 12:47:10] 'circlize' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'circlize'
 [0m[91malso installing the dependencies ‘GlobalOptions’, ‘shape’
 
-[0m[91m[2019-11-01 10:47:36] 'circlize' successfully installed.
-[0m[91m[2019-11-01 10:47:36] 'clusterProfiler' will be installed.
+[0m[91m[2019-11-01 12:47:20] 'circlize' successfully installed.
+[0m[91m[2019-11-01 12:47:20] 'clusterProfiler' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'clusterProfiler'
-[0m[91m[2019-11-01 10:47:48] 'clusterProfiler' successfully installed.
-[0m[91m[2019-11-01 10:47:48] 'ComplexHeatmap' will be installed.
+[0m[91m[2019-11-01 12:47:32] 'clusterProfiler' successfully installed.
+[0m[91m[2019-11-01 12:47:32] 'ComplexHeatmap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ComplexHeatmap'
 [0m[91malso installing the dependencies ‘GetoptLong’, ‘clue’
 
-[0m[91m[2019-11-01 10:48:04] 'ComplexHeatmap' successfully installed.
-[0m[91m[2019-11-01 10:48:04] 'cowplot' already installed.
-[0m[91m[2019-11-01 10:48:05] 'concaveman' will be installed.
+[0m[91m[2019-11-01 12:47:48] 'ComplexHeatmap' successfully installed.
+[0m[91m[2019-11-01 12:47:49] 'cowplot' already installed.
+[0m[91m[2019-11-01 12:47:49] 'concaveman' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'concaveman'
 [0m[91malso installing the dependencies ‘classInt’, ‘units’, ‘V8’, ‘sf’
 
-[0m[91m[2019-11-01 10:49:35] 'concaveman' successfully installed.
-[0m[91m[2019-11-01 10:49:35] 'DelayedArray' already installed.
-[0m[91m[2019-11-01 10:49:35] 'DelayedMatrixStats' already installed.
-[0m[91m[2019-11-01 10:49:35] 'dendextend' will be installed.
+[0m[91m[2019-11-01 12:49:19] 'concaveman' successfully installed.
+[0m[91m[2019-11-01 12:49:19] 'DelayedArray' already installed.
+[0m[91m[2019-11-01 12:49:19] 'DelayedMatrixStats' already installed.
+[0m[91m[2019-11-01 12:49:20] 'dendextend' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'dendextend'
-[0m[91m[2019-11-01 10:49:42] 'dendextend' successfully installed.
-[0m[91m[2019-11-01 10:49:42] 'destiny' already installed.
-[0m[91m[2019-11-01 10:49:42] 'devtools' already installed.
-[0m[91m[2019-11-01 10:49:42] 'DiffBind' already installed.
-[0m[91m[2019-11-01 10:49:43] 'diffusionMap' will be installed.
+[0m[91m[2019-11-01 12:49:27] 'dendextend' successfully installed.
+[0m[91m[2019-11-01 12:49:27] 'destiny' already installed.
+[0m[91m[2019-11-01 12:49:27] 'devtools' already installed.
+[0m[91m[2019-11-01 12:49:27] 'DiffBind' already installed.
+[0m[91m[2019-11-01 12:49:27] 'diffusionMap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'diffusionMap'
-[0m[91m[2019-11-01 10:49:47] 'diffusionMap' successfully installed.
-[0m[91m[2019-11-01 10:49:47] 'DropletUtils' will be installed.
+[0m[91m[2019-11-01 12:49:32] 'diffusionMap' successfully installed.
+[0m[91m[2019-11-01 12:49:32] 'DropletUtils' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'DropletUtils'
-[0m[91m[2019-11-01 10:50:43] 'DropletUtils' successfully installed.
-[0m[91m[2019-11-01 10:50:44] 'DT' already installed.
-[0m[91m[2019-11-01 10:50:44] 'enrichR' will be installed.
+[0m[91m[2019-11-01 12:50:30] 'DropletUtils' successfully installed.
+[0m[91m[2019-11-01 12:50:30] 'DT' already installed.
+[0m[91m[2019-11-01 12:50:30] 'enrichR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'enrichR'
-[0m[91m[2019-11-01 10:50:47] 'enrichR' successfully installed.
-[0m[91m[2019-11-01 10:50:47] 'FlowSOM' will be installed.
+[0m[91m[2019-11-01 12:50:33] 'enrichR' successfully installed.
+[0m[91m[2019-11-01 12:50:34] 'FlowSOM' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'FlowSOM'
 [0m[91malso installing the dependencies ‘fda’, ‘ellipse’, ‘mnormt’, ‘kernlab’, ‘mclust’, ‘multicool’, ‘mvtnorm’, ‘pcaPP’, ‘IDPmisc’, ‘flowStats’, ‘flowClust’, ‘ks’, ‘rrcov’, ‘cytolib’, ‘ALL’, ‘flowViz’, ‘ncdfFlow’, ‘RProtoBufLib’, ‘openCyto’, ‘ggcyto’, ‘corpcor’, ‘flowCore’, ‘ConsensusClusterPlus’, ‘flowWorkspace’, ‘CytoML’
 
-[0m[91m[2019-11-01 10:59:43] 'FlowSOM' successfully installed.
-[0m[91m[2019-11-01 10:59:43] 'foreign' already installed.
-[0m[91m[2019-11-01 10:59:43] 'future.apply' already installed.
-[0m[91m[2019-11-01 10:59:43] 'GenomicFeatures' already installed.
-[0m[91m[2019-11-01 10:59:43] 'GenomicRanges' already installed.
-[0m[91m[2019-11-01 10:59:44] 'gam' will be installed.
+[0m[91m[2019-11-01 12:59:05] 'FlowSOM' successfully installed.
+[0m[91m[2019-11-01 12:59:05] 'foreign' already installed.
+[0m[91m[2019-11-01 12:59:06] 'future.apply' already installed.
+[0m[91m[2019-11-01 12:59:06] 'GenomicFeatures' already installed.
+[0m[91m[2019-11-01 12:59:06] 'GenomicRanges' already installed.
+[0m[91m[2019-11-01 12:59:06] 'gam' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gam'
 [0m[91malso installing the dependencies ‘iterators’, ‘foreach’
 
-[0m[91m[2019-11-01 10:59:54] 'gam' successfully installed.
-[0m[91m[2019-11-01 10:59:54] 'ggalluvial' will be installed.
+[0m[91m[2019-11-01 12:59:15] 'gam' successfully installed.
+[0m[91m[2019-11-01 12:59:16] 'ggalluvial' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggalluvial'
-[0m[91m[2019-11-01 10:59:59] 'ggalluvial' successfully installed.
-[0m[91m[2019-11-01 10:59:59] 'gganimate' will be installed.
+[0m[91m[2019-11-01 12:59:20] 'ggalluvial' successfully installed.
+[0m[91m[2019-11-01 12:59:21] 'gganimate' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gganimate'
-[0m[91m[2019-11-01 11:00:06] 'gganimate' successfully installed.
-[0m[91m[2019-11-01 11:00:06] 'ggbeeswarm' already installed.
-[0m[91m[2019-11-01 11:00:06] 'ggbio' will be installed.
+[0m[91m[2019-11-01 12:59:27] 'gganimate' successfully installed.
+[0m[91m[2019-11-01 12:59:27] 'ggbeeswarm' already installed.
+[0m[91m[2019-11-01 12:59:27] 'ggbio' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggbio'
 [0m[91malso installing the dependencies ‘dichromat’, ‘reshape’, ‘ProtGenerics’, ‘biovizBase’, ‘OrganismDbi’, ‘GGally’, ‘ensembldb’, ‘AnnotationFilter’
 
-[0m[91m[2019-11-01 11:02:12] 'ggbio' successfully installed.
-[0m[91m[2019-11-01 11:02:12] 'ggdendro' will be installed.
+[0m[91m[2019-11-01 13:01:29] 'ggbio' successfully installed.
+[0m[91m[2019-11-01 13:01:29] 'ggdendro' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggdendro'
-[0m[91m[2019-11-01 11:02:17] 'ggdendro' successfully installed.
-[0m[91m[2019-11-01 11:02:17] 'ggExtra' will be installed.
+[0m[91m[2019-11-01 13:01:33] 'ggdendro' successfully installed.
+[0m[91m[2019-11-01 13:01:33] 'ggExtra' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggExtra'
 [0m[91malso installing the dependencies ‘colourpicker’, ‘miniUI’, ‘shinyjs’
 
-[0m[91m[2019-11-01 11:02:26] 'ggExtra' successfully installed.
-[0m[91m[2019-11-01 11:02:26] 'ggforce' already installed.
-[0m[91m[2019-11-01 11:02:26] 'ggpubr' will be installed.
+[0m[91m[2019-11-01 13:01:42] 'ggExtra' successfully installed.
+[0m[91m[2019-11-01 13:01:42] 'ggforce' already installed.
+[0m[91m[2019-11-01 13:01:42] 'ggpubr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggpubr'
 [0m[91malso installing the dependencies ‘ggsci’, ‘ggsignif’, ‘polynom’
 
-[0m[91m[2019-11-01 11:02:39] 'ggpubr' successfully installed.
-[0m[91m[2019-11-01 11:02:39] 'ggraph' already installed.
-[0m[91m[2019-11-01 11:02:39] 'ggrepel' already installed.
-[0m[91m[2019-11-01 11:02:39] 'ggridges' already installed.
-[0m[91m[2019-11-01 11:02:39] 'ggsignif' already installed.
-[0m[91m[2019-11-01 11:02:39] 'golem' will be installed.
+[0m[91m[2019-11-01 13:01:55] 'ggpubr' successfully installed.
+[0m[91m[2019-11-01 13:01:55] 'ggraph' already installed.
+[0m[91m[2019-11-01 13:01:55] 'ggrepel' already installed.
+[0m[91m[2019-11-01 13:01:56] 'ggridges' already installed.
+[0m[91m[2019-11-01 13:01:56] 'ggsignif' already installed.
+[0m[91m[2019-11-01 13:01:56] 'golem' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'golem'
 [0m[91malso installing the dependencies ‘packrat’, ‘attempt’, ‘dockerfiler’, ‘rsconnect’, ‘yesno’
 
-[0m[91m[2019-11-01 11:02:55] 'golem' successfully installed.
-[0m[91m[2019-11-01 11:02:56] 'gProfileR' will be installed.
+[0m[91m[2019-11-01 13:02:11] 'golem' successfully installed.
+[0m[91m[2019-11-01 13:02:11] 'gProfileR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gProfileR'
-[0m[91m[2019-11-01 11:02:58] 'gProfileR' successfully installed.
-[0m[91m[2019-11-01 11:02:59] 'gprofiler2' will be installed.
+[0m[91m[2019-11-01 13:02:14] 'gProfileR' successfully installed.
+[0m[91m[2019-11-01 13:02:14] 'gprofiler2' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gprofiler2'
-[0m[91m[2019-11-01 11:03:03] 'gprofiler2' successfully installed.
-[0m[91m[2019-11-01 11:03:03] 'h2o' will be installed.
+[0m[91m[2019-11-01 13:02:18] 'gprofiler2' successfully installed.
+[0m[91m[2019-11-01 13:02:19] 'h2o' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'h2o'
-[0m[91m[2019-11-01 11:03:23] 'h2o' successfully installed.
-[0m[91m[2019-11-01 11:03:23] 'hdf5r' will be installed.
+[0m[91m[2019-11-01 13:03:58] 'h2o' successfully installed.
+[0m[91m[2019-11-01 13:03:58] 'hdf5r' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'hdf5r'
-[0m[91m[2019-11-01 11:03:45] 'hdf5r' successfully installed.
-[0m[91m[2019-11-01 11:03:45] 'lwgeom' will be installed.
+[0m[91m[2019-11-01 13:04:18] 'hdf5r' successfully installed.
+[0m[91m[2019-11-01 13:04:18] 'lwgeom' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'lwgeom'
-[0m[91m[2019-11-01 11:04:21] 'lwgeom' successfully installed.
-[0m[91m[2019-11-01 11:04:21] 'magrittr' already installed.
-[0m[91m[2019-11-01 11:04:22] 'MetaNeighbor' will be installed.
+[0m[91m[2019-11-01 13:04:52] 'lwgeom' successfully installed.
+[0m[91m[2019-11-01 13:04:52] 'magrittr' already installed.
+[0m[91m[2019-11-01 13:04:52] 'MetaNeighbor' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'MetaNeighbor'
 [0m[91malso installing the dependency ‘beanplot’
 
-[0m[91m[2019-11-01 11:04:40] 'MetaNeighbor' successfully installed.
-[0m[91m[2019-11-01 11:04:40] 'monocle' already installed.
-[0m[91m[2019-11-01 11:04:40] 'msigdbr' will be installed.
+[0m[91m[2019-11-01 13:05:09] 'MetaNeighbor' successfully installed.
+[0m[91m[2019-11-01 13:05:09] 'monocle' already installed.
+[0m[91m[2019-11-01 13:05:09] 'msigdbr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'msigdbr'
-[0m[91m[2019-11-01 11:05:05] 'msigdbr' successfully installed.
-[0m[91m[2019-11-01 11:05:05] 'org.Hs.eg.db' will be installed.
+[0m[91m[2019-11-01 13:05:32] 'msigdbr' successfully installed.
+[0m[91m[2019-11-01 13:05:32] 'org.Hs.eg.db' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'org.Hs.eg.db'
-[0m[91m[2019-11-01 11:05:24] 'org.Hs.eg.db' successfully installed.
-[0m[91m[2019-11-01 11:05:24] 'org.Mm.eg.db' will be installed.
+[0m[91m[2019-11-01 13:07:42] 'org.Hs.eg.db' successfully installed.
+[0m[91m[2019-11-01 13:07:42] 'org.Mm.eg.db' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'org.Mm.eg.db'
-[0m[91m[2019-11-01 11:05:41] 'org.Mm.eg.db' successfully installed.
-[0m[91m[2019-11-01 11:05:41] 'phateR' will be installed.
+[0m[91m[2019-11-01 13:08:02] 'org.Mm.eg.db' successfully installed.
+[0m[91m[2019-11-01 13:08:02] 'phateR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'phateR'
-[0m[91m[2019-11-01 11:05:50] 'phateR' successfully installed.
-[0m[91m[2019-11-01 11:05:50] 'pheatmap' already installed.
-[0m[91m[2019-11-01 11:05:50] 'phylogram' will be installed.
+[0m[91m[2019-11-01 13:08:09] 'phateR' successfully installed.
+[0m[91m[2019-11-01 13:08:09] 'pheatmap' already installed.
+[0m[91m[2019-11-01 13:08:09] 'phylogram' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'phylogram'
-[0m[91m[2019-11-01 11:05:54] 'phylogram' successfully installed.
-[0m[91m[2019-11-01 11:05:54] 'plotly' already installed.
-[0m[91m[2019-11-01 11:05:54] 'pryr' will be installed.
+[0m[91m[2019-11-01 13:08:13] 'phylogram' successfully installed.
+[0m[91m[2019-11-01 13:08:13] 'plotly' already installed.
+[0m[91m[2019-11-01 13:08:14] 'pryr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'pryr'
-[0m[91m[2019-11-01 11:06:19] 'pryr' successfully installed.
-[0m[91m[2019-11-01 11:06:19] 'RColorBrewer' already installed.
-[0m[91m[2019-11-01 11:06:19] 'reshape2' already installed.
-[0m[91m[2019-11-01 11:06:20] 'reticulate' already installed.
-[0m[91m[2019-11-01 11:06:20] 'rgdal' will be installed.
+[0m[91m[2019-11-01 13:08:38] 'pryr' successfully installed.
+[0m[91m[2019-11-01 13:08:38] 'RColorBrewer' already installed.
+[0m[91m[2019-11-01 13:08:38] 'reshape2' already installed.
+[0m[91m[2019-11-01 13:08:39] 'reticulate' already installed.
+[0m[91m[2019-11-01 13:08:39] 'rgdal' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'rgdal'
-[0m[91m[2019-11-01 11:06:31] 'rgdal' successfully installed.
-[0m[91m[2019-11-01 11:06:31] 'Rmagic' will be installed.
+[0m[91m[2019-11-01 13:08:49] 'rgdal' successfully installed.
+[0m[91m[2019-11-01 13:08:49] 'Rmagic' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'Rmagic'
-[0m[91m[2019-11-01 11:06:39] 'Rmagic' successfully installed.
-[0m[91m[2019-11-01 11:06:39] 'roxygen2' already installed.
-[0m[91m[2019-11-01 11:06:39] 'Rsamtools' already installed.
-[0m[91m[2019-11-01 11:06:39] 'Rtsne' already installed.
-[0m[91m[2019-11-01 11:06:39] 'SC3' will be installed.
+[0m[91m[2019-11-01 13:08:56] 'Rmagic' successfully installed.
+[0m[91m[2019-11-01 13:08:56] 'roxygen2' already installed.
+[0m[91m[2019-11-01 13:08:56] 'Rsamtools' already installed.
+[0m[91m[2019-11-01 13:08:57] 'Rtsne' already installed.
+[0m[91m[2019-11-01 13:08:57] 'SC3' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'SC3'
 [0m[91malso installing the dependencies ‘registry’, ‘rngtools’, ‘pkgmaker’, ‘doParallel’, ‘doRNG’, ‘WriteXLS’
 
-[0m[91m[2019-11-01 11:07:27] 'SC3' successfully installed.
-[0m[91m[2019-11-01 11:07:27] 'scales' already installed.
-[0m[91m[2019-11-01 11:07:27] 'scater' already installed.
-[0m[91m[2019-11-01 11:07:27] 'scde' will be installed.
+[0m[91m[2019-11-01 13:09:44] 'SC3' successfully installed.
+[0m[91m[2019-11-01 13:09:44] 'scales' already installed.
+[0m[91m[2019-11-01 13:09:45] 'scater' already installed.
+[0m[91m[2019-11-01 13:09:45] 'scde' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scde'
 [0m[91malso installing the dependencies ‘modeltools’, ‘Lmoments’, ‘distillery’, ‘flexmix’, ‘Rook’, ‘Cairo’, ‘RMTstat’, ‘extRemes’, ‘pcaMethods’
 
-[0m[91m[2019-11-01 11:09:03] 'scde' successfully installed.
-[0m[91m[2019-11-01 11:09:03] 'scMerge' will be installed.
+[0m[91m[2019-11-01 13:11:29] 'scde' successfully installed.
+[0m[91m[2019-11-01 13:11:29] 'scMerge' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scMerge'
 [0m[91malso installing the dependencies ‘startupmsg’, ‘sfsmisc’, ‘numDeriv’, ‘bbmle’, ‘statmod’, ‘reldist’, ‘distr’, ‘M3Drop’, ‘pdist’, ‘ruv’
 
-[0m[91m[2019-11-01 11:10:28] 'scMerge' successfully installed.
-[0m[91m[2019-11-01 11:10:28] 'scran' will be installed.
+[0m[91m[2019-11-01 13:12:58] 'scMerge' successfully installed.
+[0m[91m[2019-11-01 13:12:58] 'scran' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scran'
-[0m[91m[2019-11-01 11:12:33] 'scran' successfully installed.
-[0m[91m[2019-11-01 11:12:33] 'sctransform' already installed.
-[0m[91m[2019-11-01 11:12:33] 'Seurat' already installed.
-[0m[91m[2019-11-01 11:12:33] 'shiny' already installed.
-[0m[91m[2019-11-01 11:12:34] 'shinydashboard' will be installed.
+[0m[91m[2019-11-01 13:15:13] 'scran' successfully installed.
+[0m[91m[2019-11-01 13:15:14] 'sctransform' already installed.
+[0m[91m[2019-11-01 13:15:14] 'Seurat' already installed.
+[0m[91m[2019-11-01 13:15:14] 'shiny' already installed.
+[0m[91m[2019-11-01 13:15:14] 'shinydashboard' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'shinydashboard'
-[0m[91m[2019-11-01 11:12:37] 'shinydashboard' successfully installed.
-[0m[91m[2019-11-01 11:12:37] 'shinyjs' already installed.
-[0m[91m[2019-11-01 11:12:37] 'shinythemes' will be installed.
+[0m[91m[2019-11-01 13:15:18] 'shinydashboard' successfully installed.
+[0m[91m[2019-11-01 13:15:18] 'shinyjs' already installed.
+[0m[91m[2019-11-01 13:15:18] 'shinythemes' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'shinythemes'
-[0m[91m[2019-11-01 11:12:41] 'shinythemes' successfully installed.
-[0m[91m[2019-11-01 11:12:41] 'sf' already installed.
-[0m[91m[2019-11-01 11:12:41] 'slingshot' will be installed.
+[0m[91m[2019-11-01 13:15:22] 'shinythemes' successfully installed.
+[0m[91m[2019-11-01 13:15:22] 'sf' already installed.
+[0m[91m[2019-11-01 13:15:23] 'slingshot' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'slingshot'
 [0m[91malso installing the dependency ‘princurve’
 
-[0m[91m[2019-11-01 11:13:04] 'slingshot' successfully installed.
-[0m[91m[2019-11-01 11:13:04] 'stringi' already installed.
-[0m[91m[2019-11-01 11:13:05] 'tensorflow' will be installed.
+[0m[91m[2019-11-01 13:15:48] 'slingshot' successfully installed.
+[0m[91m[2019-11-01 13:15:48] 'stringi' already installed.
+[0m[91m[2019-11-01 13:15:48] 'tensorflow' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'tensorflow'
 [0m[91malso installing the dependencies ‘config’, ‘tfruns’
 
-[0m[91m[2019-11-01 11:13:13] 'tensorflow' successfully installed.
-[0m[91m[2019-11-01 11:13:13] 'tidyverse' already installed.
-[0m[91m[2019-11-01 11:13:13] 'topGO' will be installed.
+[0m[91m[2019-11-01 13:15:57] 'tensorflow' successfully installed.
+[0m[91m[2019-11-01 13:15:57] 'tidyverse' already installed.
+[0m[91m[2019-11-01 13:15:57] 'topGO' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'topGO'
-[0m[91m[2019-11-01 11:13:26] 'topGO' successfully installed.
-[0m[91m[2019-11-01 11:13:26] 'TSCAN' will be installed.
+[0m[91m[2019-11-01 13:16:11] 'topGO' successfully installed.
+[0m[91m[2019-11-01 13:16:11] 'TSCAN' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'TSCAN'
-[0m[91m[2019-11-01 11:13:33] 'TSCAN' successfully installed.
-[0m[91m[2019-11-01 11:13:33] 'tsne' already installed.
-[0m[91m[2019-11-01 11:13:33] 'TxDb.Hsapiens.UCSC.hg19.knownGene' already installed.
-[0m[91m[2019-11-01 11:13:33] 'tximport' will be installed.
+[0m[91m[2019-11-01 13:16:18] 'TSCAN' successfully installed.
+[0m[91m[2019-11-01 13:16:18] 'tsne' already installed.
+[0m[91m[2019-11-01 13:16:18] 'TxDb.Hsapiens.UCSC.hg19.knownGene' already installed.
+[0m[91m[2019-11-01 13:16:18] 'tximport' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'tximport'
-[0m[91m[2019-11-01 11:13:36] 'tximport' successfully installed.
-[0m[91m[2019-11-01 11:13:36] 'umap' will be installed.
+[0m[91m[2019-11-01 13:16:22] 'tximport' successfully installed.
+[0m[91m[2019-11-01 13:16:22] 'umap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'umap'
-[0m[91m[2019-11-01 11:13:55] 'umap' successfully installed.
-[0m[91m[2019-11-01 11:13:55] 'VennDiagram' will be installed.
+[0m[91m[2019-11-01 13:16:41] 'umap' successfully installed.
+[0m[91m[2019-11-01 13:16:42] 'VennDiagram' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'VennDiagram'
-[0m[91m[2019-11-01 11:14:00] 'VennDiagram' successfully installed.
-[0m[91m[2019-11-01 11:14:00] 'viridis' already installed.
-[0m[91m[2019-11-01 11:14:01] 'XML' already installed.
-[0m[91m[2019-11-01 11:14:01] 'xml2' already installed.
-[0m[91m[2019-11-01 11:14:01] 'cole-trapnell-lab/garnett' will be installed.
+[0m[91m[2019-11-01 13:16:47] 'VennDiagram' successfully installed.
+[0m[91m[2019-11-01 13:16:48] 'viridis' already installed.
+[0m[91m[2019-11-01 13:16:48] 'XML' already installed.
+[0m[91m[2019-11-01 13:16:48] 'xml2' already installed.
+[0m[91m[2019-11-01 13:16:48] 'cole-trapnell-lab/garnett' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'cole-trapnell-lab/garnett'
 [0m[91mInstalling 2 packages: glmnet, rly
-[0m[91m[2019-11-01 11:14:42] 'cole-trapnell-lab/garnett' successfully installed.
-[0m[91m[2019-11-01 11:14:42] 'cole-trapnell-lab/monocle3' will be installed.
+[0m[91m[2019-11-01 13:17:32] 'cole-trapnell-lab/garnett' successfully installed.
+[0m[91m[2019-11-01 13:17:32] 'cole-trapnell-lab/monocle3' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'cole-trapnell-lab/monocle3'
 [0m[91mInstalling 15 packages: grr, Matrix.utils, pbmcapply, pscl, rsample, RhpcBLASctl, spdep, speedglm, furrr, spData, deldir, LearnBayes, coda, expm, gmodels
-[0m[91m[2019-11-01 11:18:03] 'cole-trapnell-lab/monocle3' successfully installed.
-[0m[91m[2019-11-01 11:18:03] 'erocoar/gghalves' will be installed.
+[0m[91m[2019-11-01 13:21:07] 'cole-trapnell-lab/monocle3' successfully installed.
+[0m[91m[2019-11-01 13:21:07] 'erocoar/gghalves' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'erocoar/gghalves'
-[0m[91m[2019-11-01 11:18:11] 'erocoar/gghalves' successfully installed.
-[0m[91m[2019-11-01 11:18:12] 'exaexa/EmbedSOM' will be installed.
+[0m[91m[2019-11-01 13:21:15] 'erocoar/gghalves' successfully installed.
+[0m[91m[2019-11-01 13:21:15] 'ggjlab/scMCA' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
-[0m[91mInstalling github package(s) 'exaexa/EmbedSOM'
-[0m[91mError: Failed to install 'EmbedSOM' from GitHub:
-  (converted from warning) installation of package ‘/tmp/RtmpAyasyv/file788d4e06/EmbedSOM_1.9.1.tar.gz’ had non-zero exit status
+[0m[91mInstalling github package(s) 'ggjlab/scMCA'
+[0m[91m[2019-11-01 13:21:32] 'ggjlab/scMCA' successfully installed.
+[0m[91m[2019-11-01 13:21:32] 'jalvesaq/colorout' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'jalvesaq/colorout'
+[0m[91m[2019-11-01 13:21:37] 'jalvesaq/colorout' successfully installed.
+[0m[91m[2019-11-01 13:21:38] 'krlmlr/ulimit' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'krlmlr/ulimit'
+[0m[91m[2019-11-01 13:21:42] 'krlmlr/ulimit' successfully installed.
+[0m[91m[2019-11-01 13:21:42] 'velocyto-team/velocyto.R' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'velocyto-team/velocyto.R'
+[0m[91m[2019-11-01 13:22:11] 'velocyto-team/velocyto.R' successfully installed.
+[0m[91m[2019-11-01 13:22:11] 'itertools' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'itertools'
+[0m[91m[2019-11-01 13:22:15] 'itertools' successfully installed.
+[0m[91m[2019-11-01 13:22:15] 'BUStools/BUSpaRse' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'BUStools/BUSpaRse'
+[0m[91mInstalling 1 packages: plyranges
+[0m[91mOld packages: 'BUSpaRse'
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/BUSpaRse_1.0.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 616107 bytes (601 KB)
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m
+[0m[91mdownloaded 601 KB
+
+[0m[91m* installing *source* package ‘BUSpaRse’ ...
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mg++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I"/usr/local/lib/R/site-library/RcppProgress/include" -I"/usr/local/lib/R/site-library/BH/include" -I"/usr/local/lib/R/site-library/RcppParallel/include" -I/usr/local/include -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I"/usr/local/lib/R/site-library/RcppProgress/include" -I"/usr/local/lib/R/site-library/BH/include" -I"/usr/local/lib/R/site-library/RcppParallel/include" -I/usr/local/include -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fill_cell_gene.cpp -o fill_cell_gene.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BUSpaRse.so RcppExports.o fill_cell_gene.o -fopenmp -L/usr/local/lib/R/lib -lRlapack -lopenblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-BUSpaRse/00new/BUSpaRse/libs
+[0m[91m** R
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (BUSpaRse)
+[0m[91m
+[0m[91mThe downloaded source packages are in
+	‘/tmp/Rtmpm3LfHj/downloaded_packages’[0m[91m
+[0m[91m[2019-11-01 13:24:07] 'BUStools/BUSpaRse' successfully installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'satijalab/seurat-wrappers'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'romanhaa/cerebroApp'
+[0m[91mInstalling 6 packages: formattable, ggtree, GSVA, shinyWidgets, tidytree, treeio
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'thomasp85/patchwork'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'metacell'
+[0m[91malso installing the dependencies ‘doMC’, ‘RSvgDevice’, ‘dbscan’, ‘entropy’, ‘tgconfig’, ‘tgutil’, ‘tgstat’
+
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'mojaveazure/loomR'
+[0mCreating virtual environment '~/.virtualenvs/r-reticulate' ...
+Using python: /miniconda3/bin/python3.7
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/00/b6/9cfa56b4081ad13874b0c6f96af8ce16cfbc1cb06bedf8e9164ce5551ec1/pip-19.3.1-py2.py3-none-any.whl (1.4MB)
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/00/83/b4a77d044e78ad1a45610eb88f745be2fd2c6d658f9798a15e384b7d57c9/wheel-0.33.6-py2.py3-none-any.whl
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/d9/de/554b6310ac87c5b921bc45634b07b11394fe63bc4cb5176f5240addf18ab/setuptools-41.6.0-py2.py3-none-any.whl (582kB)
+Installing collected packages: pip, wheel, setuptools
+Successfully installed pip-19.3.1 setuptools-41.6.0 wheel-0.33.6
+Using virtual environment '~/.virtualenvs/r-reticulate' ...
+Collecting tensorflow==2.0.0
+  Using cached https://files.pythonhosted.org/packages/2a/5c/f1d66de5dde6f3ff528f6ea1fd0757a0e594d17debb3ec7f82daa967ea9a/tensorflow-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl
+Collecting wheel>=0.26
+  Using cached https://files.pythonhosted.org/packages/00/83/b4a77d044e78ad1a45610eb88f745be2fd2c6d658f9798a15e384b7d57c9/wheel-0.33.6-py2.py3-none-any.whl
+Collecting google-pasta>=0.1.6
+  Using cached https://files.pythonhosted.org/packages/d0/33/376510eb8d6246f3c30545f416b2263eee461e40940c2a4413c711bdf62d/google_pasta-0.1.7-py3-none-any.whl
+Processing /root/.cache/pip/wheels/d7/de/2e/efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd/wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl
+Collecting tensorboard<2.1.0,>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/d3/9e/a48cd34dd7b672ffc227b566f7d16d63c62c58b542d54efa45848c395dd4/tensorboard-2.0.1-py3-none-any.whl
+Collecting grpcio>=1.8.6
+  Using cached https://files.pythonhosted.org/packages/b9/ba/254011b066e6675411ba913dafd6e40ce8d3235bebf64fb226a7305f29ac/grpcio-1.24.3-cp37-cp37m-manylinux2010_x86_64.whl
+Collecting astor>=0.6.0
+  Using cached https://files.pythonhosted.org/packages/d1/4f/950dfae467b384fc96bc6469de25d832534f6b4441033c39f914efd13418/astor-0.8.0-py2.py3-none-any.whl
+Processing /root/.cache/pip/wheels/5c/2e/7e/a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd/gast-0.2.2-cp37-none-any.whl
+Collecting keras-preprocessing>=1.0.5
+  Using cached https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl
+Collecting keras-applications>=1.0.8
+  Using cached https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl
+Collecting numpy<2.0,>=1.16.0
+  Downloading https://files.pythonhosted.org/packages/00/4a/e34fce8f18c0e052c2b49f1b3713469d855f7662d58ae2b82a88341e865b/numpy-1.17.3-cp37-cp37m-manylinux1_x86_64.whl (20.0MB)
+Processing /root/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833/opt_einsum-3.1.0-cp37-none-any.whl
+Collecting tensorflow-estimator<2.1.0,>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl
+Collecting six>=1.10.0
+  Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Processing /root/.cache/pip/wheels/7c/06/54/bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6/termcolor-1.1.0-cp37-none-any.whl
+Processing /root/.cache/pip/wheels/a7/15/a0/0a0561549ad11cdc1bc8fa1191a353efd30facf6bfb507aefc/absl_py-0.8.1-cp37-none-any.whl
+Collecting protobuf>=3.6.1
+  Using cached https://files.pythonhosted.org/packages/d7/34/02a2083afc14adff644a1e29783f276f12f1f914ca4cab157d73bb3d2fed/protobuf-3.10.0-cp37-cp37m-manylinux1_x86_64.whl
+Collecting google-auth<2,>=1.6.3
+  Using cached https://files.pythonhosted.org/packages/c5/9b/ed0516cc1f7609fb0217e3057ff4f0f9f3e3ce79a369c6af4a6c5ca25664/google_auth-1.6.3-py2.py3-none-any.whl
+Collecting werkzeug>=0.11.15
+  Using cached https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl
+Collecting setuptools>=41.0.0
+  Using cached https://files.pythonhosted.org/packages/d9/de/554b6310ac87c5b921bc45634b07b11394fe63bc4cb5176f5240addf18ab/setuptools-41.6.0-py2.py3-none-any.whl
+Collecting markdown>=2.6.8
+  Using cached https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Using cached https://files.pythonhosted.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl
+Collecting h5py
+  Using cached https://files.pythonhosted.org/packages/3f/c0/abde58b837e066bca19a3f7332d9d0493521d7dd6b48248451a9e3fe2214/h5py-2.10.0-cp37-cp37m-manylinux1_x86_64.whl
+Collecting rsa>=3.1.4
+  Using cached https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
+Collecting cachetools>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl
+Collecting pyasn1-modules>=0.2.1
+  Using cached https://files.pythonhosted.org/packages/52/50/bb4cefca37da63a0c52218ba2cb1b1c36110d84dcbae8aa48cd67c5e95c2/pyasn1_modules-0.2.7-py2.py3-none-any.whl
+Collecting requests-oauthlib>=0.7.0
+  Using cached https://files.pythonhosted.org/packages/c2/e2/9fd03d55ffb70fe51f587f20bcf407a6927eb121de86928b34d162f0b1ac/requests_oauthlib-1.2.0-py2.py3-none-any.whl
+Collecting pyasn1>=0.1.3
+  Using cached https://files.pythonhosted.org/packages/a1/71/8f0d444e3a74e5640a3d5d967c1c6b015da9c655f35b2d308a55d907a517/pyasn1-0.4.7-py2.py3-none-any.whl
+Collecting requests>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl (57kB)
+Collecting oauthlib>=3.0.0
+  Using cached https://files.pythonhosted.org/packages/05/57/ce2e7a8fa7c0afb54a0581b14a65b56e62b5759dbc98e80627142b8a3704/oauthlib-3.1.0-py2.py3-none-any.whl
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading https://files.pythonhosted.org/packages/e0/da/55f51ea951e1b7c63a579c09dd7db825bb730ec1fe9c0180fc77bfb31448/urllib3-1.25.6-py2.py3-none-any.whl (125kB)
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting certifi>=2017.4.17
+  Downloading https://files.pythonhosted.org/packages/18/b0/8146a4f8dd402f60744fa380bc73ca47303cccf8b9190fd16a827281eac2/certifi-2019.9.11-py2.py3-none-any.whl (154kB)
+Collecting idna<2.9,>=2.5
+  Downloading https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl (58kB)
+[91mERROR: scprep 1.0.3 has requirement pandas>=0.25, but you'll have pandas 0.23.4 which is incompatible.
+[0m[91mERROR: hyperopt 0.2.2 has requirement networkx==2.2, but you'll have networkx 2.4 which is incompatible.
+[0mInstalling collected packages: wheel, google-pasta, wrapt, six, pyasn1, rsa, cachetools, pyasn1-modules, google-auth, werkzeug, setuptools, protobuf, grpcio, absl-py, markdown, numpy, urllib3, chardet, certifi, idna, requests, oauthlib, requests-oauthlib, google-auth-oauthlib, tensorboard, astor, gast, keras-preprocessing, h5py, keras-applications, opt-einsum, tensorflow-estimator, termcolor, tensorflow
+Successfully installed absl-py-0.8.1 astor-0.8.0 cachetools-3.1.1 certifi-2019.9.11 chardet-3.0.4 gast-0.2.2 google-auth-1.6.3 google-auth-oauthlib-0.4.1 google-pasta-0.1.7 grpcio-1.24.3 h5py-2.10.0 idna-2.8 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.17.3 oauthlib-3.1.0 opt-einsum-3.1.0 protobuf-3.10.0 pyasn1-0.4.7 pyasn1-modules-0.2.7 requests-2.22.0 requests-oauthlib-1.2.0 rsa-4.0 setuptools-41.6.0 six-1.12.0 tensorboard-2.0.1 tensorflow-2.0.0 tensorflow-estimator-2.0.1 termcolor-1.1.0 urllib3-1.25.6 werkzeug-0.16.0 wheel-0.33.6 wrapt-1.11.2
+
+Installation complete.
+
+[91mBioconductor version 3.10 (BiocManager 1.30.9), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'Irrationone/cellassign'
+[0m[91mInstalling 8 packages: mixtools, lars, fpc, dtw, doSNOW, segmented, prabclus, diptest
+[0m[91mError: Bioconductor version '3.11' requires R version '4.0'; see
+  https://bioconductor.org/install
 Execution halted
 [0m
