@@ -124,7 +124,7 @@ packages_to_install <- c(
   'cole-trapnell-lab/garnett',
   'cole-trapnell-lab/monocle3',
   'erocoar/gghalves',
-  'exaexa/EmbedSOM',
+#  'exaexa/EmbedSOM',
   'ggjlab/scMCA',
   'jalvesaq/colorout',
   'krlmlr/ulimit',
