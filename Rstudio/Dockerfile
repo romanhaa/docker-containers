@@ -68,7 +68,10 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 \
 ##----------------------------------------------------------------------------##
 ## install conda packages
 ##----------------------------------------------------------------------------##
-RUN conda install --quiet --yes -c bioconda deeptools
+RUN conda install --quiet --yes -c bioconda \
+   bedtools \
+   deeptools \
+   samtools
 
 ##----------------------------------------------------------------------------##
 ## install Python packages
