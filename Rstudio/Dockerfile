@@ -32,14 +32,17 @@ RUN apt-get --quiet update --yes \
     pandoc \
     libcurl4-openssl-dev \
     libssl-dev \
-    libcairo2-dev libxt-dev \
+    libcairo2-dev \
+    libxt-dev \
     libxml2-dev \
     libudunits2-dev \
     libhdf5-dev \
     libv8-dev \
     libgdal-dev \
-    xorg libx11-dev libglu1-mesa-dev \
-    samtools libboost-all-dev \
+    xorg \
+    libx11-dev \
+    libglu1-mesa-dev \
+    libboost-all-dev \
     libgsl-dev \
     libbz2-dev \
     less \
