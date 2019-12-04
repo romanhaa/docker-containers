@@ -115,6 +115,7 @@ RUN python3 -m pip install \
    scanpy \
    scikit-learn \
    scipy \
+   snaptools \
    tensorflow \
    umap-learn \
    jupyter

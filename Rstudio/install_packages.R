@@ -72,6 +72,7 @@ packages_to_install <- c(
   'golem',
   'gProfileR',
   'gprofiler2',
+  'Gviz',
   'h2o',
   'hdf5r',
   'lwgeom',
@@ -85,6 +86,7 @@ packages_to_install <- c(
   'phateR',
   'pheatmap',
   'phylogram',
+  'plot3D',
   'plotly',
   'pryr',
   'RColorBrewer',
@@ -132,7 +134,9 @@ packages_to_install <- c(
   'krlmlr/ulimit',
   'velocyto-team/velocyto.R',
   'itertools',
-  'BUStools/BUSpaRse'
+  'BUStools/BUSpaRse',
+  'r3fang/SnapATAC',
+  'aertslab/cisTopic'
 )
 
 install_packages(packages_to_install)
@@ -152,6 +156,9 @@ BiocManager::install('mojaveazure/loomR', ref = 'develop', dependencies = FALSE,
 # install tensorflow
 tensorflow::install_tensorflow(extra_packages = 'tensorflow-probability')
 BiocManager::install('Irrationone/cellassign', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
+
+# Cicero
+devtools::install_github('cole-trapnell-lab/cicero-release', ref = 'monocle3')
 
 # alternative location for R packagesq
 place_for_other_libraries <- '/other_R_libraries'
