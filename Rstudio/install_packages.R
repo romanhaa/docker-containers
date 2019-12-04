@@ -81,6 +81,7 @@ packages_to_install <- c(
   'msigdbr',
   'org.Hs.eg.db',
   'org.Mm.eg.db',
+  'patchwork',
   'phateR',
   'pheatmap',
   'phylogram',
@@ -141,9 +142,6 @@ install_packages(packages_to_install)
 # different names of the packages
 BiocManager::install('satijalab/seurat-wrappers', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 BiocManager::install('romanhaa/cerebroApp', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
-
-# update not on CRAN yet
-BiocManager::install('thomasp85/patchwork', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # metacell
 BiocManager::install('metacell', site_repository = 'tanaylab.bitbucket.io/repo', quiet = TRUE)
