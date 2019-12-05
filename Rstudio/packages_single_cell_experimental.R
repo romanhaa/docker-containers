@@ -1,3 +1,5 @@
+setwd('/docker/docker_containers-master/Rstudio/')
+
 # SnapATAC
 BiocManager::install('plot3D', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 BiocManager::install('r3fang/SnapATAC', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)

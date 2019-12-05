@@ -1,3 +1,5 @@
+setwd('/docker/docker_containers-master/Rstudio/')
+
 source('install_packages_function.R')
 
 # packages for compbio
