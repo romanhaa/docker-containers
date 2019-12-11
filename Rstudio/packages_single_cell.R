@@ -11,6 +11,7 @@ packages_to_install <- c(
   'DropletUtils',
   'MetaNeighbor',
   'monocle',
+  'muscat',
   'phateR',
   'Seurat',
   'SC3',
@@ -26,7 +27,8 @@ packages_to_install <- c(
   'ggjlab/scMCA',
   'velocyto-team/velocyto.R',
   'BUStools/BUSpaRse',
-  'theislab/kBET'
+  'theislab/kBET',
+  'timoast/signac'
 )
 
 install_packages(packages_to_install)
