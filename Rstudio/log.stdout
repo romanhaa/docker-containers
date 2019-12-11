@@ -1,66 +1,117 @@
 Sending build context to Docker daemon  22.02kB
-Step 1/20 : FROM rocker/rstudio:3.6.1
+Step 1/21 : FROM rocker/rstudio:3.6.1
  ---> 88cd344dad13
-Step 2/20 : ENV DEBIAN_FRONTEND noninteractive
+Step 2/21 : ENV DEBIAN_FRONTEND noninteractive
  ---> Using cache
  ---> f3ed220c4a50
-Step 3/20 : ENV LANG en_US.UTF-8
+Step 3/21 : ENV LANG en_US.UTF-8
  ---> Using cache
  ---> 929a0393b509
-Step 4/20 : ENV LANGUAGE en_US:en
+Step 4/21 : ENV LANGUAGE en_US:en
  ---> Using cache
  ---> 7191b9f21c22
-Step 5/20 : ENV LC_ALL en_US.UTF-8
+Step 5/21 : ENV LC_ALL en_US.UTF-8
  ---> Using cache
  ---> 8a37f2e54670
-Step 6/20 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev     libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg     libx11-dev     libglu1-mesa-dev     libboost-all-dev     libgsl-dev     libbz2-dev     less  && rm -rf /var/lib/apt/lists/*
+Step 6/21 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev     libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg     libx11-dev     libglu1-mesa-dev     libboost-all-dev     libgsl-dev     libbz2-dev     less  && rm -rf /var/lib/apt/lists/*
  ---> Using cache
  ---> 68283b6dc6cb
-Step 7/20 : RUN cd /  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
+Step 7/21 : RUN cd /  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
  ---> Using cache
  ---> 77f46af6cbc1
-Step 8/20 : ENV PATH "$PATH:/miniconda3/bin"
+Step 8/21 : ENV PATH "$PATH:/miniconda3/bin"
  ---> Using cache
  ---> 5b0b1e07acdf
-Step 9/20 : RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1  && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2  && python --version  && python3 --version  && rm /usr/bin/lsb_release
+Step 9/21 : RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1  && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2  && python --version  && python3 --version  && rm /usr/bin/lsb_release
  ---> Using cache
  ---> 3e5720a26d84
-Step 10/20 : RUN conda install --quiet --yes -c bioconda    bedtools    deeptools    samtools
+Step 10/21 : RUN conda install --quiet --yes -c bioconda    bedtools    deeptools    samtools
  ---> Using cache
  ---> b57b5acc961e
-Step 11/20 : RUN python3 -m pip install    click    Cython    dca    fa2    "gast==0.2.2"    h5py    leidenalg    louvain    numba    numpy    "networkx==2.2"    numpydoc    "matplotlib>=3.0,<3.1"    pandas    phate    pysam    python-igraph    scanpy    scikit-learn    scipy    snaptools    tensorflow    umap-learn    jupyter
+Step 11/21 : RUN python3 -m pip install    click    Cython    dca    fa2    "gast==0.2.2"    h5py    leidenalg    louvain    numba    numpy    "networkx==2.2"    numpydoc    "matplotlib>=3.0,<3.1"    pandas    phate    pysam    python-igraph    scanpy    scikit-learn    scipy    snaptools    tensorflow    umap-learn    jupyter
  ---> Using cache
  ---> 75e054696c62
-Step 12/20 : RUN python3 -m pip install    velocyto    scvelo
+Step 12/21 : RUN python3 -m pip install    velocyto    scvelo
  ---> Using cache
  ---> 9cbf9b38f669
-Step 13/20 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
+Step 13/21 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 
 
- ---> Using cache
- ---> 2c2a0af2ec25
-Step 14/20 : RUN tar -xvzf /docker/master.tar.gz -C /docker
- ---> Using cache
- ---> a7f2c4d59271
-Step 15/20 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
- ---> Using cache
- ---> 0586d173d9f2
-Step 16/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
- ---> Using cache
- ---> 527c16799c33
-Step 17/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_plotting.R
- ---> Using cache
- ---> 057b04d2d414
-Step 18/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_compbio.R
- ---> Using cache
- ---> 3fa1863c98db
-Step 19/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell.R
- ---> Using cache
- ---> 99ba00e88a9e
-Step 20/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell_experimental.R
- ---> Running in c21d82f9ea41
-[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-[0m[91mInstalling package(s) 'plot3D'
-[0m[91malso installing the dependency ‘misc3d’
+ ---> c9e84b045322
+Step 14/21 : RUN tar -xvzf /docker/master.tar.gz -C /docker
+ ---> Running in 54b980b67385
+docker_containers-master/
+docker_containers-master/.gitignore
+docker_containers-master/R/
+docker_containers-master/R/01_base
+docker_containers-master/R/02_r
+docker_containers-master/R/03_r
+docker_containers-master/R/install_packages.R
+docker_containers-master/R/install_packages_external.R
+docker_containers-master/README.md
+docker_containers-master/Rstudio/
+docker_containers-master/Rstudio/Dockerfile
+docker_containers-master/Rstudio/install_packages.R
+docker_containers-master/Rstudio/install_packages_function.R
+docker_containers-master/Rstudio/log.stdout
+docker_containers-master/Rstudio/packages_compbio.R
+docker_containers-master/Rstudio/packages_plotting.R
+docker_containers-master/Rstudio/packages_single_cell.R
+docker_containers-master/Rstudio/packages_single_cell_experimental.R
+docker_containers-master/Rstudio/packages_utility.R
+docker_containers-master/STAR/
+docker_containers-master/STAR/2.7.3a/
+docker_containers-master/STAR/2.7.3a/Dockerfile
+docker_containers-master/STAR/README.md
+docker_containers-master/cell_ranger/
+docker_containers-master/cell_ranger/3.0.2/
+docker_containers-master/cell_ranger/3.0.2/Dockerfile
+docker_containers-master/cell_ranger/3.1.0/
+docker_containers-master/cell_ranger/3.1.0/Dockerfile
+docker_containers-master/cell_ranger_atac/
+docker_containers-master/cell_ranger_atac/1.1.0/
+docker_containers-master/cell_ranger_atac/1.1.0/Dockerfile
+docker_containers-master/dropEst/
+docker_containers-master/dropEst/Dockerfile
+docker_containers-master/kallisto/
+docker_containers-master/kallisto/0.46.0/
+docker_containers-master/kallisto/0.46.0/Dockerfile
+docker_containers-master/kallisto/0.46.0/README.md
+docker_containers-master/scanpy/
+docker_containers-master/scanpy/Dockerfile
+Removing intermediate container 54b980b67385
+ ---> e8ab875b1f58
+Step 15/21 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
+ ---> Running in a01522539629
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 40205 bytes (39 KB)
+================[0m[91m================================[0m[91m==
+downloaded 39 KB
 
+[0m[91m* installing *source* package ‘BiocManager’ ...
+[0m[91m** package ‘BiocManager’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (BiocManager)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpHxTVzL/downloaded_packages’
+[0mRemoving intermediate container a01522539629
+ ---> 325231047aed
+Step 16/21 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
+ ---> Running in bcb0bd449058
+[91m[2019-12-11 17:12:58] 'remotes' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'BiocVersion', 'remotes'
 [0m
