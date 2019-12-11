@@ -27,8 +27,7 @@ packages_to_install <- c(
   'ggjlab/scMCA',
   'velocyto-team/velocyto.R',
   'BUStools/BUSpaRse',
-  'theislab/kBET',
-  'timoast/signac'
+  'theislab/kBET'
 )
 
 install_packages(packages_to_install)
