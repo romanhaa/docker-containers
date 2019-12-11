@@ -42,7 +42,8 @@ packages_to_install <- c(
   'XML',
   'xml2',
   'jalvesaq/colorout',
-  'krlmlr/ulimit'
+  'krlmlr/ulimit',
+  'statsbomb/StatsBombR'
 )
 
 install_packages(packages_to_install)

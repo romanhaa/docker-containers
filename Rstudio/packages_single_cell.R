@@ -25,7 +25,8 @@ packages_to_install <- c(
   'cole-trapnell-lab/monocle3',
   'ggjlab/scMCA',
   'velocyto-team/velocyto.R',
-  'BUStools/BUSpaRse'
+  'BUStools/BUSpaRse',
+  'theislab/kBET'
 )
 
 install_packages(packages_to_install)

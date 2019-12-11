@@ -27,3 +27,10 @@ BiocManager::install('Irrationone/cellassign', update = TRUE, ask = FALSE, force
 # Cicero
 BiocManager::install('Gviz', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 devtools::install_github('cole-trapnell-lab/cicero-release', ref = 'monocle3')
+
+# Signac
+BiocManager::install('timoast/signac')
+
+# muscat
+BiocManager::install(version = 'devel')
+BiocManager::install('muscat')
