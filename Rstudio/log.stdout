@@ -2,32 +2,28 @@ Sending build context to Docker daemon  22.02kB
 Step 1/20 : FROM rocker/rstudio:3.6.1
  ---> 88cd344dad13
 Step 2/20 : ENV DEBIAN_FRONTEND noninteractive
- ---> Running in 015d44a6845d
-Removing intermediate container 015d44a6845d
- ---> 1f33e2ebce6c
+ ---> Using cache
+ ---> db7147e6ed23
 Step 3/20 : ENV LANG en_US.UTF-8
- ---> Running in 8a49c2f5231e
-Removing intermediate container 8a49c2f5231e
- ---> fb130bc416e7
+ ---> Using cache
+ ---> 3e7a53c8a0e3
 Step 4/20 : ENV LANGUAGE en_US:en
- ---> Running in acf60c58fac6
-Removing intermediate container acf60c58fac6
- ---> fbf838421a26
+ ---> Using cache
+ ---> 0d92f2f9619b
 Step 5/20 : ENV LC_ALL en_US.UTF-8
- ---> Running in cd81bf10315a
-Removing intermediate container cd81bf10315a
- ---> 0853978b07ab
+ ---> Using cache
+ ---> 336ec1ad0b7d
 Step 6/20 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev     libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg     libx11-dev     libglu1-mesa-dev     libboost-all-dev     libgsl-dev     libbz2-dev     less  && rm -rf /var/lib/apt/lists/*
- ---> Running in fe1441b2e60c
-Ign:1 http://cdn-fastly.deb.debian.org/debian stretch InRelease
-Get:3 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:4 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2,365 B]
-Get:2 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [27.9 kB]
-Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7,086 kB]
-Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [508 kB]
-Fetched 7,927 kB in 1s (4,619 kB/s)
+ ---> Running in a23f42941d56
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:2 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [508 kB]
+Ign:3 http://cdn-fastly.deb.debian.org/debian stretch InRelease
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [27.9 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2,365 B]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7,086 kB]
+Fetched 7,927 kB in 1s (4,087 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -41,27 +37,27 @@ The following packages will be upgraded:
 Need to get 15.6 MB of archives.
 After this operation, 36.9 kB of additional disk space will be used.
 Get:1 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fslibs amd64 1.43.4-2+deb9u1 [208 kB]
-Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 base-files amd64 9.9+deb9u11 [67.5 kB]
-Get:13 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsystemd0 amd64 232-25+deb9u12 [282 kB]
-Get:3 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fsprogs amd64 1.43.4-2+deb9u1 [947 kB]
-Get:14 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libudev1 amd64 232-25+deb9u12 [126 kB]
-Get:15 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 tzdata all 2019c-0+deb9u1 [276 kB]
-Get:4 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 git-man all 1:2.11.0-3+deb9u5 [1,433 kB]
-Get:5 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1 amd64 2.2.0-2+deb9u3 [83.7 kB]
-Get:6 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 git amd64 1:2.11.0-3+deb9u5 [4,161 kB]
-Get:7 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libcomerr2 amd64 1.43.4-2+deb9u1 [63.5 kB]
-Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libss2 amd64 1.43.4-2+deb9u1 [67.8 kB]
-Get:9 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.0.2 amd64 1.0.2t-1~deb9u1 [1,304 kB]
-Get:10 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl-dev amd64 1.1.0l-1~deb9u1 [1,594 kB]
-Get:11 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.1 amd64 1.1.0l-1~deb9u1 [1,358 kB]
-Get:12 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 file amd64 1:5.30-1+deb9u3 [64.2 kB]
-Get:16 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic1 amd64 1:5.30-1+deb9u3 [111 kB]
-Get:17 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic-mgc amd64 1:5.30-1+deb9u3 [222 kB]
-Get:18 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u2 [1,447 kB]
-Get:19 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 openssl amd64 1.1.0l-1~deb9u1 [749 kB]
-Get:20 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 sudo amd64 1.8.19p1-2.1+deb9u1 [1,054 kB]
+Get:2 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 e2fsprogs amd64 1.43.4-2+deb9u1 [947 kB]
+Get:3 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 git-man all 1:2.11.0-3+deb9u5 [1,433 kB]
+Get:4 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1 amd64 2.2.0-2+deb9u3 [83.7 kB]
+Get:5 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 git amd64 1:2.11.0-3+deb9u5 [4,161 kB]
+Get:6 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libcomerr2 amd64 1.43.4-2+deb9u1 [63.5 kB]
+Get:7 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libss2 amd64 1.43.4-2+deb9u1 [67.8 kB]
+Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.0.2 amd64 1.0.2t-1~deb9u1 [1,304 kB]
+Get:9 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl-dev amd64 1.1.0l-1~deb9u1 [1,594 kB]
+Get:10 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libssl1.1 amd64 1.1.0l-1~deb9u1 [1,358 kB]
+Get:11 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 file amd64 1:5.30-1+deb9u3 [64.2 kB]
+Get:12 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic1 amd64 1:5.30-1+deb9u3 [111 kB]
+Get:13 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libmagic-mgc amd64 1:5.30-1+deb9u3 [222 kB]
+Get:14 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.189-3+deb9u2 [1,447 kB]
+Get:15 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 openssl amd64 1.1.0l-1~deb9u1 [749 kB]
+Get:16 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 sudo amd64 1.8.19p1-2.1+deb9u1 [1,054 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 base-files amd64 9.9+deb9u11 [67.5 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsystemd0 amd64 232-25+deb9u12 [282 kB]
+Get:19 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libudev1 amd64 232-25+deb9u12 [126 kB]
+Get:20 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 tzdata all 2019c-0+deb9u1 [276 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 15.6 MB in 0s (27.8 MB/s)
+[0mFetched 15.6 MB in 1s (15.5 MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19951 files and directories currently installed.)
 Preparing to unpack .../base-files_9.9+deb9u11_amd64.deb ...
 Unpacking base-files (9.9+deb9u11) over (9.9+deb9u9) ...
@@ -124,8 +120,8 @@ Setting up sudo (1.8.19p1-2.1+deb9u1) ...
 Setting up tzdata (2019c-0+deb9u1) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Wed Dec 11 18:03:27 UTC 2019.
-Universal Time is now:  Wed Dec 11 18:03:27 UTC 2019.
+Local time is now:      Wed Dec 11 20:28:09 UTC 2019.
+Universal Time is now:  Wed Dec 11 20:28:09 UTC 2019.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 Setting up linux-libc-dev:amd64 (4.9.189-3+deb9u2) ...
@@ -390,8 +386,8 @@ The following NEW packages will be installed:
 0 upgraded, 479 newly installed, 0 to remove and 0 not upgraded.
 Need to get 264 MB of archives.
 After this operation, 1,077 MB of additional disk space will be used.
-Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 dmsetup amd64 2:1.02.137-2 [107 kB]
 Get:1 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1-dev amd64 2.2.0-2+deb9u3 [134 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 dmsetup amd64 2:1.02.137-2 [107 kB]
 Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libdevmapper1.02.1 amd64 2:1.02.137-2 [170 kB]
 Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcryptsetup4 amd64 2:1.7.3-4 [109 kB]
 Get:5 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libip4tc0 amd64 1.6.0+snapshot20161117-6 [67.8 kB]
@@ -870,7 +866,7 @@ Get:477 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libtxc-dxtn-s
 Get:478 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 proj-bin amd64 4.9.3-1 [59.6 kB]
 Get:479 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 xserver-xorg-legacy amd64 2:1.19.2-1+deb9u5 [2,068 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 264 MB in 8s (30.4 MB/s)
+[0mFetched 264 MB in 14s (18.3 MB/s)
 Selecting previously unselected package dmsetup.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19950 files and directories currently installed.)
 Preparing to unpack .../000-dmsetup_2%3a1.02.137-2_amd64.deb ...
@@ -2832,13 +2828,13 @@ Done.
 Setting up libpam-systemd:amd64 (232-25+deb9u12) ...
 Processing triggers for libc-bin (2.24-11+deb9u4) ...
 Processing triggers for dbus (1.10.28-0+deb9u1) ...
-Removing intermediate container fe1441b2e60c
- ---> 8dbb88b3852e
+Removing intermediate container a23f42941d56
+ ---> 686dab96a090
 Step 7/20 : RUN cd /  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
- ---> Running in f31479910dbb
+ ---> Running in 1af88cfa8293
 PREFIX=/miniconda3
 Unpacking payload ...
-[91m  0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : pyopenssl-19.0.0-py37_0.conda:   0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : zlib-1.2.11-h7b6447c_3.conda:   3%|▎         | 1/35 [00:00<00:00, 52.38it/s]Extracting : six-1.12.0-py37_0.conda:   6%|▌         | 2/35 [00:00<00:00, 103.28it/s]    [0m[91mExtracting : conda-package-handling-1.6.0-py37h7b6447c_0.conda:   9%|▊         | 3/35 [00:00<00:00, 100.27it/s][0m[91mExtracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  11%|█▏        | 4/35 [00:00<00:00, 54.35it/s]               Extracting : _libgcc_mutex-0.1-main.conda:  14%|█▍        | 5/35 [00:00<00:00, 67.80it/s]       [0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  17%|█▋        | 6/35 [00:00<00:00, 50.34it/s]Extracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  20%|██        | 7/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : pycparser-2.19-py37_0.conda:  20%|██        | 7/35 [00:00<00:00, 58.67it/s]     [0m[91mExtracting : idna-2.8-py37_0.conda:  23%|██▎       | 8/35 [00:00<00:00, 58.67it/s]      [0m[91mExtracting : pycosat-0.6.3-py37h14c3975_0.conda:  26%|██▌       | 9/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  29%|██▊       | 10/35 [00:00<00:00, 58.67it/s]        [0m[91mExtracting : requests-2.22.0-py37_0.conda:  31%|███▏      | 11/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : readline-7.0-h7b6447c_5.conda:  34%|███▍      | 12/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : yaml-0.1.7-had09818_2.conda:  37%|███▋      | 13/35 [00:00<00:00, 58.67it/s]  [0m[91mExtracting : urllib3-1.24.2-py37_0.conda:  40%|████      | 14/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : tqdm-4.36.1-py_0.conda:  43%|████▎     | 15/35 [00:00<00:00, 58.67it/s]     [0m[91mExtracting : ruamel_yaml-0.15.46-py37h14c3975_0.conda:  46%|████▌     | 16/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : xz-5.2.4-h14c3975_4.conda:  49%|████▊     | 17/35 [00:00<00:00, 58.67it/s]               [0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  51%|█████▏    | 18/35 [00:00<00:00, 58.67it/s]Extracting : libffi-3.2.1-hd88cf55_4.conda:  54%|█████▍    | 19/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  57%|█████▋    | 20/35 [00:00<00:00, 58.67it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  60%|██████    | 21/35 [00:00<00:00, 46.57it/s][0m[91mExtracting : chardet-3.0.4-py37_1003.conda:  60%|██████    | 21/35 [00:00<00:00, 46.57it/s][0m[91mExtracting : libedit-3.1.20181209-hc058e9b_0.conda:  63%|██████▎   | 22/35 [00:00<00:00, 46.57it/s][0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  66%|██████▌   | 23/35 [00:00<00:00, 46.57it/s]     Extracting : cffi-1.13.0-py37h2e261b9_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 46.57it/s]Extracting : pip-19.3.1-py37_0.tar.bz2:  71%|███████▏  | 25/35 [00:00<00:00, 46.57it/s]         [0m[91mExtracting : openssl-1.1.1d-h7b6447c_3.tar.bz2:  74%|███████▍  | 26/35 [00:00<00:00, 46.57it/s]Extracting : openssl-1.1.1d-h7b6447c_3.tar.bz2:  77%|███████▋  | 27/35 [00:00<00:00, 46.29it/s][0m[91mExtracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  77%|███████▋  | 27/35 [00:00<00:00, 46.29it/s] Extracting : setuptools-41.4.0-py37_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 46.29it/s][0m[91mExtracting : wheel-0.33.6-py37_0.tar.bz2:  83%|████████▎ | 29/35 [00:00<00:00, 46.29it/s]     [0m[91mExtracting : cryptography-2.8-py37h1ba5d50_0.tar.bz2:  86%|████████▌ | 30/35 [00:00<00:00, 46.29it/s][0m[91mExtracting : ca-certificates-2019.10.16-0.tar.bz2:  89%|████████▊ | 31/35 [00:00<00:00, 46.29it/s]   [0m[91mExtracting : asn1crypto-1.2.0-py37_0.tar.bz2:  91%|█████████▏| 32/35 [00:00<00:00, 46.29it/s]     [0m[91mExtracting : pysocks-1.7.1-py37_0.tar.bz2:  94%|█████████▍| 33/35 [00:00<00:00, 46.29it/s]   [0m[91mExtracting : conda-4.7.12-py37_0.tar.bz2:  97%|█████████▋| 34/35 [00:01<00:00, 46.29it/s] Extracting : conda-4.7.12-py37_0.tar.bz2: 100%|██████████| 35/35 [00:01<00:00, 35.64it/s][0m[91m                                                                                         [0m[91m[0mCollecting package metadata (current_repodata.json): ...working... done
+[91m  0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : pyopenssl-19.0.0-py37_0.conda:   0%|          | 0/35 [00:00<?, ?it/s][0m[91mExtracting : zlib-1.2.11-h7b6447c_3.conda:   3%|▎         | 1/35 [00:00<00:01, 20.35it/s][0m[91mExtracting : six-1.12.0-py37_0.conda:   6%|▌         | 2/35 [00:00<00:00, 40.57it/s]     [0m[91mExtracting : conda-package-handling-1.6.0-py37h7b6447c_0.conda:   9%|▊         | 3/35 [00:00<00:00, 60.39it/s][0m[91mExtracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  11%|█▏        | 4/35 [00:00<00:00, 47.44it/s]              [0m[91mExtracting : _libgcc_mutex-0.1-main.conda:  14%|█▍        | 5/35 [00:00<00:00, 58.94it/s]       [0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  17%|█▋        | 6/35 [00:00<00:00, 45.08it/s][0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  20%|██        | 7/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : pycparser-2.19-py37_0.conda:  20%|██        | 7/35 [00:00<00:00, 52.42it/s]     [0m[91mExtracting : idna-2.8-py37_0.conda:  23%|██▎       | 8/35 [00:00<00:00, 52.42it/s]      [0m[91mExtracting : pycosat-0.6.3-py37h14c3975_0.conda:  26%|██▌       | 9/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  29%|██▊       | 10/35 [00:00<00:00, 52.42it/s]        [0m[91mExtracting : requests-2.22.0-py37_0.conda:  31%|███▏      | 11/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : readline-7.0-h7b6447c_5.conda:  34%|███▍      | 12/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : yaml-0.1.7-had09818_2.conda:  37%|███▋      | 13/35 [00:00<00:00, 52.42it/s]  [0m[91mExtracting : urllib3-1.24.2-py37_0.conda:  40%|████      | 14/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : tqdm-4.36.1-py_0.conda:  43%|████▎     | 15/35 [00:00<00:00, 52.42it/s]     [0m[91mExtracting : ruamel_yaml-0.15.46-py37h14c3975_0.conda:  46%|████▌     | 16/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : xz-5.2.4-h14c3975_4.conda:  49%|████▊     | 17/35 [00:00<00:00, 52.42it/s]               [0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  51%|█████▏    | 18/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : libffi-3.2.1-hd88cf55_4.conda:  54%|█████▍    | 19/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  57%|█████▋    | 20/35 [00:00<00:00, 52.42it/s][0m[91mExtracting : python-3.7.4-h265db76_1.conda:  60%|██████    | 21/35 [00:00<00:00, 42.20it/s][0m[91mExtracting : chardet-3.0.4-py37_1003.conda:  60%|██████    | 21/35 [00:00<00:00, 42.20it/s][0m[91mExtracting : libedit-3.1.20181209-hc058e9b_0.conda:  63%|██████▎   | 22/35 [00:00<00:00, 42.20it/s][0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  66%|██████▌   | 23/35 [00:00<00:00, 42.20it/s]     Extracting : cffi-1.13.0-py37h2e261b9_0.tar.bz2:  69%|██████▊   | 24/35 [00:00<00:00, 42.20it/s][0m[91mExtracting : pip-19.3.1-py37_0.tar.bz2:  71%|███████▏  | 25/35 [00:00<00:00, 42.20it/s]         [0m[91mExtracting : openssl-1.1.1d-h7b6447c_3.tar.bz2:  74%|███████▍  | 26/35 [00:00<00:00, 42.20it/s]Extracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  77%|███████▋  | 27/35 [00:00<00:00, 42.20it/s] Extracting : setuptools-41.4.0-py37_0.tar.bz2:  80%|████████  | 28/35 [00:00<00:00, 42.20it/s][0m[91mExtracting : wheel-0.33.6-py37_0.tar.bz2:  83%|████████▎ | 29/35 [00:00<00:00, 42.20it/s]     [0m[91mExtracting : cryptography-2.8-py37h1ba5d50_0.tar.bz2:  86%|████████▌ | 30/35 [00:00<00:00, 42.20it/s]Extracting : cryptography-2.8-py37h1ba5d50_0.tar.bz2:  89%|████████▊ | 31/35 [00:00<00:00, 49.50it/s][0m[91mExtracting : ca-certificates-2019.10.16-0.tar.bz2:  89%|████████▊ | 31/35 [00:00<00:00, 49.50it/s]   [0m[91mExtracting : asn1crypto-1.2.0-py37_0.tar.bz2:  91%|█████████▏| 32/35 [00:00<00:00, 49.50it/s]     Extracting : pysocks-1.7.1-py37_0.tar.bz2:  94%|█████████▍| 33/35 [00:00<00:00, 49.50it/s]   [0m[91mExtracting : conda-4.7.12-py37_0.tar.bz2:  97%|█████████▋| 34/35 [00:01<00:00, 49.50it/s] Extracting : conda-4.7.12-py37_0.tar.bz2: 100%|██████████| 35/35 [00:01<00:00, 25.83it/s][0m[91m                                                                                         [0m[91m[0mCollecting package metadata (current_repodata.json): ...working... done
 Solving environment: ...working... done
 
 ## Package Plan ##
@@ -2925,22 +2921,22 @@ The following NEW packages will be INSTALLED:
 Preparing transaction: ...working... done
 Executing transaction: ...working... done
 installation finished.
-Removing intermediate container f31479910dbb
- ---> 2d30544e05c0
+Removing intermediate container 1af88cfa8293
+ ---> cecfbb6e2418
 Step 8/20 : ENV PATH "$PATH:/miniconda3/bin"
- ---> Running in 0fedea598eb8
-Removing intermediate container 0fedea598eb8
- ---> 655e156e78fc
+ ---> Running in 837998d5a08e
+Removing intermediate container 837998d5a08e
+ ---> 611d463ffb37
 Step 9/20 : RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1  && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2  && python --version  && python3 --version  && rm /usr/bin/lsb_release
- ---> Running in c1da015c1c10
+ ---> Running in 28d55e7a0fca
 update-alternatives: using /usr/bin/python2.7 to provide /usr/bin/python (python) in auto mode
 update-alternatives: using /miniconda3/bin/python3.7 to provide /usr/bin/python3 (python3) in auto mode
 [91mPython 2.7.13
 [0mPython 3.7.4
-Removing intermediate container c1da015c1c10
- ---> f30597bc2f50
+Removing intermediate container 28d55e7a0fca
+ ---> 7cf4573eec9c
 Step 10/20 : RUN conda install --quiet --yes -c bioconda    bedtools    deeptools    samtools
- ---> Running in 6b9fce8f0fc9
+ ---> Running in 3100e7aae89d
 Collecting package metadata (current_repodata.json): ...working... done
 Solving environment: ...working... done
 
@@ -3077,10 +3073,10 @@ The following packages will be UPDATED:
 Preparing transaction: ...working... done
 Verifying transaction: ...working... done
 Executing transaction: ...working... done
-Removing intermediate container 6b9fce8f0fc9
- ---> 3ecf2f374ebb
+Removing intermediate container 3100e7aae89d
+ ---> 8b68c744babe
 Step 11/20 : RUN python3 -m pip install    click    Cython    dca    fa2    "gast==0.2.2"    h5py    leidenalg    louvain    numba    numpy    "networkx==2.2"    numpydoc    "matplotlib>=3.0,<3.1"    pandas    phate    pysam    python-igraph    scanpy    scikit-learn    scipy    snaptools    tensorflow    umap-learn    jupyter
- ---> Running in 93f2fb17f9cd
+ ---> Running in bcb06656380e
 Collecting click
   Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
 Collecting Cython
@@ -3141,111 +3137,111 @@ Collecting sphinx>=1.6.5
 Collecting Jinja2>=2.3
   Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
 Requirement already satisfied: kiwisolver>=1.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (1.1.0)
-Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.8.1)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.4.5)
+Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (2.8.1)
 Requirement already satisfied: cycler>=0.10 in /miniconda3/lib/python3.7/site-packages (from matplotlib<3.1,>=3.0) (0.10.0)
 Requirement already satisfied: pytz>=2017.2 in /miniconda3/lib/python3.7/site-packages (from pandas) (2019.3)
+Collecting graphtools>=1.3.1
+  Downloading https://files.pythonhosted.org/packages/1a/44/15f4920625c87b92a62900575c84c41cd9900b9abf5f41b7cacb9f767f2f/graphtools-1.4.1-py3-none-any.whl
+Collecting tasklogger>=1.0
+  Downloading https://files.pythonhosted.org/packages/5d/6b/cb2a724eff19829a0ada0217f403f54fca1e48c7de6fc3383e0a8b8fa121/tasklogger-1.0.0-py3-none-any.whl
 Collecting future
   Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
+Collecting scprep>=0.11.1
+  Downloading https://files.pythonhosted.org/packages/c6/b3/e039c5181e50aa0cc9057639f100ab50483f6dfb67b602bcffe1093c1ae4/scprep-1.0.3-py3-none-any.whl (95kB)
 Collecting sgdpy>=1.4.1
   Downloading https://files.pythonhosted.org/packages/c7/08/f0d676c0a1259486c4792c972dba09bb8bcbf717804e434dd2dbdaa0b09e/sgdpy-1.4.1-cp37-cp37m-manylinux2010_x86_64.whl (480kB)
 Collecting Deprecated
   Downloading https://files.pythonhosted.org/packages/f6/89/62912e01f3cede11edcc0abf81298e3439d9c06c8dce644369380ed13f6d/Deprecated-1.2.7-py2.py3-none-any.whl
-Collecting graphtools>=1.3.1
-  Downloading https://files.pythonhosted.org/packages/1a/44/15f4920625c87b92a62900575c84c41cd9900b9abf5f41b7cacb9f767f2f/graphtools-1.4.1-py3-none-any.whl
-Collecting scprep>=0.11.1
-  Downloading https://files.pythonhosted.org/packages/c6/b3/e039c5181e50aa0cc9057639f100ab50483f6dfb67b602bcffe1093c1ae4/scprep-1.0.3-py3-none-any.whl (95kB)
-Collecting tasklogger>=1.0
-  Downloading https://files.pythonhosted.org/packages/5d/6b/cb2a724eff19829a0ada0217f403f54fca1e48c7de6fc3383e0a8b8fa121/tasklogger-1.0.0-py3-none-any.whl
-Collecting statsmodels>=0.10.0rc2
-  Downloading https://files.pythonhosted.org/packages/a6/32/5f8cff131e678a73b8f390ff7d8a04d502ed45e379378a0c5b9c25175239/statsmodels-0.10.2-cp37-cp37m-manylinux1_x86_64.whl (8.1MB)
-Collecting seaborn
-  Downloading https://files.pythonhosted.org/packages/a8/76/220ba4420459d9c4c9c9587c6ce607bf56c25b3d3d2de62056efe482dadc/seaborn-0.9.0-py3-none-any.whl (208kB)
-Collecting anndata>=0.6.22rc1
-  Downloading https://files.pythonhosted.org/packages/2b/72/87196c15f68d9865c31a43a10cf7c50bcbcedd5607d09f9aada0b3963103/anndata-0.6.22.post1-py3-none-any.whl (47kB)
 Collecting tables
   Downloading https://files.pythonhosted.org/packages/0f/cb/4097be890a773af95343389faa8c283b0d9ff606f144227a548461dcbdd5/tables-3.6.1-cp37-cp37m-manylinux1_x86_64.whl (4.3MB)
 Collecting patsy
   Downloading https://files.pythonhosted.org/packages/ea/0c/5f61f1a3d4385d6bf83b83ea495068857ff8dfb89e74824c6e9eb63286d8/patsy-0.5.1-py2.py3-none-any.whl (231kB)
-Collecting natsort
-  Downloading https://files.pythonhosted.org/packages/81/27/db2ee290a962a7c876409c91f12982a699c8956eb9485e4bfb00d1b799b1/natsort-6.2.0-py2.py3-none-any.whl
+Collecting statsmodels>=0.10.0rc2
+  Downloading https://files.pythonhosted.org/packages/a6/32/5f8cff131e678a73b8f390ff7d8a04d502ed45e379378a0c5b9c25175239/statsmodels-0.10.2-cp37-cp37m-manylinux1_x86_64.whl (8.1MB)
 Collecting joblib
   Downloading https://files.pythonhosted.org/packages/28/5c/cf6a2b65a321c4a209efcdf64c2689efae2cb62661f8f6f4bb28547cf1bf/joblib-0.14.1-py2.py3-none-any.whl (294kB)
+Collecting anndata>=0.6.22rc1
+  Downloading https://files.pythonhosted.org/packages/2b/72/87196c15f68d9865c31a43a10cf7c50bcbcedd5607d09f9aada0b3963103/anndata-0.6.22.post1-py3-none-any.whl (47kB)
+Collecting natsort
+  Downloading https://files.pythonhosted.org/packages/81/27/db2ee290a962a7c876409c91f12982a699c8956eb9485e4bfb00d1b799b1/natsort-6.2.0-py2.py3-none-any.whl
 Collecting importlib-metadata>=0.7; python_version < "3.8"
   Downloading https://files.pythonhosted.org/packages/e9/71/1a1e0ed0981bb6a67bce55a210f168126b7ebd2065958673797ea66489ca/importlib_metadata-1.3.0-py2.py3-none-any.whl
+Collecting seaborn
+  Downloading https://files.pythonhosted.org/packages/a8/76/220ba4420459d9c4c9c9587c6ce607bf56c25b3d3d2de62056efe482dadc/seaborn-0.9.0-py3-none-any.whl (208kB)
 Collecting pybedtools>=0.7
   Downloading https://files.pythonhosted.org/packages/ca/b6/af143d5247cfe331e32c96ca92056293140eb8ce788d37842f6dcea734b4/pybedtools-0.8.0.tar.gz (12.5MB)
 Collecting python-louvain
   Downloading https://files.pythonhosted.org/packages/96/b2/c74bb9023c8d4bf94f5049e3d705b3064c6f180a38d772055d20ba5a8d06/python-louvain-0.13.tar.gz
-Collecting absl-py>=0.7.0
-  Downloading https://files.pythonhosted.org/packages/3b/72/e6e483e2db953c11efa44ee21c5fdb6505c4dffa447b4263ca8af6676b62/absl-py-0.8.1.tar.gz (103kB)
-Collecting tensorboard<2.1.0,>=2.0.0
-  Downloading https://files.pythonhosted.org/packages/76/54/99b9d5d52d5cb732f099baaaf7740403e83fe6b0cedde940fabd2b13d75a/tensorboard-2.0.2-py3-none-any.whl (3.8MB)
-Collecting wrapt>=1.11.1
-  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
-Collecting opt-einsum>=2.3.2
-  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
-Collecting tensorflow-estimator<2.1.0,>=2.0.0
-  Downloading https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl (449kB)
-Requirement already satisfied: wheel>=0.26 in /miniconda3/lib/python3.7/site-packages (from tensorflow) (0.33.6)
-Collecting termcolor>=1.1.0
-  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
-Collecting grpcio>=1.8.6
-  Downloading https://files.pythonhosted.org/packages/b5/68/070ee7609b452e950bd5af35f7161f0ceb0abd61cf16ff3b23c852d4594b/grpcio-1.25.0-cp37-cp37m-manylinux2010_x86_64.whl (2.4MB)
-Collecting keras-preprocessing>=1.0.5
-  Downloading https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
 Collecting astor>=0.6.0
   Downloading https://files.pythonhosted.org/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl
+Collecting grpcio>=1.8.6
+  Downloading https://files.pythonhosted.org/packages/b5/68/070ee7609b452e950bd5af35f7161f0ceb0abd61cf16ff3b23c852d4594b/grpcio-1.25.0-cp37-cp37m-manylinux2010_x86_64.whl (2.4MB)
+Collecting absl-py>=0.7.0
+  Downloading https://files.pythonhosted.org/packages/3b/72/e6e483e2db953c11efa44ee21c5fdb6505c4dffa447b4263ca8af6676b62/absl-py-0.8.1.tar.gz (103kB)
+Collecting keras-preprocessing>=1.0.5
+  Downloading https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
+Collecting wrapt>=1.11.1
+  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
+Collecting tensorflow-estimator<2.1.0,>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl (449kB)
+Collecting tensorboard<2.1.0,>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/76/54/99b9d5d52d5cb732f099baaaf7740403e83fe6b0cedde940fabd2b13d75a/tensorboard-2.0.2-py3-none-any.whl (3.8MB)
 Collecting protobuf>=3.6.1
   Downloading https://files.pythonhosted.org/packages/c8/bd/9609c681f655c4b85f4e4f4c99d42b68bca63ad8891c6924ba6696dee0bb/protobuf-3.11.1-cp37-cp37m-manylinux1_x86_64.whl (1.3MB)
-Collecting keras-applications>=1.0.8
-  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+Collecting termcolor>=1.1.0
+  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
 Collecting google-pasta>=0.1.6
   Downloading https://files.pythonhosted.org/packages/c3/fd/1e86bc4837cc9a3a5faf3db9b1854aa04ad35b5f381f9648fbe81a6f94e4/google_pasta-0.1.8-py3-none-any.whl (57kB)
+Collecting opt-einsum>=2.3.2
+  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
+Requirement already satisfied: wheel>=0.26 in /miniconda3/lib/python3.7/site-packages (from tensorflow) (0.33.6)
+Collecting keras-applications>=1.0.8
+  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
 Collecting notebook
   Downloading https://files.pythonhosted.org/packages/f5/69/d2ffaf7efc20ce47469187e3a41e6e03e17b45de5a6559f4e7ab3eace5e1/notebook-6.0.2-py3-none-any.whl (9.7MB)
 Collecting ipywidgets
   Downloading https://files.pythonhosted.org/packages/56/a0/dbcf5881bb2f51e8db678211907f16ea0a182b232c591a6d6f276985ca95/ipywidgets-7.5.1-py2.py3-none-any.whl (121kB)
 Collecting jupyter-console
   Downloading https://files.pythonhosted.org/packages/cb/ee/6374ae8c21b7d0847f9c3722dcdfac986b8e54fa9ad9ea66e1eb6320d2b8/jupyter_console-6.0.0-py2.py3-none-any.whl
+Collecting nbconvert
+  Downloading https://files.pythonhosted.org/packages/79/6c/05a569e9f703d18aacb89b7ad6075b404e8a4afde2c26b73ca77bb644b14/nbconvert-5.6.1-py2.py3-none-any.whl (455kB)
 Collecting qtconsole
   Downloading https://files.pythonhosted.org/packages/7c/57/3528b84ffa753e2089908bbf74bb5ae60653eb7a63797b6234e88b847d67/qtconsole-4.6.0-py2.py3-none-any.whl (121kB)
 Collecting ipykernel
   Downloading https://files.pythonhosted.org/packages/e1/92/8fec943b5b81078399f969f00557804d884c96fcd0bc296e81a2ed4fd270/ipykernel-5.1.3-py3-none-any.whl (116kB)
-Collecting nbconvert
-  Downloading https://files.pythonhosted.org/packages/79/6c/05a569e9f703d18aacb89b7ad6075b404e8a4afde2c26b73ca77bb644b14/nbconvert-5.6.1-py2.py3-none-any.whl (455kB)
 Collecting pyyaml
   Downloading https://files.pythonhosted.org/packages/8d/c9/e5be955a117a1ac548cdd31e37e8fd7b02ce987f9655f5c7563c656d5dcb/PyYAML-5.2.tar.gz (265kB)
 Collecting hyperopt
   Downloading https://files.pythonhosted.org/packages/0b/4a/79541d4f61e7878f846f68ab31ed709bac6ee99345378c0e02658c3be0d4/hyperopt-0.2.2-py3-none-any.whl (1.9MB)
-Collecting sphinxcontrib-qthelp
-  Downloading https://files.pythonhosted.org/packages/ce/5b/4747c3ba98b3a3e21a66faa183d8f79b9ded70e74212a7988d236a6eb78a/sphinxcontrib_qthelp-1.0.2-py2.py3-none-any.whl (90kB)
 Collecting sphinxcontrib-htmlhelp
   Downloading https://files.pythonhosted.org/packages/e4/35/80a67cc493f4a8a9634ab203a77aaa1b84d79ccb1c02eca72cb084d2c7f7/sphinxcontrib_htmlhelp-1.0.2-py2.py3-none-any.whl (96kB)
-Collecting sphinxcontrib-jsmath
-  Downloading https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+Collecting docutils>=0.12
+  Downloading https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl (547kB)
 Collecting snowballstemmer>=1.1
   Downloading https://files.pythonhosted.org/packages/7d/4b/cdf1113a0e88b641893b814e9c36f69a6fda28cd88b62c7f0d858cde3166/snowballstemmer-2.0.0-py2.py3-none-any.whl (97kB)
-Collecting imagesize
-  Downloading https://files.pythonhosted.org/packages/fc/b6/aef66b4c52a6ad6ac18cf6ebc5731ed06d8c9ae4d3b2d9951f261150be67/imagesize-1.1.0-py2.py3-none-any.whl
 Collecting sphinxcontrib-devhelp
   Downloading https://files.pythonhosted.org/packages/b0/a3/fea98741f0b2f2902fbf6c35c8e91b22cd0dd13387291e81d457f9a93066/sphinxcontrib_devhelp-1.0.1-py2.py3-none-any.whl (84kB)
+Collecting Pygments>=2.0
+  Downloading https://files.pythonhosted.org/packages/be/39/32da3184734730c0e4d3fa3b2b5872104668ad6dc1b5a73d8e477e5fe967/Pygments-2.5.2-py2.py3-none-any.whl (896kB)
 Requirement already satisfied: setuptools in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc) (41.4.0)
+Collecting imagesize
+  Downloading https://files.pythonhosted.org/packages/fc/b6/aef66b4c52a6ad6ac18cf6ebc5731ed06d8c9ae4d3b2d9951f261150be67/imagesize-1.1.0-py2.py3-none-any.whl
+Collecting sphinxcontrib-jsmath
+  Downloading https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+Collecting sphinxcontrib-applehelp
+  Downloading https://files.pythonhosted.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl (121kB)
+Requirement already satisfied: requests>=2.5.0 in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc) (2.22.0)
 Collecting alabaster<0.8,>=0.7
   Downloading https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
-Collecting sphinxcontrib-serializinghtml
-  Downloading https://files.pythonhosted.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl (89kB)
 Collecting packaging
   Downloading https://files.pythonhosted.org/packages/cf/94/9672c2d4b126e74c4496c6b3c58a8b51d6419267be9e70660ba23374c875/packaging-19.2-py2.py3-none-any.whl
 Collecting babel!=2.0,>=1.3
   Downloading https://files.pythonhosted.org/packages/2c/60/f2af68eb046c5de5b1fe6dd4743bf42c074f7141fe7b2737d3061533b093/Babel-2.7.0-py2.py3-none-any.whl (8.4MB)
-Collecting sphinxcontrib-applehelp
-  Downloading https://files.pythonhosted.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl (121kB)
-Requirement already satisfied: requests>=2.5.0 in /miniconda3/lib/python3.7/site-packages (from sphinx>=1.6.5->numpydoc) (2.22.0)
-Collecting Pygments>=2.0
-  Downloading https://files.pythonhosted.org/packages/be/39/32da3184734730c0e4d3fa3b2b5872104668ad6dc1b5a73d8e477e5fe967/Pygments-2.5.2-py2.py3-none-any.whl (896kB)
-Collecting docutils>=0.12
-  Downloading https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl (547kB)
+Collecting sphinxcontrib-qthelp
+  Downloading https://files.pythonhosted.org/packages/ce/5b/4747c3ba98b3a3e21a66faa183d8f79b9ded70e74212a7988d236a6eb78a/sphinxcontrib_qthelp-1.0.2-py2.py3-none-any.whl (90kB)
+Collecting sphinxcontrib-serializinghtml
+  Downloading https://files.pythonhosted.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl (89kB)
 Collecting MarkupSafe>=0.23
   Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
 Collecting pygsp>=0.5.1
@@ -3254,199 +3250,201 @@ Collecting numexpr>=2.6.2
   Downloading https://files.pythonhosted.org/packages/2c/69/274c2b81b9bdf7783150461c8982f23248dc917402ed4c6f8aa4b90bb98e/numexpr-2.7.0-cp37-cp37m-manylinux1_x86_64.whl (162kB)
 Collecting zipp>=0.5
   Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
-Collecting google-auth<2,>=1.6.3
-  Downloading https://files.pythonhosted.org/packages/b6/48/50934afa81c9ab6d68acc19c1c0543f765699fa4e3a36d675baa97816bb1/google_auth-1.8.1-py2.py3-none-any.whl (75kB)
-Collecting markdown>=2.6.8
-  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
 Collecting werkzeug>=0.11.15
   Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+Collecting google-auth<2,>=1.6.3
+  Downloading https://files.pythonhosted.org/packages/b6/48/50934afa81c9ab6d68acc19c1c0543f765699fa4e3a36d675baa97816bb1/google_auth-1.8.1-py2.py3-none-any.whl (75kB)
 Collecting google-auth-oauthlib<0.5,>=0.4.1
   Downloading https://files.pythonhosted.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl
+Collecting markdown>=2.6.8
+  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
 Collecting traitlets>=4.2.1
   Downloading https://files.pythonhosted.org/packages/ca/ab/872a23e29cec3cf2594af7e857f18b687ad21039c1f9b922fac5b9b142d5/traitlets-4.3.3-py2.py3-none-any.whl (75kB)
-Collecting ipython-genutils
-  Downloading https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
 Collecting prometheus-client
   Downloading https://files.pythonhosted.org/packages/b3/23/41a5a24b502d35a4ad50a5bb7202a5e1d9a0364d0c12f56db3dbf7aca76d/prometheus_client-0.7.1.tar.gz
-Collecting jupyter-core>=4.6.0
-  Downloading https://files.pythonhosted.org/packages/fb/82/86437f661875e30682e99d04c13ba6c216f86f5f6ca6ef212d3ee8b6ca11/jupyter_core-4.6.1-py2.py3-none-any.whl (82kB)
-Requirement already satisfied: tornado>=5.0 in /miniconda3/lib/python3.7/site-packages (from notebook->jupyter) (6.0.3)
 Collecting Send2Trash
   Downloading https://files.pythonhosted.org/packages/49/46/c3dc27481d1cc57b9385aff41c474ceb7714f7935b1247194adae45db714/Send2Trash-1.5.0-py3-none-any.whl
-Collecting jupyter-client>=5.3.4
-  Downloading https://files.pythonhosted.org/packages/13/81/fe0eee1bcf949851a120254b1f530ae1e01bdde2d3ab9710c6ff81525061/jupyter_client-5.3.4-py2.py3-none-any.whl (92kB)
-Collecting terminado>=0.8.1
-  Downloading https://files.pythonhosted.org/packages/ff/96/1d9a2c23990aea8f8e0b5c3b6627d03196a73771a17a2d9860bbe9823ab6/terminado-0.8.3-py2.py3-none-any.whl
+Requirement already satisfied: tornado>=5.0 in /miniconda3/lib/python3.7/site-packages (from notebook->jupyter) (6.0.3)
 Collecting nbformat
   Downloading https://files.pythonhosted.org/packages/da/27/9a654d2b6cc1eaa517d1c5a4405166c7f6d72f04f6e7eea41855fe808a46/nbformat-4.4.0-py2.py3-none-any.whl (155kB)
 Collecting pyzmq>=17
   Downloading https://files.pythonhosted.org/packages/bf/dd/547bee2080beefe6546c332422cb0f189b3cd71cfff048146cd9ac3751cc/pyzmq-18.1.1-cp37-cp37m-manylinux1_x86_64.whl (1.1MB)
-Collecting ipython>=4.0.0; python_version >= "3.3"
-  Downloading https://files.pythonhosted.org/packages/00/17/c3e3dd337cc601b47c599441786fd4e888b587a2a512d38ac752274fd0bc/ipython-7.10.1-py3-none-any.whl (778kB)
+Collecting jupyter-client>=5.3.4
+  Downloading https://files.pythonhosted.org/packages/13/81/fe0eee1bcf949851a120254b1f530ae1e01bdde2d3ab9710c6ff81525061/jupyter_client-5.3.4-py2.py3-none-any.whl (92kB)
+Collecting terminado>=0.8.1
+  Downloading https://files.pythonhosted.org/packages/ff/96/1d9a2c23990aea8f8e0b5c3b6627d03196a73771a17a2d9860bbe9823ab6/terminado-0.8.3-py2.py3-none-any.whl
+Collecting jupyter-core>=4.6.0
+  Downloading https://files.pythonhosted.org/packages/fb/82/86437f661875e30682e99d04c13ba6c216f86f5f6ca6ef212d3ee8b6ca11/jupyter_core-4.6.1-py2.py3-none-any.whl (82kB)
+Collecting ipython-genutils
+  Downloading https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
 Collecting widgetsnbextension~=3.5.0
   Downloading https://files.pythonhosted.org/packages/6c/7b/7ac231c20d2d33c445eaacf8a433f4e22c60677eb9776c7c5262d7ddee2d/widgetsnbextension-3.5.1-py2.py3-none-any.whl (2.2MB)
+Collecting ipython>=4.0.0; python_version >= "3.3"
+  Downloading https://files.pythonhosted.org/packages/00/17/c3e3dd337cc601b47c599441786fd4e888b587a2a512d38ac752274fd0bc/ipython-7.10.1-py3-none-any.whl (778kB)
 Collecting prompt-toolkit<2.1.0,>=2.0.0
   Downloading https://files.pythonhosted.org/packages/87/61/2dfea88583d5454e3a64f9308a686071d58d59a55db638268a6413e1eb6d/prompt_toolkit-2.0.10-py3-none-any.whl (340kB)
-Collecting pandocfilters>=1.4.1
-  Downloading https://files.pythonhosted.org/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz
-Collecting defusedxml
-  Downloading https://files.pythonhosted.org/packages/06/74/9b387472866358ebc08732de3da6dc48e44b0aacd2ddaa5cb85ab7e986a2/defusedxml-0.6.0-py2.py3-none-any.whl
-Collecting mistune<2,>=0.8.1
-  Downloading https://files.pythonhosted.org/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl
-Collecting testpath
-  Downloading https://files.pythonhosted.org/packages/1b/9e/1a170feaa54f22aeb5a5d16c9015e82234275a3c8ab630b552493f9cb8a9/testpath-0.4.4-py2.py3-none-any.whl (163kB)
 Collecting entrypoints>=0.2.2
   Downloading https://files.pythonhosted.org/packages/ac/c6/44694103f8c221443ee6b0041f69e2740d89a25641e62fb4f2ee568f2f9c/entrypoints-0.3-py2.py3-none-any.whl
+Collecting testpath
+  Downloading https://files.pythonhosted.org/packages/1b/9e/1a170feaa54f22aeb5a5d16c9015e82234275a3c8ab630b552493f9cb8a9/testpath-0.4.4-py2.py3-none-any.whl (163kB)
+Collecting pandocfilters>=1.4.1
+  Downloading https://files.pythonhosted.org/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz
 Collecting bleach
   Downloading https://files.pythonhosted.org/packages/ab/05/27e1466475e816d3001efb6e0a85a819be17411420494a1e602c36f8299d/bleach-3.1.0-py2.py3-none-any.whl (157kB)
+Collecting mistune<2,>=0.8.1
+  Downloading https://files.pythonhosted.org/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl
+Collecting defusedxml
+  Downloading https://files.pythonhosted.org/packages/06/74/9b387472866358ebc08732de3da6dc48e44b0aacd2ddaa5cb85ab7e986a2/defusedxml-0.6.0-py2.py3-none-any.whl
 Collecting cloudpickle
   Downloading https://files.pythonhosted.org/packages/c1/49/334e279caa3231255725c8e860fa93e72083567625573421db8875846c14/cloudpickle-1.2.2-py2.py3-none-any.whl
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (1.24.2)
-Requirement already satisfied: certifi>=2017.4.17 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (2019.11.28)
-Requirement already satisfied: idna<2.9,>=2.5 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (2.8)
 Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (3.0.4)
+Requirement already satisfied: idna<2.9,>=2.5 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /miniconda3/lib/python3.7/site-packages (from requests>=2.5.0->sphinx>=1.6.5->numpydoc) (2019.11.28)
 Collecting more-itertools
   Downloading https://files.pythonhosted.org/packages/68/03/0604cec1ea13c9f063dd50f900d1a36160334dd3cfb01fd0e638f61b46ba/more_itertools-8.0.2-py3-none-any.whl (40kB)
-Collecting pyasn1-modules>=0.2.1
-  Downloading https://files.pythonhosted.org/packages/52/50/bb4cefca37da63a0c52218ba2cb1b1c36110d84dcbae8aa48cd67c5e95c2/pyasn1_modules-0.2.7-py2.py3-none-any.whl (131kB)
-Collecting rsa<4.1,>=3.1.4
-  Downloading https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
 Collecting cachetools<3.2,>=2.0.0
   Downloading https://files.pythonhosted.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl
+Collecting rsa<4.1,>=3.1.4
+  Downloading https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
+Collecting pyasn1-modules>=0.2.1
+  Downloading https://files.pythonhosted.org/packages/52/50/bb4cefca37da63a0c52218ba2cb1b1c36110d84dcbae8aa48cd67c5e95c2/pyasn1_modules-0.2.7-py2.py3-none-any.whl (131kB)
 Collecting requests-oauthlib>=0.7.0
   Downloading https://files.pythonhosted.org/packages/a3/12/b92740d845ab62ea4edf04d2f4164d82532b5a0b03836d4d4e71c6f3d379/requests_oauthlib-1.3.0-py2.py3-none-any.whl
-Collecting ptyprocess; os_name != "nt"
-  Downloading https://files.pythonhosted.org/packages/d1/29/605c2cc68a9992d18dada28206eeada56ea4bd07a239669da41674648b6f/ptyprocess-0.6.0-py2.py3-none-any.whl
 Collecting jsonschema!=2.5.0,>=2.4
   Downloading https://files.pythonhosted.org/packages/c5/8f/51e89ce52a085483359217bc72cdbf6e75ee595d5b1d4b5ade40c7e018b8/jsonschema-3.2.0-py2.py3-none-any.whl (56kB)
-Collecting jedi>=0.10
-  Downloading https://files.pythonhosted.org/packages/55/54/da994f359e4e7da4776a200e76dbc85ba5fc319eefc22e33d55296d95a1d/jedi-0.15.1-py2.py3-none-any.whl (1.0MB)
-Collecting pexpect; sys_platform != "win32"
-  Downloading https://files.pythonhosted.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl (58kB)
-Collecting pickleshare
-  Downloading https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
+Collecting ptyprocess; os_name != "nt"
+  Downloading https://files.pythonhosted.org/packages/d1/29/605c2cc68a9992d18dada28206eeada56ea4bd07a239669da41674648b6f/ptyprocess-0.6.0-py2.py3-none-any.whl
 Collecting backcall
   Downloading https://files.pythonhosted.org/packages/84/71/c8ca4f5bb1e08401b916c68003acf0a0655df935d74d93bf3f3364b310e0/backcall-0.1.0.tar.gz
+Collecting jedi>=0.10
+  Downloading https://files.pythonhosted.org/packages/55/54/da994f359e4e7da4776a200e76dbc85ba5fc319eefc22e33d55296d95a1d/jedi-0.15.1-py2.py3-none-any.whl (1.0MB)
+Collecting pickleshare
+  Downloading https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
+Collecting pexpect; sys_platform != "win32"
+  Downloading https://files.pythonhosted.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl (58kB)
 Collecting wcwidth
   Downloading https://files.pythonhosted.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl
 Collecting webencodings
   Downloading https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
-Collecting pyasn1<0.5.0,>=0.4.6
+Collecting pyasn1>=0.1.3
   Downloading https://files.pythonhosted.org/packages/62/1e/a94a8d635fa3ce4cfc7f506003548d0a2447ae76fd5ca53932970fe3053f/pyasn1-0.4.8-py2.py3-none-any.whl (77kB)
 Collecting oauthlib>=3.0.0
   Downloading https://files.pythonhosted.org/packages/05/57/ce2e7a8fa7c0afb54a0581b14a65b56e62b5759dbc98e80627142b8a3704/oauthlib-3.1.0-py2.py3-none-any.whl (147kB)
-Collecting pyrsistent>=0.14.0
-  Downloading https://files.pythonhosted.org/packages/6c/6f/c1a2e8da80a0029f6b618d7e20e1a6f2a61dd04e2e54225309c2cc4268f7/pyrsistent-0.15.6.tar.gz (107kB)
 Collecting attrs>=17.4.0
   Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+Collecting pyrsistent>=0.14.0
+  Downloading https://files.pythonhosted.org/packages/6c/6f/c1a2e8da80a0029f6b618d7e20e1a6f2a61dd04e2e54225309c2cc4268f7/pyrsistent-0.15.6.tar.gz (107kB)
 Collecting parso>=0.5.0
   Downloading https://files.pythonhosted.org/packages/a3/bd/bf4e5bd01d79906e5b945a7af033154da49fd2b0d5b5c705a21330323305/parso-0.5.1-py2.py3-none-any.whl (95kB)
-Building wheels for collected packages: dca, fa2, gast, leidenalg, louvain, networkx, numpydoc, python-igraph, snaptools, umap-learn, kopt, future, pybedtools, python-louvain, absl-py, wrapt, opt-einsum, termcolor, pyyaml, prometheus-client, pandocfilters, backcall, pyrsistent
+Building wheels for collected packages: dca, fa2, gast, leidenalg, louvain, networkx, numpydoc, python-igraph, snaptools, umap-learn, kopt, future, pybedtools, python-louvain, absl-py, wrapt, termcolor, opt-einsum, pyyaml, prometheus-client, pandocfilters, backcall, pyrsistent
   Building wheel for dca (setup.py): started
   Building wheel for dca (setup.py): finished with status 'done'
-  Created wheel for dca: filename=DCA-0.2.3-cp37-none-any.whl size=22140 sha256=0ea2b153661562300690a515be9106fe9abe5914ca3373f00a3ecd95f2497dde
+  Created wheel for dca: filename=DCA-0.2.3-cp37-none-any.whl size=22140 sha256=a857b87929b0bae5c75142315a3ed840ce1ed9a59e1717151212a4859dc2e01e
   Stored in directory: /root/.cache/pip/wheels/58/56/85/d272d8b353965060912768a2f079842eebb0623bcfafb5048e
   Building wheel for fa2 (setup.py): started
   Building wheel for fa2 (setup.py): finished with status 'done'
-  Created wheel for fa2: filename=fa2-0.3.5-cp37-cp37m-linux_x86_64.whl size=301838 sha256=163f267231d9b1764b18f4b49adf1680e4ef73a62eff5f1b8f9fd7ed4adfc720
+  Created wheel for fa2: filename=fa2-0.3.5-cp37-cp37m-linux_x86_64.whl size=301835 sha256=705a26d880e7c282b71667a7e1faf25cc32979bb01627aec3c8200301be785aa
   Stored in directory: /root/.cache/pip/wheels/4f/44/5b/d4fef7f6a310279e27dace5099b8f8104dcc3a9a046004524f
   Building wheel for gast (setup.py): started
   Building wheel for gast (setup.py): finished with status 'done'
-  Created wheel for gast: filename=gast-0.2.2-cp37-none-any.whl size=7540 sha256=beb9f50476aa4e52d793e740593d16e497bc219b6c8bce3649fcfd24f22fda95
+  Created wheel for gast: filename=gast-0.2.2-cp37-none-any.whl size=7540 sha256=a76ab1c3b9c0cdca1de58b43ad9798799d33009cfd196552685ff2a5946af6c2
   Stored in directory: /root/.cache/pip/wheels/5c/2e/7e/a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd
   Building wheel for leidenalg (setup.py): started
   Building wheel for leidenalg (setup.py): still running...
+  Building wheel for leidenalg (setup.py): still running...
   Building wheel for leidenalg (setup.py): finished with status 'done'
-  Created wheel for leidenalg: filename=leidenalg-0.7.0-cp37-cp37m-linux_x86_64.whl size=1122683 sha256=5e8a03db3beec841f7410de0ccb869e18e240bbecafe3f9f33b7247778b12efe
+  Created wheel for leidenalg: filename=leidenalg-0.7.0-cp37-cp37m-linux_x86_64.whl size=1122546 sha256=c57e1390ea14eb74dc1d6109455ed5fb4be341f2f33eb888fec674c98c6369d2
   Stored in directory: /root/.cache/pip/wheels/29/55/48/5a04693a10f50297bcda23819ca23ab3470a61dd911851c8bd
   Building wheel for louvain (setup.py): started
   Building wheel for louvain (setup.py): still running...
   Building wheel for louvain (setup.py): finished with status 'done'
-  Created wheel for louvain: filename=louvain-0.6.1-cp37-cp37m-linux_x86_64.whl size=1031374 sha256=ad8988acbcddda9d278de9976f0395cf56caf6b41f42ed3d315be734938782c5
+  Created wheel for louvain: filename=louvain-0.6.1-cp37-cp37m-linux_x86_64.whl size=1031361 sha256=921a4d1ebfd3f7b4c18bb0430927ef2b1b39a8ced875b2592427332259ef8ff5
   Stored in directory: /root/.cache/pip/wheels/f2/c3/d4/f7abaf064186d6214ef952bbb72fd6c5136d4b17dbeaeff481
   Building wheel for networkx (setup.py): started
   Building wheel for networkx (setup.py): finished with status 'done'
-  Created wheel for networkx: filename=networkx-2.2-py2.py3-none-any.whl size=1527322 sha256=d21b5e127c790d7d376fe3228c5f81a71495d81ee88fa423160203639d80c4a9
+  Created wheel for networkx: filename=networkx-2.2-py2.py3-none-any.whl size=1527322 sha256=cb960273f24dee117eabdd8cf522e24014967ffd7684ebc8f21e2c718b6cc4bb
   Stored in directory: /root/.cache/pip/wheels/68/f8/29/b53346a112a07d30a5a84d53f19aeadaa1a474897c0423af91
   Building wheel for numpydoc (setup.py): started
   Building wheel for numpydoc (setup.py): finished with status 'done'
-  Created wheel for numpydoc: filename=numpydoc-0.9.1-cp37-none-any.whl size=31872 sha256=a08fe065a9e9471c71d1172075927f601e01dee8980cb682d5a4a267fb4e04ef
+  Created wheel for numpydoc: filename=numpydoc-0.9.1-cp37-none-any.whl size=31872 sha256=6a301f393af072a41126676fb4db4a3c570f71eae8da6e50ae15d01629eb75be
   Stored in directory: /root/.cache/pip/wheels/51/30/d1/92a39ba40f21cb70e53f8af96eb98f002a781843c065406500
   Building wheel for python-igraph (setup.py): started
   Building wheel for python-igraph (setup.py): still running...
+  Building wheel for python-igraph (setup.py): still running...
   Building wheel for python-igraph (setup.py): finished with status 'done'
-  Created wheel for python-igraph: filename=python_igraph-0.7.1.post6-cp37-cp37m-linux_x86_64.whl size=2239799 sha256=0043c7f8fefe788c3303f1871e12772eb17fe43ca5f15d331bbed24d612c8d47
+  Created wheel for python-igraph: filename=python_igraph-0.7.1.post6-cp37-cp37m-linux_x86_64.whl size=2239819 sha256=93eb23df79fcbea1289e2810850b06c0b8210d0c43a806794b647ee31c79b481
   Stored in directory: /root/.cache/pip/wheels/41/d6/02/34eebae97e25f5b87d60f4c0687e00523e3f244fa41bc3f4a7
   Building wheel for snaptools (setup.py): started
   Building wheel for snaptools (setup.py): finished with status 'done'
-  Created wheel for snaptools: filename=snaptools-1.4.8-cp37-none-any.whl size=43977 sha256=67ee819ae23a41883679d48defb6e84764ba971ff35979476fa1f61823b40a5b
+  Created wheel for snaptools: filename=snaptools-1.4.8-cp37-none-any.whl size=43977 sha256=c356db35e1261feda85813eed3059aab132b8772ad6d66deb6132e0b7136c238
   Stored in directory: /root/.cache/pip/wheels/b5/62/83/4af86ec83f1989fe662f750c00e4a0ec958d1aef58b4e2168d
   Building wheel for umap-learn (setup.py): started
   Building wheel for umap-learn (setup.py): finished with status 'done'
-  Created wheel for umap-learn: filename=umap_learn-0.3.10-cp37-none-any.whl size=38881 sha256=c4a92411a032d56b4c5710bdb439293e8bcf0346c8f973b829f2b7e4ead3dbf9
+  Created wheel for umap-learn: filename=umap_learn-0.3.10-cp37-none-any.whl size=38881 sha256=e0049ef565d6a47052f1c98289f31e0c7b613035eeb51adb1946b27146f48409
   Stored in directory: /root/.cache/pip/wheels/d0/f8/d5/8e3af3ee957feb9b403a060ebe72f7561887fef9dea658326e
   Building wheel for kopt (setup.py): started
   Building wheel for kopt (setup.py): finished with status 'done'
-  Created wheel for kopt: filename=kopt-0.1.0-py2.py3-none-any.whl size=20597 sha256=be57d8ec44622ced0cfb4e3b073610da415b693bdcb3a3a43cd9d4c7a36031e6
+  Created wheel for kopt: filename=kopt-0.1.0-py2.py3-none-any.whl size=20597 sha256=ed3a10bd54489bfee4b60283ec9d7470813bd724785fc8ff5c6139b786f92589
   Stored in directory: /root/.cache/pip/wheels/21/07/fb/61d6d91da2defece9f6f91aa94f4370fc920324e28eb9010a9
   Building wheel for future (setup.py): started
   Building wheel for future (setup.py): finished with status 'done'
-  Created wheel for future: filename=future-0.18.2-cp37-none-any.whl size=491057 sha256=1af71dfe8e20ffec600aeda773871ca4bd8b59e99b75d5e8fe2e21bac0ad7f5c
+  Created wheel for future: filename=future-0.18.2-cp37-none-any.whl size=491057 sha256=c54d548a31693418079e2de5f2fe50e7a3c4c717d3e93ef816c27606db431e00
   Stored in directory: /root/.cache/pip/wheels/8b/99/a0/81daf51dcd359a9377b110a8a886b3895921802d2fc1b2397e
   Building wheel for pybedtools (setup.py): started
   Building wheel for pybedtools (setup.py): finished with status 'done'
-  Created wheel for pybedtools: filename=pybedtools-0.8.0-cp37-cp37m-linux_x86_64.whl size=13630446 sha256=0dd09cc03bd481b79ffcdd8cd0da1dc37aa561d87c9708e0b1188818f8a5134e
+  Created wheel for pybedtools: filename=pybedtools-0.8.0-cp37-cp37m-linux_x86_64.whl size=13630469 sha256=534748f593c2b9c2c0ba42569cfe03682de55994e9b04fed5b527033f26cc3f8
   Stored in directory: /root/.cache/pip/wheels/4b/62/5b/fcd4580cc7fd70075dc142673a677bed992b5217a7ce22b973
   Building wheel for python-louvain (setup.py): started
   Building wheel for python-louvain (setup.py): finished with status 'done'
-  Created wheel for python-louvain: filename=python_louvain-0.13-cp37-none-any.whl size=9224 sha256=aeaf098306706f4dca2a6c892a699e68de26caa753fe77f74bc39d2cbbd405e1
+  Created wheel for python-louvain: filename=python_louvain-0.13-cp37-none-any.whl size=9224 sha256=df9bddccbdce725ba16187c3f8fca89f2b7fce37e206e246e840b49fd4890e94
   Stored in directory: /root/.cache/pip/wheels/f9/74/a9/14f051b00dddd46d71529db15507796da13a43ee2c0bc39def
   Building wheel for absl-py (setup.py): started
   Building wheel for absl-py (setup.py): finished with status 'done'
-  Created wheel for absl-py: filename=absl_py-0.8.1-cp37-none-any.whl size=121167 sha256=c5e21e1d3ab9e2332b92c00f1a8af765c1061d83bd6c56218c4b42b807da82bf
+  Created wheel for absl-py: filename=absl_py-0.8.1-cp37-none-any.whl size=121167 sha256=31dfe2825b4409d8ccc5ef20c18de2c2f9aa7c675ffc97076e6a1daa80b459a9
   Stored in directory: /root/.cache/pip/wheels/a7/15/a0/0a0561549ad11cdc1bc8fa1191a353efd30facf6bfb507aefc
   Building wheel for wrapt (setup.py): started
   Building wheel for wrapt (setup.py): finished with status 'done'
-  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71263 sha256=46a589e64f5ca61b125bcc4da88748c136ca5583eef9b8dc95d479e4f0813da8
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71272 sha256=d54dcb61b5b70b50768f3d484c70370c2a6d04c9199ea520340f351501682233
   Stored in directory: /root/.cache/pip/wheels/d7/de/2e/efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd
-  Building wheel for opt-einsum (setup.py): started
-  Building wheel for opt-einsum (setup.py): finished with status 'done'
-  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp37-none-any.whl size=61682 sha256=6412dbe924ffe8f0ff5df8b4616977f1711ac089c2e07dabc1b4c245ec70789d
-  Stored in directory: /root/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833
   Building wheel for termcolor (setup.py): started
   Building wheel for termcolor (setup.py): finished with status 'done'
-  Created wheel for termcolor: filename=termcolor-1.1.0-cp37-none-any.whl size=4832 sha256=0ec333ededdc7c7603f6e91fa40a398c5e67e11c4e6c56fa2543adad9cb0c226
+  Created wheel for termcolor: filename=termcolor-1.1.0-cp37-none-any.whl size=4832 sha256=907716cebdf2c5b6738c296881f3fa3b66bccce0420f3d068722e7e274913d51
   Stored in directory: /root/.cache/pip/wheels/7c/06/54/bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6
+  Building wheel for opt-einsum (setup.py): started
+  Building wheel for opt-einsum (setup.py): finished with status 'done'
+  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp37-none-any.whl size=61682 sha256=642bd576d9e8e9cef0112802952eeaefdeee680e5b391cf95935c42af0ba8ef0
+  Stored in directory: /root/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833
   Building wheel for pyyaml (setup.py): started
   Building wheel for pyyaml (setup.py): finished with status 'done'
-  Created wheel for pyyaml: filename=PyYAML-5.2-cp37-cp37m-linux_x86_64.whl size=44209 sha256=236e45ff67c3604db3fc51f38b73f57b034fbbaf67f088b0a605274ca37c046f
+  Created wheel for pyyaml: filename=PyYAML-5.2-cp37-cp37m-linux_x86_64.whl size=44209 sha256=89f7032574319bcbe734a1d5d99a187083c95b451b84b42f37953abdfe0d69b6
   Stored in directory: /root/.cache/pip/wheels/54/b7/c7/2ada654ee54483c9329871665aaf4a6056c3ce36f29cf66e67
   Building wheel for prometheus-client (setup.py): started
   Building wheel for prometheus-client (setup.py): finished with status 'done'
-  Created wheel for prometheus-client: filename=prometheus_client-0.7.1-cp37-none-any.whl size=41402 sha256=e97ec3a19e11bafef2018064970afa4dd85d7cce5c47430fdb4850789ae6292e
+  Created wheel for prometheus-client: filename=prometheus_client-0.7.1-cp37-none-any.whl size=41402 sha256=c149699ae09b2bafe3beacba36e3679b30bf95f17afd4afedb9d30a22d3a1d44
   Stored in directory: /root/.cache/pip/wheels/1c/54/34/fd47cd9b308826cc4292b54449c1899a30251ef3b506bc91ea
   Building wheel for pandocfilters (setup.py): started
   Building wheel for pandocfilters (setup.py): finished with status 'done'
-  Created wheel for pandocfilters: filename=pandocfilters-1.4.2-cp37-none-any.whl size=7857 sha256=d7566fe21a7d9169406563312ca4b8d6c13fe0f65333320b8603061b650fafb7
+  Created wheel for pandocfilters: filename=pandocfilters-1.4.2-cp37-none-any.whl size=7857 sha256=8fbbb3e972445a14e9509c91c4631c29477287b3cfa4f9c2490274dc642db1ea
   Stored in directory: /root/.cache/pip/wheels/39/01/56/f1b08a6275acc59e846fa4c1e1b65dbc1919f20157d9e66c20
   Building wheel for backcall (setup.py): started
   Building wheel for backcall (setup.py): finished with status 'done'
-  Created wheel for backcall: filename=backcall-0.1.0-cp37-none-any.whl size=10415 sha256=ec5ed284b2cab6022f2704f2261e304e825112f99dee3fd7d8f03a78c80d5527
+  Created wheel for backcall: filename=backcall-0.1.0-cp37-none-any.whl size=10415 sha256=005fc1b3648b5a74f0b5897789d5fc78db744a6e6ac5441f59c29861d6cf6c4c
   Stored in directory: /root/.cache/pip/wheels/98/b0/dd/29e28ff615af3dda4c67cab719dd51357597eabff926976b45
   Building wheel for pyrsistent (setup.py): started
   Building wheel for pyrsistent (setup.py): finished with status 'done'
-  Created wheel for pyrsistent: filename=pyrsistent-0.15.6-cp37-cp37m-linux_x86_64.whl size=114541 sha256=c13dfa610faf0bc0af1588b7aad0c131cf3bbecca50190270d3c1e9279e1c2b2
+  Created wheel for pyrsistent: filename=pyrsistent-0.15.6-cp37-cp37m-linux_x86_64.whl size=114539 sha256=72863fbe275e59256ff20b891011878055fa7f53ed390f26b0810e249be7e4aa
   Stored in directory: /root/.cache/pip/wheels/83/89/d3/1712b9c33c9b9c0911b188a86aeff2a9a05e113f986cf79d92
-Successfully built dca fa2 gast leidenalg louvain networkx numpydoc python-igraph snaptools umap-learn kopt future pybedtools python-louvain absl-py wrapt opt-einsum termcolor pyyaml prometheus-client pandocfilters backcall pyrsistent
-Installing collected packages: click, Cython, h5py, keras-applications, keras-preprocessing, pyyaml, keras, joblib, scikit-learn, patsy, pandas, statsmodels, matplotlib, seaborn, natsort, anndata, llvmlite, numba, umap-learn, numexpr, tables, decorator, networkx, more-itertools, zipp, importlib-metadata, scanpy, future, cloudpickle, hyperopt, kopt, dca, fa2, gast, python-igraph, leidenalg, louvain, sphinxcontrib-qthelp, sphinxcontrib-htmlhelp, sphinxcontrib-jsmath, snowballstemmer, imagesize, sphinxcontrib-devhelp, alabaster, sphinxcontrib-serializinghtml, packaging, babel, sphinxcontrib-applehelp, MarkupSafe, Jinja2, Pygments, docutils, sphinx, numpydoc, sgdpy, wrapt, Deprecated, pygsp, tasklogger, graphtools, scprep, phate, pybedtools, python-louvain, snaptools, absl-py, protobuf, pyasn1, pyasn1-modules, rsa, cachetools, google-auth, grpcio, markdown, werkzeug, oauthlib, requests-oauthlib, google-auth-oauthlib, tensorboard, opt-einsum, tensorflow-estimator, termcolor, astor, google-pasta, tensorflow, ipython-genutils, traitlets, prometheus-client, jupyter-core, Send2Trash, pandocfilters, pyrsistent, attrs, jsonschema, nbformat, defusedxml, mistune, testpath, entrypoints, webencodings, bleach, nbconvert, pyzmq, jupyter-client, parso, jedi, ptyprocess, pexpect, wcwidth, prompt-toolkit, pickleshare, backcall, ipython, ipykernel, terminado, notebook, widgetsnbextension, ipywidgets, jupyter-console, qtconsole, jupyter
+Successfully built dca fa2 gast leidenalg louvain networkx numpydoc python-igraph snaptools umap-learn kopt future pybedtools python-louvain absl-py wrapt termcolor opt-einsum pyyaml prometheus-client pandocfilters backcall pyrsistent
+Installing collected packages: click, Cython, pyyaml, keras-preprocessing, h5py, keras-applications, keras, joblib, scikit-learn, llvmlite, numba, decorator, networkx, numexpr, tables, patsy, pandas, statsmodels, natsort, anndata, matplotlib, umap-learn, more-itertools, zipp, importlib-metadata, seaborn, scanpy, future, cloudpickle, hyperopt, kopt, dca, fa2, gast, python-igraph, leidenalg, louvain, MarkupSafe, Jinja2, sphinxcontrib-htmlhelp, docutils, snowballstemmer, sphinxcontrib-devhelp, Pygments, imagesize, sphinxcontrib-jsmath, sphinxcontrib-applehelp, alabaster, packaging, babel, sphinxcontrib-qthelp, sphinxcontrib-serializinghtml, sphinx, numpydoc, pygsp, tasklogger, graphtools, scprep, sgdpy, wrapt, Deprecated, phate, pybedtools, python-louvain, snaptools, astor, grpcio, absl-py, tensorflow-estimator, werkzeug, cachetools, pyasn1, rsa, pyasn1-modules, google-auth, oauthlib, requests-oauthlib, google-auth-oauthlib, protobuf, markdown, tensorboard, termcolor, google-pasta, opt-einsum, tensorflow, ipython-genutils, traitlets, entrypoints, jupyter-core, attrs, pyrsistent, jsonschema, nbformat, testpath, pandocfilters, webencodings, bleach, mistune, defusedxml, nbconvert, prometheus-client, Send2Trash, pyzmq, jupyter-client, ptyprocess, terminado, backcall, parso, jedi, wcwidth, prompt-toolkit, pickleshare, pexpect, ipython, ipykernel, notebook, widgetsnbextension, ipywidgets, jupyter-console, qtconsole, jupyter
   Found existing installation: matplotlib 3.1.1
     Uninstalling matplotlib-3.1.1:
       Successfully uninstalled matplotlib-3.1.1
 Successfully installed Cython-0.29.14 Deprecated-1.2.7 Jinja2-2.10.3 MarkupSafe-1.1.1 Pygments-2.5.2 Send2Trash-1.5.0 absl-py-0.8.1 alabaster-0.7.12 anndata-0.6.22.post1 astor-0.8.1 attrs-19.3.0 babel-2.7.0 backcall-0.1.0 bleach-3.1.0 cachetools-3.1.1 click-7.0 cloudpickle-1.2.2 dca-0.2.3 decorator-4.4.1 defusedxml-0.6.0 docutils-0.15.2 entrypoints-0.3 fa2-0.3.5 future-0.18.2 gast-0.2.2 google-auth-1.8.1 google-auth-oauthlib-0.4.1 google-pasta-0.1.8 graphtools-1.4.1 grpcio-1.25.0 h5py-2.10.0 hyperopt-0.2.2 imagesize-1.1.0 importlib-metadata-1.3.0 ipykernel-5.1.3 ipython-7.10.1 ipython-genutils-0.2.0 ipywidgets-7.5.1 jedi-0.15.1 joblib-0.14.1 jsonschema-3.2.0 jupyter-1.0.0 jupyter-client-5.3.4 jupyter-console-6.0.0 jupyter-core-4.6.1 keras-2.3.1 keras-applications-1.0.8 keras-preprocessing-1.1.0 kopt-0.1.0 leidenalg-0.7.0 llvmlite-0.30.0 louvain-0.6.1 markdown-3.1.1 matplotlib-3.0.3 mistune-0.8.4 more-itertools-8.0.2 natsort-6.2.0 nbconvert-5.6.1 nbformat-4.4.0 networkx-2.2 notebook-6.0.2 numba-0.46.0 numexpr-2.7.0 numpydoc-0.9.1 oauthlib-3.1.0 opt-einsum-3.1.0 packaging-19.2 pandas-0.25.3 pandocfilters-1.4.2 parso-0.5.1 patsy-0.5.1 pexpect-4.7.0 phate-1.0.0 pickleshare-0.7.5 prometheus-client-0.7.1 prompt-toolkit-2.0.10 protobuf-3.11.1 ptyprocess-0.6.0 pyasn1-0.4.8 pyasn1-modules-0.2.7 pybedtools-0.8.0 pygsp-0.5.1 pyrsistent-0.15.6 python-igraph-0.7.1.post6 python-louvain-0.13 pyyaml-5.2 pyzmq-18.1.1 qtconsole-4.6.0 requests-oauthlib-1.3.0 rsa-4.0 scanpy-1.4.4.post1 scikit-learn-0.22 scprep-1.0.3 seaborn-0.9.0 sgdpy-1.4.1 snaptools-1.4.8 snowballstemmer-2.0.0 sphinx-2.2.2 sphinxcontrib-applehelp-1.0.1 sphinxcontrib-devhelp-1.0.1 sphinxcontrib-htmlhelp-1.0.2 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.2 sphinxcontrib-serializinghtml-1.1.3 statsmodels-0.10.2 tables-3.6.1 tasklogger-1.0.0 tensorboard-2.0.2 tensorflow-2.0.0 tensorflow-estimator-2.0.1 termcolor-1.1.0 terminado-0.8.3 testpath-0.4.4 traitlets-4.3.3 umap-learn-0.3.10 wcwidth-0.1.7 webencodings-0.5.1 werkzeug-0.16.0 widgetsnbextension-3.5.1 wrapt-1.11.2 zipp-0.6.0
-Removing intermediate container 93f2fb17f9cd
- ---> 32c513e21104
+Removing intermediate container bcb06656380e
+ ---> 51b9dd48ac29
 Step 12/20 : RUN python3 -m pip install    velocyto    scvelo
- ---> Running in 1ca0883b0d41
+ ---> Running in ab6fec9da60a
 Collecting velocyto
   Downloading https://files.pythonhosted.org/packages/81/66/e8fff9d3b824fd99c0f678c47c740fec058ce2d9a0cfdf11b114ea8889f2/velocyto-0.17.17.tar.gz (198kB)
 Collecting scvelo
@@ -3463,13 +3461,13 @@ Collecting loompy
 Requirement already satisfied: pysam in /miniconda3/lib/python3.7/site-packages (from velocyto) (0.15.3)
 Requirement already satisfied: Click in /miniconda3/lib/python3.7/site-packages (from velocyto) (7.0)
 Requirement already satisfied: pandas in /miniconda3/lib/python3.7/site-packages (from velocyto) (0.25.3)
+Requirement already satisfied: umap-learn>=0.3 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.3.10)
 Requirement already satisfied: anndata>=0.6.18 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.6.22.post1)
 Requirement already satisfied: scanpy>=1.4 in /miniconda3/lib/python3.7/site-packages (from scvelo) (1.4.4.post1)
-Requirement already satisfied: umap-learn>=0.3 in /miniconda3/lib/python3.7/site-packages (from scvelo) (0.3.10)
 Requirement already satisfied: llvmlite>=0.30.0dev0 in /miniconda3/lib/python3.7/site-packages (from numba->velocyto) (0.30.0)
+Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (2.8.1)
 Requirement already satisfied: kiwisolver>=1.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (1.1.0)
 Requirement already satisfied: cycler>=0.10 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (0.10.0)
-Requirement already satisfied: python-dateutil>=2.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (2.8.1)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /miniconda3/lib/python3.7/site-packages (from matplotlib->velocyto) (2.4.5)
 Requirement already satisfied: joblib>=0.11 in /miniconda3/lib/python3.7/site-packages (from scikit-learn->velocyto) (0.14.1)
 Requirement already satisfied: six in /miniconda3/lib/python3.7/site-packages (from h5py->velocyto) (1.12.0)
@@ -3478,13 +3476,13 @@ Collecting numpy-groupies
   Downloading https://files.pythonhosted.org/packages/96/7a/2196465530e72084c6bb97cd49bf8ccdc83919cc94755727aa148effbc0f/numpy_groupies-0.9.9.tar.gz (43kB)
 Requirement already satisfied: pytz>=2017.2 in /miniconda3/lib/python3.7/site-packages (from pandas->velocyto) (2019.3)
 Requirement already satisfied: natsort in /miniconda3/lib/python3.7/site-packages (from anndata>=0.6.18->scvelo) (6.2.0)
+Requirement already satisfied: seaborn in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.9.0)
 Requirement already satisfied: networkx in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (2.2)
 Requirement already satisfied: importlib-metadata>=0.7; python_version < "3.8" in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (1.3.0)
-Requirement already satisfied: statsmodels>=0.10.0rc2 in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.10.2)
-Requirement already satisfied: tables in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (3.6.1)
 Requirement already satisfied: patsy in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.5.1)
+Requirement already satisfied: statsmodels>=0.10.0rc2 in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.10.2)
 Requirement already satisfied: tqdm in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (4.36.1)
-Requirement already satisfied: seaborn in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (0.9.0)
+Requirement already satisfied: tables in /miniconda3/lib/python3.7/site-packages (from scanpy>=1.4->scvelo) (3.6.1)
 Requirement already satisfied: decorator>=4.3.0 in /miniconda3/lib/python3.7/site-packages (from networkx->scanpy>=1.4->scvelo) (4.4.1)
 Requirement already satisfied: zipp>=0.5 in /miniconda3/lib/python3.7/site-packages (from importlib-metadata>=0.7; python_version < "3.8"->scanpy>=1.4->scvelo) (0.6.0)
 Requirement already satisfied: numexpr>=2.6.2 in /miniconda3/lib/python3.7/site-packages (from tables->scanpy>=1.4->scvelo) (2.7.0)
@@ -3492,27 +3490,27 @@ Requirement already satisfied: more-itertools in /miniconda3/lib/python3.7/site-
 Building wheels for collected packages: velocyto, loompy, numpy-groupies
   Building wheel for velocyto (setup.py): started
   Building wheel for velocyto (setup.py): finished with status 'done'
-  Created wheel for velocyto: filename=velocyto-0.17.17-cp37-cp37m-linux_x86_64.whl size=391277 sha256=899f5fe3cbbe689cfcc5b23d20e99c30ed3f2bc5a117b75f49e71d0b9a963d5e
+  Created wheel for velocyto: filename=velocyto-0.17.17-cp37-cp37m-linux_x86_64.whl size=391296 sha256=f70e85d72531d95a4a22e7eb88d9f9c0e8fcf286ea11f1a9f62e0051fa757f98
   Stored in directory: /root/.cache/pip/wheels/e0/10/47/5a2aa6a7179b17b50a19cdba1df71798ade77e7d9ce98c5300
   Building wheel for loompy (setup.py): started
   Building wheel for loompy (setup.py): finished with status 'done'
-  Created wheel for loompy: filename=loompy-3.0.6-cp37-none-any.whl size=47896 sha256=4ef720da10b72c3f63ba149818a8e434ebed6f92572c4c8a4514331feb3dd120
+  Created wheel for loompy: filename=loompy-3.0.6-cp37-none-any.whl size=47896 sha256=4d588a3824984768f46b191d957420b15a4d6dda56e82fa7324da7a758d54511
   Stored in directory: /root/.cache/pip/wheels/f9/a4/90/5a98ad83419732b0fba533b81a2a52ba3dbe230a936ca4cdc9
   Building wheel for numpy-groupies (setup.py): started
   Building wheel for numpy-groupies (setup.py): finished with status 'done'
-  Created wheel for numpy-groupies: filename=numpy_groupies-0+unknown-cp37-none-any.whl size=27878 sha256=d56053dd7f991cdc9a52e2d6334bb9bf748edab13a54a656932daa1130cb997a
+  Created wheel for numpy-groupies: filename=numpy_groupies-0+unknown-cp37-none-any.whl size=27878 sha256=617186d3df926ed367bae914a556b4ca36363f0446a75c696417fb4505a591d2
   Stored in directory: /root/.cache/pip/wheels/6c/fb/3d/5c43eb691bd92a3ddd0ebeb6e7e78ceaf3ae1cb8d54b89a7fb
 Successfully built velocyto loompy numpy-groupies
 Installing collected packages: numpy-groupies, loompy, velocyto, scvelo
 Successfully installed loompy-3.0.6 numpy-groupies-0+unknown scvelo-0.1.24 velocyto-0.17.17
-Removing intermediate container 1ca0883b0d41
- ---> b87ddaf016f3
+Removing intermediate container ab6fec9da60a
+ ---> b1dee3bbb4af
 Step 13/20 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 
 
- ---> b06cdd330573
+ ---> f96e1e73c828
 Step 14/20 : RUN tar -xvzf /docker/master.tar.gz -C /docker
- ---> Running in 286a14ca86da
+ ---> Running in 1f3d98178b32
 docker_containers-master/
 docker_containers-master/.gitignore
 docker_containers-master/R/
@@ -3552,15 +3550,15 @@ docker_containers-master/kallisto/0.46.0/Dockerfile
 docker_containers-master/kallisto/0.46.0/README.md
 docker_containers-master/scanpy/
 docker_containers-master/scanpy/Dockerfile
-Removing intermediate container 286a14ca86da
- ---> 218e8aea4280
+Removing intermediate container 1f3d98178b32
+ ---> 0c5f26996b4e
 Step 15/20 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
- ---> Running in cad238ee4f9a
+ ---> Running in 54032bec1403
 [91mInstalling package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
 [0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 40205 bytes (39 KB)
-=================[0m[91m=================================
+====[0m[91m=[0m[91m=[0m[91m===[0m[91m===[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=======[0m[91m==[0m[91m=[0m[91m=====[0m[91m==[0m[91m=[0m[91m==[0m[91m====[0m[91m=[0m[91m==[0m[91m====[0m[91m==[0m[91m
 downloaded 39 KB
 
 [0m[91m* installing *source* package ‘BiocManager’ ...
@@ -3579,20 +3577,20 @@ downloaded 39 KB
 [0m[91m* DONE (BiocManager)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmppJWOF9/downloaded_packages’
-[0mRemoving intermediate container cad238ee4f9a
- ---> 15c3e70145b6
+	‘/tmp/RtmpBEtakp/downloaded_packages’
+[0mRemoving intermediate container 54032bec1403
+ ---> 860678a00879
 Step 16/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
- ---> Running in 13a65592d130
-[91m[2019-12-11 18:14:10] 'remotes' will be installed.
+ ---> Running in 8f56e395260c
+[91m[2019-12-11 20:45:39] 'remotes' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'BiocVersion', 'remotes'
 [0m[91mOld packages: 'littler', 'boot', 'foreign', 'KernSmooth', 'Matrix', 'mgcv',
   'nlme', 'survival'
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/littler_0.3.9.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 652684 bytes (637 KB)
-=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m===[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m===[0m[91m
-downloaded 637 KB
+[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m
+[0m[91mdownloaded 637 KB
 
 [0m[91m* installing *source* package ‘littler’ ...
 [0m[91m** package ‘littler’ successfully unpacked and MD5 sums checked
@@ -3653,15 +3651,15 @@ config.status: creating src/config.h
 [0m[91m* DONE (littler)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpFciAZU/downloaded_packages’
+	‘/tmp/RtmpNoZ0xz/downloaded_packages’
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/boot_1.3-23.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 232655 bytes (227 KB)
-[0m[91m===[0m[91m====[0m[91m===[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m====[0m[91m===[0m[91m===[0m[91m=[0m[91m=[0m[91m==[0m[91m====[0m[91m=
+[0m[91m=======[0m[91m======[0m[91m====[0m[91m=====[0m[91m===[0m[91m======[0m[91m===[0m[91m===[0m[91m=====[0m[91m=======[0m[91m=
 downloaded 227 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/foreign_0.8-72.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 346659 bytes (338 KB)
-==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m=[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m
+==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m=[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m
 downloaded 338 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/KernSmooth_2.23-16.tar.gz'
@@ -3676,12 +3674,12 @@ downloaded 1.8 MB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/mgcv_1.8-31.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 936344 bytes (914 KB)
-[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m
 downloaded 914 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/nlme_3.1-143.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 789415 bytes (770 KB)
-[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==
 downloaded 770 KB
 
 [0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/survival_3.1-8.tar.gz'
@@ -3776,7 +3774,7 @@ gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/us
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Mutils.c -o Mutils.o
 [91mIn file included from Mutils.c:3:0:
 Mutils.c: In function ‘dim_validate’:
-[0m[91mMutils.c:336:21: warning: pointer/integer type mismatch in conditional expression
+Mutils.c:336:21: warning: pointer/integer type mismatch in conditional expression
        (m*n > 0) ? 2 : 1));
                      ^
 Mutils.h:39:45: note: in definition of macro ‘dngettext’
@@ -3803,26 +3801,26 @@ gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/us
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lgCMatrix.c -o lgCMatrix.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sparseQR.c -o sparseQR.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER -I./SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c abIndex.c -o abIndex.o
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD'
 ( cd Lib ; make clean )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD/Lib'
-make[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD/Lib'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD/Lib'
+make[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD/Lib'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD'
 ( cd Source ; make clean )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD/Source'
-make[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD/Source'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD/Source'
+make[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD/Source'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD'
 ( cd Source ; make clean )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD/Source'
-make[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD/Source'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/SuiteSparse_config'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/SuiteSparse_config'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD/Source'
+make[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD/Source'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/SuiteSparse_config'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/SuiteSparse_config'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD'
 ( cd Lib ; make -f "/usr/local/lib/R/etc/Makeconf" -f Makefile )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD/Lib'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD/Lib'
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../../AMD/Include -I../../AMD/Source -I../../COLAMD/Include -I../Include -I../../SuiteSparse_config -DNPARTITION -DNPRINT  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ../Core/cholmod_aat.c -o cholmod_aat.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../../AMD/Include -I../../AMD/Source -I../../COLAMD/Include -I../Include -I../../SuiteSparse_config -DNPARTITION -DNPRINT  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ../Core/cholmod_add.c -o cholmod_add.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../../AMD/Include -I../../AMD/Source -I../../COLAMD/Include -I../Include -I../../SuiteSparse_config -DNPARTITION -DNPRINT  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ../Core/cholmod_band.c -o cholmod_band.o
@@ -3915,21 +3913,21 @@ gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../../AMD/Include -I../../AMD/Source
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../../AMD/Include -I../../AMD/Source -I../../COLAMD/Include -I../Include -I../../SuiteSparse_config -DNPARTITION -DNPRINT  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DDLONG -c  ../Supernodal/cholmod_super_symbolic.c -o cholmod_l_super_symbolic.o
 ar -rucs ../../CHOLMOD.a cholmod_aat.o cholmod_add.o cholmod_band.o cholmod_change_factor.o cholmod_common.o cholmod_complex.o cholmod_copy.o cholmod_dense.o cholmod_error.o cholmod_factor.o cholmod_memory.o cholmod_sparse.o cholmod_transpose.o cholmod_triplet.o cholmod_version.o cholmod_check.o cholmod_read.o cholmod_write.o cholmod_amd.o cholmod_analyze.o cholmod_colamd.o cholmod_etree.o cholmod_factorize.o cholmod_postorder.o cholmod_rcond.o cholmod_resymbol.o cholmod_rowcolcounts.o cholmod_rowfac.o cholmod_solve.o cholmod_spsolve.o cholmod_drop.o cholmod_horzcat.o cholmod_norm.o cholmod_scale.o cholmod_sdmult.o cholmod_ssmult.o cholmod_submatrix.o cholmod_vertcat.o cholmod_symmetry.o cholmod_rowadd.o cholmod_rowdel.o cholmod_updown.o cholmod_super_numeric.o cholmod_super_solve.o cholmod_super_symbolic.o  cholmod_l_aat.o cholmod_l_add.o cholmod_l_band.o cholmod_l_change_factor.o cholmod_l_common.o cholmod_l_complex.o cholmod_l_copy.o cholmod_l_dense.o cholmod_l_error.o cholmod_l_factor.o cholmod_l_memory.o cholmod_l_sparse.o cholmod_l_transpose.o cholmod_l_triplet.o cholmod_l_version.o cholmod_l_check.o cholmod_l_read.o cholmod_l_write.o cholmod_l_amd.o cholmod_l_analyze.o cholmod_l_colamd.o cholmod_l_etree.o cholmod_l_factorize.o cholmod_l_postorder.o cholmod_l_rcond.o cholmod_l_resymbol.o cholmod_l_rowcolcounts.o cholmod_l_rowfac.o cholmod_l_solve.o cholmod_l_spsolve.o cholmod_l_drop.o cholmod_l_horzcat.o cholmod_l_norm.o cholmod_l_scale.o cholmod_l_sdmult.o cholmod_l_ssmult.o cholmod_l_submatrix.o cholmod_l_vertcat.o cholmod_l_symmetry.o cholmod_l_rowadd.o cholmod_l_rowdel.o cholmod_l_updown.o cholmod_l_super_numeric.o cholmod_l_super_solve.o cholmod_l_super_symbolic.o 
 [91mar: `u' modifier ignored since `D' is the default (see `U')
-[0mmake[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD/Lib'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/CHOLMOD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD'
+[0mmake[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD/Lib'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/CHOLMOD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD'
 ( cd Source ; make -f "/usr/local/lib/R/etc/Makeconf" -f Makefile lib )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD/Source'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD/Source'
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colamd_global.c -o colamd_global.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colamd.c -o colamd.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDLONG -c colamd.c -o colamd_l.o
 ar -rucs ../../COLAMD.a colamd_global.o colamd.o colamd_l.o
 [91mar: `u' modifier ignored since `D' is the default (see `U')
-[0mmake[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD/Source'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/COLAMD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD'
+[0mmake[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD/Source'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/COLAMD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD'
 ( cd Source ; make -f "/usr/local/lib/R/etc/Makeconf" -f Makefile lib )
-make[2]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD/Source'
+make[2]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD/Source'
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDINT -c amd_aat.c -o amd_i_aat.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDLONG -c amd_aat.c -o amd_l_aat.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDINT -c amd_1.c -o amd_i_1.o
@@ -3957,14 +3955,14 @@ gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_confi
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDINT -c amd_global.c -o amd_i_global.o
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../Include -I../../SuiteSparse_config  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I../Include -DDLONG -c amd_global.c -o amd_l_global.o
 ar -rucs ../../AMD.a amd_i_aat.o amd_l_aat.o amd_i_1.o amd_l_1.o amd_i_2.o amd_l_2.o amd_i_postorder.o amd_l_postorder.o amd_i_post_tree.o amd_l_post_tree.o amd_i_defaults.o amd_l_defaults.o amd_i_order.o amd_l_order.o amd_i_control.o amd_l_control.o amd_i_info.o amd_l_info.o amd_i_valid.o amd_l_valid.o amd_i_preprocess.o amd_l_preprocess.o amd_i_dump.o amd_l_dump.o amd_i_global.o amd_l_global.o 
-[91mar: `u' modifier ignored since `D' is the default (see `U')
-[0mmake[2]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD/Source'
-make[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/AMD'
-make[1]: Entering directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/SuiteSparse_config'
+[91mar: [0m[91m`u' modifier ignored since `D' is the default (see `U')[0m[91m
+[0mmake[2]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD/Source'
+make[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/AMD'
+make[1]: Entering directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/SuiteSparse_config'
 gcc -I"/usr/local/lib/R/include" -DNDEBUG -DNTIMER  -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SuiteSparse_config.c -o SuiteSparse_config.o
 ar -rucs ../SuiteSparse_config.a SuiteSparse_config.o
 [91mar: `u' modifier ignored since `D' is the default (see `U')
-[0mmake[1]: Leaving directory '/tmp/RtmpX43Ks3/R.INSTALL54852cc0481/Matrix/src/SuiteSparse_config'
+[0mmake[1]: Leaving directory '/tmp/Rtmp1Iv20a/R.INSTALL54863f93ea8/Matrix/src/SuiteSparse_config'
 gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Matrix.so CHMfactor.o Csparse.o TMatrix_as.o Tsparse.o init.o Mutils.o chm_common.o cs.o cs_utils.o dense.o dgCMatrix.o dgTMatrix.o dgeMatrix.o dpoMatrix.o dppMatrix.o dsCMatrix.o dsyMatrix.o dspMatrix.o dtCMatrix.o dtTMatrix.o dtrMatrix.o dtpMatrix.o factorizations.o ldense.o lgCMatrix.o sparseQR.o abIndex.o CHOLMOD.a COLAMD.a AMD.a SuiteSparse_config.a -L/usr/local/lib/R/lib -lRlapack -lopenblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
 [91minstalling to /usr/local/lib/R/library/00LOCK-Matrix/00new/Matrix/libs
 [0m[91m** R
@@ -4185,481 +4183,481 @@ gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o survival.so agexact.o agf
 [0m[91m* DONE (survival)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpFciAZU/downloaded_packages’
+	‘/tmp/RtmpNoZ0xz/downloaded_packages’
 [0m[91mUpdating HTML index of packages in '.Library'
 [0m[91mMaking 'packages.html' ...[0m[91m done
-[0m[91m[2019-12-11 18:16:52] 'remotes' successfully installed.
-[0m[91m[2019-12-11 18:16:52] 'devtools' will be installed.
+[0m[91m[2019-12-11 20:48:22] 'remotes' successfully installed.
+[0m[91m[2019-12-11 20:48:22] 'devtools' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'devtools'
 [0m[91malso installing the dependencies ‘zeallot’, ‘colorspace’, ‘utf8’, ‘vctrs’, ‘plyr’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘lifecycle’, ‘pillar’, ‘pkgconfig’, ‘httpuv’, ‘xtable’, ‘sourcetools’, ‘fastmap’, ‘gtable’, ‘reshape2’, ‘scales’, ‘tibble’, ‘viridisLite’, ‘BH’, ‘sys’, ‘ini’, ‘backports’, ‘ps’, ‘lazyeval’, ‘shiny’, ‘ggplot2’, ‘later’, ‘askpass’, ‘clipr’, ‘clisymbols’, ‘curl’, ‘fs’, ‘gh’, ‘purrr’, ‘rprojroot’, ‘whisker’, ‘yaml’, ‘processx’, ‘R6’, ‘assertthat’, ‘fansi’, ‘rex’, ‘htmltools’, ‘htmlwidgets’, ‘magrittr’, ‘crosstalk’, ‘promises’, ‘mime’, ‘openssl’, ‘prettyunits’, ‘xopen’, ‘brew’, ‘commonmark’, ‘Rcpp’, ‘stringi’, ‘stringr’, ‘xml2’, ‘evaluate’, ‘praise’, ‘usethis’, ‘callr’, ‘cli’, ‘covr’, ‘crayon’, ‘desc’, ‘digest’, ‘DT’, ‘ellipsis’, ‘glue’, ‘git2r’, ‘httr’, ‘jsonlite’, ‘memoise’, ‘pkgbuild’, ‘pkgload’, ‘rcmdcheck’, ‘rlang’, ‘roxygen2’, ‘rstudioapi’, ‘rversions’, ‘sessioninfo’, ‘testthat’, ‘withr’
 
-[0m[91m[2019-12-11 18:26:23] 'devtools' successfully installed.
-[0m[91m[2019-12-11 18:26:23] 'tidyverse' will be installed.
+[0m[91m[2019-12-11 20:58:11] 'devtools' successfully installed.
+[0m[91m[2019-12-11 20:58:11] 'tidyverse' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'tidyverse'
 [0m[91malso installing the dependencies ‘highr’, ‘markdown’, ‘rematch’, ‘knitr’, ‘base64enc’, ‘tinytex’, ‘xfun’, ‘generics’, ‘DBI’, ‘tidyselect’, ‘plogr’, ‘cellranger’, ‘progress’, ‘rmarkdown’, ‘selectr’, ‘broom’, ‘dbplyr’, ‘dplyr’, ‘forcats’, ‘haven’, ‘hms’, ‘lubridate’, ‘modelr’, ‘readr’, ‘readxl’, ‘reprex’, ‘rvest’, ‘tidyr’
 
-[0m[91m[2019-12-11 18:33:17] 'tidyverse' successfully installed.
-[0m[91m[2019-12-11 18:33:17] 'concaveman' will be installed.
+[0m[91m[2019-12-11 21:04:53] 'tidyverse' successfully installed.
+[0m[91m[2019-12-11 21:04:54] 'concaveman' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'concaveman'
 [0m[91malso installing the dependencies ‘e1071’, ‘classInt’, ‘units’, ‘V8’, ‘sf’
 
-[0m[91m[2019-12-11 18:34:59] 'concaveman' successfully installed.
-[0m[91m[2019-12-11 18:34:59] 'dendextend' will be installed.
+[0m[91m[2019-12-11 21:06:35] 'concaveman' successfully installed.
+[0m[91m[2019-12-11 21:06:35] 'dendextend' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'dendextend'
 [0m[91malso installing the dependencies ‘gridExtra’, ‘viridis’
 
-[0m[91m[2019-12-11 18:35:11] 'dendextend' successfully installed.
-[0m[91m[2019-12-11 18:35:11] 'densityClust' will be installed.
+[0m[91m[2019-12-11 21:06:46] 'dendextend' successfully installed.
+[0m[91m[2019-12-11 21:06:47] 'densityClust' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'densityClust'
 [0m[91malso installing the dependencies ‘FNN’, ‘Rtsne’, ‘ggrepel’
 
-[0m[91m[2019-12-11 18:36:00] 'densityClust' successfully installed.
-[0m[91m[2019-12-11 18:36:00] 'DT' already installed.
-[0m[91m[2019-12-11 18:36:01] 'fastcluster' will be installed.
+[0m[91m[2019-12-11 21:07:36] 'densityClust' successfully installed.
+[0m[91m[2019-12-11 21:07:36] 'DT' already installed.
+[0m[91m[2019-12-11 21:07:36] 'fastcluster' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'fastcluster'
-[0m[91m[2019-12-11 18:36:05] 'fastcluster' successfully installed.
-[0m[91m[2019-12-11 18:36:05] 'FlowSOM' will be installed.
+[0m[91m[2019-12-11 21:07:40] 'fastcluster' successfully installed.
+[0m[91m[2019-12-11 21:07:40] 'FlowSOM' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'FlowSOM'
 [0m[91malso installing the dependencies ‘DEoptimR’, ‘fda’, ‘ellipse’, ‘mnormt’, ‘kernlab’, ‘mclust’, ‘multicool’, ‘mvtnorm’, ‘robustbase’, ‘pcaPP’, ‘R.oo’, ‘R.methodsS3’, ‘hexbin’, ‘IDPmisc’, ‘RcppArmadillo’, ‘zlibbioc’, ‘Rhdf5lib’, ‘gtools’, ‘flowStats’, ‘flowClust’, ‘clue’, ‘ks’, ‘rrcov’, ‘R.utils’, ‘Biobase’, ‘matrixStats’, ‘cytolib’, ‘ALL’, ‘graph’, ‘RBGL’, ‘Rgraphviz’, ‘data.table’, ‘latticeExtra’, ‘flowViz’, ‘RcppParallel’, ‘ncdfFlow’, ‘RProtoBufLib’, ‘openCyto’, ‘ggcyto’, ‘corpcor’, ‘RUnit’, ‘igraph’, ‘flowCore’, ‘ConsensusClusterPlus’, ‘BiocGenerics’, ‘tsne’, ‘flowWorkspace’, ‘CytoML’, ‘XML’
 
-[0m[91m[2019-12-11 18:54:40] 'FlowSOM' successfully installed.
-[0m[91m[2019-12-11 18:54:40] 'foreign' already installed.
-[0m[91m[2019-12-11 18:54:40] 'future.apply' will be installed.
+[0m[91m[2019-12-11 21:26:21] 'FlowSOM' successfully installed.
+[0m[91m[2019-12-11 21:26:21] 'foreign' already installed.
+[0m[91m[2019-12-11 21:26:21] 'future.apply' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'future.apply'
 [0m[91malso installing the dependencies ‘listenv’, ‘future’, ‘globals’
 
-[0m[91m[2019-12-11 18:54:50] 'future.apply' successfully installed.
-[0m[91m[2019-12-11 18:54:50] 'gam' will be installed.
+[0m[91m[2019-12-11 21:26:33] 'future.apply' successfully installed.
+[0m[91m[2019-12-11 21:26:33] 'gam' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gam'
 [0m[91malso installing the dependencies ‘iterators’, ‘foreach’
 
-[0m[91m[2019-12-11 18:54:59] 'gam' successfully installed.
-[0m[91m[2019-12-11 18:55:00] 'golem' will be installed.
+[0m[91m[2019-12-11 21:26:43] 'gam' successfully installed.
+[0m[91m[2019-12-11 21:26:43] 'golem' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'golem'
 [0m[91malso installing the dependencies ‘packrat’, ‘attempt’, ‘dockerfiler’, ‘rsconnect’, ‘yesno’
 
-[0m[91m[2019-12-11 18:55:15] 'golem' successfully installed.
-[0m[91m[2019-12-11 18:55:15] 'h2o' will be installed.
+[0m[91m[2019-12-11 21:26:59] 'golem' successfully installed.
+[0m[91m[2019-12-11 21:26:59] 'h2o' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'h2o'
 [0m[91malso installing the dependencies ‘bitops’, ‘RCurl’
 
-[0m[91m[2019-12-11 18:55:57] 'h2o' successfully installed.
-[0m[91m[2019-12-11 18:55:57] 'hdf5r' will be installed.
+[0m[91m[2019-12-11 21:59:23] 'h2o' successfully installed.
+[0m[91m[2019-12-11 21:59:23] 'hdf5r' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'hdf5r'
 [0m[91malso installing the dependencies ‘bit’, ‘bit64’
 
-[0m[91m[2019-12-11 18:56:26] 'hdf5r' successfully installed.
-[0m[91m[2019-12-11 18:56:26] 'lwgeom' will be installed.
+[0m[91m[2019-12-11 21:59:52] 'hdf5r' successfully installed.
+[0m[91m[2019-12-11 21:59:52] 'lwgeom' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'lwgeom'
-[0m[91m[2019-12-11 18:57:02] 'lwgeom' successfully installed.
-[0m[91m[2019-12-11 18:57:02] 'magrittr' already installed.
-[0m[91m[2019-12-11 18:57:02] 'phylogram' will be installed.
+[0m[91m[2019-12-11 22:00:28] 'lwgeom' successfully installed.
+[0m[91m[2019-12-11 22:00:28] 'magrittr' already installed.
+[0m[91m[2019-12-11 22:00:28] 'phylogram' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'phylogram'
 [0m[91malso installing the dependency ‘ape’
 
-[0m[91m[2019-12-11 18:57:31] 'phylogram' successfully installed.
-[0m[91m[2019-12-11 18:57:31] 'pryr' will be installed.
+[0m[91m[2019-12-11 22:00:57] 'phylogram' successfully installed.
+[0m[91m[2019-12-11 22:00:57] 'pryr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'pryr'
-[0m[91m[2019-12-11 18:57:55] 'pryr' successfully installed.
-[0m[91m[2019-12-11 18:57:55] 'reshape2' already installed.
-[0m[91m[2019-12-11 18:57:55] 'reticulate' will be installed.
+[0m[91m[2019-12-11 22:01:22] 'pryr' successfully installed.
+[0m[91m[2019-12-11 22:01:22] 'reshape2' already installed.
+[0m[91m[2019-12-11 22:01:22] 'reticulate' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'reticulate'
-[0m[91m[2019-12-11 18:58:17] 'reticulate' successfully installed.
-[0m[91m[2019-12-11 18:58:17] 'rgdal' will be installed.
+[0m[91m[2019-12-11 22:01:44] 'reticulate' successfully installed.
+[0m[91m[2019-12-11 22:01:44] 'rgdal' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'rgdal'
 [0m[91malso installing the dependency ‘sp’
 
-[0m[91m[2019-12-11 18:58:35] 'rgdal' successfully installed.
-[0m[91m[2019-12-11 18:58:35] 'roxygen2' already installed.
-[0m[91m[2019-12-11 18:58:35] 'Rtsne' already installed.
-[0m[91m[2019-12-11 18:58:35] 'scales' already installed.
-[0m[91m[2019-12-11 18:58:35] 'shiny' already installed.
-[0m[91m[2019-12-11 18:58:36] 'shinydashboard' will be installed.
+[0m[91m[2019-12-11 22:02:02] 'rgdal' successfully installed.
+[0m[91m[2019-12-11 22:02:02] 'roxygen2' already installed.
+[0m[91m[2019-12-11 22:02:02] 'Rtsne' already installed.
+[0m[91m[2019-12-11 22:02:02] 'scales' already installed.
+[0m[91m[2019-12-11 22:02:02] 'shiny' already installed.
+[0m[91m[2019-12-11 22:02:03] 'shinydashboard' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'shinydashboard'
-[0m[91m[2019-12-11 18:58:39] 'shinydashboard' successfully installed.
-[0m[91m[2019-12-11 18:58:39] 'shinyjs' will be installed.
+[0m[91m[2019-12-11 22:02:06] 'shinydashboard' successfully installed.
+[0m[91m[2019-12-11 22:02:06] 'shinyjs' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'shinyjs'
-[0m[91m[2019-12-11 18:58:42] 'shinyjs' successfully installed.
-[0m[91m[2019-12-11 18:58:42] 'shinythemes' will be installed.
+[0m[91m[2019-12-11 22:02:09] 'shinyjs' successfully installed.
+[0m[91m[2019-12-11 22:02:10] 'shinythemes' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'shinythemes'
-[0m[91m[2019-12-11 18:58:46] 'shinythemes' successfully installed.
-[0m[91m[2019-12-11 18:58:46] 'sf' already installed.
-[0m[91m[2019-12-11 18:58:46] 'stringi' already installed.
-[0m[91m[2019-12-11 18:58:46] 'tensorflow' will be installed.
+[0m[91m[2019-12-11 22:02:13] 'shinythemes' successfully installed.
+[0m[91m[2019-12-11 22:02:13] 'sf' already installed.
+[0m[91m[2019-12-11 22:02:13] 'stringi' already installed.
+[0m[91m[2019-12-11 22:02:13] 'tensorflow' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'tensorflow'
 [0m[91malso installing the dependencies ‘config’, ‘tfruns’
 
-[0m[91m[2019-12-11 18:58:55] 'tensorflow' successfully installed.
-[0m[91m[2019-12-11 18:58:55] 'tsne' already installed.
-[0m[91m[2019-12-11 18:58:55] 'umap' will be installed.
+[0m[91m[2019-12-11 22:02:22] 'tensorflow' successfully installed.
+[0m[91m[2019-12-11 22:02:22] 'tsne' already installed.
+[0m[91m[2019-12-11 22:02:22] 'umap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'umap'
 [0m[91malso installing the dependencies ‘RcppEigen’, ‘RSpectra’
 
-[0m[91m[2019-12-11 19:01:28] 'umap' successfully installed.
-[0m[91m[2019-12-11 19:01:28] 'uwot' will be installed.
+[0m[91m[2019-12-11 22:04:59] 'umap' successfully installed.
+[0m[91m[2019-12-11 22:04:59] 'uwot' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'uwot'
 [0m[91malso installing the dependencies ‘sitmo’, ‘RcppAnnoy’, ‘irlba’, ‘RcppProgress’, ‘dqrng’
 
-[0m[91m[2019-12-11 19:02:44] 'uwot' successfully installed.
-[0m[91m[2019-12-11 19:02:44] 'XML' already installed.
-[0m[91m[2019-12-11 19:02:44] 'xml2' already installed.
-[0m[91m[2019-12-11 19:02:44] 'jalvesaq/colorout' will be installed.
+[0m[91m[2019-12-11 22:06:17] 'uwot' successfully installed.
+[0m[91m[2019-12-11 22:06:17] 'XML' already installed.
+[0m[91m[2019-12-11 22:06:17] 'xml2' already installed.
+[0m[91m[2019-12-11 22:06:17] 'jalvesaq/colorout' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'jalvesaq/colorout'
-[0m[91m[2019-12-11 19:02:50] 'jalvesaq/colorout' successfully installed.
-[0m[91m[2019-12-11 19:02:50] 'krlmlr/ulimit' will be installed.
+[0m[91m[2019-12-11 22:06:23] 'jalvesaq/colorout' successfully installed.
+[0m[91m[2019-12-11 22:06:23] 'krlmlr/ulimit' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-Installing github package(s) 'krlmlr/ulimit'
-[0m[91m[2019-12-11 19:02:54] 'krlmlr/ulimit' successfully installed.
-[0m[91m[2019-12-11 19:02:54] 'statsbomb/StatsBombR' will be installed.
+[0m[91mInstalling github package(s) 'krlmlr/ulimit'
+[0m[91m[2019-12-11 22:06:28] 'krlmlr/ulimit' successfully installed.
+[0m[91m[2019-12-11 22:06:28] 'statsbomb/StatsBombR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'statsbomb/StatsBombR'
 [0m[91mInstalling 2 packages: doParallel, SDMTools
-[0m[91m[2019-12-11 19:03:07] 'statsbomb/StatsBombR' successfully installed.
-[0mRemoving intermediate container 13a65592d130
- ---> ef0640a8527b
+[0m[91m[2019-12-11 22:06:42] 'statsbomb/StatsBombR' successfully installed.
+[0mRemoving intermediate container 8f56e395260c
+ ---> f9f1354ac4a8
 Step 17/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_plotting.R
- ---> Running in d59ea95accf8
-[91m[2019-12-11 19:03:21] 'alluvial' will be installed.
+ ---> Running in 311113120abf
+[91m[2019-12-11 22:06:55] 'alluvial' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'alluvial'
-[0m[91m[2019-12-11 19:03:26] 'alluvial' successfully installed.
-[0m[91m[2019-12-11 19:03:26] 'beeswarm' will be installed.
+[0m[91m[2019-12-11 22:07:00] 'alluvial' successfully installed.
+[0m[91m[2019-12-11 22:07:00] 'beeswarm' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'beeswarm'
-[0m[91m[2019-12-11 19:03:29] 'beeswarm' successfully installed.
-[0m[91m[2019-12-11 19:03:29] 'circlize' will be installed.
+[0m[91m[2019-12-11 22:07:03] 'beeswarm' successfully installed.
+[0m[91m[2019-12-11 22:07:03] 'circlize' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'circlize'
 [0m[91malso installing the dependencies ‘GlobalOptions’, ‘shape’
 
-[0m[91m[2019-12-11 19:03:40] 'circlize' successfully installed.
-[0m[91m[2019-12-11 19:03:40] 'ComplexHeatmap' will be installed.
+[0m[91m[2019-12-11 22:07:14] 'circlize' successfully installed.
+[0m[91m[2019-12-11 22:07:14] 'ComplexHeatmap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ComplexHeatmap'
 [0m[91malso installing the dependencies ‘rjson’, ‘GetoptLong’, ‘png’
 
-[0m[91m[2019-12-11 19:03:55] 'ComplexHeatmap' successfully installed.
-[0m[91m[2019-12-11 19:03:55] 'cowplot' will be installed.
+[0m[91m[2019-12-11 22:07:29] 'ComplexHeatmap' successfully installed.
+[0m[91m[2019-12-11 22:07:29] 'cowplot' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'cowplot'
-[0m[91m[2019-12-11 19:04:00] 'cowplot' successfully installed.
-[0m[91m[2019-12-11 19:04:00] 'ggalluvial' will be installed.
+[0m[91m[2019-12-11 22:07:34] 'cowplot' successfully installed.
+[0m[91m[2019-12-11 22:07:34] 'ggalluvial' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggalluvial'
-[0m[91m[2019-12-11 19:04:05] 'ggalluvial' successfully installed.
-[0m[91m[2019-12-11 19:04:06] 'gganimate' will be installed.
+[0m[91m[2019-12-11 22:07:39] 'ggalluvial' successfully installed.
+[0m[91m[2019-12-11 22:07:39] 'gganimate' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gganimate'
 [0m[91malso installing the dependency ‘tweenr’
 
-[0m[91m[2019-12-11 19:04:25] 'gganimate' successfully installed.
-[0m[91m[2019-12-11 19:04:25] 'ggbeeswarm' will be installed.
+[0m[91m[2019-12-11 22:07:59] 'gganimate' successfully installed.
+[0m[91m[2019-12-11 22:07:59] 'ggbeeswarm' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggbeeswarm'
 [0m[91malso installing the dependency ‘vipor’
 
-[0m[91m[2019-12-11 19:04:30] 'ggbeeswarm' successfully installed.
-[0m[91m[2019-12-11 19:04:31] 'ggbio' will be installed.
+[0m[91m[2019-12-11 22:08:05] 'ggbeeswarm' successfully installed.
+[0m[91m[2019-12-11 22:08:05] 'ggbio' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggbio'
 [0m[91malso installing the dependencies ‘formatR’, ‘lambda.r’, ‘futile.options’, ‘checkmate’, ‘futile.logger’, ‘snow’, ‘blob’, ‘BiocFileCache’, ‘rappdirs’, ‘Formula’, ‘acepack’, ‘htmlTable’, ‘dichromat’, ‘GenomeInfoDbData’, ‘XVector’, ‘DelayedArray’, ‘BiocParallel’, ‘Rhtslib’, ‘RSQLite’, ‘biomaRt’, ‘reshape’, ‘ProtGenerics’, ‘Hmisc’, ‘biovizBase’, ‘S4Vectors’, ‘IRanges’, ‘GenomeInfoDb’, ‘GenomicRanges’, ‘SummarizedExperiment’, ‘Biostrings’, ‘Rsamtools’, ‘GenomicAlignments’, ‘BSgenome’, ‘VariantAnnotation’, ‘rtracklayer’, ‘GenomicFeatures’, ‘OrganismDbi’, ‘GGally’, ‘ensembldb’, ‘AnnotationDbi’, ‘AnnotationFilter’
 
-[0m[91m[2019-12-11 19:15:06] 'ggbio' successfully installed.
-[0m[91m[2019-12-11 19:15:06] 'ggdendro' will be installed.
+[0m[91m[2019-12-11 22:18:40] 'ggbio' successfully installed.
+[0m[91m[2019-12-11 22:18:40] 'ggdendro' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggdendro'
-[0m[91m[2019-12-11 19:15:10] 'ggdendro' successfully installed.
-[0m[91m[2019-12-11 19:15:10] 'ggExtra' will be installed.
+[0m[91m[2019-12-11 22:18:44] 'ggdendro' successfully installed.
+[0m[91m[2019-12-11 22:18:44] 'ggExtra' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggExtra'
 [0m[91malso installing the dependencies ‘colourpicker’, ‘miniUI’
 
-[0m[91m[2019-12-11 19:15:18] 'ggExtra' successfully installed.
-[0m[91m[2019-12-11 19:15:18] 'ggforce' will be installed.
+[0m[91m[2019-12-11 22:18:52] 'ggExtra' successfully installed.
+[0m[91m[2019-12-11 22:18:52] 'ggforce' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggforce'
 [0m[91malso installing the dependency ‘polyclip’
 
-[0m[91m[2019-12-11 19:16:11] 'ggforce' successfully installed.
-[0m[91m[2019-12-11 19:16:11] 'ggpubr' will be installed.
+[0m[91m[2019-12-11 22:19:46] 'ggforce' successfully installed.
+[0m[91m[2019-12-11 22:19:46] 'ggpubr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggpubr'
 [0m[91malso installing the dependencies ‘ggsci’, ‘ggsignif’, ‘polynom’
 
-[0m[91m[2019-12-11 19:16:25] 'ggpubr' successfully installed.
-[0m[91m[2019-12-11 19:16:25] 'ggraph' will be installed.
+[0m[91m[2019-12-11 22:20:00] 'ggpubr' successfully installed.
+[0m[91m[2019-12-11 22:20:00] 'ggraph' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggraph'
 [0m[91malso installing the dependencies ‘tidygraph’, ‘graphlayouts’
 
-[0m[91m[2019-12-11 19:17:33] 'ggraph' successfully installed.
-[0m[91m[2019-12-11 19:17:33] 'ggrepel' already installed.
-[0m[91m[2019-12-11 19:17:33] 'ggridges' will be installed.
+[0m[91m[2019-12-11 22:21:08] 'ggraph' successfully installed.
+[0m[91m[2019-12-11 22:21:08] 'ggrepel' already installed.
+[0m[91m[2019-12-11 22:21:08] 'ggridges' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ggridges'
-[0m[91m[2019-12-11 19:17:38] 'ggridges' successfully installed.
-[0m[91m[2019-12-11 19:17:38] 'ggsignif' already installed.
-[0m[91m[2019-12-11 19:17:38] 'patchwork' will be installed.
+[0m[91m[2019-12-11 22:21:13] 'ggridges' successfully installed.
+[0m[91m[2019-12-11 22:21:13] 'ggsignif' already installed.
+[0m[91m[2019-12-11 22:21:14] 'patchwork' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'patchwork'
-[0m[91m[2019-12-11 19:17:43] 'patchwork' successfully installed.
-[0m[91m[2019-12-11 19:17:44] 'pheatmap' will be installed.
+[0m[91m[2019-12-11 22:21:18] 'patchwork' successfully installed.
+[0m[91m[2019-12-11 22:21:19] 'pheatmap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'pheatmap'
-[0m[91m[2019-12-11 19:17:47] 'pheatmap' successfully installed.
-[0m[91m[2019-12-11 19:17:47] 'plotly' will be installed.
+[0m[91m[2019-12-11 22:21:22] 'pheatmap' successfully installed.
+[0m[91m[2019-12-11 22:21:22] 'plotly' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'plotly'
-[0m[91m[2019-12-11 19:17:57] 'plotly' successfully installed.
-[0m[91m[2019-12-11 19:17:57] 'RColorBrewer' already installed.
-[0m[91m[2019-12-11 19:17:57] 'VennDiagram' will be installed.
+[0m[91m[2019-12-11 22:21:32] 'plotly' successfully installed.
+[0m[91m[2019-12-11 22:21:32] 'RColorBrewer' already installed.
+[0m[91m[2019-12-11 22:21:32] 'VennDiagram' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'VennDiagram'
-[0m[91m[2019-12-11 19:18:02] 'VennDiagram' successfully installed.
-[0m[91m[2019-12-11 19:18:02] 'viridis' already installed.
-[0m[91m[2019-12-11 19:18:02] 'erocoar/gghalves' will be installed.
+[0m[91m[2019-12-11 22:21:38] 'VennDiagram' successfully installed.
+[0m[91m[2019-12-11 22:21:38] 'viridis' already installed.
+[0m[91m[2019-12-11 22:21:38] 'erocoar/gghalves' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'erocoar/gghalves'
-[0m[91m[2019-12-11 19:18:11] 'erocoar/gghalves' successfully installed.
-[0mRemoving intermediate container d59ea95accf8
- ---> d6e0033422e3
+[0m[91m[2019-12-11 22:21:47] 'erocoar/gghalves' successfully installed.
+[0mRemoving intermediate container 311113120abf
+ ---> 72465ddd8b31
 Step 18/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_compbio.R
- ---> Running in f793335a276d
-[91m[2019-12-11 19:18:15] 'biomaRt' already installed.
-[0m[91m[2019-12-11 19:18:15] 'BSgenome.Hsapiens.UCSC.hg19' will be installed.
+ ---> Running in c7c393db22c6
+[91m[2019-12-11 22:21:50] 'biomaRt' already installed.
+[0m[91m[2019-12-11 22:21:51] 'BSgenome.Hsapiens.UCSC.hg19' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'BSgenome.Hsapiens.UCSC.hg19'
-[0m[91m[2019-12-11 19:19:14] 'BSgenome.Hsapiens.UCSC.hg19' successfully installed.
-[0m[91m[2019-12-11 19:19:15] 'BSgenome.Mmusculus.UCSC.mm10' will be installed.
+[0m[91m[2019-12-11 22:22:50] 'BSgenome.Hsapiens.UCSC.hg19' successfully installed.
+[0m[91m[2019-12-11 22:22:50] 'BSgenome.Mmusculus.UCSC.mm10' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'BSgenome.Mmusculus.UCSC.mm10'
-[0m[91m[2019-12-11 19:20:10] 'BSgenome.Mmusculus.UCSC.mm10' successfully installed.
-[0m[91m[2019-12-11 19:20:10] 'ChIPseeker' will be installed.
+[0m[91m[2019-12-11 22:23:57] 'BSgenome.Mmusculus.UCSC.mm10' successfully installed.
+[0m[91m[2019-12-11 22:23:57] 'ChIPseeker' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'ChIPseeker'
 [0m[91malso installing the dependencies ‘fastmatch’, ‘triebeard’, ‘DO.db’, ‘fgsea’, ‘qvalue’, ‘urltools’, ‘gridGraphics’, ‘rvcheck’, ‘GO.db’, ‘DOSE’, ‘europepmc’, ‘ggplotify’, ‘GOSemSim’, ‘gdata’, ‘caTools’, ‘enrichplot’, ‘gplots’, ‘plotrix’, ‘TxDb.Hsapiens.UCSC.hg19.knownGene’
 
-[0m[91m[2019-12-11 19:23:39] 'ChIPseeker' successfully installed.
-[0m[91m[2019-12-11 19:23:39] 'clusterProfiler' will be installed.
+[0m[91m[2019-12-11 22:27:27] 'ChIPseeker' successfully installed.
+[0m[91m[2019-12-11 22:27:28] 'clusterProfiler' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'clusterProfiler'
-[0m[91m[2019-12-11 19:23:52] 'clusterProfiler' successfully installed.
-[0m[91m[2019-12-11 19:23:52] 'DelayedArray' already installed.
-[0m[91m[2019-12-11 19:23:52] 'DelayedMatrixStats' will be installed.
+[0m[91m[2019-12-11 22:27:40] 'clusterProfiler' successfully installed.
+[0m[91m[2019-12-11 22:27:41] 'DelayedArray' already installed.
+[0m[91m[2019-12-11 22:27:41] 'DelayedMatrixStats' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'DelayedMatrixStats'
 [0m[91malso installing the dependencies ‘rhdf5’, ‘HDF5Array’
 
-[0m[91m[2019-12-11 19:24:22] 'DelayedMatrixStats' successfully installed.
-[0m[91m[2019-12-11 19:24:22] 'DiffBind' will be installed.
+[0m[91m[2019-12-11 22:28:11] 'DelayedMatrixStats' successfully installed.
+[0m[91m[2019-12-11 22:28:11] 'DiffBind' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'DiffBind'
 [0m[91malso installing the dependencies ‘GSEABase’, ‘hwriter’, ‘Category’, ‘AnnotationForge’, ‘base64url’, ‘ShortRead’, ‘GOstats’, ‘annotate’, ‘batchtools’, ‘genefilter’, ‘geneplotter’, ‘amap’, ‘edgeR’, ‘limma’, ‘locfit’, ‘systemPipeR’, ‘DESeq2’
 
-[0m[91m[2019-12-11 19:29:50] 'DiffBind' successfully installed.
-[0m[91m[2019-12-11 19:29:50] 'enrichR' will be installed.
+[0m[91m[2019-12-11 22:33:38] 'DiffBind' successfully installed.
+[0m[91m[2019-12-11 22:33:38] 'enrichR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'enrichR'
-[0m[91m[2019-12-11 19:29:54] 'enrichR' successfully installed.
-[0m[91m[2019-12-11 19:29:54] 'EnsDb.Hsapiens.v75' will be installed.
+[0m[91m[2019-12-11 22:33:42] 'enrichR' successfully installed.
+[0m[91m[2019-12-11 22:33:42] 'EnsDb.Hsapiens.v75' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'EnsDb.Hsapiens.v75'
-[0m[91m[2019-12-11 19:30:30] 'EnsDb.Hsapiens.v75' successfully installed.
-[0m[91m[2019-12-11 19:30:30] 'EnsDb.Mmusculus.v79' will be installed.
+[0m[91m[2019-12-11 22:34:19] 'EnsDb.Hsapiens.v75' successfully installed.
+[0m[91m[2019-12-11 22:34:19] 'EnsDb.Mmusculus.v79' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-[0m[91mInstalling package(s) 'EnsDb.Mmusculus.v79'
-[0m[91m[2019-12-11 19:31:00] 'EnsDb.Mmusculus.v79' successfully installed.
-[0m[91m[2019-12-11 19:31:00] 'GenomicFeatures' already installed.
-[0m[91m[2019-12-11 19:31:00] 'GenomicRanges' already installed.
-[0m[91m[2019-12-11 19:31:00] 'gProfileR' will be installed.
+Installing package(s) 'EnsDb.Mmusculus.v79'
+[0m[91m[2019-12-11 22:34:49] 'EnsDb.Mmusculus.v79' successfully installed.
+[0m[91m[2019-12-11 22:34:49] 'GenomicFeatures' already installed.
+[0m[91m[2019-12-11 22:34:49] 'GenomicRanges' already installed.
+[0m[91m[2019-12-11 22:34:49] 'gProfileR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gProfileR'
-[0m[91m[2019-12-11 19:31:03] 'gProfileR' successfully installed.
-[0m[91m[2019-12-11 19:31:03] 'gprofiler2' will be installed.
+[0m[91m[2019-12-11 22:34:52] 'gProfileR' successfully installed.
+[0m[91m[2019-12-11 22:34:52] 'gprofiler2' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'gprofiler2'
-[0m[91m[2019-12-11 19:31:08] 'gprofiler2' successfully installed.
-[0m[91m[2019-12-11 19:31:08] 'msigdbr' will be installed.
+[0m[91m[2019-12-11 22:34:57] 'gprofiler2' successfully installed.
+[0m[91m[2019-12-11 22:34:57] 'msigdbr' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'msigdbr'
-[0m[91m[2019-12-11 19:31:31] 'msigdbr' successfully installed.
-[0m[91m[2019-12-11 19:31:32] 'org.Hs.eg.db' will be installed.
+[0m[91m[2019-12-11 22:35:21] 'msigdbr' successfully installed.
+[0m[91m[2019-12-11 22:35:21] 'org.Hs.eg.db' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'org.Hs.eg.db'
-[0m[91m[2019-12-11 19:31:50] 'org.Hs.eg.db' successfully installed.
-[0m[91m[2019-12-11 19:31:51] 'org.Mm.eg.db' will be installed.
+[0m[91m[2019-12-11 22:35:40] 'org.Hs.eg.db' successfully installed.
+[0m[91m[2019-12-11 22:35:40] 'org.Mm.eg.db' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'org.Mm.eg.db'
-[0m[91m[2019-12-11 19:32:10] 'org.Mm.eg.db' successfully installed.
-[0m[91m[2019-12-11 19:32:10] 'rGREAT' will be installed.
+[0m[91m[2019-12-11 22:35:59] 'org.Mm.eg.db' successfully installed.
+[0m[91m[2019-12-11 22:35:59] 'rGREAT' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-[0m[91mInstalling package(s) 'rGREAT'
-[0m[91m[2019-12-11 19:32:19] 'rGREAT' successfully installed.
-[0m[91m[2019-12-11 19:32:19] 'Rmagic' will be installed.
+Installing package(s) 'rGREAT'
+[0m[91m[2019-12-11 22:36:07] 'rGREAT' successfully installed.
+[0m[91m[2019-12-11 22:36:08] 'Rmagic' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-Installing package(s) 'Rmagic'
-[0m[91m[2019-12-11 19:32:26] 'Rmagic' successfully installed.
-[0m[91m[2019-12-11 19:32:26] 'Rsamtools' already installed.
-[0m[91m[2019-12-11 19:32:26] 'Rsubread' will be installed.
+[0m[91mInstalling package(s) 'Rmagic'
+[0m[91m[2019-12-11 22:36:15] 'Rmagic' successfully installed.
+[0m[91m[2019-12-11 22:36:15] 'Rsamtools' already installed.
+[0m[91m[2019-12-11 22:36:15] 'Rsubread' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'Rsubread'
-[0m[91m[2019-12-11 19:32:48] 'Rsubread' successfully installed.
-[0m[91m[2019-12-11 19:32:48] 'topGO' will be installed.
+[0m[91m[2019-12-11 22:36:36] 'Rsubread' successfully installed.
+[0m[91m[2019-12-11 22:36:36] 'topGO' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'topGO'
 [0m[91malso installing the dependency ‘SparseM’
 
-[0m[91m[2019-12-11 19:33:07] 'topGO' successfully installed.
-[0m[91m[2019-12-11 19:33:07] 'TSCAN' will be installed.
+[0m[91m[2019-12-11 22:36:57] 'topGO' successfully installed.
+[0m[91m[2019-12-11 22:36:57] 'TSCAN' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'TSCAN'
 [0m[91malso installing the dependencies ‘fastICA’, ‘combinat’
 
-[0m[91m[2019-12-11 19:33:16] 'TSCAN' successfully installed.
-[0m[91m[2019-12-11 19:33:17] 'TxDb.Hsapiens.UCSC.hg19.knownGene' already installed.
-[0m[91m[2019-12-11 19:33:17] 'tximport' will be installed.
+[0m[91m[2019-12-11 22:37:06] 'TSCAN' successfully installed.
+[0m[91m[2019-12-11 22:37:06] 'TxDb.Hsapiens.UCSC.hg19.knownGene' already installed.
+[0m[91m[2019-12-11 22:37:06] 'tximport' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'tximport'
-[0m[91m[2019-12-11 19:33:20] 'tximport' successfully installed.
-[0mRemoving intermediate container f793335a276d
- ---> 065dcc692142
+[0m[91m[2019-12-11 22:37:10] 'tximport' successfully installed.
+[0mRemoving intermediate container c7c393db22c6
+ ---> 862812180084
 Step 19/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell.R
- ---> Running in bf5d6c8734f5
-[91m[2019-12-11 19:33:43] 'batchelor' will be installed.
+ ---> Running in bfe3c548eefe
+[91m[2019-12-11 22:37:29] 'batchelor' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'batchelor'
 [0m[91malso installing the dependencies ‘RcppHNSW’, ‘rsvd’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocSingular’, ‘scater’, ‘beachmat’
 
-[0m[91m[2019-12-11 19:37:38] 'batchelor' successfully installed.
-[0m[91m[2019-12-11 19:37:38] 'destiny' will be installed.
+[0m[91m[2019-12-11 22:41:26] 'batchelor' successfully installed.
+[0m[91m[2019-12-11 22:41:26] 'destiny' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'destiny'
 [0m[91malso installing the dependencies ‘zip’, ‘MatrixModels’, ‘openxlsx’, ‘minqa’, ‘nloptr’, ‘carData’, ‘abind’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘rio’, ‘lme4’, ‘lmtest’, ‘xts’, ‘zoo’, ‘car’, ‘vcd’, ‘laeken’, ‘ranger’, ‘TTR’, ‘pcaMethods’, ‘ggplot.multistats’, ‘ggthemes’, ‘VIM’, ‘knn.covertree’, ‘proxy’, ‘smoother’, ‘scatterplot3d’
 
-[0m[91m[2019-12-11 19:43:06] 'destiny' successfully installed.
-[0m[91m[2019-12-11 19:43:07] 'cellranger' already installed.
-[0m[91m[2019-12-11 19:43:07] 'diffusionMap' will be installed.
+[0m[91m[2019-12-11 22:46:59] 'destiny' successfully installed.
+[0m[91m[2019-12-11 22:46:59] 'cellranger' already installed.
+[0m[91m[2019-12-11 22:46:59] 'diffusionMap' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'diffusionMap'
-[0m[91m[2019-12-11 19:43:12] 'diffusionMap' successfully installed.
-[0m[91m[2019-12-11 19:43:12] 'DropletUtils' will be installed.
+[0m[91m[2019-12-11 22:47:05] 'diffusionMap' successfully installed.
+[0m[91m[2019-12-11 22:47:05] 'DropletUtils' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
-[0m[91mInstalling package(s) 'DropletUtils'
-[0m[91m[2019-12-11 19:44:11] 'DropletUtils' successfully installed.
-[0m[91m[2019-12-11 19:44:11] 'MetaNeighbor' will be installed.
+Installing package(s) 'DropletUtils'
+[0m[91m[2019-12-11 22:48:05] 'DropletUtils' successfully installed.
+[0m[91m[2019-12-11 22:48:05] 'MetaNeighbor' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'MetaNeighbor'
 [0m[91malso installing the dependency ‘beanplot’
 
-[0m[91m[2019-12-11 19:44:28] 'MetaNeighbor' successfully installed.
-[0m[91m[2019-12-11 19:44:28] 'monocle' will be installed.
+[0m[91m[2019-12-11 22:48:22] 'MetaNeighbor' successfully installed.
+[0m[91m[2019-12-11 22:48:22] 'monocle' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'monocle'
 [0m[91malso installing the dependencies ‘sparsesvd’, ‘VGAM’, ‘DDRTree’, ‘HSMMSingleCell’, ‘qlcMatrix’, ‘slam’, ‘biocViews’, ‘RANN’
 
-[0m[91m[2019-12-11 19:46:27] 'monocle' successfully installed.
-[0m[91m[2019-12-11 19:46:27] 'muscat' will be installed.
+[0m[91m[2019-12-11 22:50:23] 'monocle' successfully installed.
+[0m[91m[2019-12-11 22:50:23] 'muscat' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'muscat'
 [0m[91malso installing the dependencies ‘TMB’, ‘numDeriv’, ‘colorRamps’, ‘blme’, ‘glmmTMB’, ‘lmerTest’, ‘sctransform’, ‘variancePartition’
 
-[0m[91m[2019-12-11 19:49:07] 'muscat' successfully installed.
-[0m[91m[2019-12-11 19:49:07] 'phateR' will be installed.
+[0m[91m[2019-12-11 22:53:04] 'muscat' successfully installed.
+[0m[91m[2019-12-11 22:53:04] 'phateR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'phateR'
-[0m[91m[2019-12-11 19:49:14] 'phateR' successfully installed.
-[0m[91m[2019-12-11 19:49:15] 'Seurat' will be installed.
+[0m[91m[2019-12-11 22:53:11] 'phateR' successfully installed.
+[0m[91m[2019-12-11 22:53:11] 'Seurat' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'Seurat'
 [0m[91malso installing the dependencies ‘TH.data’, ‘sandwich’, ‘lsei’, ‘bibtex’, ‘gbRd’, ‘sn’, ‘multtest’, ‘multcomp’, ‘npsurv’, ‘Rdpack’, ‘TFisher’, ‘mutoss’, ‘fitdistrplus’, ‘ica’, ‘leiden’, ‘metap’, ‘pbapply’, ‘ROCR’
 
-[0m[91m[2019-12-11 19:51:13] 'Seurat' successfully installed.
-[0m[91m[2019-12-11 19:51:13] 'SC3' will be installed.
+[0m[91m[2019-12-11 22:55:12] 'Seurat' successfully installed.
+[0m[91m[2019-12-11 22:55:12] 'SC3' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'SC3'
 [0m[91malso installing the dependencies ‘registry’, ‘rngtools’, ‘pkgmaker’, ‘doRNG’, ‘WriteXLS’
 
-[0m[91m[2019-12-11 19:51:57] 'SC3' successfully installed.
-[0m[91m[2019-12-11 19:51:57] 'scater' already installed.
-[0m[91m[2019-12-11 19:51:57] 'scde' will be installed.
+[0m[91m[2019-12-11 22:55:56] 'SC3' successfully installed.
+[0m[91m[2019-12-11 22:55:57] 'scater' already installed.
+[0m[91m[2019-12-11 22:55:57] 'scde' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scde'
 [0m[91malso installing the dependencies ‘modeltools’, ‘Lmoments’, ‘distillery’, ‘flexmix’, ‘Rook’, ‘Cairo’, ‘RMTstat’, ‘extRemes’
 
-[0m[91m[2019-12-11 19:53:20] 'scde' successfully installed.
-[0m[91m[2019-12-11 19:53:21] 'scMerge' will be installed.
+[0m[91m[2019-12-11 22:57:21] 'scde' successfully installed.
+[0m[91m[2019-12-11 22:57:21] 'scMerge' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scMerge'
 [0m[91malso installing the dependencies ‘startupmsg’, ‘sfsmisc’, ‘bbmle’, ‘statmod’, ‘reldist’, ‘distr’, ‘M3Drop’, ‘pdist’, ‘ruv’
 
-[0m[91m[2019-12-11 19:54:42] 'scMerge' successfully installed.
-[0m[91m[2019-12-11 19:54:42] 'scran' will be installed.
+[0m[91m[2019-12-11 22:58:43] 'scMerge' successfully installed.
+[0m[91m[2019-12-11 22:58:43] 'scran' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'scran'
-[0m[91m[2019-12-11 19:56:46] 'scran' successfully installed.
-[0m[91m[2019-12-11 19:56:46] 'sctransform' already installed.
-[0m[91m[2019-12-11 19:56:46] 'SingleR' will be installed.
+[0m[91m[2019-12-11 23:00:49] 'scran' successfully installed.
+[0m[91m[2019-12-11 23:00:49] 'sctransform' already installed.
+[0m[91m[2019-12-11 23:00:49] 'SingleR' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'SingleR'
 [0m[91malso installing the dependencies ‘interactiveDisplayBase’, ‘AnnotationHub’, ‘ExperimentHub’
 
-[0m[91m[2019-12-11 19:57:37] 'SingleR' successfully installed.
-[0m[91m[2019-12-11 19:57:38] 'slingshot' will be installed.
+[0m[91m[2019-12-11 23:01:42] 'SingleR' successfully installed.
+[0m[91m[2019-12-11 23:01:42] 'slingshot' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling package(s) 'slingshot'
 [0m[91malso installing the dependency ‘princurve’
 
-[0m[91m[2019-12-11 19:58:01] 'slingshot' successfully installed.
-[0m[91m[2019-12-11 19:58:01] 'cole-trapnell-lab/garnett' will be installed.
+[0m[91m[2019-12-11 23:02:05] 'slingshot' successfully installed.
+[0m[91m[2019-12-11 23:02:05] 'cole-trapnell-lab/garnett' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'cole-trapnell-lab/garnett'
 [0m[91mInstalling 2 packages: glmnet, rly
-[0m[91m[2019-12-11 19:58:42] 'cole-trapnell-lab/garnett' successfully installed.
-[0m[91m[2019-12-11 19:58:43] 'cole-trapnell-lab/monocle3' will be installed.
+[0m[91m[2019-12-11 23:02:46] 'cole-trapnell-lab/garnett' successfully installed.
+[0m[91m[2019-12-11 23:02:46] 'cole-trapnell-lab/monocle3' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'cole-trapnell-lab/monocle3'
 [0m[91mInstalling 15 packages: grr, Matrix.utils, pbmcapply, pscl, rsample, RhpcBLASctl, spdep, speedglm, furrr, spData, deldir, LearnBayes, coda, expm, gmodels
-[0m[91m[2019-12-11 20:02:13] 'cole-trapnell-lab/monocle3' successfully installed.
-[0m[91m[2019-12-11 20:02:13] 'ggjlab/scMCA' will be installed.
+[0m[91m[2019-12-11 23:06:07] 'cole-trapnell-lab/monocle3' successfully installed.
+[0m[91m[2019-12-11 23:06:07] 'ggjlab/scMCA' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'ggjlab/scMCA'
-[0m[91m[2019-12-11 20:02:44] 'ggjlab/scMCA' successfully installed.
-[0m[91m[2019-12-11 20:02:44] 'velocyto-team/velocyto.R' will be installed.
+[0m[91m[2019-12-11 23:06:24] 'ggjlab/scMCA' successfully installed.
+[0m[91m[2019-12-11 23:06:24] 'velocyto-team/velocyto.R' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'velocyto-team/velocyto.R'
-[0m[91m[2019-12-11 20:03:12] 'velocyto-team/velocyto.R' successfully installed.
-[0m[91m[2019-12-11 20:03:12] 'BUStools/BUSpaRse' will be installed.
+[0m[91m[2019-12-11 23:06:52] 'velocyto-team/velocyto.R' successfully installed.
+[0m[91m[2019-12-11 23:06:52] 'BUStools/BUSpaRse' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'BUStools/BUSpaRse'
 [0m[91mInstalling 1 packages: plyranges
 [0m[91mOld packages: 'BUSpaRse'
 [0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/BUSpaRse_1.0.0.tar.gz'
 [0m[91mContent type 'application/x-gzip' length 616107 bytes (601 KB)
-=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m===[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m===[0m[91m==[0m[91m==[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m==[0m[91m=
+[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m===[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m===[0m[91m
 downloaded 601 KB
 
 [0m[91m* installing *source* package ‘BUSpaRse’ ...
@@ -4683,17 +4681,488 @@ g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BUSpaRse.so 
 [0m[91m* DONE (BUSpaRse)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpaPjIW1/downloaded_packages’
-[0m[91m[2019-12-11 20:04:56] 'BUStools/BUSpaRse' successfully installed.
-[0m[91m[2019-12-11 20:04:56] 'theislab/kBET' will be installed.
+	‘/tmp/RtmpUXLGvS/downloaded_packages’
+[0m[91m[2019-12-11 23:08:35] 'BUStools/BUSpaRse' successfully installed.
+[0m[91m[2019-12-11 23:08:35] 'theislab/kBET' will be installed.
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'theislab/kBET'
-[0m[91m[2019-12-11 20:05:05] 'theislab/kBET' successfully installed.
-[0m[91m[2019-12-11 20:05:05] 'timoast/signac' will be installed.
+[0m[91m[2019-12-11 23:08:43] 'theislab/kBET' successfully installed.
+[0m[91mInstalling 8 packages: mixtools, lars, fpc, dtw, doSNOW, segmented, prabclus, diptest
+[0mRemoving intermediate container bfe3c548eefe
+ ---> a3e48f05f0fd
+Step 20/20 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell_experimental.R
+ ---> Running in f46a77bdbe7e
+[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'plot3D'
+[0m[91malso installing the dependency ‘misc3d’
+
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'r3fang/SnapATAC'
+[0m[91mInstalling 3 packages: raster, bigmemory, bigmemory.sri
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'aertslab/cisTopic'
+[0m[91mInstalling 4 packages: lda, AUCell, RcisTarget, feather
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'satijalab/seurat-wrappers'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'romanhaa/cerebroApp'
+[0m[91mInstalling 6 packages: formattable, ggtree, GSVA, shinyWidgets, tidytree, treeio
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'metacell'
+[0m[91malso installing the dependencies ‘doMC’, ‘RSvgDevice’, ‘dbscan’, ‘entropy’, ‘tgconfig’, ‘tgutil’, ‘tgstat’
+
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'itertools'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'mojaveazure/loomR'
+[0mCreating virtual environment '~/.virtualenvs/r-reticulate' ...
+Using python: /miniconda3/bin/python3.7
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/00/b6/9cfa56b4081ad13874b0c6f96af8ce16cfbc1cb06bedf8e9164ce5551ec1/pip-19.3.1-py2.py3-none-any.whl (1.4MB)
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/00/83/b4a77d044e78ad1a45610eb88f745be2fd2c6d658f9798a15e384b7d57c9/wheel-0.33.6-py2.py3-none-any.whl
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/54/28/c45d8b54c1339f9644b87663945e54a8503cfef59cf0f65b3ff5dd17cf64/setuptools-42.0.2-py2.py3-none-any.whl (583kB)
+Installing collected packages: pip, wheel, setuptools
+Successfully installed pip-19.3.1 setuptools-42.0.2 wheel-0.33.6
+Using virtual environment '~/.virtualenvs/r-reticulate' ...
+Collecting tensorflow==2.0.0
+  Using cached https://files.pythonhosted.org/packages/2a/5c/f1d66de5dde6f3ff528f6ea1fd0757a0e594d17debb3ec7f82daa967ea9a/tensorflow-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl
+Collecting tensorflow-probability
+  Downloading https://files.pythonhosted.org/packages/f8/72/29ef1e5f386b65544d4e7002dfeca1e55b099ed182cd6d405c21a19ae259/tensorflow_probability-0.8.0-py2.py3-none-any.whl (2.5MB)
+Collecting wheel>=0.26
+  Using cached https://files.pythonhosted.org/packages/00/83/b4a77d044e78ad1a45610eb88f745be2fd2c6d658f9798a15e384b7d57c9/wheel-0.33.6-py2.py3-none-any.whl
+Collecting tensorboard<2.1.0,>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/76/54/99b9d5d52d5cb732f099baaaf7740403e83fe6b0cedde940fabd2b13d75a/tensorboard-2.0.2-py3-none-any.whl
+Processing /root/.cache/pip/wheels/7c/06/54/bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6/termcolor-1.1.0-cp37-none-any.whl
+Processing /root/.cache/pip/wheels/d7/de/2e/efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd/wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl
+Collecting keras-preprocessing>=1.0.5
+  Using cached https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl
+Collecting six>=1.10.0
+  Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
+Collecting keras-applications>=1.0.8
+  Using cached https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl
+Collecting numpy<2.0,>=1.16.0
+  Downloading https://files.pythonhosted.org/packages/9b/af/4fc72f9d38e43b092e91e5b8cb9956d25b2e3ff8c75aed95df5569e4734e/numpy-1.17.4-cp37-cp37m-manylinux1_x86_64.whl (20.0MB)
+Processing /root/.cache/pip/wheels/5c/2e/7e/a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd/gast-0.2.2-cp37-none-any.whl
+Collecting protobuf>=3.6.1
+  Using cached https://files.pythonhosted.org/packages/c8/bd/9609c681f655c4b85f4e4f4c99d42b68bca63ad8891c6924ba6696dee0bb/protobuf-3.11.1-cp37-cp37m-manylinux1_x86_64.whl
+Collecting tensorflow-estimator<2.1.0,>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl
+Collecting astor>=0.6.0
+  Using cached https://files.pythonhosted.org/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl
+Processing /root/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833/opt_einsum-3.1.0-cp37-none-any.whl
+Collecting grpcio>=1.8.6
+  Using cached https://files.pythonhosted.org/packages/b5/68/070ee7609b452e950bd5af35f7161f0ceb0abd61cf16ff3b23c852d4594b/grpcio-1.25.0-cp37-cp37m-manylinux2010_x86_64.whl
+Collecting google-pasta>=0.1.6
+  Using cached https://files.pythonhosted.org/packages/c3/fd/1e86bc4837cc9a3a5faf3db9b1854aa04ad35b5f381f9648fbe81a6f94e4/google_pasta-0.1.8-py3-none-any.whl
+Processing /root/.cache/pip/wheels/a7/15/a0/0a0561549ad11cdc1bc8fa1191a353efd30facf6bfb507aefc/absl_py-0.8.1-cp37-none-any.whl
+Collecting decorator
+  Using cached https://files.pythonhosted.org/packages/8f/b7/f329cfdc75f3d28d12c65980e4469e2fa373f1953f5df6e370e84ea2e875/decorator-4.4.1-py2.py3-none-any.whl
+Collecting cloudpickle==1.1.1
+  Downloading https://files.pythonhosted.org/packages/24/fb/4f92f8c0f40a0d728b4f3d5ec5ff84353e705d8ff5e3e447620ea98b06bd/cloudpickle-1.1.1-py2.py3-none-any.whl
+Collecting requests<3,>=2.21.0
+  Downloading https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl (57kB)
+Collecting setuptools>=41.0.0
+  Using cached https://files.pythonhosted.org/packages/54/28/c45d8b54c1339f9644b87663945e54a8503cfef59cf0f65b3ff5dd17cf64/setuptools-42.0.2-py2.py3-none-any.whl
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Using cached https://files.pythonhosted.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl
+Collecting google-auth<2,>=1.6.3
+  Downloading https://files.pythonhosted.org/packages/54/31/f944cbd5bdbcc90d5b36f0615036308c8ec1e41b4788da5b55d4900f6803/google_auth-1.8.2-py2.py3-none-any.whl (75kB)
+Collecting markdown>=2.6.8
+  Using cached https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl
+Collecting werkzeug>=0.11.15
+  Using cached https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl
+Collecting h5py
+  Using cached https://files.pythonhosted.org/packages/3f/c0/abde58b837e066bca19a3f7332d9d0493521d7dd6b48248451a9e3fe2214/h5py-2.10.0-cp37-cp37m-manylinux1_x86_64.whl
+Collecting certifi>=2017.4.17
+  Downloading https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl (156kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading https://files.pythonhosted.org/packages/b4/40/a9837291310ee1ccc242ceb6ebfd9eb21539649f193a7c8c86ba15b98539/urllib3-1.25.7-py2.py3-none-any.whl (125kB)
+Collecting idna<2.9,>=2.5
+  Downloading https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl (58kB)
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached https://files.pythonhosted.org/packages/a3/12/b92740d845ab62ea4edf04d2f4164d82532b5a0b03836d4d4e71c6f3d379/requests_oauthlib-1.3.0-py2.py3-none-any.whl
+Collecting cachetools<3.2,>=2.0.0
+  Using cached https://files.pythonhosted.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl
+Collecting rsa<4.1,>=3.1.4
+  Using cached https://files.pythonhosted.org/packages/02/e5/38518af393f7c214357079ce67a317307936896e961e35450b70fad2a9cf/rsa-4.0-py2.py3-none-any.whl
+Collecting pyasn1-modules>=0.2.1
+  Using cached https://files.pythonhosted.org/packages/52/50/bb4cefca37da63a0c52218ba2cb1b1c36110d84dcbae8aa48cd67c5e95c2/pyasn1_modules-0.2.7-py2.py3-none-any.whl
+Collecting oauthlib>=3.0.0
+  Using cached https://files.pythonhosted.org/packages/05/57/ce2e7a8fa7c0afb54a0581b14a65b56e62b5759dbc98e80627142b8a3704/oauthlib-3.1.0-py2.py3-none-any.whl
+Collecting pyasn1>=0.1.3
+  Using cached https://files.pythonhosted.org/packages/62/1e/a94a8d635fa3ce4cfc7f506003548d0a2447ae76fd5ca53932970fe3053f/pyasn1-0.4.8-py2.py3-none-any.whl
+Installing collected packages: wheel, numpy, certifi, urllib3, idna, chardet, requests, six, setuptools, protobuf, oauthlib, requests-oauthlib, cachetools, pyasn1, rsa, pyasn1-modules, google-auth, google-auth-oauthlib, absl-py, grpcio, markdown, werkzeug, tensorboard, termcolor, wrapt, keras-preprocessing, h5py, keras-applications, gast, tensorflow-estimator, astor, opt-einsum, google-pasta, tensorflow, decorator, cloudpickle, tensorflow-probability
+Successfully installed absl-py-0.8.1 astor-0.8.1 cachetools-3.1.1 certifi-2019.11.28 chardet-3.0.4 cloudpickle-1.1.1 decorator-4.4.1 gast-0.2.2 google-auth-1.8.2 google-auth-oauthlib-0.4.1 google-pasta-0.1.8 grpcio-1.25.0 h5py-2.10.0 idna-2.8 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.17.4 oauthlib-3.1.0 opt-einsum-3.1.0 protobuf-3.11.1 pyasn1-0.4.8 pyasn1-modules-0.2.7 requests-2.22.0 requests-oauthlib-1.3.0 rsa-4.0 setuptools-42.0.2 six-1.13.0 tensorboard-2.0.2 tensorflow-2.0.0 tensorflow-estimator-2.0.1 tensorflow-probability-0.8.0 termcolor-1.1.0 urllib3-1.25.7 werkzeug-0.16.0 wheel-0.33.6 wrapt-1.11.2
+
+Installation complete.
+
+[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling github package(s) 'Irrationone/cellassign'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
+[0m[91mInstalling package(s) 'Gviz'
+[0m[91mDownloading GitHub repo cole-trapnell-lab/cicero-release@monocle3
+[0mglasso (NA -> 1.10) [CRAN]
+[91mSkipping 51 packages ahead of CRAN: Gviz, Biobase, BiocGenerics, data.table, GenomicRanges, igraph, IRanges, plyr, S4Vectors, VGAM, XVector, rtracklayer, biomaRt, AnnotationDbi, GenomicFeatures, BSgenome, Biostrings, biovizBase, Rsamtools, GenomicAlignments, GenomeInfoDb, digest, pkgconfig, R6, Rcpp, rlang, scales, cli, GenomeInfoDbData, zlibbioc, SummarizedExperiment, BiocParallel, Rhtslib, DelayedArray, lambda.r, RSQLite, curl, hms, backports, ellipsis, Hmisc, VariantAnnotation, ensembldb, AnnotationFilter, ProtGenerics, htmlTable, htmltools, knitr, htmlwidgets, xfun, purrr
+[0m[91mInstalling 1 packages: glasso
+[0m[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://mran.microsoft.com/snapshot/2019-09-09/src/contrib/glasso_1.10.tar.gz'
+[0m[91mContent type 'application/octet-stream' length 8385 bytes
+==============================[0m[91m====================
+downloaded 8385 bytes
+
+[0m[91m* installing *source* package ‘glasso’ ...
+[0m[91m** package ‘glasso’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mgfortran  -fpic  -g -O2  -c glasso.f -o glasso.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glasso_init.c -o glasso_init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o glasso.so glasso.o glasso_init.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-glasso/00new/glasso/libs
+[0m[91m** R
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (glasso)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpWftEe4/downloaded_packages’
+[0m     checking for file ‘/tmp/RtmpWftEe4/remotes738dbcd60/cole-trapnell-lab-cicero-release-40f0f03/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpWftEe4/remotes738dbcd60/cole-trapnell-lab-cicero-release-40f0f03/DESCRIPTION’
+  ─  preparing ‘cicero’:
+   checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  looking to see if a ‘data/datalist’ file should be added
+  ─  building ‘cicero_1.3.4.3.tar.gz’
+     
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91m* installing *source* package ‘cicero’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (cicero)
 [0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.1 (2019-07-05)
 [0m[91mInstalling github package(s) 'timoast/signac'
+[0m[91mDownloading GitHub repo timoast/signac@master
 [0m[91mInstalling 9 packages: TFBSTools, ggseqlogo, motifmatchr, CNEr, DirichletMultinomial, seqLogo, TFMPvalue, poweRlaw, KEGGREST
-[0m[91m[2019-12-11 20:07:59] 'timoast/signac' installation failed.
-Error in install_packages(packages_to_install) : 
-Execution halted
-[0m
+[0mTFBSTools    (NA -> 1.24.0) [CRAN]
+ggseqlogo    (NA -> 0.1   ) [CRAN]
+motifmatchr  (NA -> 1.8.0 ) [CRAN]
+CNEr         (NA -> 1.22.0) [CRAN]
+Dirichlet... (NA -> 1.28.0) [CRAN]
+seqLogo      (NA -> 1.52.0) [CRAN]
+TFMPvalue    (NA -> 0.0.8 ) [CRAN]
+poweRlaw     (NA -> 0.70.2) [CRAN]
+KEGGREST     (NA -> 1.26.1) [CRAN]
+[91mInstalling packages into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/TFBSTools_1.24.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 588972 bytes (575 KB)
+[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==
+downloaded 575 KB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/ggseqlogo_0.1.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 738907 bytes (721 KB)
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m
+downloaded 721 KB
+
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/motifmatchr_1.8.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 52549 bytes (51 KB)
+============[0m[91m===[0m[91m===============[0m[91m================[0m[91m====[0m[91m
+downloaded 51 KB
+
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/CNEr_1.22.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 9932377 bytes (9.5 MB)
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
+downloaded 9.5 MB
+
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/DirichletMultinomial_1.28.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 409261 bytes (399 KB)
+[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m====[0m[91m==[0m[91m=====[0m[91m====[0m[91m====[0m[91m====[0m[91m======[0m[91m==[0m[91m====
+downloaded 399 KB
+
+trying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/seqLogo_1.52.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 272751 bytes (266 KB)
+[0m[91m===[0m[91m===[0m[91m=[0m[91m===[0m[91m====[0m[91m===[0m[91m===[0m[91m===[0m[91m==[0m[91m=[0m[91m===[0m[91m===[0m[91m===[0m[91m===[0m[91m===[0m[91m===[0m[91m==[0m[91m=[0m[91m==[0m[91m=
+downloaded 266 KB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/TFMPvalue_0.0.8.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 15175 bytes (14 KB)
+===[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m===[0m[91m=[0m[91m=[0m[91m===[0m[91m======[0m[91m=[0m[91m==[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m
+downloaded 14 KB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/poweRlaw_0.70.2.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 4315696 bytes (4.1 MB)
+[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
+downloaded 4.1 MB
+
+[0m[91mtrying URL 'https://bioconductor.org/packages/3.10/bioc/src/contrib/KEGGREST_1.26.1.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 25020 bytes (24 KB)
+===============================[0m[91m===================
+downloaded 24 KB
+
+[0m[91m* installing *source* package ‘ggseqlogo’ ...
+[0m[91m** package ‘ggseqlogo’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (ggseqlogo)
+[0m[91m* installing *source* package ‘DirichletMultinomial’ ...
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mgcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include `gsl-config --cflags` -DR_DIRICHLETMULTINOMIAL -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_DirichletMultinomial.c -o R_init_DirichletMultinomial.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include `gsl-config --cflags` -DR_DIRICHLETMULTINOMIAL -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dirichlet_fit.c -o dirichlet_fit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include `gsl-config --cflags` -DR_DIRICHLETMULTINOMIAL -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dirichlet_fit_main.c -o dirichlet_fit_main.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o DirichletMultinomial.so R_init_DirichletMultinomial.o dirichlet_fit.o dirichlet_fit_main.o -L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-DirichletMultinomial/00new/DirichletMultinomial/libs
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (DirichletMultinomial)
+[0m[91m* installing *source* package ‘seqLogo’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (seqLogo)
+[0m[91m* installing *source* package ‘TFMPvalue’ ...
+[0m[91m** package ‘TFMPvalue’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mg++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ArgumentException.cpp -o ArgumentException.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c FileException.cpp -o FileException.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Matrix.cpp -o Matrix.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ParseException.cpp -o ParseException.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TFMMain.cpp -o TFMMain.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TFMPvalue_init.c -o TFMPvalue_init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I"/usr/local/lib/R/site-library/Rcpp/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TFMpvalue.cpp -o TFMpvalue.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o TFMPvalue.so ArgumentException.o FileException.o Matrix.o ParseException.o TFMMain.o TFMPvalue_init.o TFMpvalue.o -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-TFMPvalue/00new/TFMPvalue/libs
+[0m[91m** R
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (TFMPvalue)
+[0m[91m* installing *source* package ‘poweRlaw’ ...
+[0m[91m** package ‘poweRlaw’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m** demo
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (poweRlaw)
+[0m[91m* installing *source* package ‘KEGGREST’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (KEGGREST)
+[0m[91m* installing *source* package ‘CNEr’ ...
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mgcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c IRanges_stubs.c -o IRanges_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c XVector_stubs.c -o XVector_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_CNEr.c -o R_init_CNEr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io.c -o io.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ceScan.c -o ceScan.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/axt.c -o ucsc/axt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/base64.c -o ucsc/base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/binRange.c -o ucsc/binRange.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/bits.c -o ucsc/bits.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/chain.c -o ucsc/chain.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/_cheapcgi.c -o ucsc/_cheapcgi.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/cirTree.c -o ucsc/cirTree.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/common.c -o ucsc/common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/dlist.c -o ucsc/dlist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/dnaseq.c -o ucsc/dnaseq.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/dnautil.c -o ucsc/dnautil.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/dystring.c -o ucsc/dystring.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/errabort.c -o ucsc/errabort.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/hash.c -o ucsc/hash.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/https.c -o ucsc/https.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/intExp.c -o ucsc/intExp.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/kxTok.c -o ucsc/kxTok.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/linefile.c -o ucsc/linefile.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/localmem.c -o ucsc/localmem.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/memalloc.c -o ucsc/memalloc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/obscure.c -o ucsc/obscure.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/options.c -o ucsc/options.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/pipeline.c -o ucsc/pipeline.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/_portimpl.c -o ucsc/_portimpl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/sqlList.c -o ucsc/sqlList.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/sqlNum.c -o ucsc/sqlNum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/verbose.c -o ucsc/verbose.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/os.c -o ucsc/os.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I"/usr/local/lib/R/site-library/S4Vectors/include" -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include" -I/usr/local/include -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ucsc/wildcmp.c -o ucsc/wildcmp.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o CNEr.so S4Vectors_stubs.o IRanges_stubs.o XVector_stubs.o R_init_CNEr.o utils.o io.o ceScan.o ucsc/axt.o ucsc/base64.o ucsc/binRange.o ucsc/bits.o ucsc/chain.o ucsc/_cheapcgi.o ucsc/cirTree.o ucsc/common.o ucsc/dlist.o ucsc/dnaseq.o ucsc/dnautil.o ucsc/dystring.o ucsc/errabort.o ucsc/hash.o ucsc/https.o ucsc/intExp.o ucsc/kxTok.o ucsc/linefile.o ucsc/localmem.o ucsc/memalloc.o ucsc/obscure.o ucsc/options.o ucsc/pipeline.o ucsc/_portimpl.o ucsc/sqlList.o ucsc/sqlNum.o ucsc/verbose.o ucsc/os.o ucsc/wildcmp.o -lz -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-CNEr/00new/CNEr/libs
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (CNEr)
+[0m[91m* installing *source* package ‘TFBSTools’ ...
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mgcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrixAlignerDynamic.c -o matrixAlignerDynamic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_TFBSTools.c -o R_init_TFBSTools.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o TFBSTools.so matrixAlignerDynamic.o R_init_TFBSTools.o -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-TFBSTools/00new/TFBSTools/libs
+[0m[91m** R
+[0m[91m** data
+[0m[91m*** moving datasets to lazyload DB
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+Creating a new generic function for ‘seqLogo’ in package ‘TFBSTools’
+[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (TFBSTools)
+[0m[91m* installing *source* package ‘motifmatchr’ ...
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mg++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_interface.cpp -o r_interface.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/scanner.cpp -o MOODS/scanner.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/motif_h.cpp -o MOODS/motif_h.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/motif_0.cpp -o MOODS/motif_0.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/moods_tools.cpp -o MOODS/moods_tools.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/moods_scan.cpp -o MOODS/moods_scan.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/moods_parsers.cpp -o MOODS/moods_parsers.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/moods_misc.cpp -o MOODS/moods_misc.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./MOODS/ -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include" -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MOODS/match_types.cpp -o MOODS/match_types.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o motifmatchr.so ./RcppExports.o ./r_interface.o ./MOODS/scanner.o ./MOODS/motif_h.o ./MOODS/motif_0.o ./MOODS/moods_tools.o ./MOODS/moods_scan.o ./MOODS/moods_parsers.o ./MOODS/moods_misc.o ./MOODS/match_types.o -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-motifmatchr/00new/motifmatchr/libs
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (motifmatchr)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpWftEe4/downloaded_packages’
+[0m     checking for file ‘/tmp/RtmpWftEe4/remotes71268f8fb/timoast-signac-5c728f6/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpWftEe4/remotes71268f8fb/timoast-signac-5c728f6/DESCRIPTION’
+  ─  preparing ‘Signac’:
+   checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  looking to see if a ‘data/datalist’ file should be added
+  ─  building ‘Signac_0.1.6.tar.gz’
+     
+[91m* installing *source* package ‘Signac’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m*** moving datasets to lazyload DB
+[0m[91m** byte-compile and prepare package for lazy loading
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+From .checkSubclasses(): subclass "ICMatrixList" of class "PWMatrixList" is not local and is not updated for new inheritance information currently; 
+[where=<environment: 0x5626566fa798>, where2=<environment: namespace:Signac>]
+[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** testing if installed package can be loaded from final location
+[0mNo methods found in package ‘IRanges’ for request: ‘score’ when loading ‘TFBSTools’
+[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (Signac)
+[0m[91mOld packages: 'cicero', 'glasso'
+[0mRemoving intermediate container f46a77bdbe7e
+ ---> fb34ef18a719
+Successfully built fb34ef18a719
+Successfully tagged romanhaa/rstudio:2019-12-11_3.6.1
