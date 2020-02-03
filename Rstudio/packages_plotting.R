@@ -9,6 +9,7 @@ packages_to_install <- c(
   'circlize',
   'ComplexHeatmap',
   'cowplot',
+  'vankesteren/firatheme',
   'ggalluvial',
   'gganimate',
   'ggbeeswarm',
@@ -16,18 +17,22 @@ packages_to_install <- c(
   'ggdendro',
   'ggExtra',
   'ggforce',
+  'thomasp85/ggfx',
+  'erocoar/gghalves'
   'ggpubr',
   'ggraph',
   'ggrepel',
   'ggridges',
+  'ggsci',
   'ggsignif',
+  'jcolors',
   'patchwork',
   'pheatmap',
   'plotly',
   'RColorBrewer',
   'VennDiagram',
   'viridis',
-  'erocoar/gghalves'
+  'wesanderson'
 )
 
 install_packages(packages_to_install)

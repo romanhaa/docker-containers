@@ -1,4 +1,4 @@
-FROM rocker/rstudio:3.6.1
+FROM rocker/rstudio:3.6.2
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
@@ -139,3 +139,8 @@ RUN Rscript /docker/docker_containers-master/Rstudio/packages_plotting.R
 RUN Rscript /docker/docker_containers-master/Rstudio/packages_compbio.R
 RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell.R
 RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell_experimental.R
+
+##----------------------------------------------------------------------------##
+## remove files from repository
+##----------------------------------------------------------------------------##
+RUN rm -rf /docker

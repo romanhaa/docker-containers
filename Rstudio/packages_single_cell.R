@@ -5,29 +5,33 @@ source('install_packages_function.R')
 # packages for single cell analysis
 packages_to_install <- c(
   'batchelor',
+  'BUStools/BUSpaRse',
   'destiny',
   'cellranger',
+  'zhouzilu/DENDRO',
   'diffusionMap',
   'DropletUtils',
+  'cole-trapnell-lab/garnett',
+  'theislab/kBET',
   'MetaNeighbor',
   'monocle',
+  'cole-trapnell-lab/monocle3',
   'muscat',
   'phateR',
   'Seurat',
   'SC3',
   'scater',
   'scde',
+  'scDblFinder',
+  'ggjlab/scMCA',
   'scMerge',
   'scran',
   'sctransform',
   'SingleR',
   'slingshot',
-  'cole-trapnell-lab/garnett',
-  'cole-trapnell-lab/monocle3',
-  'ggjlab/scMCA',
+  'splatter',
   'velocyto-team/velocyto.R',
-  'BUStools/BUSpaRse',
-  'theislab/kBET'
+  'YosefLab/VISION'
 )
 
 install_packages(packages_to_install)
