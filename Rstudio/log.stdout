@@ -37,9 +37,9 @@ Step 12/21 : RUN python3 -m pip install    velocyto    scvelo
 Step 13/21 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 
 
- ---> b4877f15db4e
+ ---> ddc72e554c95
 Step 14/21 : RUN tar -xvzf /docker/master.tar.gz -C /docker
- ---> Running in ab1a2f1060b7
+ ---> Running in b8e128e68570
 docker_containers-master/
 docker_containers-master/.gitignore
 docker_containers-master/R/
@@ -252,15 +252,15 @@ docker_containers-master/kallisto/0.46.0/Dockerfile
 docker_containers-master/kallisto/0.46.0/README.md
 docker_containers-master/scanpy/
 docker_containers-master/scanpy/Dockerfile
-Removing intermediate container ab1a2f1060b7
- ---> 1f398bcce70f
+Removing intermediate container b8e128e68570
+ ---> ca72f57aeb46
 Step 15/21 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
- ---> Running in aeed3ca3852b
+ ---> Running in d499bcd744e1
 [91mInstalling package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
 [0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
 [0m[91mContent type 'application/octet-stream' length 40205 bytes (39 KB)
-=================[0m[91m===[0m[91m======[0m[91m=[0m[91m===============[0m[91m========
+=================[0m[91m===[0m[91m====[0m[91m=============[0m[91m=======[0m[91m======
 downloaded 39 KB
 
 [0m[91m* installing *source* package ‘BiocManager’ ...
@@ -279,13 +279,12 @@ downloaded 39 KB
 [0m[91m* DONE (BiocManager)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpFpAA2w/downloaded_packages’
-[0mRemoving intermediate container aeed3ca3852b
- ---> e1740534eb84
+	‘/tmp/RtmpxJMDmS/downloaded_packages’
+[0mRemoving intermediate container d499bcd744e1
+ ---> d434fae967c0
 Step 16/21 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
- ---> Running in 12d76aa44b58
-[91mError: unexpected string constant in:
-"  'statsbomb/StatsBombR'
-  'stringi'"
+ ---> Running in 8026dc0790f3
+[91mError in c("remotes", "devtools", "tidyverse", "jalvesaq/colorout", "concaveman",  : 
+  argument 45 is empty
 [0m[91mExecution halted
 [0m

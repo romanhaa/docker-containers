@@ -47,7 +47,7 @@ packages_to_install <- c(
   'umap',
   'uwot',
   'XML',
-  'xml2',
+  'xml2'
 )
 
 install_packages(packages_to_install)
