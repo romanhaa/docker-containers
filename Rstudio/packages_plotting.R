@@ -18,7 +18,7 @@ packages_to_install <- c(
   'ggExtra',
   'ggforce',
   'thomasp85/ggfx',
-  'erocoar/gghalves'
+  'erocoar/gghalves',
   'ggpubr',
   'ggraph',
   'ggrepel',
