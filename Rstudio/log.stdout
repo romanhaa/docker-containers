@@ -36,248 +36,256 @@ Step 12/21 : RUN python3 -m pip install    velocyto    scvelo
  ---> cb768c069deb
 Step 13/21 : ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
 
- ---> Using cache
- ---> be37457c7a15
+
+ ---> b4877f15db4e
 Step 14/21 : RUN tar -xvzf /docker/master.tar.gz -C /docker
- ---> Using cache
- ---> a06c7e8fa53e
+ ---> Running in ab1a2f1060b7
+docker_containers-master/
+docker_containers-master/.gitignore
+docker_containers-master/R/
+docker_containers-master/R/01_base
+docker_containers-master/R/02_r
+docker_containers-master/R/03_r
+docker_containers-master/R/install_packages.R
+docker_containers-master/R/install_packages_external.R
+docker_containers-master/README.md
+docker_containers-master/Rstudio/
+docker_containers-master/Rstudio/Dockerfile
+docker_containers-master/Rstudio/install_packages.R
+docker_containers-master/Rstudio/install_packages_function.R
+docker_containers-master/Rstudio/log.stdout
+docker_containers-master/Rstudio/packages_compbio.R
+docker_containers-master/Rstudio/packages_plotting.R
+docker_containers-master/Rstudio/packages_single_cell.R
+docker_containers-master/Rstudio/packages_single_cell_experimental.R
+docker_containers-master/Rstudio/packages_utility.R
+docker_containers-master/STAR/
+docker_containers-master/STAR/2.7.3a/
+docker_containers-master/STAR/2.7.3a/Dockerfile
+docker_containers-master/STAR/README.md
+docker_containers-master/cell_ranger/
+docker_containers-master/cell_ranger/3.0.2/
+docker_containers-master/cell_ranger/3.0.2/Dockerfile
+docker_containers-master/cell_ranger/3.1.0/
+docker_containers-master/cell_ranger/3.1.0/Dockerfile
+docker_containers-master/cell_ranger_atac/
+docker_containers-master/cell_ranger_atac/1.1.0/
+docker_containers-master/cell_ranger_atac/1.1.0/Dockerfile
+docker_containers-master/chromhmm/
+docker_containers-master/chromhmm/v1.17/
+docker_containers-master/chromhmm/v1.17/Dockerfile
+docker_containers-master/chromhmm/v1.17/chromhmm/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce10/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce10/RefSeqTES.ce10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce10/RefSeqTSS.ce10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce11/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce11/RefSeqTES.ce11.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce11/RefSeqTSS.ce11.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce6/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce6/RefSeqTES.ce6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/ce6/RefSeqTSS.ce6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer10/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer10/RefSeqTES.danRer10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer10/RefSeqTSS.danRer10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer11/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer11/RefSeqTES.danRer11.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer11/RefSeqTSS.danRer11.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer7/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer7/RefSeqTES.danRer7.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/danRer7/RefSeqTSS.danRer7.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm3/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm3/RefSeqTES.dm3.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm3/RefSeqTSS.dm3.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm6/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm6/RefSeqTES.dm6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/dm6/RefSeqTSS.dm6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg18/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg18/RefSeqTES.hg18.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg18/RefSeqTSS.hg18.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg19/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg19/RefSeqTES.hg19.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg19/RefSeqTSS.hg19.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg38/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg38/RefSeqTES.hg38.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/hg38/RefSeqTSS.hg38.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm10/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm10/RefSeqTES.mm10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm10/RefSeqTSS.mm10.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm9/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm9/RefSeqTES.mm9.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/mm9/RefSeqTSS.mm9.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn5/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn5/RefSeqTES.rn5.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn5/RefSeqTSS.rn5.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn6/
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn6/RefSeqTES.rn6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/ANCHORFILES/rn6/RefSeqTSS.rn6.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/ce10.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/ce11.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/ce6.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/danRer10.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/danRer11.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/danRer7.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/dm3.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/dm6.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/hg18.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/hg19.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/hg38.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/mm10.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/mm9.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/rn5.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/CHROMSIZES/rn6.txt
+docker_containers-master/chromhmm/v1.17/chromhmm/ChromHMM.jar
+docker_containers-master/chromhmm/v1.17/chromhmm/ChromHMM_manual.pdf
+docker_containers-master/chromhmm/v1.17/chromhmm/SAMPLEDATA_HG18/
+docker_containers-master/chromhmm/v1.17/chromhmm/SAMPLEDATA_HG18/GM12878_chr11_binary.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/SAMPLEDATA_HG18/K562_chr11_binary.txt.gz
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/BrowserOutput.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/ChromHMM.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/ConvertGeneTable.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/NestedEliminateInitialize.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/Preprocessing.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/StateAnalysis.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/edu/mit/compbio/ChromHMM/Util.java
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/org/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/org/tc33/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/org/tc33/jheatchart/
+docker_containers-master/chromhmm/v1.17/chromhmm/SRC/org/tc33/jheatchart/HeatChart.java
+docker_containers-master/chromhmm/v1.20/
+docker_containers-master/chromhmm/v1.20/Dockerfile
+docker_containers-master/chromhmm/v1.20/chromhmm/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce10/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce10/RefSeqTES.ce10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce10/RefSeqTSS.ce10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce11/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce11/RefSeqTES.ce11.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce11/RefSeqTSS.ce11.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce6/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce6/RefSeqTES.ce6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/ce6/RefSeqTSS.ce6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer10/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer10/RefSeqTES.danRer10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer10/RefSeqTSS.danRer10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer11/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer11/RefSeqTES.danRer11.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer11/RefSeqTSS.danRer11.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer7/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer7/RefSeqTES.danRer7.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/danRer7/RefSeqTSS.danRer7.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm3/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm3/RefSeqTES.dm3.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm3/RefSeqTSS.dm3.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm6/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm6/RefSeqTES.dm6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/dm6/RefSeqTSS.dm6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg18/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg18/RefSeqTES.hg18.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg18/RefSeqTSS.hg18.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg19/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg19/RefSeqTES.hg19.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg19/RefSeqTSS.hg19.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg38/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg38/RefSeqTES.hg38.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/hg38/RefSeqTSS.hg38.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm10/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm10/RefSeqTES.mm10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm10/RefSeqTSS.mm10.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm9/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm9/RefSeqTES.mm9.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/mm9/RefSeqTSS.mm9.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn5/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn5/RefSeqTES.rn5.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn5/RefSeqTSS.rn5.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn6/
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn6/RefSeqTES.rn6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/ANCHORFILES/rn6/RefSeqTSS.rn6.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/ce10.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/ce11.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/ce6.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/danRer10.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/danRer11.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/danRer7.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/dm3.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/dm6.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/hg18.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/hg19.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/hg38.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/mm10.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/mm9.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/rn5.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/CHROMSIZES/rn6.txt
+docker_containers-master/chromhmm/v1.20/chromhmm/ChromHMM.jar
+docker_containers-master/chromhmm/v1.20/chromhmm/ChromHMM_manual.pdf
+docker_containers-master/chromhmm/v1.20/chromhmm/SAMPLEDATA_HG18/
+docker_containers-master/chromhmm/v1.20/chromhmm/SAMPLEDATA_HG18/GM12878_chr11_binary.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/SAMPLEDATA_HG18/K562_chr11_binary.txt.gz
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/BrowserOutput.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/ChromHMM.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/ConvertGeneTable.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/NestedEliminateInitialize.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/Preprocessing.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/StateAnalysis.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/edu/mit/compbio/ChromHMM/Util.java
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/org/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/org/tc33/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/org/tc33/jheatchart/
+docker_containers-master/chromhmm/v1.20/chromhmm/SRC/org/tc33/jheatchart/HeatChart.java
+docker_containers-master/dropEst/
+docker_containers-master/dropEst/Dockerfile
+docker_containers-master/kallisto/
+docker_containers-master/kallisto/0.46.0/
+docker_containers-master/kallisto/0.46.0/Dockerfile
+docker_containers-master/kallisto/0.46.0/README.md
+docker_containers-master/scanpy/
+docker_containers-master/scanpy/Dockerfile
+Removing intermediate container ab1a2f1060b7
+ ---> 1f398bcce70f
 Step 15/21 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
- ---> Using cache
- ---> 3ca747b22ce9
-Step 16/21 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
- ---> Running in 527cfc852b9a
-[91m[2020-02-03 14:17:49] 'remotes' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'BiocVersion', 'remotes'
-[0m[91mOld packages: 'boot', 'foreign', 'MASS', 'nlme'
-[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/boot_1.3-24.tar.gz'
-[0m[91mContent type 'application/x-gzip' length 232298 bytes (226 KB)
-===[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m===[0m[91m===[0m[91m==[0m[91m===[0m[91m====[0m[91m===[0m[91m====[0m[91m===[0m[91m=====
-downloaded 226 KB
+ ---> Running in aeed3ca3852b
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'http://cran.us.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
+[0m[91mContent type 'application/octet-stream' length 40205 bytes (39 KB)
+=================[0m[91m===[0m[91m======[0m[91m=[0m[91m===============[0m[91m========
+downloaded 39 KB
 
-[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/foreign_0.8-75.tar.gz'
-[0m[91mContent type 'application/x-gzip' length 346249 bytes (338 KB)
-==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m===[0m[91m==[0m[91m===[0m[91m==[0m[91m==[0m[91m======
-downloaded 338 KB
-
-[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/MASS_7.3-51.5.tar.gz'
-[0m[91mContent type 'application/x-gzip' length 487569 bytes (476 KB)
-=[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m====[0m[91m=[0m[91m==[0m[91m==
-downloaded 476 KB
-
-[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/nlme_3.1-143.tar.gz'
-[0m[91mContent type 'application/x-gzip' length 789415 bytes (770 KB)
-=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m================================
-downloaded 770 KB
-
-[0m[91m* installing *source* package ‘boot’ ...
-[0m[91m** package ‘boot’ successfully unpacked and MD5 sums checked
+[0m[91m* installing *source* package ‘BiocManager’ ...
+[0m[91m** package ‘BiocManager’ successfully unpacked and MD5 sums checked
 [0m[91m** using staged installation
-[0m[91m** R
-[0m[91m** data
-[0m[91m*** moving datasets to lazyload DB
-[0m[91m** inst
-[0m[91m** byte-compile and prepare package for lazy loading
-[0m[91m** help
-[0m[91m*** installing help indices
-[0m[91m** building package indices
-[0m[91m** testing if installed package can be loaded from temporary location
-[0m[91m** testing if installed package can be loaded from final location
-[0m[91m** testing if installed package keeps a record of temporary installation path
-[0m[91m* DONE (boot)
-[0m[91m* installing *source* package ‘foreign’ ...
-[0m[91m** package ‘foreign’ successfully unpacked and MD5 sums checked
-[0m[91m** using staged installation
-[0m[91m** libs
-[0mgcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_systat.c -o R_systat.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rdbfread.c -o Rdbfread.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rdbfwrite.c -o Rdbfwrite.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SASxport.c -o SASxport.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c avl.c -o avl.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dbfopen.c -o dbfopen.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file-handle.c -o file-handle.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c format.c -o format.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minitab.c -o minitab.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pfm-read.c -o pfm-read.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sfm-read.c -o sfm-read.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spss.c -o spss.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stataread.c -o stataread.o
-gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o foreign.so R_systat.o Rdbfread.o Rdbfwrite.o SASxport.o avl.o dbfopen.o file-handle.o format.o init.o minitab.o pfm-read.o sfm-read.o spss.o stataread.o -L/usr/local/lib/R/lib -lR
-[91minstalling to /usr/local/lib/R/library/00LOCK-foreign/00new/foreign/libs
 [0m[91m** R
 [0m[91m** inst
 [0m[91m** byte-compile and prepare package for lazy loading
 [0m[91m** help
 [0m[91m*** installing help indices
 [0m[91m** building package indices
+[0m[91m** installing vignettes
 [0m[91m** testing if installed package can be loaded from temporary location
-[0m[91m** checking absolute paths in shared objects and dynamic libraries
 [0m[91m** testing if installed package can be loaded from final location
 [0m[91m** testing if installed package keeps a record of temporary installation path
-[0m[91m* DONE (foreign)
-[0m[91m* installing *source* package ‘MASS’ ...
-[0m[91m** package ‘MASS’ successfully unpacked and MD5 sums checked
-[0m[91m** using staged installation
-[0m[91m** libs
-[0mgcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MASS.c -o MASS.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lqs.c -o lqs.o
-gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o MASS.so MASS.o lqs.o -L/usr/local/lib/R/lib -lR
-[91minstalling to /usr/local/lib/R/library/00LOCK-MASS/00new/MASS/libs
-[0m[91m** R
-[0m[91m** data
-[0m[91m*** moving datasets to lazyload DB
-[0m[91m** inst
-[0m[91m** byte-compile and prepare package for lazy loading
-[0m[91m** help
-[0m[91m*** installing help indices
-[0m[91m** building package indices
-[0m[91m** testing if installed package can be loaded from temporary location
-[0m[91m** checking absolute paths in shared objects and dynamic libraries
-[0m[91m** testing if installed package can be loaded from final location
-[0m[91m** testing if installed package keeps a record of temporary installation path
-[0m[91m* DONE (MASS)
-[0m[91m* installing *source* package ‘nlme’ ...
-[0m[91m** package ‘nlme’ successfully unpacked and MD5 sums checked
-[0m[91m** using staged installation
-[0m[91m** libs
-[0mgfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c chol.f -o chol.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c corStruct.c -o corStruct.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gnls.c -o gnls.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix.c -o matrix.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nlOptimizer.c -o nlOptimizer.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nlme.c -o nlme.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nlmefit.c -o nlmefit.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pdMat.c -o pdMat.o
-gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pythag.c -o pythag.o
-gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c rs.f -o rs.o
-gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o nlme.so chol.o corStruct.o gnls.o init.o matrix.o nlOptimizer.o nlme.o nlmefit.o pdMat.o pythag.o rs.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
-[91minstalling to /usr/local/lib/R/library/00LOCK-nlme/00new/nlme/libs
-[0m[91m** R
-[0m[91m** data
-[0m[91m*** moving datasets to lazyload DB
-[0m[91m** inst
-[0m[91m** byte-compile and prepare package for lazy loading
-[0m[91m** help
-[0m[91m*** installing help indices
-[0m[91m** building package indices
-[0m[91m** testing if installed package can be loaded from temporary location
-[0m[91m** checking absolute paths in shared objects and dynamic libraries
-[0m[91m** testing if installed package can be loaded from final location
-[0m[91m** testing if installed package keeps a record of temporary installation path
-[0m[91m* DONE (nlme)
+[0m[91m* DONE (BiocManager)
 [0m[91m
 The downloaded source packages are in
-	‘/tmp/RtmpjWIuI7/downloaded_packages’
-[0m[91mUpdating HTML index of packages in '.Library'
-[0m[91mMaking 'packages.html' ...[0m[91m done
-[0m[91m[2020-02-03 14:18:25] 'remotes' successfully installed.
-[0m[91m[2020-02-03 14:18:25] 'devtools' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'devtools'
-[0m[91malso installing the dependencies ‘colorspace’, ‘utf8’, ‘vctrs’, ‘plyr’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘lifecycle’, ‘pillar’, ‘pkgconfig’, ‘httpuv’, ‘xtable’, ‘sourcetools’, ‘fastmap’, ‘gtable’, ‘reshape2’, ‘scales’, ‘tibble’, ‘viridisLite’, ‘BH’, ‘sys’, ‘ini’, ‘backports’, ‘ps’, ‘lazyeval’, ‘shiny’, ‘ggplot2’, ‘later’, ‘askpass’, ‘clipr’, ‘clisymbols’, ‘curl’, ‘fs’, ‘gh’, ‘purrr’, ‘rprojroot’, ‘whisker’, ‘yaml’, ‘processx’, ‘R6’, ‘assertthat’, ‘fansi’, ‘rex’, ‘htmltools’, ‘htmlwidgets’, ‘magrittr’, ‘crosstalk’, ‘promises’, ‘mime’, ‘openssl’, ‘prettyunits’, ‘xopen’, ‘brew’, ‘commonmark’, ‘Rcpp’, ‘stringi’, ‘stringr’, ‘xml2’, ‘evaluate’, ‘praise’, ‘usethis’, ‘callr’, ‘cli’, ‘covr’, ‘crayon’, ‘desc’, ‘digest’, ‘DT’, ‘ellipsis’, ‘glue’, ‘git2r’, ‘httr’, ‘jsonlite’, ‘memoise’, ‘pkgbuild’, ‘pkgload’, ‘rcmdcheck’, ‘rlang’, ‘roxygen2’, ‘rstudioapi’, ‘rversions’, ‘sessioninfo’, ‘testthat’, ‘withr’
-
-[0m[91m[2020-02-03 14:30:13] 'devtools' successfully installed.
-[0m[91m[2020-02-03 14:30:13] 'tidyverse' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'tidyverse'
-[0m[91malso installing the dependencies ‘highr’, ‘markdown’, ‘rematch’, ‘knitr’, ‘base64enc’, ‘tinytex’, ‘xfun’, ‘generics’, ‘DBI’, ‘tidyselect’, ‘plogr’, ‘cellranger’, ‘progress’, ‘rmarkdown’, ‘selectr’, ‘broom’, ‘dbplyr’, ‘dplyr’, ‘forcats’, ‘haven’, ‘hms’, ‘lubridate’, ‘modelr’, ‘readr’, ‘readxl’, ‘reprex’, ‘rvest’, ‘tidyr’
-
-[0m[91m[2020-02-03 14:38:53] 'tidyverse' successfully installed.
-[0m[91m[2020-02-03 14:38:53] 'concaveman' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'concaveman'
-[0m[91malso installing the dependencies ‘e1071’, ‘classInt’, ‘units’, ‘V8’, ‘sf’
-
-[0m[91m[2020-02-03 14:40:59] 'concaveman' successfully installed.
-[0m[91m[2020-02-03 14:40:59] 'dendextend' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'dendextend'
-[0m[91malso installing the dependencies ‘gridExtra’, ‘viridis’
-
-[0m[91m[2020-02-03 14:41:11] 'dendextend' successfully installed.
-[0m[91m[2020-02-03 14:41:11] 'densityClust' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'densityClust'
-[0m[91malso installing the dependencies ‘FNN’, ‘Rtsne’, ‘ggrepel’
-
-[0m[91m[2020-02-03 14:42:09] 'densityClust' successfully installed.
-[0m[91m[2020-02-03 14:42:09] 'DT' already installed.
-[0m[91m[2020-02-03 14:42:09] 'fastcluster' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'fastcluster'
-[0m[91m[2020-02-03 14:42:14] 'fastcluster' successfully installed.
-[0m[91m[2020-02-03 14:42:14] 'FlowSOM' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'FlowSOM'
-[0m[91malso installing the dependencies ‘DEoptimR’, ‘fda’, ‘ellipse’, ‘mnormt’, ‘kernlab’, ‘mclust’, ‘multicool’, ‘mvtnorm’, ‘robustbase’, ‘pcaPP’, ‘R.oo’, ‘R.methodsS3’, ‘png’, ‘jpeg’, ‘hexbin’, ‘IDPmisc’, ‘RcppArmadillo’, ‘zlibbioc’, ‘Rhdf5lib’, ‘gtools’, ‘flowStats’, ‘flowClust’, ‘clue’, ‘ks’, ‘rrcov’, ‘R.utils’, ‘Biobase’, ‘matrixStats’, ‘cytolib’, ‘ALL’, ‘graph’, ‘RBGL’, ‘Rgraphviz’, ‘data.table’, ‘latticeExtra’, ‘flowViz’, ‘RcppParallel’, ‘ncdfFlow’, ‘RProtoBufLib’, ‘openCyto’, ‘ggcyto’, ‘corpcor’, ‘RUnit’, ‘igraph’, ‘flowCore’, ‘ConsensusClusterPlus’, ‘BiocGenerics’, ‘tsne’, ‘flowWorkspace’, ‘CytoML’, ‘XML’
-
-[0m[91m[2020-02-03 15:05:58] 'FlowSOM' successfully installed.
-[0m[91m[2020-02-03 15:05:58] 'foreign' already installed.
-[0m[91m[2020-02-03 15:05:58] 'future.apply' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'future.apply'
-[0m[91malso installing the dependencies ‘listenv’, ‘future’, ‘globals’
-
-[0m[91m[2020-02-03 15:06:12] 'future.apply' successfully installed.
-[0m[91m[2020-02-03 15:06:12] 'gam' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'gam'
-[0m[91malso installing the dependencies ‘iterators’, ‘foreach’
-
-[0m[91m[2020-02-03 15:06:27] 'gam' successfully installed.
-[0m[91m[2020-02-03 15:06:27] 'golem' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'golem'
-[0m[91malso installing the dependencies ‘packrat’, ‘attempt’, ‘dockerfiler’, ‘rsconnect’, ‘yesno’
-
-[0m[91m[2020-02-03 15:06:47] 'golem' successfully installed.
-[0m[91m[2020-02-03 15:06:47] 'h2o' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'h2o'
-[0m[91malso installing the dependencies ‘bitops’, ‘RCurl’
-
-[0m[91m[2020-02-03 15:18:39] 'h2o' successfully installed.
-[0m[91m[2020-02-03 15:18:39] 'hdf5r' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'hdf5r'
-[0m[91malso installing the dependencies ‘bit’, ‘bit64’
-
-[0m[91m[2020-02-03 15:19:18] 'hdf5r' successfully installed.
-[0m[91m[2020-02-03 15:19:18] 'lwgeom' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'lwgeom'
-[0m[91m[2020-02-03 15:20:14] 'lwgeom' successfully installed.
-[0m[91m[2020-02-03 15:20:14] 'magrittr' already installed.
-[0m[91m[2020-02-03 15:20:14] 'phylogram' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'phylogram'
-[0m[91malso installing the dependency ‘ape’
-
-[0m[91m[2020-02-03 15:20:50] 'phylogram' successfully installed.
-[0m[91m[2020-02-03 15:20:50] 'pryr' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'pryr'
-[0m[91m[2020-02-03 15:21:23] 'pryr' successfully installed.
-[0m[91m[2020-02-03 15:21:23] 'reshape2' already installed.
-[0m[91m[2020-02-03 15:21:23] 'reticulate' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'reticulate'
-[0m[91malso installing the dependency ‘rappdirs’
-
-[0m[91m[2020-02-03 15:21:53] 'reticulate' successfully installed.
-[0m[91m[2020-02-03 15:21:53] 'rgdal' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'rgdal'
-[0m[91malso installing the dependency ‘sp’
-
-[0m[91m[2020-02-03 15:22:21] 'rgdal' successfully installed.
-[0m[91m[2020-02-03 15:22:21] 'roxygen2' already installed.
-[0m[91m[2020-02-03 15:22:21] 'Rtsne' already installed.
-[0m[91m[2020-02-03 15:22:21] 'scales' already installed.
-[0m[91m[2020-02-03 15:22:21] 'shiny' already installed.
-[0m[91m[2020-02-03 15:22:21] 'shinydashboard' will be installed.
-[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
-[0m[91mInstalling package(s) 'shinydashboard'
+	‘/tmp/RtmpFpAA2w/downloaded_packages’
+[0mRemoving intermediate container aeed3ca3852b
+ ---> e1740534eb84
+Step 16/21 : RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
+ ---> Running in 12d76aa44b58
+[91mError: unexpected string constant in:
+"  'statsbomb/StatsBombR'
+  'stringi'"
+[0m[91mExecution halted
 [0m
