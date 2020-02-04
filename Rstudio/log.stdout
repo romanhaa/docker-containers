@@ -1,906 +1,519 @@
-Sending build context to Docker daemon  22.02kB
-Step 1/21 : FROM rocker/rstudio:3.6.2
+Sending build context to Docker daemon   21.5kB
+Step 1/20 : FROM rocker/rstudio:3.6.2
  ---> a2f92e4ee8db
-Step 2/21 : ENV DEBIAN_FRONTEND noninteractive
- ---> Running in 27a4baecc439
-Removing intermediate container 27a4baecc439
- ---> 48b180e5c264
-Step 3/21 : ENV LANG en_US.UTF-8
- ---> Running in edb1902685d3
-Removing intermediate container edb1902685d3
- ---> 449c18103d13
-Step 4/21 : ENV LANGUAGE en_US:en
- ---> Running in b8f0917bf9fe
-Removing intermediate container b8f0917bf9fe
- ---> 14f4eafc1b94
-Step 5/21 : ENV LC_ALL en_US.UTF-8
- ---> Running in 1469d3e7bd74
-Removing intermediate container 1469d3e7bd74
- ---> dc18b19ad9b9
-Step 6/21 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev     libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg     libx11-dev     libglu1-mesa-dev     libboost-all-dev     libgsl-dev     libbz2-dev     less  && rm -rf /var/lib/apt/lists/*
- ---> Running in 87c9ab122bee
-Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
-Get:2 http://deb.debian.org/debian buster-updates InRelease [49.3 kB]
-Get:3 http://security-cdn.debian.org/debian-security buster/updates InRelease [65.4 kB]
-Get:4 http://deb.debian.org/debian buster/main amd64 Packages [7,908 kB]
-Get:5 http://security-cdn.debian.org/debian-security buster/updates/main amd64 Packages [175 kB]
-Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [5,792 B]
-Fetched 8,325 kB in 2s (3,722 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Calculating upgrade...
-The following packages will be upgraded:
-  libidn2-0
-1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 76.7 kB of archives.
-After this operation, 1,024 B of additional disk space will be used.
-Get:1 http://security-cdn.debian.org/debian-security buster/updates/main amd64 libidn2-0 amd64 2.0.5-1+deb10u1 [76.7 kB]
-[91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 76.7 kB in 0s (823 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 20846 files and directories currently installed.)
-Preparing to unpack .../libidn2-0_2.0.5-1+deb10u1_amd64.deb ...
-Unpacking libidn2-0:amd64 (2.0.5-1+deb10u1) over (2.0.5-1) ...
-Setting up libidn2-0:amd64 (2.0.5-1+deb10u1) ...
-Processing triggers for libc-bin (2.28-10) ...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-libcurl4-openssl-dev is already the newest version (7.64.0-4).
-libssl-dev is already the newest version (1.1.1d-0+deb10u2).
-The following additional packages will be installed:
-  autoconf automake autotools-dev blt bsdmainutils build-essential bzip2
-  bzip2-doc dbus default-libmysqlclient-dev dh-python dirmngr dmsetup dpkg-dev
-  fakeroot gdal-data gir1.2-glib-2.0 gnupg gnupg-l10n gnupg-utils gpg
-  gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm groff-base
-  hdf5-helpers ibverbs-providers icu-devtools javascript-common
-  keyboard-configuration libaec-dev libaec0 libalgorithm-diff-perl
-  libalgorithm-diff-xs-perl libalgorithm-merge-perl libargon2-1
-  libarmadillo-dev libarmadillo9 libarpack2 libarpack2-dev libassuan0
-  libblkid-dev libboost-atomic-dev libboost-atomic1.67-dev
-  libboost-atomic1.67.0 libboost-chrono-dev libboost-chrono1.67-dev
-  libboost-chrono1.67.0 libboost-container-dev libboost-container1.67-dev
-  libboost-container1.67.0 libboost-context-dev libboost-context1.67-dev
-  libboost-context1.67.0 libboost-coroutine-dev libboost-coroutine1.67-dev
-  libboost-coroutine1.67.0 libboost-date-time-dev libboost-date-time1.67-dev
-  libboost-date-time1.67.0 libboost-dev libboost-exception-dev
-  libboost-exception1.67-dev libboost-fiber-dev libboost-fiber1.67-dev
-  libboost-fiber1.67.0 libboost-filesystem-dev libboost-filesystem1.67-dev
-  libboost-filesystem1.67.0 libboost-graph-dev libboost-graph-parallel-dev
-  libboost-graph-parallel1.67-dev libboost-graph-parallel1.67.0
-  libboost-graph1.67-dev libboost-graph1.67.0 libboost-iostreams-dev
-  libboost-iostreams1.67-dev libboost-iostreams1.67.0 libboost-locale-dev
-  libboost-locale1.67-dev libboost-locale1.67.0 libboost-log-dev
-  libboost-log1.67-dev libboost-log1.67.0 libboost-math-dev
-  libboost-math1.67-dev libboost-math1.67.0 libboost-mpi-dev
-  libboost-mpi-python-dev libboost-mpi-python1.67-dev
-  libboost-mpi-python1.67.0 libboost-mpi1.67-dev libboost-mpi1.67.0
-  libboost-numpy-dev libboost-numpy1.67-dev libboost-numpy1.67.0
-  libboost-program-options-dev libboost-program-options1.67-dev
-  libboost-program-options1.67.0 libboost-python-dev libboost-python1.67-dev
-  libboost-python1.67.0 libboost-random-dev libboost-random1.67-dev
-  libboost-random1.67.0 libboost-regex-dev libboost-regex1.67-dev
-  libboost-regex1.67.0 libboost-serialization-dev
-  libboost-serialization1.67-dev libboost-serialization1.67.0
-  libboost-signals-dev libboost-signals1.67-dev libboost-signals1.67.0
-  libboost-stacktrace-dev libboost-stacktrace1.67-dev
-  libboost-stacktrace1.67.0 libboost-system-dev libboost-system1.67-dev
-  libboost-system1.67.0 libboost-test-dev libboost-test1.67-dev
-  libboost-test1.67.0 libboost-thread-dev libboost-thread1.67-dev
-  libboost-thread1.67.0 libboost-timer-dev libboost-timer1.67-dev
-  libboost-timer1.67.0 libboost-tools-dev libboost-type-erasure-dev
-  libboost-type-erasure1.67-dev libboost-type-erasure1.67.0 libboost-wave-dev
-  libboost-wave1.67-dev libboost-wave1.67.0 libboost1.67-dev
-  libboost1.67-tools-dev libc-ares2 libcaf-openmpi-3 libcairo-gobject2
-  libcairo-script-interpreter2 libcharls-dev libcharls2 libcoarrays-dev
-  libcoarrays-openmpi-dev libcryptsetup12 libdap-dev libdap25 libdapclient6v5
-  libdapserver7v5 libdbus-1-3 libdevmapper1.02.1 libdpkg-perl libdrm-amdgpu1
-  libdrm-common libdrm-dev libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
-  libdrm2 libegl-mesa0 libegl1 libepoxy0 libepsilon-dev libepsilon1 libevdev2
-  libevent-2.1-6 libevent-core-2.1-6 libevent-pthreads-2.1-6 libexpat1-dev
-  libfabric1 libfakeroot libffi-dev libfile-fcntllock-perl libfontconfig1-dev
-  libfontenc1 libfreetype6-dev libfreexl-dev libfreexl1 libfyba-dev libfyba0
-  libgbm1 libgdal20 libgeos-3.7.1 libgeos-c1v5 libgeos-dev libgeotiff-dev
-  libgeotiff2 libgif-dev libgif7 libgirepository-1.0-1 libgl1 libgl1-mesa-dev
-  libgl1-mesa-dri libglapi-mesa libgles1 libgles2 libglib2.0-bin
-  libglib2.0-dev libglib2.0-dev-bin libglu1-mesa libglvnd-core-dev
-  libglvnd-dev libglvnd0 libglx-mesa0 libglx0 libgmp-dev libgmpxx4ldbl
-  libgnutls-dane0 libgnutls-openssl27 libgnutls28-dev libgnutlsxx28 libgsl23
-  libgslcblas0 libgudev-1.0-0 libhdf4-0-alt libhdf4-alt-dev libhdf5-103
-  libhdf5-cpp-103 libhwloc-dev libhwloc-plugins libhwloc5 libibverbs-dev
-  libibverbs1 libice-dev libice6 libicu-dev libidn11 libidn2-dev libinput-bin
-  libinput10 libip4tc0 libjbig-dev libjpeg-dev libjpeg62-turbo-dev
-  libjs-jquery libjs-sphinxdoc libjs-underscore libjson-c-dev libjson-c3
-  libkml-dev libkmlbase1 libkmlconvenience1 libkmldom1 libkmlengine1
-  libkmlregionator1 libkmlxsd1 libkmod2 libksba8 liblcms2-2
-  liblocale-gettext-perl libltdl-dev libltdl7 liblua5.1-0 liblzma-dev
-  liblzo2-2 libmariadb-dev libmariadb-dev-compat libmariadb3 libminizip-dev
-  libminizip1 libmount-dev libmtdev1 libnetcdf-dev libnetcdf13 libnl-3-200
-  libnl-3-dev libnl-route-3-200 libnl-route-3-dev libnode64 libnpth0 libnspr4
-  libnss-systemd libnss3 libnuma-dev libnuma1 libodbc1 libogdi3.2
-  libogdi3.2-dev libopengl0 libopenjp2-7 libopenjp2-7-dev libopenmpi-dev
-  libopenmpi3 libp11-kit-dev libpam-systemd libpciaccess0 libpcre16-3
-  libpcre3-dev libpcre32-3 libpcrecpp0v5 libpipeline1 libpixman-1-dev libpmix2
-  libpng-dev libpng-tools libpoppler-dev libpoppler-private-dev libpoppler82
-  libpopt0 libpq-dev libpq5 libproj-dev libproj13 libpsm-infinipath1 libpsm2-2
-  libpthread-stubs0-dev libpython-all-dev libpython-dev libpython2-dev
-  libpython2.7 libpython2.7-dev libpython3-dev libpython3.7 libpython3.7-dev
-  libqhull-dev libqhull-r7 libqhull7 librdmacm1 libselinux1-dev
-  libsensors-config libsensors5 libsepol1-dev libsigsegv2 libsm-dev libsm6
-  libspatialite-dev libspatialite7 libsqlite3-dev libsuperlu-dev libsuperlu5
-  libsz2 libtasn1-6-dev libtasn1-doc libtcl8.6 libtiff-dev libtiffxx5 libtk8.6
-  libtool libuchardet0 libudunits2-0 libudunits2-data libunbound8 libunwind8
-  liburiparser-dev liburiparser1 libutempter0 libuv1 libuv1-dev libwacom-bin
-  libwacom-common libwacom2 libwayland-client0 libwayland-server0 libwebp-dev
-  libwebpdemux2 libwebpmux3 libx11-xcb-dev libx11-xcb1 libxatracker2
-  libxau-dev libxaw7 libxcb-dri2-0 libxcb-dri2-0-dev libxcb-dri3-0
-  libxcb-dri3-dev libxcb-glx0 libxcb-glx0-dev libxcb-present-dev
-  libxcb-present0 libxcb-randr0 libxcb-randr0-dev libxcb-render0-dev
-  libxcb-shape0 libxcb-shape0-dev libxcb-shm0-dev libxcb-sync-dev libxcb-sync1
-  libxcb-util0 libxcb-xfixes0 libxcb-xfixes0-dev libxcb1-dev libxcomposite1
-  libxcursor1 libxdamage-dev libxdamage1 libxdmcp-dev libxerces-c-dev
-  libxerces-c3.2 libxext-dev libxfixes-dev libxfixes3 libxfont2 libxft2 libxi6
-  libxinerama1 libxkbfile1 libxml2 libxmu6 libxmuu1 libxpm4 libxrandr2
-  libxrender-dev libxshmfence-dev libxshmfence1 libxss1 libxt6 libxtst6 libxv1
-  libxvmc1 libxxf86dga1 libxxf86vm-dev libxxf86vm1 libyaml-0-2 libzstd-dev m4
-  man-db mariadb-common mesa-common-dev mpi-default-bin mpi-default-dev
-  mysql-common nettle-dev ocl-icd-libopencl1 odbcinst odbcinst1debian2
-  openmpi-bin openmpi-common openssh-client pandoc-data patch pinentry-curses
-  pkg-config poppler-data proj-bin proj-data python-all python-all-dev
-  python-asn1crypto python-cffi-backend python-configparser python-crypto
-  python-cryptography python-dbus python-entrypoints python-enum34 python-gi
-  python-ipaddress python-keyring python-keyrings.alt python-pip-whl
-  python-secretstorage python-six python-wheel python-xdg python2-dev
-  python2.7-dev python3-asn1crypto python3-cffi-backend python3-crypto
-  python3-cryptography python3-dbus python3-distutils python3-entrypoints
-  python3-gi python3-keyring python3-keyrings.alt python3-lib2to3
-  python3-pkg-resources python3-secretstorage python3-setuptools python3-six
-  python3-wheel python3-xdg python3.7-dev systemd systemd-sysv tk8.6-blt2.5
-  udev unixodbc-dev uuid-dev x11-apps x11-common x11-session-utils x11-utils
-  x11-xkb-utils x11-xserver-utils x11proto-core-dev x11proto-damage-dev
-  x11proto-dev x11proto-fixes-dev x11proto-xext-dev x11proto-xf86vidmode-dev
-  xauth xbitmaps xfonts-100dpi xfonts-75dpi xfonts-base xfonts-encodings
-  xfonts-scalable xfonts-utils xinit xkb-data xorg-docs-core
-  xorg-sgml-doctools xserver-common xserver-xorg xserver-xorg-core
-  xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-wacom
-  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu
-  xserver-xorg-video-ati xserver-xorg-video-fbdev xserver-xorg-video-intel
-  xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon
-  xserver-xorg-video-vesa xserver-xorg-video-vmware xterm xtrans-dev xz-utils
-  zlib1g-dev
-Suggested packages:
-  autoconf-archive gnu-standards autoconf-doc gettext blt-demo wamerican
-  | wordlist whois vacation default-dbus-session-bus | dbus-session-bus
-  dbus-user-session pinentry-gnome3 tor debian-keyring parcimonie xloadimage
-  scdaemon groff apache2 | lighttpd | httpd libitpp-dev libboost-doc graphviz
-  libboost1.67-doc gccxml libmpfrc++-dev libntl-dev xsltproc doxygen
-  docbook-xml docbook-xsl default-jdk fop libcairo2-doc bzr freetype2-doc
-  libgdal-doc libgeotiff-epsg geotiff-bin gdal-bin libglib2.0-doc
-  libgdk-pixbuf2.0-bin | libgdk-pixbuf2.0-dev libxml2-utils gmp-doc
-  libgmp10-doc libmpfr-dev dns-root-data gnutls-bin gnutls-doc gsl-ref-psdoc
-  | gsl-doc-pdf | gsl-doc-info | gsl-ref-html libhdf4-doc hdf4-tools
-  libhdf5-doc libhwloc-contrib-plugins libice-doc icu-doc liblcms2-utils
-  libtool-doc liblzma-doc netcdf-bin netcdf-doc libmyodbc odbc-postgresql
-  tdsodbc unixodbc-bin ogdi-bin openmpi-doc pciutils postgresql-doc-11
-  lm-sensors libsm-doc sqlite3-doc libsuperlu-doc tcl8.6 tk8.6 gcj-jdk
-  libx11-doc libxcb-doc libxerces-c-doc libxext-doc libxt-doc m4-doc apparmor
-  www-browser opencl-icd keychain libpam-ssh monkeysphere ssh-askpass
-  texlive-latex-recommended texlive-xetex texlive-luatex pandoc-citeproc
-  texlive-latex-extra context wkhtmltopdf librsvg2-bin ghc nodejs php ruby
-  r-base-core libjs-mathjax node-katex ed diffutils-doc pinentry-doc
-  poppler-utils ghostscript fonts-japanese-mincho | fonts-ipafont-mincho
-  fonts-japanese-gothic | fonts-ipafont-gothic fonts-arphic-ukai
-  fonts-arphic-uming fonts-nanum python-crypto-doc python-cryptography-doc
-  python-cryptography-vectors python-dbus-dbg python-dbus-doc
-  python-enum34-doc python-gi-cairo gnome-keyring libkf5wallet-bin
-  gir1.2-gnomekeyring-1.0 python-gdata python-keyczar python-secretstorage-doc
-  python3-cryptography-vectors python3-dbus-dbg python-setuptools-doc tix
-  python3-tk-dbg systemd-container policykit-1 mesa-utils nickle cairo-5c
-  xorg-docs x11-xfs-utils xinput firmware-amd-graphics xserver-xorg-video-r128
-  xserver-xorg-video-mach64 firmware-misc-nonfree xfonts-cyrillic
-The following NEW packages will be installed:
-  autoconf automake autotools-dev blt bsdmainutils build-essential bzip2
-  bzip2-doc dbus default-libmysqlclient-dev dh-python dirmngr dmsetup dpkg-dev
-  fakeroot gdal-data gir1.2-glib-2.0 gnupg gnupg-l10n gnupg-utils gpg
-  gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm groff-base
-  hdf5-helpers ibverbs-providers icu-devtools javascript-common
-  keyboard-configuration less libaec-dev libaec0 libalgorithm-diff-perl
-  libalgorithm-diff-xs-perl libalgorithm-merge-perl libargon2-1
-  libarmadillo-dev libarmadillo9 libarpack2 libarpack2-dev libassuan0
-  libblkid-dev libboost-all-dev libboost-atomic-dev libboost-atomic1.67-dev
-  libboost-atomic1.67.0 libboost-chrono-dev libboost-chrono1.67-dev
-  libboost-chrono1.67.0 libboost-container-dev libboost-container1.67-dev
-  libboost-container1.67.0 libboost-context-dev libboost-context1.67-dev
-  libboost-context1.67.0 libboost-coroutine-dev libboost-coroutine1.67-dev
-  libboost-coroutine1.67.0 libboost-date-time-dev libboost-date-time1.67-dev
-  libboost-date-time1.67.0 libboost-dev libboost-exception-dev
-  libboost-exception1.67-dev libboost-fiber-dev libboost-fiber1.67-dev
-  libboost-fiber1.67.0 libboost-filesystem-dev libboost-filesystem1.67-dev
-  libboost-filesystem1.67.0 libboost-graph-dev libboost-graph-parallel-dev
-  libboost-graph-parallel1.67-dev libboost-graph-parallel1.67.0
-  libboost-graph1.67-dev libboost-graph1.67.0 libboost-iostreams-dev
-  libboost-iostreams1.67-dev libboost-iostreams1.67.0 libboost-locale-dev
-  libboost-locale1.67-dev libboost-locale1.67.0 libboost-log-dev
-  libboost-log1.67-dev libboost-log1.67.0 libboost-math-dev
-  libboost-math1.67-dev libboost-math1.67.0 libboost-mpi-dev
-  libboost-mpi-python-dev libboost-mpi-python1.67-dev
-  libboost-mpi-python1.67.0 libboost-mpi1.67-dev libboost-mpi1.67.0
-  libboost-numpy-dev libboost-numpy1.67-dev libboost-numpy1.67.0
-  libboost-program-options-dev libboost-program-options1.67-dev
-  libboost-program-options1.67.0 libboost-python-dev libboost-python1.67-dev
-  libboost-python1.67.0 libboost-random-dev libboost-random1.67-dev
-  libboost-random1.67.0 libboost-regex-dev libboost-regex1.67-dev
-  libboost-regex1.67.0 libboost-serialization-dev
-  libboost-serialization1.67-dev libboost-serialization1.67.0
-  libboost-signals-dev libboost-signals1.67-dev libboost-signals1.67.0
-  libboost-stacktrace-dev libboost-stacktrace1.67-dev
-  libboost-stacktrace1.67.0 libboost-system-dev libboost-system1.67-dev
-  libboost-system1.67.0 libboost-test-dev libboost-test1.67-dev
-  libboost-test1.67.0 libboost-thread-dev libboost-thread1.67-dev
-  libboost-thread1.67.0 libboost-timer-dev libboost-timer1.67-dev
-  libboost-timer1.67.0 libboost-tools-dev libboost-type-erasure-dev
-  libboost-type-erasure1.67-dev libboost-type-erasure1.67.0 libboost-wave-dev
-  libboost-wave1.67-dev libboost-wave1.67.0 libboost1.67-dev
-  libboost1.67-tools-dev libbz2-dev libc-ares2 libcaf-openmpi-3
-  libcairo-gobject2 libcairo-script-interpreter2 libcairo2-dev libcharls-dev
-  libcharls2 libcoarrays-dev libcoarrays-openmpi-dev libcryptsetup12
-  libdap-dev libdap25 libdapclient6v5 libdapserver7v5 libdbus-1-3
-  libdevmapper1.02.1 libdpkg-perl libdrm-amdgpu1 libdrm-common libdrm-dev
-  libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libdrm2 libegl-mesa0 libegl1
-  libepoxy0 libepsilon-dev libepsilon1 libevdev2 libevent-2.1-6
-  libevent-core-2.1-6 libevent-pthreads-2.1-6 libexpat1-dev libfabric1
-  libfakeroot libffi-dev libfile-fcntllock-perl libfontconfig1-dev libfontenc1
-  libfreetype6-dev libfreexl-dev libfreexl1 libfyba-dev libfyba0 libgbm1
-  libgdal-dev libgdal20 libgeos-3.7.1 libgeos-c1v5 libgeos-dev libgeotiff-dev
-  libgeotiff2 libgif-dev libgif7 libgirepository-1.0-1 libgl1 libgl1-mesa-dev
-  libgl1-mesa-dri libglapi-mesa libgles1 libgles2 libglib2.0-bin
-  libglib2.0-dev libglib2.0-dev-bin libglu1-mesa libglu1-mesa-dev
-  libglvnd-core-dev libglvnd-dev libglvnd0 libglx-mesa0 libglx0 libgmp-dev
-  libgmpxx4ldbl libgnutls-dane0 libgnutls-openssl27 libgnutls28-dev
-  libgnutlsxx28 libgsl-dev libgsl23 libgslcblas0 libgudev-1.0-0 libhdf4-0-alt
-  libhdf4-alt-dev libhdf5-103 libhdf5-cpp-103 libhdf5-dev libhwloc-dev
-  libhwloc-plugins libhwloc5 libibverbs-dev libibverbs1 libice-dev libice6
-  libicu-dev libidn11 libidn2-dev libinput-bin libinput10 libip4tc0
-  libjbig-dev libjpeg-dev libjpeg62-turbo-dev libjs-jquery libjs-sphinxdoc
-  libjs-underscore libjson-c-dev libjson-c3 libkml-dev libkmlbase1
-  libkmlconvenience1 libkmldom1 libkmlengine1 libkmlregionator1 libkmlxsd1
-  libkmod2 libksba8 liblcms2-2 liblocale-gettext-perl libltdl-dev libltdl7
-  liblua5.1-0 liblzma-dev liblzo2-2 libmariadb-dev libmariadb-dev-compat
-  libmariadb3 libminizip-dev libminizip1 libmount-dev libmtdev1 libnetcdf-dev
-  libnetcdf13 libnl-3-200 libnl-3-dev libnl-route-3-200 libnl-route-3-dev
-  libnode-dev libnode64 libnpth0 libnspr4 libnss-systemd libnss3 libnuma-dev
-  libnuma1 libodbc1 libogdi3.2 libogdi3.2-dev libopengl0 libopenjp2-7
-  libopenjp2-7-dev libopenmpi-dev libopenmpi3 libp11-kit-dev libpam-systemd
-  libpciaccess0 libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5
-  libpipeline1 libpixman-1-dev libpmix2 libpng-dev libpng-tools libpoppler-dev
-  libpoppler-private-dev libpoppler82 libpopt0 libpq-dev libpq5 libproj-dev
-  libproj13 libpsm-infinipath1 libpsm2-2 libpthread-stubs0-dev
-  libpython-all-dev libpython-dev libpython2-dev libpython2.7 libpython2.7-dev
-  libpython3-dev libpython3.7 libpython3.7-dev libqhull-dev libqhull-r7
-  libqhull7 librdmacm1 libselinux1-dev libsensors-config libsensors5
-  libsepol1-dev libsigsegv2 libsm-dev libsm6 libspatialite-dev libspatialite7
-  libsqlite3-dev libsuperlu-dev libsuperlu5 libsz2 libtasn1-6-dev libtasn1-doc
-  libtcl8.6 libtiff-dev libtiffxx5 libtk8.6 libtool libuchardet0 libudunits2-0
-  libudunits2-data libudunits2-dev libunbound8 libunwind8 liburiparser-dev
-  liburiparser1 libutempter0 libuv1 libuv1-dev libwacom-bin libwacom-common
-  libwacom2 libwayland-client0 libwayland-server0 libwebp-dev libwebpdemux2
-  libwebpmux3 libx11-dev libx11-xcb-dev libx11-xcb1 libxatracker2 libxau-dev
-  libxaw7 libxcb-dri2-0 libxcb-dri2-0-dev libxcb-dri3-0 libxcb-dri3-dev
-  libxcb-glx0 libxcb-glx0-dev libxcb-present-dev libxcb-present0 libxcb-randr0
-  libxcb-randr0-dev libxcb-render0-dev libxcb-shape0 libxcb-shape0-dev
-  libxcb-shm0-dev libxcb-sync-dev libxcb-sync1 libxcb-util0 libxcb-xfixes0
-  libxcb-xfixes0-dev libxcb1-dev libxcomposite1 libxcursor1 libxdamage-dev
-  libxdamage1 libxdmcp-dev libxerces-c-dev libxerces-c3.2 libxext-dev
-  libxfixes-dev libxfixes3 libxfont2 libxft2 libxi6 libxinerama1 libxkbfile1
-  libxml2 libxml2-dev libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender-dev
-  libxshmfence-dev libxshmfence1 libxss1 libxt-dev libxt6 libxtst6 libxv1
-  libxvmc1 libxxf86dga1 libxxf86vm-dev libxxf86vm1 libyaml-0-2 libzstd-dev m4
-  man-db mariadb-common mesa-common-dev mpi-default-bin mpi-default-dev
-  mysql-common nettle-dev ocl-icd-libopencl1 odbcinst odbcinst1debian2
-  openmpi-bin openmpi-common openssh-client pandoc pandoc-data patch
-  pinentry-curses pkg-config poppler-data proj-bin proj-data python-all
-  python-all-dev python-asn1crypto python-cffi-backend python-configparser
-  python-crypto python-cryptography python-dbus python-dev python-entrypoints
-  python-enum34 python-gi python-ipaddress python-keyring python-keyrings.alt
-  python-pip python-pip-whl python-secretstorage python-six python-wheel
-  python-xdg python2-dev python2.7-dev python3-asn1crypto python3-cffi-backend
-  python3-crypto python3-cryptography python3-dbus python3-dev
-  python3-distutils python3-entrypoints python3-gi python3-keyring
-  python3-keyrings.alt python3-lib2to3 python3-pip python3-pkg-resources
-  python3-secretstorage python3-setuptools python3-six python3-tk
-  python3-wheel python3-xdg python3.7-dev systemd systemd-sysv tk8.6-blt2.5
-  udev unixodbc-dev uuid-dev x11-apps x11-common x11-session-utils x11-utils
-  x11-xkb-utils x11-xserver-utils x11proto-core-dev x11proto-damage-dev
-  x11proto-dev x11proto-fixes-dev x11proto-xext-dev x11proto-xf86vidmode-dev
-  xauth xbitmaps xfonts-100dpi xfonts-75dpi xfonts-base xfonts-encodings
-  xfonts-scalable xfonts-utils xinit xkb-data xorg xorg-docs-core
-  xorg-sgml-doctools xserver-common xserver-xorg xserver-xorg-core
-  xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-wacom
-  xserver-xorg-legacy xserver-xorg-video-all xserver-xorg-video-amdgpu
-  xserver-xorg-video-ati xserver-xorg-video-fbdev xserver-xorg-video-intel
-  xserver-xorg-video-nouveau xserver-xorg-video-qxl xserver-xorg-video-radeon
-  xserver-xorg-video-vesa xserver-xorg-video-vmware xterm xtrans-dev xz-utils
-  zlib1g-dev
-0 upgraded, 549 newly installed, 0 to remove and 0 not upgraded.
-Need to get 296 MB of archives.
-After this operation, 1,307 MB of additional disk space will be used.
-Get:1 http://deb.debian.org/debian buster/main amd64 libargon2-1 amd64 0~20171227-0.2 [19.6 kB]
-Get:2 http://deb.debian.org/debian buster/main amd64 dmsetup amd64 2:1.02.155-3 [90.8 kB]
-Get:3 http://deb.debian.org/debian buster/main amd64 libdevmapper1.02.1 amd64 2:1.02.155-3 [141 kB]
-Get:4 http://deb.debian.org/debian buster/main amd64 libjson-c3 amd64 0.12.1+ds-2 [26.9 kB]
-Get:5 http://deb.debian.org/debian buster/main amd64 libcryptsetup12 amd64 2:2.1.0-5+deb10u2 [193 kB]
-Get:7 http://deb.debian.org/debian buster/main amd64 libidn11 amd64 1.33-2.2 [116 kB]
-Get:8 http://deb.debian.org/debian buster/main amd64 libip4tc0 amd64 1.8.2-4 [70.2 kB]
-Get:9 http://deb.debian.org/debian buster/main amd64 libkmod2 amd64 26-1 [52.7 kB]
-Get:10 http://deb.debian.org/debian buster/main amd64 systemd amd64 241-7~deb10u2 [3,497 kB]
-Get:6 http://security-cdn.debian.org/debian-security buster/updates/main amd64 libidn2-dev amd64 2.0.5-1+deb10u1 [79.5 kB]
-Get:11 http://security-cdn.debian.org/debian-security buster/updates/main amd64 libnss3 amd64 2:3.42.1-1+deb10u2 [1,160 kB]
-Get:12 http://security-cdn.debian.org/debian-security buster/updates/main amd64 libtiffxx5 amd64 4.1.0+git191117-2~deb10u1 [117 kB]
-Get:13 http://security-cdn.debian.org/debian-security buster/updates/main amd64 libtiff-dev amd64 4.1.0+git191117-2~deb10u1 [394 kB]
-Get:14 http://deb.debian.org/debian buster/main amd64 systemd-sysv amd64 241-7~deb10u2 [99.3 kB]
-Get:15 http://deb.debian.org/debian buster/main amd64 bsdmainutils amd64 11.1.2+b1 [191 kB]
-Get:16 http://deb.debian.org/debian buster/main amd64 libuchardet0 amd64 0.0.6-3 [64.9 kB]
-Get:17 http://deb.debian.org/debian buster/main amd64 groff-base amd64 1.22.4-3 [916 kB]
-Get:18 http://deb.debian.org/debian buster/main amd64 libpipeline1 amd64 1.5.1-2 [31.2 kB]
-Get:19 http://deb.debian.org/debian buster/main amd64 man-db amd64 2.8.5-2 [1,274 kB]
-Get:20 http://deb.debian.org/debian buster/main amd64 liblocale-gettext-perl amd64 1.07-3+b4 [18.9 kB]
-Get:21 http://deb.debian.org/debian buster/main amd64 keyboard-configuration all 1.193~deb10u1 [404 kB]
-Get:22 http://deb.debian.org/debian buster/main amd64 poppler-data all 0.4.9-2 [1,473 kB]
-Get:23 http://deb.debian.org/debian buster/main amd64 less amd64 487-0.1+b1 [129 kB]
-Get:24 http://deb.debian.org/debian buster/main amd64 udev amd64 241-7~deb10u2 [1,276 kB]
-Get:25 http://deb.debian.org/debian buster/main amd64 bzip2 amd64 1.0.6-9.2~deb10u1 [48.4 kB]
-Get:26 http://deb.debian.org/debian buster/main amd64 libdbus-1-3 amd64 1.12.16-1 [214 kB]
-Get:27 http://deb.debian.org/debian buster/main amd64 dbus amd64 1.12.16-1 [235 kB]
-Get:28 http://deb.debian.org/debian buster/main amd64 libnss-systemd amd64 241-7~deb10u2 [204 kB]
-Get:29 http://deb.debian.org/debian buster/main amd64 libpam-systemd amd64 241-7~deb10u2 [208 kB]
-Get:30 http://deb.debian.org/debian buster/main amd64 openssh-client amd64 1:7.9p1-10+deb10u1 [782 kB]
-Get:31 http://deb.debian.org/debian buster/main amd64 xz-utils amd64 5.2.4-1 [183 kB]
-Get:32 http://deb.debian.org/debian buster/main amd64 libsigsegv2 amd64 2.12-2 [32.8 kB]
-Get:33 http://deb.debian.org/debian buster/main amd64 m4 amd64 1.4.18-2 [203 kB]
-Get:34 http://deb.debian.org/debian buster/main amd64 autoconf all 2.69-11 [341 kB]
-Get:35 http://deb.debian.org/debian buster/main amd64 autotools-dev all 20180224.1 [77.0 kB]
-Get:36 http://deb.debian.org/debian buster/main amd64 automake all 1:1.16.1-4 [771 kB]
-Get:37 http://deb.debian.org/debian buster/main amd64 libtcl8.6 amd64 8.6.9+dfsg-2 [1,005 kB]
-Get:38 http://deb.debian.org/debian buster/main amd64 libxft2 amd64 2.3.2-2 [57.2 kB]
-Get:39 http://deb.debian.org/debian buster/main amd64 x11-common all 1:7.7+19 [251 kB]
-Get:40 http://deb.debian.org/debian buster/main amd64 libxss1 amd64 1:1.2.3-1 [17.8 kB]
-Get:41 http://deb.debian.org/debian buster/main amd64 libtk8.6 amd64 8.6.9-2 [768 kB]
-Get:42 http://deb.debian.org/debian buster/main amd64 tk8.6-blt2.5 amd64 2.5.3+dfsg-4 [587 kB]
-Get:43 http://deb.debian.org/debian buster/main amd64 blt amd64 2.5.3+dfsg-4 [14.8 kB]
-Get:44 http://deb.debian.org/debian buster/main amd64 libdpkg-perl all 1.19.7 [1,414 kB]
-Get:45 http://deb.debian.org/debian buster/main amd64 patch amd64 2.7.6-3+deb10u1 [126 kB]
-Get:46 http://deb.debian.org/debian buster/main amd64 dpkg-dev all 1.19.7 [1,773 kB]
-Get:47 http://deb.debian.org/debian buster/main amd64 build-essential amd64 12.6 [7,576 B]
-Get:48 http://deb.debian.org/debian buster/main amd64 bzip2-doc all 1.0.6-9.2~deb10u1 [493 kB]
-Get:49 http://deb.debian.org/debian buster/main amd64 mysql-common all 5.8+1.0.5 [7,324 B]
-Get:50 http://deb.debian.org/debian buster/main amd64 mariadb-common all 1:10.3.18-0+deb10u1 [31.7 kB]
-Get:51 http://deb.debian.org/debian buster/main amd64 libmariadb3 amd64 1:10.3.18-0+deb10u1 [169 kB]
-Get:52 http://deb.debian.org/debian buster/main amd64 libevent-2.1-6 amd64 2.1.8-stable-4 [177 kB]
-Get:53 http://deb.debian.org/debian buster/main amd64 libunbound8 amd64 1.9.0-2+deb10u1 [461 kB]
-Get:54 http://deb.debian.org/debian buster/main amd64 libgnutls-dane0 amd64 3.6.7-4 [317 kB]
-Get:55 http://deb.debian.org/debian buster/main amd64 libgnutls-openssl27 amd64 3.6.7-4 [316 kB]
-Get:56 http://deb.debian.org/debian buster/main amd64 libgnutlsxx28 amd64 3.6.7-4 [14.6 kB]
-Get:57 http://deb.debian.org/debian buster/main amd64 libp11-kit-dev amd64 0.23.15-2 [195 kB]
-Get:58 http://deb.debian.org/debian buster/main amd64 libtasn1-6-dev amd64 4.13-3 [104 kB]
-Get:59 http://deb.debian.org/debian buster/main amd64 libgmpxx4ldbl amd64 2:6.1.2+dfsg-4 [22.9 kB]
-Get:60 http://deb.debian.org/debian buster/main amd64 libgmp-dev amd64 2:6.1.2+dfsg-4 [628 kB]
-Get:61 http://deb.debian.org/debian buster/main amd64 nettle-dev amd64 3.4.1-1 [1,076 kB]
-Get:62 http://deb.debian.org/debian buster/main amd64 libgnutls28-dev amd64 3.6.7-4 [1,086 kB]
-Get:63 http://deb.debian.org/debian buster/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-1 [214 kB]
-Get:64 http://deb.debian.org/debian buster/main amd64 libmariadb-dev amd64 1:10.3.18-0+deb10u1 [1,009 kB]
-Get:65 http://deb.debian.org/debian buster/main amd64 libmariadb-dev-compat amd64 1:10.3.18-0+deb10u1 [30.9 kB]
-Get:66 http://deb.debian.org/debian buster/main amd64 default-libmysqlclient-dev amd64 1.0.5 [3,764 B]
-Get:67 http://deb.debian.org/debian buster/main amd64 python3-lib2to3 all 3.7.3-1 [76.7 kB]
-Get:68 http://deb.debian.org/debian buster/main amd64 python3-distutils all 3.7.3-1 [142 kB]
-Get:69 http://deb.debian.org/debian buster/main amd64 dh-python all 3.20190308 [99.3 kB]
-Get:70 http://deb.debian.org/debian buster/main amd64 libassuan0 amd64 2.5.2-1 [49.4 kB]
-Get:71 http://deb.debian.org/debian buster/main amd64 gpgconf amd64 2.2.12-1+deb10u1 [510 kB]
-Get:72 http://deb.debian.org/debian buster/main amd64 libksba8 amd64 1.3.5-2 [99.7 kB]
-Get:73 http://deb.debian.org/debian buster/main amd64 libnpth0 amd64 1.6-1 [18.4 kB]
-Get:74 http://deb.debian.org/debian buster/main amd64 dirmngr amd64 2.2.12-1+deb10u1 [712 kB]
-Get:75 http://deb.debian.org/debian buster/main amd64 libfakeroot amd64 1.23-1 [45.9 kB]
-Get:76 http://deb.debian.org/debian buster/main amd64 fakeroot amd64 1.23-1 [85.8 kB]
-Get:77 http://deb.debian.org/debian buster/main amd64 gdal-data all 2.4.0+dfsg-1 [744 kB]
-Get:78 http://deb.debian.org/debian buster/main amd64 libgirepository-1.0-1 amd64 1.58.3-2 [92.8 kB]
-Get:79 http://deb.debian.org/debian buster/main amd64 gir1.2-glib-2.0 amd64 1.58.3-2 [143 kB]
-Get:80 http://deb.debian.org/debian buster/main amd64 gnupg-l10n all 2.2.12-1+deb10u1 [1,010 kB]
-Get:81 http://deb.debian.org/debian buster/main amd64 gnupg-utils amd64 2.2.12-1+deb10u1 [861 kB]
-Get:82 http://deb.debian.org/debian buster/main amd64 gpg amd64 2.2.12-1+deb10u1 [865 kB]
-Get:83 http://deb.debian.org/debian buster/main amd64 pinentry-curses amd64 1.1.0-2 [64.5 kB]
-Get:84 http://deb.debian.org/debian buster/main amd64 gpg-agent amd64 2.2.12-1+deb10u1 [617 kB]
-Get:85 http://deb.debian.org/debian buster/main amd64 gpg-wks-client amd64 2.2.12-1+deb10u1 [485 kB]
-Get:86 http://deb.debian.org/debian buster/main amd64 gpg-wks-server amd64 2.2.12-1+deb10u1 [478 kB]
-Get:87 http://deb.debian.org/debian buster/main amd64 gpgsm amd64 2.2.12-1+deb10u1 [604 kB]
-Get:88 http://deb.debian.org/debian buster/main amd64 gnupg all 2.2.12-1+deb10u1 [715 kB]
-Get:89 http://deb.debian.org/debian buster/main amd64 hdf5-helpers amd64 1.10.4+repack-10 [35.2 kB]
-Get:90 http://deb.debian.org/debian buster/main amd64 libnl-3-200 amd64 3.4.0-1 [63.0 kB]
-Get:91 http://deb.debian.org/debian buster/main amd64 libnl-route-3-200 amd64 3.4.0-1 [162 kB]
-Get:92 http://deb.debian.org/debian buster/main amd64 libibverbs1 amd64 22.1-1 [51.2 kB]
-Get:93 http://deb.debian.org/debian buster/main amd64 ibverbs-providers amd64 22.1-1 [187 kB]
-Get:94 http://deb.debian.org/debian buster/main amd64 icu-devtools amd64 63.1-6 [188 kB]
-Get:95 http://deb.debian.org/debian buster/main amd64 javascript-common all 11 [6,120 B]
-Get:96 http://deb.debian.org/debian buster/main amd64 libaec0 amd64 1.0.2-1 [20.1 kB]
-Get:97 http://deb.debian.org/debian buster/main amd64 libsz2 amd64 1.0.2-1 [6,676 B]
-Get:98 http://deb.debian.org/debian buster/main amd64 libaec-dev amd64 1.0.2-1 [18.4 kB]
-Get:99 http://deb.debian.org/debian buster/main amd64 libalgorithm-diff-perl all 1.19.03-2 [47.9 kB]
-Get:100 http://deb.debian.org/debian buster/main amd64 libalgorithm-diff-xs-perl amd64 0.04-5+b1 [11.8 kB]
-Get:101 http://deb.debian.org/debian buster/main amd64 libalgorithm-merge-perl all 0.08-3 [12.7 kB]
-Get:102 http://deb.debian.org/debian buster/main amd64 libarpack2 amd64 3.7.0-2 [102 kB]
-Get:103 http://deb.debian.org/debian buster/main amd64 libsuperlu5 amd64 5.2.1+dfsg1-4 [161 kB]
-Get:104 http://deb.debian.org/debian buster/main amd64 libarmadillo9 amd64 1:9.200.7+dfsg-1 [88.6 kB]
-Get:105 http://deb.debian.org/debian buster/main amd64 libarpack2-dev amd64 3.7.0-2 [110 kB]
-Get:106 http://deb.debian.org/debian buster/main amd64 libhdf5-103 amd64 1.10.4+repack-10 [1,325 kB]
-Get:107 http://deb.debian.org/debian buster/main amd64 libjpeg62-turbo-dev amd64 1:1.5.2-2+b1 [208 kB]
-Get:108 http://deb.debian.org/debian buster/main amd64 libjpeg-dev all 1:1.5.2-2 [57.5 kB]
-Get:109 http://deb.debian.org/debian buster/main amd64 libhdf5-cpp-103 amd64 1.10.4+repack-10 [146 kB]
-Get:110 http://deb.debian.org/debian buster/main amd64 libhdf5-dev amd64 1.10.4+repack-10 [2,598 kB]
-Get:111 http://deb.debian.org/debian buster/main amd64 libsuperlu-dev amd64 5.2.1+dfsg1-4 [18.4 kB]
-Get:112 http://deb.debian.org/debian buster/main amd64 libarmadillo-dev amd64 1:9.200.7+dfsg-1 [360 kB]
-Get:113 http://deb.debian.org/debian buster/main amd64 uuid-dev amd64 2.33.1-0.1 [93.6 kB]
-Get:114 http://deb.debian.org/debian buster/main amd64 libblkid-dev amd64 2.33.1-0.1 [225 kB]
-Get:115 http://deb.debian.org/debian buster/main amd64 libboost1.67-dev amd64 1.67.0-13 [8,386 kB]
-Get:116 http://deb.debian.org/debian buster/main amd64 libboost-dev amd64 1.67.0.1 [3,864 B]
-Get:117 http://deb.debian.org/debian buster/main amd64 libboost1.67-tools-dev amd64 1.67.0-13 [1,432 kB]
-Get:118 http://deb.debian.org/debian buster/main amd64 libboost-tools-dev amd64 1.67.0.1 [3,824 B]
-Get:119 http://deb.debian.org/debian buster/main amd64 libboost-atomic1.67.0 amd64 1.67.0-13 [226 kB]
-Get:120 http://deb.debian.org/debian buster/main amd64 libboost-atomic1.67-dev amd64 1.67.0-13 [225 kB]
-Get:121 http://deb.debian.org/debian buster/main amd64 libboost-atomic-dev amd64 1.67.0.1 [3,956 B]
-Get:122 http://deb.debian.org/debian buster/main amd64 libboost-system1.67.0 amd64 1.67.0-13 [229 kB]
-Get:123 http://deb.debian.org/debian buster/main amd64 libboost-chrono1.67.0 amd64 1.67.0-13 [234 kB]
-Get:124 http://deb.debian.org/debian buster/main amd64 libboost-chrono1.67-dev amd64 1.67.0-13 [236 kB]
-Get:125 http://deb.debian.org/debian buster/main amd64 libboost-chrono-dev amd64 1.67.0.1 [4,268 B]
-Get:126 http://deb.debian.org/debian buster/main amd64 libboost-container1.67.0 amd64 1.67.0-13 [256 kB]
-Get:127 http://deb.debian.org/debian buster/main amd64 libboost-container1.67-dev amd64 1.67.0-13 [256 kB]
-Get:128 http://deb.debian.org/debian buster/main amd64 libboost-container-dev amd64 1.67.0.1 [4,132 B]
-Get:129 http://deb.debian.org/debian buster/main amd64 libboost-context1.67.0 amd64 1.67.0-13 [228 kB]
-Get:130 http://deb.debian.org/debian buster/main amd64 libboost-context1.67-dev amd64 1.67.0-13 [227 kB]
-Get:131 http://deb.debian.org/debian buster/main amd64 libboost-context-dev amd64 1.67.0.1 [3,852 B]
-Get:132 http://deb.debian.org/debian buster/main amd64 libboost-thread1.67.0 amd64 1.67.0-13 [267 kB]
-Get:133 http://deb.debian.org/debian buster/main amd64 libboost-coroutine1.67.0 amd64 1.67.0-13 [243 kB]
-Get:134 http://deb.debian.org/debian buster/main amd64 libboost-coroutine1.67-dev amd64 1.67.0-13 [244 kB]
-Get:135 http://deb.debian.org/debian buster/main amd64 libboost-coroutine-dev amd64 1.67.0.1 [3,924 B]
-Get:136 http://deb.debian.org/debian buster/main amd64 libboost-date-time1.67.0 amd64 1.67.0-13 [239 kB]
-Get:137 http://deb.debian.org/debian buster/main amd64 libboost-serialization1.67.0 amd64 1.67.0-13 [319 kB]
-Get:138 http://deb.debian.org/debian buster/main amd64 libboost-serialization1.67-dev amd64 1.67.0-13 [359 kB]
-Get:139 http://deb.debian.org/debian buster/main amd64 libboost-date-time1.67-dev amd64 1.67.0-13 [247 kB]
-Get:140 http://deb.debian.org/debian buster/main amd64 libboost-date-time-dev amd64 1.67.0.1 [3,648 B]
-Get:141 http://deb.debian.org/debian buster/main amd64 libboost-exception1.67-dev amd64 1.67.0-13 [224 kB]
-Get:142 http://deb.debian.org/debian buster/main amd64 libboost-exception-dev amd64 1.67.0.1 [3,636 B]
-Get:143 http://deb.debian.org/debian buster/main amd64 libboost-filesystem1.67.0 amd64 1.67.0-13 [261 kB]
-Get:144 http://deb.debian.org/debian buster/main amd64 libboost-fiber1.67.0 amd64 1.67.0-13 [327 kB]
-Get:145 http://deb.debian.org/debian buster/main amd64 libboost-fiber1.67-dev amd64 1.67.0-13 [339 kB]
-Get:146 http://deb.debian.org/debian buster/main amd64 libboost-fiber-dev amd64 1.67.0.1 [4,076 B]
-Get:147 http://deb.debian.org/debian buster/main amd64 libboost-system1.67-dev amd64 1.67.0-13 [231 kB]
-Get:148 http://deb.debian.org/debian buster/main amd64 libboost-filesystem1.67-dev amd64 1.67.0-13 [268 kB]
-Get:149 http://deb.debian.org/debian buster/main amd64 libboost-filesystem-dev amd64 1.67.0.1 [3,684 B]
-Get:150 http://deb.debian.org/debian buster/main amd64 libboost-regex1.67.0 amd64 1.67.0-13 [484 kB]
-Get:151 http://deb.debian.org/debian buster/main amd64 libboost-graph1.67.0 amd64 1.67.0-13 [316 kB]
-Get:152 http://deb.debian.org/debian buster/main amd64 libboost-timer1.67.0 amd64 1.67.0-13 [231 kB]
-Get:153 http://deb.debian.org/debian buster/main amd64 libboost-test1.67.0 amd64 1.67.0-13 [459 kB]
-Get:154 http://deb.debian.org/debian buster/main amd64 libboost-test1.67-dev amd64 1.67.0-13 [512 kB]
-Get:155 http://deb.debian.org/debian buster/main amd64 libboost-graph1.67-dev amd64 1.67.0-13 [327 kB]
-Get:156 http://deb.debian.org/debian buster/main amd64 libboost-graph-dev amd64 1.67.0.1 [3,752 B]
-Get:157 http://deb.debian.org/debian buster/main amd64 libevent-core-2.1-6 amd64 2.1.8-stable-4 [129 kB]
-Get:158 http://deb.debian.org/debian buster/main amd64 libevent-pthreads-2.1-6 amd64 2.1.8-stable-4 [47.9 kB]
-Get:159 http://deb.debian.org/debian buster/main amd64 libpsm-infinipath1 amd64 3.3+20.604758e7-6 [168 kB]
-Get:160 http://deb.debian.org/debian buster/main amd64 libnuma1 amd64 2.0.12-1 [26.2 kB]
-Get:161 http://deb.debian.org/debian buster/main amd64 libpsm2-2 amd64 11.2.78-1 [177 kB]
-Get:162 http://deb.debian.org/debian buster/main amd64 librdmacm1 amd64 22.1-1 [65.3 kB]
-Get:163 http://deb.debian.org/debian buster/main amd64 libfabric1 amd64 1.6.2-3 [396 kB]
-Get:164 http://deb.debian.org/debian buster/main amd64 libltdl7 amd64 2.4.6-9 [390 kB]
-Get:165 http://deb.debian.org/debian buster/main amd64 libhwloc5 amd64 1.11.12-3 [111 kB]
-Get:166 http://deb.debian.org/debian buster/main amd64 libpciaccess0 amd64 0.14-1 [53.5 kB]
-Get:167 http://deb.debian.org/debian buster/main amd64 libxml2 amd64 2.9.4+dfsg1-7+b3 [687 kB]
-Get:168 http://deb.debian.org/debian buster/main amd64 ocl-icd-libopencl1 amd64 2.2.12-2 [37.5 kB]
-Get:169 http://deb.debian.org/debian buster/main amd64 libhwloc-plugins amd64 1.11.12-3 [17.4 kB]
-Get:170 http://deb.debian.org/debian buster/main amd64 libpmix2 amd64 3.1.2-3 [498 kB]
-Get:171 http://deb.debian.org/debian buster/main amd64 libopenmpi3 amd64 3.1.3-11 [2,191 kB]
-Get:172 http://deb.debian.org/debian buster/main amd64 libboost-mpi1.67.0 amd64 1.67.0-13 [273 kB]
-Get:173 http://deb.debian.org/debian buster/main amd64 libboost-graph-parallel1.67.0 amd64 1.67.0-13 [284 kB]
-Get:174 http://deb.debian.org/debian buster/main amd64 libboost-graph-parallel1.67-dev amd64 1.67.0-13 [287 kB]
-Get:175 http://deb.debian.org/debian buster/main amd64 libboost-graph-parallel-dev amd64 1.67.0.1 [3,772 B]
-Get:176 http://deb.debian.org/debian buster/main amd64 libicu-dev amd64 63.1-6 [9,181 kB]
-Get:177 http://deb.debian.org/debian buster/main amd64 libboost-regex1.67-dev amd64 1.67.0-13 [538 kB]
-Get:178 http://deb.debian.org/debian buster/main amd64 libboost-iostreams1.67.0 amd64 1.67.0-13 [249 kB]
-Get:179 http://deb.debian.org/debian buster/main amd64 libboost-iostreams1.67-dev amd64 1.67.0-13 [255 kB]
-Get:180 http://deb.debian.org/debian buster/main amd64 libboost-iostreams-dev amd64 1.67.0.1 [3,632 B]
-Get:181 http://deb.debian.org/debian buster/main amd64 libboost-locale1.67.0 amd64 1.67.0-13 [472 kB]
-Get:182 http://deb.debian.org/debian buster/main amd64 libboost-locale1.67-dev amd64 1.67.0-13 [560 kB]
-Get:183 http://deb.debian.org/debian buster/main amd64 libboost-locale-dev amd64 1.67.0.1 [3,976 B]
-Get:184 http://deb.debian.org/debian buster/main amd64 libboost-log1.67.0 amd64 1.67.0-13 [608 kB]
-Get:185 http://deb.debian.org/debian buster/main amd64 libboost-thread1.67-dev amd64 1.67.0-13 [269 kB]
-Get:186 http://deb.debian.org/debian buster/main amd64 libboost-log1.67-dev amd64 1.67.0-13 [784 kB]
-Get:187 http://deb.debian.org/debian buster/main amd64 libboost-log-dev amd64 1.67.0.1 [3,852 B]
-Get:188 http://deb.debian.org/debian buster/main amd64 libboost-math1.67.0 amd64 1.67.0-13 [461 kB]
-Get:189 http://deb.debian.org/debian buster/main amd64 libboost-math1.67-dev amd64 1.67.0-13 [739 kB]
-Get:190 http://deb.debian.org/debian buster/main amd64 libboost-math-dev amd64 1.67.0.1 [3,848 B]
-Get:191 http://deb.debian.org/debian buster/main amd64 openmpi-common all 3.1.3-11 [165 kB]
-Get:192 http://deb.debian.org/debian buster/main amd64 libnl-3-dev amd64 3.4.0-1 [102 kB]
-Get:193 http://deb.debian.org/debian buster/main amd64 libnl-route-3-dev amd64 3.4.0-1 [177 kB]
-Get:194 http://deb.debian.org/debian buster/main amd64 libibverbs-dev amd64 22.1-1 [362 kB]
-Get:195 http://deb.debian.org/debian buster/main amd64 libnuma-dev amd64 2.0.12-1 [39.2 kB]
-Get:196 http://deb.debian.org/debian buster/main amd64 libltdl-dev amd64 2.4.6-9 [162 kB]
-Get:197 http://deb.debian.org/debian buster/main amd64 libhwloc-dev amd64 1.11.12-3 [175 kB]
-Get:198 http://deb.debian.org/debian buster/main amd64 openmpi-bin amd64 3.1.3-11 [200 kB]
-Get:199 http://deb.debian.org/debian buster/main amd64 libopenmpi-dev amd64 3.1.3-11 [974 kB]
-Get:200 http://deb.debian.org/debian buster/main amd64 mpi-default-dev amd64 1.13 [5,476 B]
-Get:201 http://deb.debian.org/debian buster/main amd64 libboost-mpi1.67-dev amd64 1.67.0-13 [380 kB]
-Get:202 http://deb.debian.org/debian buster/main amd64 libboost-mpi-dev amd64 1.67.0.1 [3,732 B]
-Get:203 http://deb.debian.org/debian buster/main amd64 libboost-python1.67.0 amd64 1.67.0-13 [329 kB]
-Get:204 http://deb.debian.org/debian buster/main amd64 mpi-default-bin amd64 1.13 [4,672 B]
-Get:205 http://deb.debian.org/debian buster/main amd64 libboost-mpi-python1.67.0 amd64 1.67.0-13 [438 kB]
-Get:206 http://deb.debian.org/debian buster/main amd64 libboost-mpi-python1.67-dev amd64 1.67.0-13 [244 kB]
-Get:207 http://deb.debian.org/debian buster/main amd64 libboost-mpi-python-dev amd64 1.67.0.1 [3,768 B]
-Get:208 http://deb.debian.org/debian buster/main amd64 libboost-numpy1.67.0 amd64 1.67.0-13 [238 kB]
-Get:209 http://deb.debian.org/debian buster/main amd64 libboost-numpy1.67-dev amd64 1.67.0-13 [238 kB]
-Get:210 http://deb.debian.org/debian buster/main amd64 libboost-numpy-dev amd64 1.67.0.1 [3,692 B]
-Get:211 http://deb.debian.org/debian buster/main amd64 libboost-program-options1.67.0 amd64 1.67.0-13 [355 kB]
-Get:212 http://deb.debian.org/debian buster/main amd64 libboost-program-options1.67-dev amd64 1.67.0-13 [383 kB]
-Get:213 http://deb.debian.org/debian buster/main amd64 libboost-program-options-dev amd64 1.67.0.1 [3,656 B]
-Get:214 http://deb.debian.org/debian buster/main amd64 libpython2.7 amd64 2.7.16-2+deb10u1 [1,036 kB]
-Get:215 http://deb.debian.org/debian buster/main amd64 libexpat1-dev amd64 2.2.6-2+deb10u1 [153 kB]
-Get:216 http://deb.debian.org/debian buster/main amd64 libpython2.7-dev amd64 2.7.16-2+deb10u1 [31.6 MB]
-Get:217 http://deb.debian.org/debian buster/main amd64 libpython2-dev amd64 2.7.16-1 [20.9 kB]
-Get:218 http://deb.debian.org/debian buster/main amd64 libpython-dev amd64 2.7.16-1 [20.9 kB]
-Get:219 http://deb.debian.org/debian buster/main amd64 python2.7-dev amd64 2.7.16-2+deb10u1 [294 kB]
-Get:220 http://deb.debian.org/debian buster/main amd64 python2-dev amd64 2.7.16-1 [1,212 B]
-Get:221 http://deb.debian.org/debian buster/main amd64 python-dev amd64 2.7.16-1 [1,192 B]
-Get:222 http://deb.debian.org/debian buster/main amd64 libpython3.7 amd64 3.7.3-2 [1,498 kB]
-Get:223 http://deb.debian.org/debian buster/main amd64 libpython3.7-dev amd64 3.7.3-2 [48.4 MB]
-Get:224 http://deb.debian.org/debian buster/main amd64 libpython3-dev amd64 3.7.3-1 [20.1 kB]
-Get:225 http://deb.debian.org/debian buster/main amd64 python3.7-dev amd64 3.7.3-2 [509 kB]
-Get:226 http://deb.debian.org/debian buster/main amd64 python3-dev amd64 3.7.3-1 [1,264 B]
-Get:227 http://deb.debian.org/debian buster/main amd64 libboost-python1.67-dev amd64 1.67.0-13 [335 kB]
-Get:228 http://deb.debian.org/debian buster/main amd64 libboost-python-dev amd64 1.67.0.1 [3,948 B]
-Get:229 http://deb.debian.org/debian buster/main amd64 libboost-random1.67.0 amd64 1.67.0-13 [232 kB]
-Get:230 http://deb.debian.org/debian buster/main amd64 libboost-random1.67-dev amd64 1.67.0-13 [232 kB]
-Get:231 http://deb.debian.org/debian buster/main amd64 libboost-random-dev amd64 1.67.0.1 [3,648 B]
-Get:232 http://deb.debian.org/debian buster/main amd64 libboost-regex-dev amd64 1.67.0.1 [3,916 B]
-Get:233 http://deb.debian.org/debian buster/main amd64 libboost-serialization-dev amd64 1.67.0.1 [3,876 B]
-Get:234 http://deb.debian.org/debian buster/main amd64 libboost-signals1.67.0 amd64 1.67.0-13 [249 kB]
-Get:235 http://deb.debian.org/debian buster/main amd64 libboost-signals1.67-dev amd64 1.67.0-13 [256 kB]
-Get:236 http://deb.debian.org/debian buster/main amd64 libboost-signals-dev amd64 1.67.0.1 [3,716 B]
-Get:237 http://deb.debian.org/debian buster/main amd64 libboost-stacktrace1.67.0 amd64 1.67.0-13 [269 kB]
-Get:238 http://deb.debian.org/debian buster/main amd64 libboost-stacktrace1.67-dev amd64 1.67.0-13 [247 kB]
-Get:239 http://deb.debian.org/debian buster/main amd64 libboost-stacktrace-dev amd64 1.67.0.1 [3,640 B]
-Get:240 http://deb.debian.org/debian buster/main amd64 libboost-system-dev amd64 1.67.0.1 [3,788 B]
-Get:241 http://deb.debian.org/debian buster/main amd64 libboost-test-dev amd64 1.67.0.1 [3,684 B]
-Get:242 http://deb.debian.org/debian buster/main amd64 libboost-thread-dev amd64 1.67.0.1 [3,672 B]
-Get:243 http://deb.debian.org/debian buster/main amd64 libboost-timer1.67-dev amd64 1.67.0-13 [231 kB]
-Get:244 http://deb.debian.org/debian buster/main amd64 libboost-timer-dev amd64 1.67.0.1 [3,772 B]
-Get:245 http://deb.debian.org/debian buster/main amd64 libboost-type-erasure1.67.0 amd64 1.67.0-13 [240 kB]
-Get:246 http://deb.debian.org/debian buster/main amd64 libboost-type-erasure1.67-dev amd64 1.67.0-13 [240 kB]
-Get:247 http://deb.debian.org/debian buster/main amd64 libboost-type-erasure-dev amd64 1.67.0.1 [3,740 B]
-Get:248 http://deb.debian.org/debian buster/main amd64 libboost-wave1.67.0 amd64 1.67.0-13 [432 kB]
-Get:249 http://deb.debian.org/debian buster/main amd64 libboost-wave1.67-dev amd64 1.67.0-13 [461 kB]
-Get:250 http://deb.debian.org/debian buster/main amd64 libboost-wave-dev amd64 1.67.0.1 [3,676 B]
-Get:251 http://deb.debian.org/debian buster/main amd64 libboost-all-dev amd64 1.67.0.1 [3,988 B]
-Get:252 http://deb.debian.org/debian buster/main amd64 libbz2-dev amd64 1.0.6-9.2~deb10u1 [30.2 kB]
-Get:253 http://deb.debian.org/debian buster/main amd64 libc-ares2 amd64 1.14.0-1 [85.8 kB]
-Get:254 http://deb.debian.org/debian buster/main amd64 libcaf-openmpi-3 amd64 2.4.0-2 [35.6 kB]
-Get:255 http://deb.debian.org/debian buster/main amd64 libcairo-gobject2 amd64 1.16.0-4 [124 kB]
-Get:256 http://deb.debian.org/debian buster/main amd64 liblzo2-2 amd64 2.10-0.1 [56.1 kB]
-Get:257 http://deb.debian.org/debian buster/main amd64 libcairo-script-interpreter2 amd64 1.16.0-4 [160 kB]
-Get:258 http://deb.debian.org/debian buster/main amd64 libpng-dev amd64 1.6.36-6 [300 kB]
-Get:259 http://deb.debian.org/debian buster/main amd64 libfreetype6-dev amd64 2.9.1-3+deb10u1 [544 kB]
-Get:260 http://deb.debian.org/debian buster/main amd64 pkg-config amd64 0.29-6 [63.5 kB]
-Get:261 http://deb.debian.org/debian buster/main amd64 libfontconfig1-dev amd64 2.13.1-2 [966 kB]
-Get:262 http://deb.debian.org/debian buster/main amd64 xorg-sgml-doctools all 1:1.11-1 [21.9 kB]
-Get:263 http://deb.debian.org/debian buster/main amd64 x11proto-dev all 2018.4-4 [251 kB]
-Get:264 http://deb.debian.org/debian buster/main amd64 x11proto-core-dev all 2018.4-4 [3,128 B]
-Get:265 http://deb.debian.org/debian buster/main amd64 libxau-dev amd64 1:1.0.8-1+b2 [23.1 kB]
-Get:266 http://deb.debian.org/debian buster/main amd64 libxdmcp-dev amd64 1:1.1.2-3 [42.2 kB]
-Get:267 http://deb.debian.org/debian buster/main amd64 xtrans-dev all 1.3.5-1 [100 kB]
-Get:268 http://deb.debian.org/debian buster/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5,344 B]
-Get:269 http://deb.debian.org/debian buster/main amd64 libxcb1-dev amd64 1.13.1-2 [174 kB]
-Get:270 http://deb.debian.org/debian buster/main amd64 libx11-dev amd64 2:1.6.7-1 [827 kB]
-Get:271 http://deb.debian.org/debian buster/main amd64 libxrender-dev amd64 1:0.9.10-1 [40.8 kB]
-Get:272 http://deb.debian.org/debian buster/main amd64 x11proto-xext-dev all 2018.4-4 [3,128 B]
-Get:273 http://deb.debian.org/debian buster/main amd64 libxext-dev amd64 2:1.3.3-1+b2 [107 kB]
-Get:274 http://deb.debian.org/debian buster/main amd64 libice6 amd64 2:1.0.9-2 [58.7 kB]
-Get:275 http://deb.debian.org/debian buster/main amd64 libsm6 amd64 2:1.2.3-1 [35.1 kB]
-Get:276 http://deb.debian.org/debian buster/main amd64 libice-dev amd64 2:1.0.9-2 [66.8 kB]
-Get:277 http://deb.debian.org/debian buster/main amd64 libsm-dev amd64 2:1.2.3-1 [38.0 kB]
-Get:278 http://deb.debian.org/debian buster/main amd64 libpixman-1-dev amd64 0.36.0-1 [554 kB]
-Get:279 http://deb.debian.org/debian buster/main amd64 libxcb-render0-dev amd64 1.13.1-2 [112 kB]
-Get:280 http://deb.debian.org/debian buster/main amd64 libxcb-shm0-dev amd64 1.13.1-2 [100 kB]
-Get:281 http://deb.debian.org/debian buster/main amd64 libffi-dev amd64 3.2.1-9 [156 kB]
-Get:282 http://deb.debian.org/debian buster/main amd64 libglib2.0-bin amd64 2.58.3-2+deb10u2 [126 kB]
-Get:283 http://deb.debian.org/debian buster/main amd64 libglib2.0-dev-bin amd64 2.58.3-2+deb10u2 [157 kB]
-Get:284 http://deb.debian.org/debian buster/main amd64 libmount-dev amd64 2.33.1-0.1 [232 kB]
-Get:285 http://deb.debian.org/debian buster/main amd64 libpcre16-3 amd64 2:8.39-12 [259 kB]
-Get:286 http://deb.debian.org/debian buster/main amd64 libpcre32-3 amd64 2:8.39-12 [250 kB]
-Get:287 http://deb.debian.org/debian buster/main amd64 libpcrecpp0v5 amd64 2:8.39-12 [152 kB]
-Get:288 http://deb.debian.org/debian buster/main amd64 libpcre3-dev amd64 2:8.39-12 [650 kB]
-Get:289 http://deb.debian.org/debian buster/main amd64 libsepol1-dev amd64 2.8-1 [338 kB]
-Get:290 http://deb.debian.org/debian buster/main amd64 libselinux1-dev amd64 2.8-1+b1 [169 kB]
-Get:291 http://deb.debian.org/debian buster/main amd64 libglib2.0-dev amd64 2.58.3-2+deb10u2 [1,483 kB]
-Get:292 http://deb.debian.org/debian buster/main amd64 libcairo2-dev amd64 1.16.0-4 [734 kB]
-Get:293 http://deb.debian.org/debian buster/main amd64 libcharls2 amd64 2.0.0+dfsg-1 [64.3 kB]
-Get:294 http://deb.debian.org/debian buster/main amd64 libcharls-dev amd64 2.0.0+dfsg-1 [7,928 B]
-Get:295 http://deb.debian.org/debian buster/main amd64 libcoarrays-dev amd64 2.4.0-2 [29.1 kB]
-Get:296 http://deb.debian.org/debian buster/main amd64 libcoarrays-openmpi-dev amd64 2.4.0-2 [35.2 kB]
-Get:297 http://deb.debian.org/debian buster/main amd64 libdap25 amd64 3.20.3-1 [557 kB]
-Get:298 http://deb.debian.org/debian buster/main amd64 libdapserver7v5 amd64 3.20.3-1 [131 kB]
-Get:299 http://deb.debian.org/debian buster/main amd64 libdapclient6v5 amd64 3.20.3-1 [202 kB]
-Get:300 http://deb.debian.org/debian buster/main amd64 libxml2-dev amd64 2.9.4+dfsg1-7+b3 [783 kB]
-Get:301 http://deb.debian.org/debian buster/main amd64 libdap-dev amd64 3.20.3-1 [870 kB]
-Get:302 http://deb.debian.org/debian buster/main amd64 libdrm-common all 2.4.97-1 [13.8 kB]
-Get:303 http://deb.debian.org/debian buster/main amd64 libdrm2 amd64 2.4.97-1 [39.7 kB]
-Get:304 http://deb.debian.org/debian buster/main amd64 libdrm-amdgpu1 amd64 2.4.97-1 [27.3 kB]
-Get:305 http://deb.debian.org/debian buster/main amd64 libdrm-intel1 amd64 2.4.97-1 [69.8 kB]
-Get:306 http://deb.debian.org/debian buster/main amd64 libdrm-radeon1 amd64 2.4.97-1 [31.1 kB]
-Get:307 http://deb.debian.org/debian buster/main amd64 libdrm-nouveau2 amd64 2.4.97-1 [26.3 kB]
-Get:308 http://deb.debian.org/debian buster/main amd64 libdrm-dev amd64 2.4.97-1 [131 kB]
-Get:309 http://deb.debian.org/debian buster/main amd64 libwayland-server0 amd64 1.16.0-1 [32.5 kB]
-Get:310 http://deb.debian.org/debian buster/main amd64 libgbm1 amd64 18.3.6-2 [67.7 kB]
-Get:311 http://deb.debian.org/debian buster/main amd64 libglapi-mesa amd64 18.3.6-2 [66.2 kB]
-Get:312 http://deb.debian.org/debian buster/main amd64 libwayland-client0 amd64 1.16.0-1 [26.4 kB]
-Get:313 http://deb.debian.org/debian buster/main amd64 libx11-xcb1 amd64 2:1.6.7-1 [190 kB]
-Get:314 http://deb.debian.org/debian buster/main amd64 libxcb-dri2-0 amd64 1.13.1-2 [101 kB]
-Get:315 http://deb.debian.org/debian buster/main amd64 libxcb-dri3-0 amd64 1.13.1-2 [100 kB]
-Get:316 http://deb.debian.org/debian buster/main amd64 libxcb-present0 amd64 1.13.1-2 [99.1 kB]
-Get:317 http://deb.debian.org/debian buster/main amd64 libxcb-sync1 amd64 1.13.1-2 [103 kB]
-Get:318 http://deb.debian.org/debian buster/main amd64 libxcb-xfixes0 amd64 1.13.1-2 [103 kB]
-Get:319 http://deb.debian.org/debian buster/main amd64 libxshmfence1 amd64 1.3-1 [8,820 B]
-Get:320 http://deb.debian.org/debian buster/main amd64 libegl-mesa0 amd64 18.3.6-2 [135 kB]
-Get:321 http://deb.debian.org/debian buster/main amd64 libepoxy0 amd64 1.5.3-0.1 [190 kB]
-Get:322 http://deb.debian.org/debian buster/main amd64 libpopt0 amd64 1.16-12 [49.4 kB]
-Get:323 http://deb.debian.org/debian buster/main amd64 libepsilon1 amd64 0.9.2+dfsg-4 [42.0 kB]
-Get:324 http://deb.debian.org/debian buster/main amd64 libepsilon-dev amd64 0.9.2+dfsg-4 [51.2 kB]
-Get:325 http://deb.debian.org/debian buster/main amd64 libevdev2 amd64 1.6.0+dfsg-1 [31.0 kB]
-Get:326 http://deb.debian.org/debian buster/main amd64 libfile-fcntllock-perl amd64 0.22-3+b5 [35.4 kB]
-Get:327 http://deb.debian.org/debian buster/main amd64 libfontenc1 amd64 1:1.1.3-1+b2 [24.4 kB]
-Get:328 http://deb.debian.org/debian buster/main amd64 libfreexl1 amd64 1.0.5-3 [34.1 kB]
-Get:329 http://deb.debian.org/debian buster/main amd64 libfreexl-dev amd64 1.0.5-3 [32.9 kB]
-Get:330 http://deb.debian.org/debian buster/main amd64 libfyba0 amd64 4.1.1-6 [114 kB]
-Get:331 http://deb.debian.org/debian buster/main amd64 libfyba-dev amd64 4.1.1-6 [169 kB]
-Get:332 http://deb.debian.org/debian buster/main amd64 libgeos-3.7.1 amd64 3.7.1-1 [735 kB]
-Get:333 http://deb.debian.org/debian buster/main amd64 libgeos-c1v5 amd64 3.7.1-1 [299 kB]
-Get:334 http://deb.debian.org/debian buster/main amd64 proj-data all 5.2.0-1 [6,986 kB]
-Get:335 http://deb.debian.org/debian buster/main amd64 libproj13 amd64 5.2.0-1 [225 kB]
-Get:336 http://deb.debian.org/debian buster/main amd64 libgeotiff2 amd64 1.4.3-1 [72.0 kB]
-Get:337 http://deb.debian.org/debian buster/main amd64 libgif7 amd64 5.1.4-3 [43.3 kB]
-Get:338 http://deb.debian.org/debian buster/main amd64 libhdf4-0-alt amd64 4.2.13-4 [277 kB]
-Get:339 http://deb.debian.org/debian buster/main amd64 libminizip1 amd64 1.1-8+b1 [20.4 kB]
-Get:340 http://deb.debian.org/debian buster/main amd64 liburiparser1 amd64 0.9.1-1 [47.8 kB]
-Get:341 http://deb.debian.org/debian buster/main amd64 libkmlbase1 amd64 1.3.0-7 [48.9 kB]
-Get:342 http://deb.debian.org/debian buster/main amd64 libkmldom1 amd64 1.3.0-7 [172 kB]
-Get:343 http://deb.debian.org/debian buster/main amd64 libkmlengine1 amd64 1.3.0-7 [78.4 kB]
-Get:344 http://deb.debian.org/debian buster/main amd64 libkmlconvenience1 amd64 1.3.0-7 [50.1 kB]
-Get:345 http://deb.debian.org/debian buster/main amd64 libkmlregionator1 amd64 1.3.0-7 [25.1 kB]
-Get:346 http://deb.debian.org/debian buster/main amd64 libkmlxsd1 amd64 1.3.0-7 [34.6 kB]
-Get:347 http://deb.debian.org/debian buster/main amd64 libnetcdf13 amd64 1:4.6.2-1 [403 kB]
-Get:348 http://deb.debian.org/debian buster/main amd64 libodbc1 amd64 2.3.6-0.1 [223 kB]
-Get:349 http://deb.debian.org/debian buster/main amd64 libogdi3.2 amd64 3.2.1+ds-4 [241 kB]
-Get:350 http://deb.debian.org/debian buster/main amd64 libopenjp2-7 amd64 2.3.0-2 [158 kB]
-Get:351 http://deb.debian.org/debian buster/main amd64 liblcms2-2 amd64 2.9-3 [145 kB]
-Get:352 http://deb.debian.org/debian buster/main amd64 libnspr4 amd64 2:4.20-1 [112 kB]
-Get:353 http://deb.debian.org/debian buster/main amd64 libpoppler82 amd64 0.71.0-5 [1,507 kB]
-Get:354 http://deb.debian.org/debian buster/main amd64 libpq5 amd64 11.5-1+deb10u1 [166 kB]
-Get:355 http://deb.debian.org/debian buster/main amd64 libqhull7 amd64 2015.2-4 [196 kB]
-Get:356 http://deb.debian.org/debian buster/main amd64 libspatialite7 amd64 4.3.0a-5+b2 [1,256 kB]
-Get:357 http://deb.debian.org/debian buster/main amd64 libxerces-c3.2 amd64 3.2.2+debian-1+b1 [886 kB]
-Get:358 http://deb.debian.org/debian buster/main amd64 odbcinst amd64 2.3.6-0.1 [48.4 kB]
-Get:359 http://deb.debian.org/debian buster/main amd64 odbcinst1debian2 amd64 2.3.6-0.1 [78.1 kB]
-Get:360 http://deb.debian.org/debian buster/main amd64 libgdal20 amd64 2.4.0+dfsg-1+b1 [6,171 kB]
-Get:361 http://deb.debian.org/debian buster/main amd64 libgeos-dev amd64 3.7.1-1 [320 kB]
-Get:362 http://deb.debian.org/debian buster/main amd64 libjbig-dev amd64 2.1-3.1+b2 [30.5 kB]
-Get:363 http://deb.debian.org/debian buster/main amd64 liblzma-dev amd64 5.2.4-1 [210 kB]
-Get:364 http://deb.debian.org/debian buster/main amd64 libgeotiff-dev amd64 1.4.3-1 [98.8 kB]
-Get:365 http://deb.debian.org/debian buster/main amd64 libgif-dev amd64 5.1.4-3 [46.3 kB]
-Get:366 http://deb.debian.org/debian buster/main amd64 libnetcdf-dev amd64 1:4.6.2-1 [82.7 kB]
-Get:367 http://deb.debian.org/debian buster/main amd64 libhdf4-alt-dev amd64 4.2.13-4 [377 kB]
-Get:368 http://deb.debian.org/debian buster/main amd64 libjson-c-dev amd64 0.12.1+ds-2 [38.8 kB]
-Get:369 http://deb.debian.org/debian buster/main amd64 libminizip-dev amd64 1.1-8+b1 [27.6 kB]
-Get:370 http://deb.debian.org/debian buster/main amd64 liburiparser-dev amd64 0.9.1-1 [21.3 kB]
-Get:371 http://deb.debian.org/debian buster/main amd64 libkml-dev amd64 1.3.0-7 [939 kB]
-Get:372 http://deb.debian.org/debian buster/main amd64 libproj-dev amd64 5.2.0-1 [279 kB]
-Get:373 http://deb.debian.org/debian buster/main amd64 libogdi3.2-dev amd64 3.2.1+ds-4 [38.2 kB]
-Get:374 http://deb.debian.org/debian buster/main amd64 libopenjp2-7-dev amd64 2.3.0-2 [44.2 kB]
-Get:375 http://deb.debian.org/debian buster/main amd64 libpoppler-dev amd64 0.71.0-5 [23.7 kB]
-Get:376 http://deb.debian.org/debian buster/main amd64 libpoppler-private-dev amd64 0.71.0-5 [187 kB]
-Get:377 http://deb.debian.org/debian buster/main amd64 libpq-dev amd64 11.5-1+deb10u1 [161 kB]
-Get:378 http://deb.debian.org/debian buster/main amd64 libqhull-r7 amd64 2015.2-4 [193 kB]
-Get:379 http://deb.debian.org/debian buster/main amd64 libqhull-dev amd64 2015.2-4 [401 kB]
-Get:380 http://deb.debian.org/debian buster/main amd64 libsqlite3-dev amd64 3.27.2-3 [787 kB]
-Get:381 http://deb.debian.org/debian buster/main amd64 libspatialite-dev amd64 4.3.0a-5+b2 [1,364 kB]
-Get:382 http://deb.debian.org/debian buster/main amd64 libwebpmux3 amd64 0.6.1-2 [97.7 kB]
-Get:383 http://deb.debian.org/debian buster/main amd64 libwebpdemux2 amd64 0.6.1-2 [87.5 kB]
-Get:384 http://deb.debian.org/debian buster/main amd64 libwebp-dev amd64 0.6.1-2 [345 kB]
-Get:385 http://deb.debian.org/debian buster/main amd64 libxerces-c-dev amd64 3.2.2+debian-1+b1 [1,695 kB]
-Get:386 http://deb.debian.org/debian buster/main amd64 libzstd-dev amd64 1.3.8+dfsg-3 [284 kB]
-Get:387 http://deb.debian.org/debian buster/main amd64 unixodbc-dev amd64 2.3.6-0.1 [261 kB]
-Get:388 http://deb.debian.org/debian buster/main amd64 libgdal-dev amd64 2.4.0+dfsg-1+b1 [8,042 kB]
-Get:389 http://deb.debian.org/debian buster/main amd64 mesa-common-dev amd64 18.3.6-2 [611 kB]
-Get:390 http://deb.debian.org/debian buster/main amd64 libglvnd0 amd64 1.1.0-1 [48.6 kB]
-Get:391 http://deb.debian.org/debian buster/main amd64 libglvnd-core-dev amd64 1.1.0-1 [13.2 kB]
-Get:392 http://deb.debian.org/debian buster/main amd64 libegl1 amd64 1.1.0-1 [33.6 kB]
-Get:393 http://deb.debian.org/debian buster/main amd64 libgles1 amd64 1.1.0-1 [13.8 kB]
-Get:394 http://deb.debian.org/debian buster/main amd64 libgles2 amd64 1.1.0-1 [19.0 kB]
-Get:395 http://deb.debian.org/debian buster/main amd64 libxcb-glx0 amd64 1.13.1-2 [116 kB]
-Get:396 http://deb.debian.org/debian buster/main amd64 libxfixes3 amd64 1:5.0.3-1 [21.9 kB]
-Get:397 http://deb.debian.org/debian buster/main amd64 libxdamage1 amd64 1:1.1.4-3+b3 [14.9 kB]
-Get:398 http://deb.debian.org/debian buster/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
-Get:399 http://deb.debian.org/debian buster/main amd64 libsensors-config all 1:3.5.0-3 [31.6 kB]
-Get:400 http://deb.debian.org/debian buster/main amd64 libsensors5 amd64 1:3.5.0-3 [52.6 kB]
-Get:401 http://deb.debian.org/debian buster/main amd64 libgl1-mesa-dri amd64 18.3.6-2 [6,680 kB]
-Get:402 http://deb.debian.org/debian buster/main amd64 libglx-mesa0 amd64 18.3.6-2 [180 kB]
-Get:403 http://deb.debian.org/debian buster/main amd64 libglx0 amd64 1.1.0-1 [30.0 kB]
-Get:404 http://deb.debian.org/debian buster/main amd64 libgl1 amd64 1.1.0-1 [91.1 kB]
-Get:405 http://deb.debian.org/debian buster/main amd64 libopengl0 amd64 1.1.0-1 [33.4 kB]
-Get:406 http://deb.debian.org/debian buster/main amd64 libglvnd-dev amd64 1.1.0-1 [5,128 B]
-Get:407 http://deb.debian.org/debian buster/main amd64 libx11-xcb-dev amd64 2:1.6.7-1 [192 kB]
-Get:408 http://deb.debian.org/debian buster/main amd64 libxcb-dri3-dev amd64 1.13.1-2 [101 kB]
-Get:409 http://deb.debian.org/debian buster/main amd64 libxcb-randr0 amd64 1.13.1-2 [110 kB]
-Get:410 http://deb.debian.org/debian buster/main amd64 libxcb-randr0-dev amd64 1.13.1-2 [114 kB]
-Get:411 http://deb.debian.org/debian buster/main amd64 libxcb-shape0 amd64 1.13.1-2 [99.5 kB]
-Get:412 http://deb.debian.org/debian buster/main amd64 libxcb-shape0-dev amd64 1.13.1-2 [101 kB]
-Get:413 http://deb.debian.org/debian buster/main amd64 libxcb-xfixes0-dev amd64 1.13.1-2 [105 kB]
-Get:414 http://deb.debian.org/debian buster/main amd64 libxcb-sync-dev amd64 1.13.1-2 [104 kB]
-Get:415 http://deb.debian.org/debian buster/main amd64 libxcb-present-dev amd64 1.13.1-2 [101 kB]
-Get:416 http://deb.debian.org/debian buster/main amd64 libxshmfence-dev amd64 1.3-1 [8,360 B]
-Get:417 http://deb.debian.org/debian buster/main amd64 libxcb-dri2-0-dev amd64 1.13.1-2 [102 kB]
-Get:418 http://deb.debian.org/debian buster/main amd64 libxcb-glx0-dev amd64 1.13.1-2 [122 kB]
-Get:419 http://deb.debian.org/debian buster/main amd64 x11proto-fixes-dev all 1:2018.4-4 [3,140 B]
-Get:420 http://deb.debian.org/debian buster/main amd64 libxfixes-dev amd64 1:5.0.3-1 [23.8 kB]
-Get:421 http://deb.debian.org/debian buster/main amd64 x11proto-damage-dev all 1:2018.4-4 [3,140 B]
-Get:422 http://deb.debian.org/debian buster/main amd64 libxdamage-dev amd64 1:1.1.4-3+b3 [14.6 kB]
-Get:423 http://deb.debian.org/debian buster/main amd64 x11proto-xf86vidmode-dev all 2018.4-4 [3,140 B]
-Get:424 http://deb.debian.org/debian buster/main amd64 libxxf86vm-dev amd64 1:1.1.4-1+b2 [25.4 kB]
-Get:425 http://deb.debian.org/debian buster/main amd64 libgl1-mesa-dev amd64 18.3.6-2 [47.9 kB]
-Get:426 http://deb.debian.org/debian buster/main amd64 libglu1-mesa amd64 9.0.0-2.1+b3 [169 kB]
-Get:427 http://deb.debian.org/debian buster/main amd64 libglu1-mesa-dev amd64 9.0.0-2.1+b3 [208 kB]
-Get:428 http://deb.debian.org/debian buster/main amd64 libgslcblas0 amd64 2.5+dfsg-6 [101 kB]
-Get:429 http://deb.debian.org/debian buster/main amd64 libgsl23 amd64 2.5+dfsg-6 [880 kB]
-Get:430 http://deb.debian.org/debian buster/main amd64 libgsl-dev amd64 2.5+dfsg-6 [1,063 kB]
-Get:431 http://deb.debian.org/debian buster/main amd64 libgudev-1.0-0 amd64 232-2 [13.6 kB]
-Get:432 http://deb.debian.org/debian buster/main amd64 libwacom-common all 0.32-1 [39.1 kB]
-Get:433 http://deb.debian.org/debian buster/main amd64 libwacom2 amd64 0.32-1 [18.8 kB]
-Get:434 http://deb.debian.org/debian buster/main amd64 libinput-bin amd64 1.12.6-2 [16.7 kB]
-Get:435 http://deb.debian.org/debian buster/main amd64 libmtdev1 amd64 1.1.5-1+b1 [22.3 kB]
-Get:436 http://deb.debian.org/debian buster/main amd64 libinput10 amd64 1.12.6-2 [107 kB]
-Get:437 http://deb.debian.org/debian buster/main amd64 libjs-jquery all 3.3.1~dfsg-3 [332 kB]
-Get:438 http://deb.debian.org/debian buster/main amd64 libjs-underscore all 1.9.1~dfsg-1 [99.4 kB]
-Get:439 http://deb.debian.org/debian buster/main amd64 libjs-sphinxdoc all 1.8.4-1 [95.9 kB]
-Get:440 http://deb.debian.org/debian buster/main amd64 liblua5.1-0 amd64 5.1.5-8.1+b2 [111 kB]
-Get:441 http://deb.debian.org/debian buster/main amd64 libuv1 amd64 1.24.1-1 [110 kB]
-Get:442 http://deb.debian.org/debian buster/main amd64 libuv1-dev amd64 1.24.1-1 [130 kB]
-Get:443 http://deb.debian.org/debian buster/main amd64 libnode64 amd64 10.15.2~dfsg-2 [5,521 kB]
-Get:444 http://deb.debian.org/debian buster/main amd64 libnode-dev amd64 10.15.2~dfsg-2 [391 kB]
-Get:445 http://deb.debian.org/debian buster/main amd64 libpng-tools amd64 1.6.36-6 [140 kB]
-Get:446 http://deb.debian.org/debian buster/main amd64 libpython-all-dev amd64 2.7.16-1 [1,064 B]
-Get:447 http://deb.debian.org/debian buster/main amd64 libtasn1-doc all 4.13-3 [317 kB]
-Get:448 http://deb.debian.org/debian buster/main amd64 libtool all 2.4.6-9 [547 kB]
-Get:449 http://deb.debian.org/debian buster/main amd64 libudunits2-data all 2.2.26-5 [25.8 kB]
-Get:450 http://deb.debian.org/debian buster/main amd64 libudunits2-0 amd64 2.2.26-5 [56.7 kB]
-Get:451 http://deb.debian.org/debian buster/main amd64 libudunits2-dev amd64 2.2.26-5 [370 kB]
-Get:452 http://deb.debian.org/debian buster/main amd64 libunwind8 amd64 1.2.1-9 [50.9 kB]
-Get:453 http://deb.debian.org/debian buster/main amd64 libutempter0 amd64 1.1.6-3 [7,812 B]
-Get:454 http://deb.debian.org/debian buster/main amd64 libwacom-bin amd64 0.32-1 [6,820 B]
-Get:455 http://deb.debian.org/debian buster/main amd64 libxatracker2 amd64 18.3.6-2 [1,211 kB]
-Get:456 http://deb.debian.org/debian buster/main amd64 libxt6 amd64 1:1.1.5-1+b3 [190 kB]
-Get:457 http://deb.debian.org/debian buster/main amd64 libxmu6 amd64 2:1.1.2-2+b3 [60.8 kB]
-Get:458 http://deb.debian.org/debian buster/main amd64 libxpm4 amd64 1:3.5.12-1 [49.1 kB]
-Get:459 http://deb.debian.org/debian buster/main amd64 libxaw7 amd64 2:1.0.13-1+b2 [201 kB]
-Get:460 http://deb.debian.org/debian buster/main amd64 libxcb-util0 amd64 0.3.8-3+b2 [23.0 kB]
-Get:461 http://deb.debian.org/debian buster/main amd64 libxcomposite1 amd64 1:0.4.4-2 [16.5 kB]
-Get:462 http://deb.debian.org/debian buster/main amd64 libxcursor1 amd64 1:1.1.15-2 [36.6 kB]
-Get:463 http://deb.debian.org/debian buster/main amd64 libxfont2 amd64 1:2.0.3-1 [135 kB]
-Get:464 http://deb.debian.org/debian buster/main amd64 libxi6 amd64 2:1.7.9-1 [82.6 kB]
-Get:465 http://deb.debian.org/debian buster/main amd64 libxinerama1 amd64 2:1.1.4-2 [17.7 kB]
-Get:466 http://deb.debian.org/debian buster/main amd64 libxkbfile1 amd64 1:1.0.9-2+b11 [76.0 kB]
-Get:467 http://deb.debian.org/debian buster/main amd64 libxmuu1 amd64 2:1.1.2-2+b3 [23.9 kB]
-Get:468 http://deb.debian.org/debian buster/main amd64 libxrandr2 amd64 2:1.5.1-1 [37.5 kB]
-Get:469 http://deb.debian.org/debian buster/main amd64 libxt-dev amd64 1:1.1.5-1+b3 [426 kB]
-Get:470 http://deb.debian.org/debian buster/main amd64 libxtst6 amd64 2:1.2.3-1 [27.8 kB]
-Get:471 http://deb.debian.org/debian buster/main amd64 libxv1 amd64 2:1.0.11-1 [24.6 kB]
-Get:472 http://deb.debian.org/debian buster/main amd64 libxvmc1 amd64 2:1.0.10-1 [25.1 kB]
-Get:473 http://deb.debian.org/debian buster/main amd64 libxxf86dga1 amd64 2:1.1.4-1+b3 [22.1 kB]
-Get:474 http://deb.debian.org/debian buster/main amd64 libyaml-0-2 amd64 0.2.1-1 [47.2 kB]
-Get:475 http://deb.debian.org/debian buster/main amd64 pandoc-data all 2.2.1-3 [329 kB]
-Get:476 http://deb.debian.org/debian buster/main amd64 pandoc amd64 2.2.1-3+b2 [14.7 MB]
-Get:477 http://deb.debian.org/debian buster/main amd64 proj-bin amd64 5.2.0-1 [105 kB]
-Get:478 http://deb.debian.org/debian buster/main amd64 python-all amd64 2.7.16-1 [1,044 B]
-Get:479 http://deb.debian.org/debian buster/main amd64 python-all-dev amd64 2.7.16-1 [1,068 B]
-Get:480 http://deb.debian.org/debian buster/main amd64 python-asn1crypto all 0.24.0-1 [78.1 kB]
-Get:481 http://deb.debian.org/debian buster/main amd64 python-cffi-backend amd64 1.12.2-1 [78.8 kB]
-Get:482 http://deb.debian.org/debian buster/main amd64 python-configparser all 3.5.0b2-1 [59.2 kB]
-Get:483 http://deb.debian.org/debian buster/main amd64 python-crypto amd64 2.6.1-9+b1 [259 kB]
-Get:484 http://deb.debian.org/debian buster/main amd64 python-enum34 all 1.1.6-2 [35.3 kB]
-Get:485 http://deb.debian.org/debian buster/main amd64 python-ipaddress all 1.0.17-1 [18.1 kB]
-Get:486 http://deb.debian.org/debian buster/main amd64 python-six all 1.12.0-1 [15.7 kB]
-Get:487 http://deb.debian.org/debian buster/main amd64 python-cryptography amd64 2.6.1-3+deb10u2 [218 kB]
-Get:488 http://deb.debian.org/debian buster/main amd64 python-dbus amd64 1.2.8-3 [103 kB]
-Get:489 http://deb.debian.org/debian buster/main amd64 python-entrypoints all 0.3-1 [5,444 B]
-Get:490 http://deb.debian.org/debian buster/main amd64 python-gi amd64 3.30.4-1 [227 kB]
-Get:491 http://deb.debian.org/debian buster/main amd64 python-secretstorage all 2.3.1-2 [13.8 kB]
-Get:492 http://deb.debian.org/debian buster/main amd64 python-keyring all 17.1.1-1 [47.1 kB]
-Get:493 http://deb.debian.org/debian buster/main amd64 python-keyrings.alt all 3.1.1-1 [18.3 kB]
-Get:494 http://deb.debian.org/debian buster/main amd64 python-pip-whl all 18.1-5 [1,591 kB]
-Get:495 http://deb.debian.org/debian buster/main amd64 python-pip all 18.1-5 [215 kB]
-Get:496 http://deb.debian.org/debian buster/main amd64 python-wheel all 0.32.3-2 [19.3 kB]
-Get:497 http://deb.debian.org/debian buster/main amd64 python-xdg all 0.25-5 [35.9 kB]
-Get:498 http://deb.debian.org/debian buster/main amd64 python3-asn1crypto all 0.24.0-1 [78.2 kB]
-Get:499 http://deb.debian.org/debian buster/main amd64 python3-cffi-backend amd64 1.12.2-1 [79.7 kB]
-Get:500 http://deb.debian.org/debian buster/main amd64 python3-crypto amd64 2.6.1-9+b1 [263 kB]
-Get:501 http://deb.debian.org/debian buster/main amd64 python3-six all 1.12.0-1 [15.7 kB]
-Get:502 http://deb.debian.org/debian buster/main amd64 python3-cryptography amd64 2.6.1-3+deb10u2 [219 kB]
-Get:503 http://deb.debian.org/debian buster/main amd64 python3-dbus amd64 1.2.8-3 [103 kB]
-Get:504 http://deb.debian.org/debian buster/main amd64 python3-entrypoints all 0.3-1 [5,508 B]
-Get:505 http://deb.debian.org/debian buster/main amd64 python3-gi amd64 3.30.4-1 [180 kB]
-Get:506 http://deb.debian.org/debian buster/main amd64 python3-secretstorage all 2.3.1-2 [14.2 kB]
-Get:507 http://deb.debian.org/debian buster/main amd64 python3-keyring all 17.1.1-1 [43.1 kB]
-Get:508 http://deb.debian.org/debian buster/main amd64 python3-keyrings.alt all 3.1.1-1 [18.2 kB]
-Get:509 http://deb.debian.org/debian buster/main amd64 python3-pip all 18.1-5 [171 kB]
-Get:510 http://deb.debian.org/debian buster/main amd64 python3-pkg-resources all 40.8.0-1 [153 kB]
-Get:511 http://deb.debian.org/debian buster/main amd64 python3-setuptools all 40.8.0-1 [306 kB]
-Get:512 http://deb.debian.org/debian buster/main amd64 python3-tk amd64 3.7.3-1 [97.4 kB]
-Get:513 http://deb.debian.org/debian buster/main amd64 python3-wheel all 0.32.3-2 [19.4 kB]
-Get:514 http://deb.debian.org/debian buster/main amd64 python3-xdg all 0.25-5 [35.9 kB]
-Get:515 http://deb.debian.org/debian buster/main amd64 x11-apps amd64 7.7+7 [660 kB]
-Get:516 http://deb.debian.org/debian buster/main amd64 x11-session-utils amd64 7.7+3 [71.9 kB]
-Get:517 http://deb.debian.org/debian buster/main amd64 x11-utils amd64 7.7+4 [202 kB]
-Get:518 http://deb.debian.org/debian buster/main amd64 x11-xkb-utils amd64 7.7+4 [164 kB]
-Get:519 http://deb.debian.org/debian buster/main amd64 x11-xserver-utils amd64 7.7+8 [168 kB]
-Get:520 http://deb.debian.org/debian buster/main amd64 xauth amd64 1:1.0.10-1 [40.3 kB]
-Get:521 http://deb.debian.org/debian buster/main amd64 xbitmaps all 1.1.1-2 [32.1 kB]
-Get:522 http://deb.debian.org/debian buster/main amd64 xfonts-encodings all 1:1.0.4-2 [574 kB]
-Get:523 http://deb.debian.org/debian buster/main amd64 xfonts-utils amd64 1:7.7+6 [93.0 kB]
-Get:524 http://deb.debian.org/debian buster/main amd64 xfonts-100dpi all 1:1.0.4+nmu1 [3,822 kB]
-Get:525 http://deb.debian.org/debian buster/main amd64 xfonts-75dpi all 1:1.0.4+nmu1 [3,367 kB]
-Get:526 http://deb.debian.org/debian buster/main amd64 xfonts-base all 1:1.0.5 [5,897 kB]
-Get:527 http://deb.debian.org/debian buster/main amd64 xfonts-scalable all 1:1.0.3-1.1 [304 kB]
-Get:528 http://deb.debian.org/debian buster/main amd64 xinit amd64 1.4.0-1 [50.2 kB]
-Get:529 http://deb.debian.org/debian buster/main amd64 xkb-data all 2.26-2 [681 kB]
-Get:530 http://deb.debian.org/debian buster/main amd64 xserver-common all 2:1.20.4-1 [2,235 kB]
-Get:531 http://deb.debian.org/debian buster/main amd64 xserver-xorg-core amd64 2:1.20.4-1 [3,541 kB]
-Get:532 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-amdgpu amd64 18.1.99+git20190207-1 [133 kB]
-Get:533 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-radeon amd64 1:19.0.1-1 [504 kB]
-Get:534 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-ati amd64 1:19.0.1-1 [363 kB]
-Get:535 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-fbdev amd64 1:0.5.0-1 [25.0 kB]
-Get:536 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-nouveau amd64 1:1.0.16-1 [329 kB]
-Get:537 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-vesa amd64 1:2.4.0-1 [31.9 kB]
-Get:538 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-vmware amd64 1:13.3.0-2 [116 kB]
-Get:539 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-all amd64 1:7.7+19 [38.0 kB]
-Get:540 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-qxl amd64 0.1.5-2+b1 [145 kB]
-Get:541 http://deb.debian.org/debian buster/main amd64 xserver-xorg-video-intel amd64 2:2.99.917+git20180925-2 [1,645 kB]
-Get:542 http://deb.debian.org/debian buster/main amd64 xserver-xorg-input-libinput amd64 0.28.2-2 [61.5 kB]
-Get:543 http://deb.debian.org/debian buster/main amd64 xserver-xorg-input-all amd64 1:7.7+19 [37.9 kB]
-Get:544 http://deb.debian.org/debian buster/main amd64 xserver-xorg-input-wacom amd64 0.34.99.1-1 [95.4 kB]
-Get:545 http://deb.debian.org/debian buster/main amd64 xserver-xorg amd64 1:7.7+19 [93.7 kB]
-Get:546 http://deb.debian.org/debian buster/main amd64 xorg-docs-core all 1:1.7.1-1.1 [84.0 kB]
-Get:547 http://deb.debian.org/debian buster/main amd64 xterm amd64 344-1 [771 kB]
-Get:548 http://deb.debian.org/debian buster/main amd64 xorg amd64 1:7.7+19 [38.4 kB]
-Get:549 http://deb.debian.org/debian buster/main amd64 xserver-xorg-legacy amd64 2:1.20.4-1 [2,240 kB]
-[91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 296 MB in 7s (44.6 MB/s)
-Selecting previously unselected package libargon2-1:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 20846 files and directories currently installed.)
-Preparing to unpack .../0-libargon2-1_0~20171227-0.2_amd64.deb ...
-Unpacking libargon2-1:amd64 (0~20171227-0.2) ...
-Selecting previously unselected package dmsetup.
-Preparing to unpack .../1-dmsetup_2%3a1.02.155-3_amd64.deb ...
-Unpacking dmsetup (2:1.02.155-3) ...
-Selecting previously unselected package libdevmapper1.02.1:amd64.
-Preparing to unpack .../2-libdevmapper1.02.1_2%3a1.02.155-3_amd64.deb ...
-Unpacking libdevmapper1.02.1:amd64 (2:1.02.155-3) ...
-Selecting previously unselected package libjson-c3:amd64.
-Preparing to unpack .../3-libjson-c3_0.12.1+ds-2_amd64.deb ...
-Unpacking libjson-c3:amd64 (0.12.1+ds-2) ...
-Selecting previously unselected package libcryptsetup12:amd64.
-Preparing to unpack .../4-libcryptsetup12_2%3a2.1.0-5+deb10u2_amd64.deb ...
-Unpacking libcryptsetup12:amd64 (2:2.1.0-5+deb10u2) ...
-Selecting previously unselected package libidn11:amd64.
-Preparing to unpack .../5-libidn11_1.33-2.2_amd64.deb ...
-Unpacking libidn11:amd64 (1.33-2.2) ...
-Selecting previously unselected package libip4tc0:amd64.
-Preparing to unpack .../6-libip4tc0_1.8.2-4_amd64.deb ...
-Unpacking libip4tc0:amd64 (1.8.2-4) ...
-Selecting previously unselected package libkmod2:amd64.
-Preparing to unpack .../7-libkmod2_26-1_amd64.deb ...
-Unpacking libkmod2:amd64 (26-1) ...
-Selecting previously unselected package systemd.
-Preparing to unpack .../8-systemd_241-7~deb10u2_amd64.deb ...
-Unpacking systemd (241-7~deb10u2) ...
+Step 2/20 : ENV DEBIAN_FRONTEND noninteractive
+ ---> Using cache
+ ---> fcca83c1d535
+Step 3/20 : ENV LANG en_US.UTF-8
+ ---> Using cache
+ ---> 060d574fba8f
+Step 4/20 : ENV LANGUAGE en_US:en
+ ---> Using cache
+ ---> 9ad65634f458
+Step 5/20 : ENV LC_ALL en_US.UTF-8
+ ---> Using cache
+ ---> dfa5ff783ede
+Step 6/20 : RUN apt-get --quiet update --yes  && apt-get --quiet upgrade --yes  && apt-get --quiet install --yes     python-dev     python-pip     python3-dev     python3-pip     python3-tk     pandoc     libcurl4-openssl-dev     libssl-dev     libcairo2-dev     libxt-dev     libxml2-dev     libudunits2-dev     libhdf5-dev     libv8-dev     libgdal-dev     xorg     libx11-dev     libglu1-mesa-dev     libboost-all-dev     libgsl-dev     libbz2-dev     less     libmagick++-dev  && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> b24e77a0c865
+Step 7/20 : RUN cd /  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3
+ ---> Using cache
+ ---> 79ab444fbb97
+Step 8/20 : ENV PATH "$PATH:/miniconda3/bin"
+ ---> Using cache
+ ---> 04015c681bbb
+Step 9/20 : RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1  && update-alternatives --install /usr/bin/python3 python3 /miniconda3/bin/python3.7 2  && python --version  && python3 --version  && rm /usr/bin/lsb_release
+ ---> Using cache
+ ---> af8041db81a7
+Step 10/20 : RUN conda install --quiet --yes -c bioconda    bedtools    deeptools    samtools
+ ---> Using cache
+ ---> b949efa152c8
+Step 11/20 : RUN python3 -m pip install    click    Cython    dca    fa2    "gast==0.2.2"    h5py    leidenalg    louvain    numba    numpy    "networkx==2.2"    numpydoc    "matplotlib>=3.0,<3.1"    pandas    phate    pysam    python-igraph    scanpy    scikit-learn    scipy    snaptools    tensorflow    umap-learn    jupyter
+ ---> Using cache
+ ---> 718a9954f9ff
+Step 12/20 : RUN python3 -m pip install    velocyto    scvelo
+ ---> Using cache
+ ---> fca1cd5a8f9d
+Step 13/20 : RUN mkdir /Rscripts
+ ---> Using cache
+ ---> b4360fba529b
+Step 14/20 : COPY *.R /Rscripts/
+ ---> Using cache
+ ---> 27fb0587d840
+Step 15/20 : RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
+ ---> Using cache
+ ---> 9f4c04a43660
+Step 16/20 : RUN Rscript /Rscripts/packages_utility.R
+ ---> Using cache
+ ---> 4038320f748c
+Step 17/20 : RUN Rscript /Rscripts/packages_plotting.R
+ ---> Using cache
+ ---> 47c67e7812d1
+Step 18/20 : RUN Rscript /Rscripts/packages_compbio.R
+ ---> Using cache
+ ---> 1bec89512d83
+Step 19/20 : RUN Rscript /Rscripts/packages_single_cell.R
+ ---> Running in 359ce456a4cd
+[91m[2020-02-04 12:33:29] 'batchelor' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'batchelor'
+[0m[91malso installing the dependencies ‘RcppHNSW’, ‘rsvd’, ‘SingleCellExperiment’, ‘BiocNeighbors’, ‘BiocSingular’, ‘scater’, ‘beachmat’
+
+[0m[91m[2020-02-04 12:39:35] 'batchelor' successfully installed.
+[0m[91m[2020-02-04 12:39:36] 'BUStools/BUSpaRse' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'BUStools/BUSpaRse'
+[0m[91mInstalling 2 packages: plyranges, zeallot
+[0m[91m[2020-02-04 12:41:04] 'BUStools/BUSpaRse' successfully installed.
+[0m[91m[2020-02-04 12:41:04] 'destiny' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'destiny'
+[0m[91malso installing the dependencies ‘zip’, ‘MatrixModels’, ‘openxlsx’, ‘minqa’, ‘nloptr’, ‘carData’, ‘abind’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘rio’, ‘lme4’, ‘lmtest’, ‘xts’, ‘zoo’, ‘car’, ‘vcd’, ‘laeken’, ‘ranger’, ‘TTR’, ‘pcaMethods’, ‘ggplot.multistats’, ‘ggthemes’, ‘VIM’, ‘knn.covertree’, ‘proxy’, ‘smoother’, ‘scatterplot3d’
+
+[0m[91m[2020-02-04 12:48:04] 'destiny' successfully installed.
+[0m[91m[2020-02-04 12:48:04] 'cellranger' already installed.
+[0m[91m[2020-02-04 12:48:04] 'zhouzilu/DENDRO' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'zhouzilu/DENDRO'
+[0m[91mInstalling 7 packages: TailRank, phangorn, svMisc, phyclust, oompaBase, oompaData, quadprog
+[0m[91m[2020-02-04 12:49:20] 'zhouzilu/DENDRO' successfully installed.
+[0m[91m[2020-02-04 12:49:20] 'diffusionMap' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'diffusionMap'
+[0m[91m[2020-02-04 12:49:26] 'diffusionMap' successfully installed.
+[0m[91m[2020-02-04 12:49:26] 'DropletUtils' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'DropletUtils'
+[0m[91m[2020-02-04 12:50:34] 'DropletUtils' successfully installed.
+[0m[91m[2020-02-04 12:50:34] 'cole-trapnell-lab/garnett' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'cole-trapnell-lab/garnett'
+[0m[91mInstalling 11 packages: monocle, glmnet, RANN, rly, VGAM, DDRTree, HSMMSingleCell, qlcMatrix, slam, biocViews, sparsesvd
+[0m[91m[2020-02-04 12:53:41] 'cole-trapnell-lab/garnett' successfully installed.
+[0m[91m[2020-02-04 12:53:42] 'theislab/kBET' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'theislab/kBET'
+[0m[91m[2020-02-04 12:53:50] 'theislab/kBET' successfully installed.
+[0m[91m[2020-02-04 12:53:50] 'MetaNeighbor' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'MetaNeighbor'
+[0m[91malso installing the dependency ‘beanplot’
+
+[0m[91m[2020-02-04 12:54:09] 'MetaNeighbor' successfully installed.
+[0m[91m[2020-02-04 12:54:09] 'monocle' already installed.
+[0m[91m[2020-02-04 12:54:10] 'muscat' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'muscat'
+[0m[91malso installing the dependencies ‘TMB’, ‘numDeriv’, ‘colorRamps’, ‘blme’, ‘glmmTMB’, ‘lmerTest’, ‘sctransform’, ‘variancePartition’
+
+[0m[91m[2020-02-04 12:57:56] 'muscat' successfully installed.
+[0m[91m[2020-02-04 12:57:57] 'phateR' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'phateR'
+[0m[91m[2020-02-04 12:58:05] 'phateR' successfully installed.
+[0m[91m[2020-02-04 12:58:05] 'Seurat' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'Seurat'
+[0m[91malso installing the dependencies ‘TH.data’, ‘sandwich’, ‘lsei’, ‘bibtex’, ‘gbRd’, ‘sn’, ‘multtest’, ‘multcomp’, ‘npsurv’, ‘Rdpack’, ‘TFisher’, ‘mutoss’, ‘fitdistrplus’, ‘ica’, ‘leiden’, ‘metap’, ‘pbapply’, ‘ROCR’
+
+[0m[91m[2020-02-04 13:00:35] 'Seurat' successfully installed.
+[0m[91m[2020-02-04 13:00:36] 'SC3' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'SC3'
+[0m[91malso installing the dependencies ‘rngtools’, ‘doRNG’, ‘WriteXLS’
+
+[0m[91m[2020-02-04 13:01:20] 'SC3' successfully installed.
+[0m[91m[2020-02-04 13:01:20] 'scater' already installed.
+[0m[91m[2020-02-04 13:01:21] 'scde' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'scde'
+[0m[91malso installing the dependencies ‘modeltools’, ‘Lmoments’, ‘distillery’, ‘flexmix’, ‘Rook’, ‘Cairo’, ‘RMTstat’, ‘extRemes’
+
+[0m[91m[2020-02-04 13:03:06] 'scde' successfully installed.
+[0m[91m[2020-02-04 13:03:07] 'scDblFinder' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'scDblFinder'
+[0m[91malso installing the dependencies ‘statmod’, ‘scran’, ‘randomForest’
+
+[0m[91m[2020-02-04 13:06:20] 'scDblFinder' successfully installed.
+[0m[91m[2020-02-04 13:06:20] 'ggjlab/scMCA' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'ggjlab/scMCA'
+[0m[91m[2020-02-04 13:06:46] 'ggjlab/scMCA' successfully installed.
+[0m[91m[2020-02-04 13:06:46] 'scMerge' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'scMerge'
+[0m[91malso installing the dependencies ‘bdsmatrix’, ‘startupmsg’, ‘sfsmisc’, ‘bbmle’, ‘reldist’, ‘distr’, ‘M3Drop’, ‘pdist’, ‘ruv’
+
+[0m[91m[2020-02-04 13:08:40] 'scMerge' successfully installed.
+[0m[91m[2020-02-04 13:08:40] 'scran' already installed.
+[0m[91m[2020-02-04 13:08:41] 'sctransform' already installed.
+[0m[91m[2020-02-04 13:08:41] 'SingleR' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'SingleR'
+[0m[91malso installing the dependencies ‘interactiveDisplayBase’, ‘AnnotationHub’, ‘ExperimentHub’
+
+[0m[91m[2020-02-04 13:09:49] 'SingleR' successfully installed.
+[0m[91m[2020-02-04 13:09:49] 'slingshot' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'slingshot'
+[0m[91malso installing the dependency ‘princurve’
+
+[0m[91m[2020-02-04 13:10:18] 'slingshot' successfully installed.
+[0m[91m[2020-02-04 13:10:18] 'splatter' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'splatter'
+[0m[91malso installing the dependency ‘akima’
+
+[0m[91m[2020-02-04 13:10:51] 'splatter' successfully installed.
+[0m[91m[2020-02-04 13:10:51] 'velocyto-team/velocyto.R' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'velocyto-team/velocyto.R'
+[0m[91m[2020-02-04 13:11:27] 'velocyto-team/velocyto.R' successfully installed.
+[0m[91m[2020-02-04 13:11:27] 'YosefLab/VISION' will be installed.
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'YosefLab/VISION'
+[0m[91mInstalling 8 packages: loe, logging, pbmcapply, plumber, vegan, wordspace, permute, iotools
+[0m[91m[2020-02-04 13:13:14] 'YosefLab/VISION' successfully installed.
+[0m[91mInstalling 8 packages: mixtools, lars, fpc, dtw, doSNOW, segmented, prabclus, diptest
+[0mRemoving intermediate container 359ce456a4cd
+ ---> 09a029f6c07f
+Step 20/20 : RUN Rscript /Rscripts/packages_single_cell_experimental.R
+ ---> Running in 3f8442ebcfe8
+[91mDownloading package from url: https://cran.r-project.org/src/contrib/Archive/Matrix.utils/Matrix.utils_0.9.7.tar.gz
+[0mgrr (NA -> 0.9.5) [CRAN]
+[91mInstalling 1 packages: grr
+[0m[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/grr_0.9.5.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 8285 bytes
+==================================================[0m[91m
+downloaded 8285 bytes
+
+[0m[91m* installing *source* package ‘grr’ ...
+[0m[91m** package ‘grr’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mg++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c grr.cpp -o grr.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o grr.so grr.o -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-grr/00new/grr/libs
+[0m[91m** R
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (grr)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpjIeK4n/downloaded_packages’
+[0m     checking for file ‘/tmp/RtmpjIeK4n/remotes64cdbd14e/Matrix.utils/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpjIeK4n/remotes64cdbd14e/Matrix.utils/DESCRIPTION’
+  ─  preparing ‘Matrix.utils’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘Matrix.utils_0.9.7.tar.gz’
+     
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91m* installing *source* package ‘Matrix.utils’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (Matrix.utils)
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'cole-trapnell-lab/monocle3'
+[0m[91mInstalling 11 packages: pscl, rsample, RhpcBLASctl, spdep, speedglm, spData, deldir, LearnBayes, coda, expm, gmodels
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+Installing package(s) 'plot3D'
+[0m[91malso installing the dependency ‘misc3d’
+
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'r3fang/SnapATAC'
+[0m[91mInstalling 3 packages: raster, bigmemory, bigmemory.sri
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'aertslab/cisTopic'
+[0m[91mInstalling 7 packages: lda, text2vec, AUCell, RcisTarget, feather, mlapi, sparsepp
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'satijalab/seurat-wrappers'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'romanhaa/cerebroApp'
+[0m[91mInstalling 6 packages: formattable, ggtree, GSVA, shinyWidgets, tidytree, treeio
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'metacell'
+[0m[91malso installing the dependencies ‘doMC’, ‘RSvgDevice’, ‘dbscan’, ‘entropy’, ‘tgconfig’, ‘tgutil’, ‘tgstat’
+
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'itertools'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'mojaveazure/loomR'
+[0mCreating virtual environment '~/.virtualenvs/r-reticulate' ...
+Using python: /miniconda3/bin/python3.7
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl (1.4MB)
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/8c/23/848298cccf8e40f5bbb59009b32848a4c38f4e7f3364297ab3c3e2e2cd14/wheel-0.34.2-py2.py3-none-any.whl
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/a7/c5/6c1acea1b4ea88b86b03280f3fde1efa04fefecd4e7d2af13e602661cde4/setuptools-45.1.0-py3-none-any.whl (583kB)
+[91mtensorflow 2.1.0 has requirement scipy==1.4.1; python_version >= "3", but you'll have scipy 1.3.2 which is incompatible.
+deeptools 3.3.2 has requirement matplotlib>=3.1.0, but you'll have matplotlib 3.0.3 which is incompatible.
+[0mInstalling collected packages: pip, wheel, setuptools
+  Found existing installation: pip 19.0.3
+    Uninstalling pip-19.0.3:
+      Successfully uninstalled pip-19.0.3
+  Found existing installation: wheel 0.33.6
+    Not uninstalling wheel at /miniconda3/lib/python3.7/site-packages, outside environment /root/.virtualenvs/r-reticulate
+    Can't uninstall 'wheel'. No files were found to uninstall.
+  Found existing installation: setuptools 40.8.0
+    Uninstalling setuptools-40.8.0:
+      Successfully uninstalled setuptools-40.8.0
+Successfully installed pip-20.0.2 setuptools-45.1.0 wheel-0.34.2
+Using virtual environment '~/.virtualenvs/r-reticulate' ...
+Collecting tensorflow==2.0.0
+  Downloading tensorflow-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl (86.3 MB)
+Collecting tensorflow-probability
+  Downloading tensorflow_probability-0.9.0-py2.py3-none-any.whl (3.2 MB)
+Requirement already satisfied, skipping upgrade: wrapt>=1.11.1 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.11.2)
+Requirement already satisfied, skipping upgrade: keras-preprocessing>=1.0.5 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.1.0)
+Requirement already satisfied, skipping upgrade: protobuf>=3.6.1 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (3.11.2)
+Requirement already satisfied, skipping upgrade: wheel>=0.26 in /root/.virtualenvs/r-reticulate/lib/python3.7/site-packages (from tensorflow==2.0.0) (0.34.2)
+Requirement already satisfied, skipping upgrade: grpcio>=1.8.6 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.26.0)
+Requirement already satisfied, skipping upgrade: gast==0.2.2 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (0.2.2)
+Requirement already satisfied, skipping upgrade: google-pasta>=0.1.6 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (0.1.8)
+Collecting tensorflow-estimator<2.1.0,>=2.0.0
+  Downloading tensorflow_estimator-2.0.1-py2.py3-none-any.whl (449 kB)
+Requirement already satisfied, skipping upgrade: six>=1.10.0 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.12.0)
+Requirement already satisfied, skipping upgrade: opt-einsum>=2.3.2 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (3.1.0)
+Requirement already satisfied, skipping upgrade: astor>=0.6.0 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (0.8.1)
+Requirement already satisfied, skipping upgrade: numpy<2.0,>=1.16.0 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.18.1)
+Requirement already satisfied, skipping upgrade: keras-applications>=1.0.8 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.0.8)
+Requirement already satisfied, skipping upgrade: absl-py>=0.7.0 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (0.9.0)
+Requirement already satisfied, skipping upgrade: termcolor>=1.1.0 in /miniconda3/lib/python3.7/site-packages (from tensorflow==2.0.0) (1.1.0)
+Collecting tensorboard<2.1.0,>=2.0.0
+  Downloading tensorboard-2.0.2-py3-none-any.whl (3.8 MB)
+Requirement already satisfied, skipping upgrade: decorator in /miniconda3/lib/python3.7/site-packages (from tensorflow-probability) (4.4.1)
+Requirement already satisfied, skipping upgrade: cloudpickle>=1.2.2 in /miniconda3/lib/python3.7/site-packages (from tensorflow-probability) (1.2.2)
+Requirement already satisfied, skipping upgrade: setuptools in /root/.virtualenvs/r-reticulate/lib/python3.7/site-packages (from protobuf>=3.6.1->tensorflow==2.0.0) (45.1.0)
+Requirement already satisfied, skipping upgrade: h5py in /miniconda3/lib/python3.7/site-packages (from keras-applications>=1.0.8->tensorflow==2.0.0) (2.10.0)
+Requirement already satisfied, skipping upgrade: requests<3,>=2.21.0 in /miniconda3/lib/python3.7/site-packages (from tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (2.22.0)
+Requirement already satisfied, skipping upgrade: google-auth-oauthlib<0.5,>=0.4.1 in /miniconda3/lib/python3.7/site-packages (from tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (0.4.1)
+Requirement already satisfied, skipping upgrade: werkzeug>=0.11.15 in /miniconda3/lib/python3.7/site-packages (from tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (0.16.1)
+Requirement already satisfied, skipping upgrade: markdown>=2.6.8 in /miniconda3/lib/python3.7/site-packages (from tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (3.1.1)
+Requirement already satisfied, skipping upgrade: google-auth<2,>=1.6.3 in /miniconda3/lib/python3.7/site-packages (from tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (1.11.0)
+Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in /miniconda3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (3.0.4)
+Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /miniconda3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (1.24.2)
+Requirement already satisfied, skipping upgrade: idna<2.9,>=2.5 in /miniconda3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (2.8)
+Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in /miniconda3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (2019.11.28)
+Requirement already satisfied, skipping upgrade: requests-oauthlib>=0.7.0 in /miniconda3/lib/python3.7/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (1.3.0)
+Requirement already satisfied, skipping upgrade: cachetools<5.0,>=2.0.0 in /miniconda3/lib/python3.7/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (4.0.0)
+Requirement already satisfied, skipping upgrade: pyasn1-modules>=0.2.1 in /miniconda3/lib/python3.7/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (0.2.8)
+Requirement already satisfied, skipping upgrade: rsa<4.1,>=3.1.4 in /miniconda3/lib/python3.7/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (4.0)
+Requirement already satisfied, skipping upgrade: oauthlib>=3.0.0 in /miniconda3/lib/python3.7/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (3.1.0)
+Requirement already satisfied, skipping upgrade: pyasn1<0.5.0,>=0.4.6 in /miniconda3/lib/python3.7/site-packages (from pyasn1-modules>=0.2.1->google-auth<2,>=1.6.3->tensorboard<2.1.0,>=2.0.0->tensorflow==2.0.0) (0.4.8)
+Installing collected packages: tensorflow-estimator, tensorboard, tensorflow, tensorflow-probability
+  Attempting uninstall: tensorflow-estimator
+    Found existing installation: tensorflow-estimator 2.1.0
+    Not uninstalling tensorflow-estimator at /miniconda3/lib/python3.7/site-packages, outside environment /root/.virtualenvs/r-reticulate
+    Can't uninstall 'tensorflow-estimator'. No files were found to uninstall.
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.1.0
+    Not uninstalling tensorboard at /miniconda3/lib/python3.7/site-packages, outside environment /root/.virtualenvs/r-reticulate
+    Can't uninstall 'tensorboard'. No files were found to uninstall.
+  Attempting uninstall: tensorflow
+    Found existing installation: tensorflow 2.1.0
+    Not uninstalling tensorflow at /miniconda3/lib/python3.7/site-packages, outside environment /root/.virtualenvs/r-reticulate
+    Can't uninstall 'tensorflow'. No files were found to uninstall.
+Successfully installed tensorboard-2.0.2 tensorflow-2.0.0 tensorflow-estimator-2.0.1 tensorflow-probability-0.9.0
+
+Installation complete.
+
+[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'Irrationone/cellassign'
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling package(s) 'Gviz'
+[0m[91mDownloading GitHub repo cole-trapnell-lab/cicero-release@monocle3
+[0mglasso (NA -> 1.11) [CRAN]
+[91mSkipping 27 packages ahead of CRAN: Gviz, Biobase, BiocGenerics, GenomicRanges, IRanges, S4Vectors, XVector, rtracklayer, biomaRt, AnnotationDbi, GenomicFeatures, BSgenome, Biostrings, biovizBase, Rsamtools, GenomicAlignments, GenomeInfoDb, GenomeInfoDbData, zlibbioc, SummarizedExperiment, BiocParallel, Rhtslib, DelayedArray, VariantAnnotation, ensembldb, AnnotationFilter, ProtGenerics
+[0m[91mInstalling 1 packages: glasso
+[0m[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/glasso_1.11.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 8662 bytes
+==================================================
+downloaded 8662 bytes
+
+[0m[91m* installing *source* package ‘glasso’ ...
+[0m[91m** package ‘glasso’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** libs
+[0mgfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c glasso.f -o glasso.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glasso_init.c -o glasso_init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o glasso.so glasso.o glasso_init.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+[91minstalling to /usr/local/lib/R/site-library/00LOCK-glasso/00new/glasso/libs
+[0m[91m** R
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (glasso)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpjIeK4n/downloaded_packages’
+[0m     checking for file ‘/tmp/RtmpjIeK4n/remotes63a3fcf94/cole-trapnell-lab-cicero-release-03664d2/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpjIeK4n/remotes63a3fcf94/cole-trapnell-lab-cicero-release-03664d2/DESCRIPTION’
+  ─  preparing ‘cicero’:
+       checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  looking to see if a ‘data/datalist’ file should be added
+  ─  building ‘cicero_1.3.4.5.tar.gz’
+     
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91m* installing *source* package ‘cicero’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (cicero)
+[0m[91mBioconductor version 3.10 (BiocManager 1.30.10), R 3.6.2 (2019-12-12)
+[0m[91mInstalling github package(s) 'timoast/signac'
+[0m[91mDownloading GitHub repo timoast/signac@master
+[0mggseqlogo (NA -> 0.1  ) [CRAN]
+gggenes   (NA -> 0.4.0) [CRAN]
+ggfittext (NA -> 0.8.1) [CRAN]
+shades    (NA -> 1.4.0) [CRAN]
+[91mInstalling 4 packages: ggseqlogo, gggenes, ggfittext, shades
+[0m[91mInstalling packages into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/ggseqlogo_0.1.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 738907 bytes (721 KB)
+=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m====[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=
+downloaded 721 KB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/gggenes_0.4.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 1238831 bytes (1.2 MB)
+======[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m==[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=[0m[91m=
+downloaded 1.2 MB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/ggfittext_0.8.1.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 444700 bytes (434 KB)
+=[0m[91m=[0m[91m==[0m[91m===[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m==[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m=[0m[91m==[0m[91m==[0m[91m=[0m[91m=====
+downloaded 434 KB
+
+[0m[91mtrying URL 'https://cran.rstudio.com/src/contrib/shades_1.4.0.tar.gz'
+[0m[91mContent type 'application/x-gzip' length 46637 bytes (45 KB)
+=================[0m[91m==================[0m[91m===============[0m[91m
+[0m[91mdownloaded 45 KB
+
+[0m[91m* installing *source* package ‘ggseqlogo’ ...
+[0m[91m** package ‘ggseqlogo’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (ggseqlogo)
+[0m[91m* installing *source* package ‘shades’ ...
+[0m[91m** package ‘shades’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (shades)
+[0m[91m* installing *source* package ‘ggfittext’ ...
+[0m[91m** package ‘ggfittext’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m*** moving datasets to lazyload DB
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m*** copying figures
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (ggfittext)
+[0m[91m* installing *source* package ‘gggenes’ ...
+[0m[91m** package ‘gggenes’ successfully unpacked and MD5 sums checked
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m*** moving datasets to lazyload DB
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m*** copying figures
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (gggenes)
+[0m[91m
+The downloaded source packages are in
+	‘/tmp/RtmpjIeK4n/downloaded_packages’
+[0m     checking for file ‘/tmp/RtmpjIeK4n/remotes662b68c00/timoast-signac-9f9385a/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpjIeK4n/remotes662b68c00/timoast-signac-9f9385a/DESCRIPTION’
+  ─  preparing ‘Signac’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+─  looking to see if a ‘data/datalist’ file should be added
+  ─  building ‘Signac_0.2.1.tar.gz’
+     
+[91m* installing *source* package ‘Signac’ ...
+[0m[91m** using staged installation
+[0m[91m** R
+[0m[91m** data
+[0m[91m*** moving datasets to lazyload DB
+[0m[91m** inst
+[0m[91m** byte-compile and prepare package for lazy loading
+[0m[91m** help
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (Signac)
+[0m[91mOld packages: 'cicero'
+[0mRemoving intermediate container 3f8442ebcfe8
+ ---> 7e1234c6e5b5
+Successfully built 7e1234c6e5b5
+Successfully tagged romanhaa/rstudio:2020-02-03_3.6.2

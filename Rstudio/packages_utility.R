@@ -1,6 +1,4 @@
-setwd('/docker/docker_containers-master/Rstudio/')
-
-source('install_packages_function.R')
+source('/Rscripts/install_packages_function.R')
 
 # utility packages
 packages_to_install <- c(
@@ -12,7 +10,7 @@ packages_to_install <- c(
   'corrr',
   'dendextend',
   'densityClust',
-  'disk.frame',
+  'xiaodaigh/disk.frame',
   'DT',
   'fastcluster',
   'FlowSOM',

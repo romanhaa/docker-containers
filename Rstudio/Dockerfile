@@ -46,6 +46,7 @@ RUN apt-get --quiet update --yes \
     libgsl-dev \
     libbz2-dev \
     less \
+    libmagick++-dev \
  && rm -rf /var/lib/apt/lists/*
 
 ##----------------------------------------------------------------------------##
@@ -127,20 +128,17 @@ RUN python3 -m pip install \
 ##----------------------------------------------------------------------------##
 ## download GitHub repo
 ##----------------------------------------------------------------------------##
-ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
-RUN tar -xvzf /docker/master.tar.gz -C /docker
+# ADD https://github.com/romanhaa/docker_containers/archive/master.tar.gz /docker/
+# RUN tar -xvzf /docker/master.tar.gz -C /docker
 
 ##----------------------------------------------------------------------------##
 ## install R packages
 ##----------------------------------------------------------------------------##
+RUN mkdir /Rscripts
+COPY *.R /Rscripts/
 RUN Rscript -e 'install.packages("BiocManager", repos = "http://cran.us.r-project.org")'
-RUN Rscript /docker/docker_containers-master/Rstudio/packages_utility.R
-RUN Rscript /docker/docker_containers-master/Rstudio/packages_plotting.R
-RUN Rscript /docker/docker_containers-master/Rstudio/packages_compbio.R
-RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell.R
-RUN Rscript /docker/docker_containers-master/Rstudio/packages_single_cell_experimental.R
-
-##----------------------------------------------------------------------------##
-## remove files from repository
-##----------------------------------------------------------------------------##
-RUN rm -rf /docker
+RUN Rscript /Rscripts/packages_utility.R
+RUN Rscript /Rscripts/packages_plotting.R
+RUN Rscript /Rscripts/packages_compbio.R
+RUN Rscript /Rscripts/packages_single_cell.R
+RUN Rscript /Rscripts/packages_single_cell_experimental.R

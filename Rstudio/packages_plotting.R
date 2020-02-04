@@ -1,6 +1,4 @@
-setwd('/docker/docker_containers-master/Rstudio/')
-
-source('install_packages_function.R')
+source('/Rscripts/install_packages_function.R')
 
 # packages for plotting
 packages_to_install <- c(

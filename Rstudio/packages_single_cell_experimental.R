@@ -1,4 +1,6 @@
-setwd('/docker/docker_containers-master/Rstudio/')
+# Monocle 3
+devtools::install_url('https://cran.r-project.org/src/contrib/Archive/Matrix.utils/Matrix.utils_0.9.7.tar.gz')
+BiocManager::install('cole-trapnell-lab/monocle3', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # SnapATAC
 BiocManager::install('plot3D', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
