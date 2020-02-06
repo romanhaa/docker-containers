@@ -12,4 +12,4 @@ RUN mkdir /tools && \
   tar -xzf 2.7.3a.tar.gz && \
   cd STAR-2.7.3a/source && \
   make STAR
-ENV PATH="/tools/STAR-2.7.3a/source:${PATH}"
+ENV PATH "/tools/STAR-2.7.3a/source:${PATH}"
