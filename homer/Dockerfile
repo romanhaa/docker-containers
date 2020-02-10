@@ -46,4 +46,5 @@ ENV PATH "$PATH:/homer/bin/"
 ##----------------------------------------------------------------------------##
 ## install hg38 and mm10 reference data
 ##----------------------------------------------------------------------------##
-RUN perl /homer/configureHomer.pl -install mm10 hg38
+RUN perl /homer/configureHomer.pl -install mm10
+RUN perl /homer/configureHomer.pl -install hg38
