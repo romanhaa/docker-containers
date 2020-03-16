@@ -8,6 +8,7 @@ packages_to_install <- c(
   'ComplexHeatmap',
   'cowplot',
   'vankesteren/firatheme',
+  'chrisamiller/fishplot',
   'ggalluvial',
   'gganimate',
   'ggbeeswarm',
@@ -28,6 +29,7 @@ packages_to_install <- c(
   'pheatmap',
   'plotly',
   'RColorBrewer',
+  'UpSetR',
   'VennDiagram',
   'viridis',
   'wesanderson'

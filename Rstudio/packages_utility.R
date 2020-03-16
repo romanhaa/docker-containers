@@ -44,6 +44,7 @@ packages_to_install <- c(
   'krlmlr/ulimit',
   'umap',
   'uwot',
+  'workflowr',
   'XML',
   'xml2'
 )
