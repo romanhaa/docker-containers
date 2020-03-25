@@ -6,6 +6,12 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 ##----------------------------------------------------------------------------##
+##
+##----------------------------------------------------------------------------##
+COPY Makevars /root/.R/
+COPY ccache.conf /root/.ccache/
+
+##----------------------------------------------------------------------------##
 ## update and install system packages
 ##
 ## libcurl4-openssl-dev                   curl and RCurl (R package)
@@ -47,6 +53,7 @@ RUN apt-get --quiet update --yes \
     libbz2-dev \
     less \
     libmagick++-dev \
+    ccache \
   && rm -rf /var/lib/apt/lists/*
 
 ##----------------------------------------------------------------------------##

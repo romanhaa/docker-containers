@@ -18,6 +18,7 @@ packages_to_install <- c(
   'Seurat',
   'SC3',
   'scater',
+  'ZJUFanLab/scCATCH',
   'scde',
   'scDblFinder',
   'ggjlab/scMCA',

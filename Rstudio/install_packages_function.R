@@ -12,7 +12,7 @@ install_packages <- function(packages) {
     }
     if ( (name %in% library()$results[,1] ) == FALSE ) {
       message(paste0('[', format(Sys.time(), '%Y-%m-%d %H:%M:%S'), "] '", i, "' will be installed."))
-      BiocManager::install(i, update = TRUE, ask = FALSE, quiet = TRUE)
+      BiocManager::install(i, update = TRUE, ask = FALSE, quiet = TRUE, Ncpus = 2)
       if ( (name %in% library()$results[,1] ) == FALSE ) {
         message(paste0('[', format(Sys.time(), '%Y-%m-%d %H:%M:%S'), "] '", i, "' installation failed."))
         stop()

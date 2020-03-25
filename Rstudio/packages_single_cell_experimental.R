@@ -4,7 +4,7 @@ BiocManager::install('cole-trapnell-lab/monocle3', update = TRUE, ask = FALSE, f
 
 # SnapATAC
 BiocManager::install('plot3D', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
-BiocManager::install('r3fang/SnapATAC', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
+#BiocManager::install('r3fang/SnapATAC', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
 
 # cisTopic
 BiocManager::install('aertslab/cisTopic', update = TRUE, ask = FALSE, force = TRUE, quiet = TRUE)
