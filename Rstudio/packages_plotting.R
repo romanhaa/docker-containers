@@ -26,6 +26,7 @@ packages_to_install <- c(
   'ggsci',
   'ggsignif',
   'ggthemes',
+  'heatmaps',
   'jcolors',
   'paletteer',
   'patchwork',

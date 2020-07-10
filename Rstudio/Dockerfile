@@ -26,6 +26,7 @@ COPY ccache.conf /root/.ccache/
 ## samtools libboost-all-dev              velocyto (R package)
 ## libgsl-dev                             gsl -> slingshot (R package)
 ## libbz2-dev                             Rsamtools (R package)
+## libfftw3-dev                           heatmaps (R package)
 ##----------------------------------------------------------------------------##
 RUN apt-get --quiet update --yes \
   && apt-get --quiet upgrade --yes \
@@ -54,6 +55,7 @@ RUN apt-get --quiet update --yes \
     less \
     libmagick++-dev \
     ccache \
+    libfftw3-dev \
   && rm -rf /var/lib/apt/lists/*
 
 ##----------------------------------------------------------------------------##
