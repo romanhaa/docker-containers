@@ -1,4 +1,4 @@
-FROM rocker/rstudio:3.6.2
+FROM rocker/rstudio:4.0.3
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
@@ -32,7 +32,6 @@ RUN apt-get --quiet update --yes \
   && apt-get --quiet upgrade --yes \
   && apt-get --quiet install --yes \
     python-dev \
-    python-pip \
     python3-dev \
     python3-pip \
     python3-tk \
